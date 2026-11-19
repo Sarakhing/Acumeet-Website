@@ -5,6 +5,7 @@ import { ROUTES } from '@/constants/routes';
 /**
  * Figma "CTA band" (19:15139): brand gradient card with headline, sub-line
  * and two CTAs. Headline / sub-line / CTAs are overridable per page.
+ * Pass lead={null} to drop the sub-line, secondary={null} for a single CTA.
  */
 export default function CtaBand({
   title = 'Make Every Meeting Part of Your Enterprise Knowledge',
@@ -20,7 +21,7 @@ export default function CtaBand({
             <h2 className="text-[30px] font-medium leading-[1.1] tracking-[-0.9px] text-white text-balance sm:text-[36px] lg:text-display-2">
               {title}
             </h2>
-            <p className="mt-4 text-body-lead text-white/85">{lead}</p>
+            {lead && <p className="mt-4 text-body-lead text-white/85">{lead}</p>}
             <div className="mt-[30px] flex flex-wrap justify-center gap-3">
               {primary && (
                 <Button to={primary.to} intent="light">

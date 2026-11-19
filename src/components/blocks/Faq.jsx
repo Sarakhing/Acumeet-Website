@@ -41,9 +41,24 @@ function FaqItem({ q, a, open, onToggle }) {
   );
 }
 
-/** Figma "FAQ" (24:22059). items: [{ q, a }]. First item open by default. */
-export default function Faq({ title = 'Frequently asked questions', items = [] }) {
-  const [openIndex, setOpenIndex] = useState(0);
+/**
+ * Figma "FAQ" (24:22059). items: [{ q, a }].
+ * defaultOpen: index of the item open on load (default 0, -1 = none) or 'all'
+ *   (Solutions pages show every answer expanded). With 'all', items toggle
+ *   independently; otherwise it behaves as a single-open accordion.
+ */
+export default function Faq({ title = 'Frequently asked questions', items = [], defaultOpen = 0 }) {
+  const multi = defaultOpen === 'all';
+  const [open, setOpen] = useState(() =>
+    multi ? new Set(items.map((_, i) => i)) : new Set(defaultOpen >= 0 ? [defaultOpen] : []),
+  );
+  const toggle = (i) =>
+    setOpen((prev) => {
+      const next = new Set(multi ? prev : []);
+      if (prev.has(i)) next.delete(i);
+      else next.add(i);
+      return next;
+    });
   if (!items.length) return null;
   return (
     <section className="bg-surface-white py-16 lg:py-[120px]">
@@ -57,12 +72,7 @@ export default function Faq({ title = 'Frequently asked questions', items = [] }
         </div>
         <div className="flex min-w-0 flex-1 flex-col gap-3">
           {items.map((item, i) => (
-            <FaqItem
-              key={item.q}
-              {...item}
-              open={openIndex === i}
-              onToggle={() => setOpenIndex(openIndex === i ? -1 : i)}
-            />
+            <FaqItem key={item.q} {...item} open={open.has(i)} onToggle={() => toggle(i)} />
           ))}
         </div>
       </Container>
