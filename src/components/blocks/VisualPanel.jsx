@@ -7,6 +7,8 @@ export const PANEL_TINTS = {
   pink: 'bg-panel-pink',
   blue: 'bg-panel-blue',
   mint: 'bg-panel-mint',
+  amber: 'bg-panel-amber',
+  grey: 'bg-panel-grey',
   night: 'bg-surface-night-raised',
   white: 'bg-surface-white',
 };
@@ -16,7 +18,7 @@ export const PANEL_TINTS = {
  * layer and a centred product mock-up. Rendered at its exact design size
  * (default 656×480) and proportionally scaled down on narrow screens.
  *
- * tint: lilac | pink | blue | mint | night | white
+ * tint: lilac | pink | blue | mint | amber | grey | night | white
  * pattern: { type: 'rings'|'dots'|'hairlines'|'waveform', size } — size defaults by panel width
  * chip: optional label pill pinned top-left (Explorer style)
  * glow: optional CSS background-image layered under the pattern (e.g. Chapters)

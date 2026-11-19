@@ -5,6 +5,7 @@ import AccentTitle from '@/components/ui/AccentTitle';
 import ScaleToFit from '@/components/ui/ScaleToFit';
 import DotGrid from '@/components/patterns/DotGrid';
 import Rings from '@/components/patterns/Rings';
+import Hairlines from '@/components/patterns/Hairlines';
 import { cn } from '@/utils/cn';
 
 /** Magenta-arrow text link ("Explore Acumeet Security →"). */
@@ -18,17 +19,52 @@ function ArrowLink({ to, children, dark }) {
       )}
     >
       {children}
-      <span aria-hidden="true" className={cn('transition-transform group-hover:translate-x-0.5', dark ? 'text-brand-magenta-soft' : 'text-brand-magenta')}>
+      <span
+        aria-hidden="true"
+        className={cn(
+          'transition-transform group-hover:translate-x-0.5',
+          dark ? 'text-brand-magenta-soft' : 'text-brand-magenta',
+        )}
+      >
         →
       </span>
     </Link>
   );
 }
 
+/* lg title sizes for the wash hero: 56 (default), 58 (Solutions overview), 54 (EMI). */
+const HERO_TITLE_SIZES = {
+  hero: 'lg:text-display-hero',
+  58: 'lg:text-[58px] lg:tracking-[-1.74px]',
+  54: 'lg:text-[54px] lg:tracking-[-1.62px]',
+};
+
 /* ------------------------------------------------------------------ */
 /* variant="wash" — Figma "Gradient wash" hero (Protect, Control, Govern…) */
 /* ------------------------------------------------------------------ */
-function WashHero({ eyebrow, title, accent, lead, primary, secondary, visual, visualWidth }) {
+function WashHero({
+  eyebrow,
+  title,
+  accent,
+  lead,
+  primary,
+  secondary,
+  visual,
+  visualWidth,
+  pattern = 'dots',
+  eyebrowStyle = 'plain',
+  secondaryStyle = 'link',
+  visualAlign = 'start',
+  copyTop = 76,
+  padBottom = 111,
+  copyWidth = 600,
+  titleSize = 'hero',
+  leadSize = 18,
+}) {
+  const leadClass = cn(
+    'text-[17px] leading-[1.35] text-ink-700',
+    leadSize === 19 ? 'tracking-[-0.19px] sm:text-[19px]' : 'tracking-[-0.18px] sm:text-[18px]',
+  );
   return (
     <section className="relative overflow-hidden bg-[#fbfbfd]">
       {/* Pattern · glow ×2 */}
@@ -40,35 +76,86 @@ function WashHero({ eyebrow, title, accent, lead, primary, secondary, visual, vi
             'radial-gradient(648px 533px at 20% 164px, rgb(204 219 255 / 0.95), rgb(255 255 255 / 0) 100%), radial-gradient(576px 492px at 85% 164px, rgb(252 214 235 / 0.85), rgb(255 255 255 / 0) 100%)',
         }}
       />
-      {/* Pattern · dot grid — right 640px, fading towards the copy */}
-      <DotGrid fade="left" className="left-auto w-full lg:w-[44.5%]" />
+      {typeof pattern === 'object' && pattern ? (
+        /* Custom hairline field { src, width, height } (Solutions overview 720×884) */
+        <img
+          src={pattern.src}
+          alt=""
+          aria-hidden="true"
+          width={pattern.width}
+          height={pattern.height}
+          className="pointer-events-none absolute right-0 top-0 max-w-none select-none"
+          style={{ width: pattern.width, height: pattern.height }}
+        />
+      ) : pattern === 'hairlines' ? (
+        /* Pattern · hairlines (Control) — right 680×900, clipped by the section */
+        <div
+          aria-hidden="true"
+          className="pointer-events-none absolute right-0 top-0 h-[900px] w-[680px] max-w-full"
+        >
+          <Hairlines size="hero" />
+        </div>
+      ) : (
+        /* Pattern · dot grid — right 640px, fading towards the copy */
+        <DotGrid fade="left" className="left-auto w-full lg:w-[44.5%]" />
+      )}
 
       <Container
         width="wide"
-        className="relative flex flex-col gap-12 pb-16 pt-12 sm:pt-16 lg:flex-row lg:items-start lg:gap-5 lg:pb-[111px] lg:pt-16"
+        className="relative flex flex-col gap-12 pb-16 pt-12 sm:pt-16 lg:flex-row lg:items-start lg:gap-5 lg:pb-(--hero-pb) lg:pt-16"
+        style={{ '--hero-copy-top': `${copyTop}px`, '--hero-pb': `${padBottom}px`, '--hero-copy-w': `${copyWidth}px` }}
       >
-        <div className="flex max-w-[600px] flex-col gap-[22px] lg:mt-[76px] lg:w-[600px] lg:shrink-0">
+        <div className="flex max-w-(--hero-copy-w) flex-col gap-[22px] lg:mt-(--hero-copy-top) lg:w-(--hero-copy-w) lg:shrink-0">
           {eyebrow && (
-            <p className="font-mono text-overline font-medium tracking-[0.44px] text-brand-magenta uppercase">{eyebrow}</p>
+            <p
+              className={cn(
+                'font-mono text-overline font-medium tracking-[0.44px] text-brand-magenta uppercase',
+                eyebrowStyle === 'chip' &&
+                  'w-fit rounded-pill border border-border-muted bg-surface-white px-2.5 py-1',
+              )}
+            >
+              {eyebrow}
+            </p>
           )}
           <AccentTitle
             as="h1"
             accent={accent}
-            className="text-[38px] font-medium leading-[1.04] tracking-[-1.2px] sm:text-[48px] lg:text-display-hero"
+            className={cn(
+              'text-[38px] font-medium leading-[1.04] tracking-[-1.2px] sm:text-[48px]',
+              HERO_TITLE_SIZES[titleSize] ?? HERO_TITLE_SIZES.hero,
+            )}
           >
             {title}
           </AccentTitle>
-          {lead && <p className="max-w-[560px] text-[17px] leading-[1.35] tracking-[-0.18px] text-ink-700 sm:text-[18px]">{lead}</p>}
+          {lead &&
+            (Array.isArray(lead) ? (
+              <div className="flex max-w-[560px] flex-col gap-6">
+                {lead.map((para) => (
+                  <p key={para} className={leadClass}>
+                    {para}
+                  </p>
+                ))}
+              </div>
+            ) : (
+              <p className={cn('max-w-[560px]', leadClass)}>{lead}</p>
+            ))}
           {(primary || secondary) && (
             <div className="flex flex-wrap items-center gap-x-3 gap-y-4">
               {primary && <Button to={primary.to}>{primary.label}</Button>}
-              {secondary && <ArrowLink to={secondary.to}>{secondary.label}</ArrowLink>}
+              {secondary &&
+                (secondaryStyle === 'button' ? (
+                  <Button to={secondary.to} intent="secondary">
+                    {secondary.label}
+                  </Button>
+                ) : (
+                  <ArrowLink to={secondary.to}>{secondary.label}</ArrowLink>
+                ))}
             </div>
           )}
         </div>
         {visual && (
           <div className="min-w-0 flex-1">
-            <ScaleToFit width={visualWidth} align="start">
+            <ScaleToFit width={visualWidth} align={visualAlign}>
               {visual}
             </ScaleToFit>
           </div>
@@ -81,7 +168,16 @@ function WashHero({ eyebrow, title, accent, lead, primary, secondary, visual, vi
 /* ------------------------------------------------------------------ */
 /* variant="rings" — Figma "Pattern · rings" dark centred hero (Secure, Connect) */
 /* ------------------------------------------------------------------ */
-function RingsHero({ eyebrow, title, accent, lead, primary, secondary, children }) {
+function RingsHero({
+  eyebrow,
+  title,
+  accent,
+  lead,
+  primary,
+  secondary,
+  secondaryStyle = 'button',
+  children,
+}) {
   return (
     <section className="relative overflow-hidden bg-surface-night">
       <div
@@ -92,11 +188,17 @@ function RingsHero({ eyebrow, title, accent, lead, primary, secondary, children 
             'radial-gradient(600px 450px at calc(50% - 320px) 250px, rgb(158 0 89 / 0.55) 0%, rgb(84 5 54 / 0.275) 50%, rgb(10 10 18 / 0) 100%), radial-gradient(550px 450px at calc(50% + 450px) 330px, rgb(0 77 229 / 0.45) 0%, rgb(5 43 124 / 0.225) 50%, rgb(10 10 18 / 0) 100%)',
         }}
       />
-      <div aria-hidden="true" className="pointer-events-none absolute left-1/2 top-[200px] h-[900px] w-[1440px] -translate-x-1/2">
+      <div
+        aria-hidden="true"
+        className="pointer-events-none absolute left-1/2 top-[200px] h-[900px] w-[1440px] -translate-x-1/2"
+      >
         <Rings size="hero" />
       </div>
 
-      <Container width="wide" className="relative flex flex-col items-center gap-6 pt-16 text-center sm:pt-24 lg:gap-7 lg:pt-[120px]">
+      <Container
+        width="wide"
+        className="relative flex flex-col items-center gap-6 pt-16 text-center sm:pt-24 lg:gap-7 lg:pt-[120px]"
+      >
         {eyebrow && (
           <p className="rounded-pill border border-border-night bg-surface-night-chip px-2.5 py-1 font-mono text-overline font-medium tracking-[0.44px] text-brand-magenta-soft uppercase">
             {eyebrow}
@@ -107,17 +209,41 @@ function RingsHero({ eyebrow, title, accent, lead, primary, secondary, children 
           {accent && (
             <>
               {' '}
-              <span className="bg-[image:var(--gradient-accent)] bg-clip-text text-transparent">{accent}</span>
+              <span className="bg-[image:var(--gradient-accent)] bg-clip-text text-transparent">
+                {accent}
+              </span>
             </>
           )}
         </h1>
         {lead && (
-          <p className="max-w-[700px] text-[17px] leading-[1.35] tracking-[-0.19px] text-ink-on-dark-muted sm:text-[19px]">{lead}</p>
+          <p className="max-w-[700px] text-[17px] leading-[1.35] tracking-[-0.19px] text-ink-on-dark-muted sm:text-[19px]">
+            {lead}
+          </p>
         )}
         {(primary || secondary) && (
-          <div className="flex flex-wrap items-center justify-center gap-3">
+          <div
+            className={cn(
+              'flex flex-wrap justify-center gap-3',
+              secondaryStyle === 'link' ? 'items-start' : 'items-center',
+            )}
+          >
             {primary && <Button to={primary.to}>{primary.label}</Button>}
-            {secondary && (
+            {secondary && secondaryStyle === 'link' && (
+              /* Connect "Explore link": white 15px label + white arrow, top-aligned with the button */
+              <Link
+                to={secondary.to}
+                className="group inline-flex items-center gap-1.5 text-[15px] font-medium leading-[1.5] text-ink-on-dark underline-offset-4 hover:underline"
+              >
+                {secondary.label}
+                <span
+                  aria-hidden="true"
+                  className="transition-transform group-hover:translate-x-0.5"
+                >
+                  →
+                </span>
+              </Link>
+            )}
+            {secondary && secondaryStyle !== 'link' && (
               <Link
                 to={secondary.to}
                 className="inline-flex items-center justify-center rounded-pill border border-white px-3 py-2 text-[15px] font-medium leading-[1.5] text-ink-on-dark transition-colors hover:bg-white/10"
@@ -136,6 +262,10 @@ function RingsHero({ eyebrow, title, accent, lead, primary, secondary, children 
 /**
  * Solutions hero.
  * variant: 'wash' (light, copy left + `visual` right) | 'rings' (dark, centred, `children` = HeroCarousel)
+ * wash-only options (all optional, defaults = Protect): pattern 'dots' | 'hairlines' (Control),
+ *   eyebrowStyle 'plain' | 'chip' (Govern), secondaryStyle 'link' | 'button' (Control),
+ *   visualAlign 'start' | 'end', copyTop (lg copy offset, 76), padBottom (lg bottom padding, 111).
+ * rings-only option: secondaryStyle 'button' (default, white outlined pill) | 'link' (Connect: white text + →).
  * See src/components/blocks/README.md for props.
  */
 export default function SolutionHero({ variant = 'wash', visualWidth = 665, ...props }) {

@@ -19,6 +19,9 @@ const SECTION_TONES = {
  * size="feature" (Secure "Feature / …"): 1228 content (500 copy + 656 visual), 72 gap, 34px title, 16.5px body,
  *                bullets 15.5px, py-88.
  *
+ * size="standard" (Control "Split"): as wide, but 17px body.
+ * size="compact"  (Govern "02 · rows" Split): as wide, but 36px title and 17px body.
+ *
  * Content order: eyebrow → title(+accent) → body[] → bullets[] → footnote[] → cta.
  * bullets: [{ lead?, text }] — `lead` renders bold ("Access by role:").
  * bulletStyle: 'plain' | 'check' (blue check-circle, Figma "Icon/check").
@@ -42,9 +45,14 @@ export default function Split({
   className,
 }) {
   const feature = size === 'feature';
+  const body17 = size === 'standard' || size === 'compact';
   const dark = tone === 'dark';
   const bodyText = cn(
-    feature ? 'text-[16px] leading-[1.6] sm:text-[16.5px]' : 'text-[17px] leading-[1.5] sm:text-[18px]',
+    feature
+      ? 'text-[16px] leading-[1.6] sm:text-[16.5px]'
+      : body17
+        ? 'text-[16px] leading-[1.5] sm:text-[17px]'
+        : 'text-[17px] leading-[1.5] sm:text-[18px]',
     dark ? 'text-ink-on-dark-muted' : feature ? 'text-ink-600' : 'text-ink-700',
   );
 
@@ -76,7 +84,9 @@ export default function Split({
               'font-medium',
               feature
                 ? 'text-[28px] leading-[1.15] tracking-[-0.68px] sm:text-[34px]'
-                : 'text-[30px] leading-[1.12] tracking-[-1.2px] sm:text-[34px] lg:text-heading-xl',
+                : size === 'compact'
+                  ? 'text-[28px] leading-[1.12] tracking-[-0.72px] sm:text-[32px] lg:text-[36px]'
+                  : 'text-[30px] leading-[1.12] tracking-[-1.2px] sm:text-[34px] lg:text-heading-xl',
               dark && '[&>span:first-child]:text-ink-on-dark',
               !dark && feature && '[&>span:first-child]:text-ink-900',
             )}

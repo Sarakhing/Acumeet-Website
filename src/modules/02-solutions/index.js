@@ -9,14 +9,20 @@ const rel = (path) => path.replace(/^\//, '');
 
 const ProtectPage = lazy(() => import('./pages/ProtectPage'));
 const SecurePage = lazy(() => import('./pages/SecurePage'));
+const ControlPage = lazy(() => import('./pages/ControlPage'));
+const GovernPage = lazy(() => import('./pages/GovernPage'));
+const SolutionsOverviewPage = lazy(() => import('./pages/SolutionsOverviewPage'));
+const EmiPage = lazy(() => import('./pages/EmiPage'));
+const UnderstandPage = lazy(() => import('./pages/UnderstandPage'));
+const ConnectPage = lazy(() => import('./pages/ConnectPage'));
 
 export const solutionsRoutes = [
-  // TODO(03.01 Overview, Figma 46:11504):   { path: rel(ROUTES.solutions.overview), element: createElement(OverviewPage) },
+  { path: rel(ROUTES.solutions.overview), element: createElement(SolutionsOverviewPage) },
   { path: rel(ROUTES.solutions.protect), element: createElement(ProtectPage) },
-  // TODO(03.03 Control, Figma 46:16979):    { path: rel(ROUTES.solutions.control), element: createElement(ControlPage) },
+  { path: rel(ROUTES.solutions.control), element: createElement(ControlPage) },
   { path: rel(ROUTES.solutions.secure), element: createElement(SecurePage) },
-  // TODO(03.05 Govern, Figma 46:17748):     { path: rel(ROUTES.solutions.govern), element: createElement(GovernPage) },
-  // TODO(03.06 Understand, Figma 46:19096): { path: rel(ROUTES.solutions.understand), element: createElement(UnderstandPage) },
-  // TODO(03.07 Connect, Figma 46:19542):    { path: rel(ROUTES.solutions.connect), element: createElement(ConnectPage) },
-  // TODO(03.08 EMI, Figma 46:20684):        { path: rel(ROUTES.solutions.emi), element: createElement(EmiPage) },
+  { path: rel(ROUTES.solutions.govern), element: createElement(GovernPage) },
+  { path: rel(ROUTES.solutions.understand), element: createElement(UnderstandPage) },
+  { path: rel(ROUTES.solutions.connect), element: createElement(ConnectPage) },
+  { path: rel(ROUTES.solutions.emi), element: createElement(EmiPage) },
 ];

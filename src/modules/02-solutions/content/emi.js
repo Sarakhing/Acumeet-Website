@@ -1,0 +1,224 @@
+import { createElement as h } from 'react';
+import { ROUTES } from '@/constants/routes';
+import pillar1 from '@/assets/images/solutions/emi-pillar-1-880x360.svg';
+import pillar2 from '@/assets/images/solutions/emi-pillar-2-880x360.svg';
+import pillar3 from '@/assets/images/solutions/emi-pillar-3-880x360.svg';
+import pillar4 from '@/assets/images/solutions/emi-pillar-4-880x360.svg';
+import pillar5 from '@/assets/images/solutions/emi-pillar-5-880x360.svg';
+import approachRings from '@/assets/images/solutions/emi-approach-rings-1440x900.svg';
+import ringsDark from '@/assets/images/solutions/emi-audience-rings-dark-630x220.svg';
+import ringsBlue from '@/assets/images/solutions/emi-audience-rings-blue-630x220.svg';
+import ringsAmber from '@/assets/images/solutions/emi-audience-rings-amber-413x220.svg';
+import ringsMint from '@/assets/images/solutions/emi-audience-rings-mint-413x220.svg';
+import ringsLilac from '@/assets/images/solutions/emi-audience-rings-lilac-413x220.svg';
+import icBriefcase from '@/assets/images/solutions/ic-briefcase-26.svg';
+import icKanban from '@/assets/images/solutions/ic-kanban-26.svg';
+import icScales from '@/assets/images/solutions/ic-scales-26.svg';
+import icBooks from '@/assets/images/solutions/ic-books-26.svg';
+import icShieldCheck from '@/assets/images/solutions/ic-shield-check-26.svg';
+import EmiHeroVisual from '../components/visuals/EmiHeroVisual';
+import { SOLUTIONS, solutionBreadcrumb } from './solutions';
+
+/** 03.08 · Enterprise Meeting Intelligence (Figma 46:20684). */
+export const emi = {
+  breadcrumb: solutionBreadcrumb('Enterprise Meeting Intelligence'),
+
+  hero: {
+    variant: 'wash',
+    eyebrow: 'Solutions  ·  Enterprise Meeting Intelligence',
+    eyebrowStyle: 'chip',
+    title: 'Turn Enterprise Meetings Into Organisational Intelligence',
+    lead: [
+      'Every business-critical meeting creates information that can shape decisions, influence strategy, and drive execution. Acumeet helps enterprises transform meeting conversations into structured documentation, traceable decisions, searchable institutional knowledge, and governed information.',
+      'Bring greater consistency, visibility, and accountability to the way your organisation manages meeting intelligence.',
+    ],
+    primary: { label: 'Explore Enterprise Meeting Intelligence', to: '#pillars' },
+    secondary: { label: 'Talk to Our Team', to: ROUTES.contactSales },
+    secondaryStyle: 'button',
+    pattern: 'hairlines',
+    titleSize: 54,
+    copyWidth: 580,
+    copyTop: 56,
+    padBottom: 100,
+    visual: h(EmiHeroVisual),
+    visualWidth: 540,
+    visualAlign: 'end',
+  },
+
+  pillars: [
+    {
+      tab: 'Meeting Documentation',
+      eyebrow: 'Meeting Documentation',
+      accent: 'magenta',
+      pattern: pillar1,
+      title: 'Every Important Conversation, Properly Documented',
+      body: 'Give your organisation a structured way to preserve what was discussed, agreed, and assigned during meetings. Acumeet transforms conversations into accessible meeting records, helping teams maintain context and reduce dependence on scattered notes and individual recollection.',
+      benefits: [
+        'Generate structured meeting summaries and transcripts.',
+        'Preserve key discussions, decisions, and action items.',
+        'Make meeting records easier to retrieve and revisit.',
+        'Improve consistency in meeting documentation across teams.',
+      ],
+      cta: { label: 'Explore Meeting Documentation', to: `${ROUTES.products}/meeting-documentation` },
+    },
+    {
+      tab: 'Decision Management',
+      eyebrow: 'Decision Management',
+      accent: 'blue',
+      pattern: pillar2,
+      title: 'Keep Business Decisions Visible and Accountable',
+      body: 'Important decisions should remain accessible long after the meeting ends. Acumeet helps organisations identify, document, and revisit decisions alongside the discussions that informed them. Give teams better visibility into what was decided, the context behind decisions, and the actions that follow.',
+      benefits: [
+        'Preserve decisions made during important meetings.',
+        'Revisit the context behind previous decisions.',
+        'Connect decisions with related action items and follow-ups.',
+        'Support continuity when projects, priorities, or team members change.',
+      ],
+      cta: { label: 'Explore Decision Management', to: `${ROUTES.products}/decision-management` },
+    },
+    {
+      tab: 'Institutional Memory',
+      eyebrow: 'Institutional Memory',
+      accent: 'purple',
+      pattern: pillar3,
+      title: 'Preserve Knowledge Beyond Individual Meetings',
+      body: "Organisational knowledge should not disappear when meetings end or employees move on. Acumeet helps build a searchable body of meeting-derived knowledge, allowing teams to retrieve relevant information and maintain context across conversations. Make the knowledge generated by your organisation's meetings more useful over time.",
+      benefits: [
+        'Preserve knowledge captured across meetings.',
+        'Search for information from previous discussions.',
+        'Revisit historical context when making new decisions.',
+        'Reduce dependence on individual memory and disconnected records.',
+        'Support knowledge continuity across teams and projects.',
+      ],
+      cta: { label: 'Explore Institutional Memory', to: `${ROUTES.products}/institutional-memory` },
+    },
+    {
+      tab: 'Compliance',
+      eyebrow: 'Compliance',
+      accent: 'green',
+      pattern: pillar4,
+      title: 'Make Meeting Information Easier to Govern and Review',
+      body: 'Enterprise meeting information may contain sensitive business details, personal information, and records subject to internal policies or regulatory obligations. Acumeet supports a more structured approach to managing meeting information, helping organisations apply appropriate controls and maintain visibility into relevant records.',
+      benefits: [
+        'Support structured meeting-record management.',
+        'Apply available access and information-handling controls.',
+        'Support redaction of sensitive information where enabled.',
+        'Maintain relevant audit records for review.',
+        'Help teams align meeting-information practices with organisational policies.',
+      ],
+      cta: { label: 'Explore Compliance Capabilities', to: ROUTES.compliance },
+    },
+    {
+      tab: 'Enterprise Governance',
+      eyebrow: 'Enterprise Governance',
+      accent: 'amber',
+      pattern: pillar5,
+      title: 'Establish Clearer Control Over Meeting Information',
+      body: 'As organisations grow, meeting information becomes distributed across teams, projects, and systems. Enterprise governance helps establish consistent expectations for how this information is accessed, managed, shared, and retained. Acumeet supports a more structured approach to meeting-information governance, helping enterprises bring greater consistency to their processes and controls.',
+      benefits: [
+        'Support consistent meeting-information management practices.',
+        'Apply available permissions and access controls.',
+        'Help manage how meeting records are shared.',
+        'Support organisational retention and handling policies.',
+        'Improve visibility and accountability around meeting information.',
+      ],
+      cta: { label: 'Explore Enterprise Governance', to: ROUTES.solutions.govern },
+    },
+  ],
+
+  approach: {
+    eyebrow: 'One enterprise approach to meeting intelligence',
+    title: 'From Conversations to',
+    accent: 'Organisational Intelligence',
+    pattern: { src: approachRings, width: 1440, height: 900 },
+    steps: [
+      { title: 'Document', body: 'Capture and organise the information generated by important meetings.' },
+      { title: 'Manage Decisions', body: 'Preserve decisions and their context so teams can revisit them when needed.' },
+      { title: 'Preserve Knowledge', body: 'Make meeting-derived information searchable and reusable across the organisation.' },
+      { title: 'Support Compliance', body: 'Manage meeting information using appropriate controls and organisational policies.' },
+      { title: 'Strengthen Governance', body: 'Promote consistent, accountable management of meeting information across teams.' },
+    ],
+  },
+
+  audiences: {
+    title: 'Who Is Enterprise Meeting Intelligence For?',
+    items: [
+      {
+        title: 'Executive leadership',
+        body: 'Preserve strategic discussions, decisions, and organisational context.',
+        size: 'wide',
+        tint: 'night',
+        icon: icBriefcase,
+        iconTone: 'night',
+        pattern: { src: ringsDark, width: 630, height: 220 },
+      },
+      {
+        title: 'Operations and project teams',
+        body: 'Maintain visibility into commitments, dependencies, and follow-up actions.',
+        size: 'wide',
+        tint: 'blue',
+        icon: icKanban,
+        iconTone: 'blue',
+        pattern: { src: ringsBlue, width: 630, height: 220 },
+      },
+      {
+        title: 'Compliance and risk teams',
+        body: 'Support structured handling and review of relevant meeting records.',
+        size: 'narrow',
+        tint: 'amber',
+        icon: icScales,
+        iconTone: 'amber',
+        pattern: { src: ringsAmber, width: 413, height: 220 },
+      },
+      {
+        title: 'Knowledge and information-management teams',
+        body: 'Make meeting-derived knowledge easier to preserve and retrieve.',
+        size: 'narrow',
+        tint: 'mint',
+        icon: icBooks,
+        iconTone: 'green',
+        pattern: { src: ringsMint, width: 413, height: 220 },
+      },
+      {
+        title: 'IT and security teams',
+        body: 'Support controlled access and consistent management of enterprise meeting information.',
+        size: 'narrow',
+        tint: 'lilac',
+        icon: icShieldCheck,
+        iconTone: 'purple',
+        pattern: { src: ringsLilac, width: 413, height: 220 },
+      },
+    ],
+  },
+
+  faq: [
+    {
+      q: 'What is enterprise meeting intelligence?',
+      a: 'Enterprise meeting intelligence is the structured capture, organisation, retrieval, and management of information generated through business meetings. It helps organisations turn conversations into accessible records, decisions, actions, and institutional knowledge.',
+    },
+    {
+      q: 'How is enterprise meeting intelligence different from meeting summaries?',
+      a: 'Meeting summaries provide a concise account of individual conversations. Enterprise meeting intelligence extends beyond summaries by helping organisations preserve meeting records, revisit decisions, retrieve knowledge across meetings, and manage information consistently.',
+    },
+    {
+      q: 'Can Acumeet help preserve organisational knowledge?',
+      a: 'Acumeet helps make meeting-derived information searchable and reusable, enabling teams to revisit previous discussions and maintain context across projects and business activities.',
+    },
+    {
+      q: 'How does Acumeet support compliance and governance?',
+      a: "Acumeet provides meeting-intelligence capabilities that can support structured information management. The specific compliance and governance controls available depend on the product capabilities enabled and the organisation's configuration.",
+    },
+  ],
+
+  /* Figma keeps Related thumbnails positional on this page (lilac rings, pink
+     dots, blue waveform, mint hairlines), so Control/Secure are restyled here. */
+  related: [
+    SOLUTIONS.protect,
+    { ...SOLUTIONS.control, tint: 'pink', pattern: { type: 'dots', size: 'mini' } },
+    { ...SOLUTIONS.secure, tint: 'blue', pattern: { type: 'waveform', size: 'mini' } },
+    SOLUTIONS.understand,
+  ],
+
+  /* CtaBand defaults are this page's Figma copy ("Make Every Meeting Part of Your Enterprise Knowledge"). */
+  cta: {},
+};

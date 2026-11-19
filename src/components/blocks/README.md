@@ -111,3 +111,83 @@ Same as before. `lead={null}` drops the sub-line and `secondary={null}` gives a 
 - Connect "Meeting types" scroll area.
 - Understand audience cards (`46:25057` …).
 - Mock-ups for Chapters and Stepper (transcript, action items, integrations, Atlas chat, search). Their Figma specs are the `✓` frames listed in the section metadata.
+
+---
+
+## Added for Control (03.03) and Govern (03.05)
+
+### IconCardGrid (new)
+Figma Control "02 · Control Where Your Data Lives" (Row `46:17148`) — this covers the "Control 02" item in the list above.
+A 780px heading + copy column, then a 2×2 grid of white cards (radius 20, p-22): a 44px icon tile with a 28% tone border, a mono number in the tone colour, an optional title and a 15px body. One column below `md`.
+`title`, `accent?`, `paragraphs[]`, `tone: white | subtle`, `cards: [{ icon, tone: magenta|blue|purple|green, title?, body }]` (`icon` is an imported 24px SVG, e.g. `ic-key-blue-24.svg`).
+
+### Additive options on existing blocks (defaults unchanged)
+- `SolutionHero` (`wash` only): `pattern: 'dots' | 'hairlines'` (Control's 680×900 hairline field), `eyebrowStyle: 'plain' | 'chip'` (Govern's white bordered pill), `secondaryStyle: 'link' | 'button'` (Control's outlined pill), `visualAlign: 'start' | 'end'`, `copyTop` (lg copy offset, default 76) and `padBottom` (lg bottom padding, default 111). Use the last two to hit each Figma hero height. Hero canvases include about 64px of bottom room so ScaleToFit doesn't clip the float shadows.
+- `Split`: `size="standard"` (Control: 40px title, 17px body) and `size="compact"` (Govern "02 · rows": 36px title, 17px body). Both use the `wide` layout (560 copy column, 64 gap, py-112).
+- `Faq`: `eyebrow` (default `'FAQ'`, `null` hides it, as on Control).
+- `RelatedRow`: `eyebrow={null}` now drops the overline completely (Control).
+- Patterns: `HAIRLINES.hero` (680×900) and `WAVEFORM.panel` (656×480, so `{ type:'waveform', size:'panel' }` in a `VisualPanel`, built from the Figma bars component `46:3060`).
+- `LiveDot`: `tone="red"` (Govern transcript "Live" chip).
+- Visuals: `KeysStorageCard` takes `keyIcon` / `storageIcon` (`{ src, tone }`) and `iconSize` (32 | 36). New visuals: `ActionItemsCard`, `ControlHeroVisual`, `GovernHeroVisual`, `TranscriptCard`. `people.js` adds Fredelina Augustus.
+- Related cards: on Govern, Figma keeps thumbnails positional (lilac rings, pink dots, blue waveform, mint hairlines), so `content/govern.js` overrides `tint`/`pattern` per slot.
+
+---
+
+## Added for Solutions overview (03.01) and Enterprise Meeting Intelligence (03.08)
+Covers the "Overview showcase", "EMI pillars and audience sections" and "Meeting types scroll area" items in the list above.
+
+### Showcase (new)
+Figma "02 · Solutions" + "03 · Solutions showcase" (`46:11684`, `46:11702`). Centred mono eyebrow + 48px title, a row of jump-link pills, then rows of tinted 28px-radius tiles. Each row is a grid whose lg columns follow the tiles' Figma `width` (760/496, 410/410/412…); below lg tiles stack full width and their visuals scale.
+`id`, `eyebrow`, `title`, `index: [{ label, href: '#tile-id' }]`, `rows: [[tile]]`.
+Tile (`ShowcaseTile`, also exported): `{ id, width, layout: 'stack' | 'split' | 'feature', tint: pink|lilac|grey|blue|mint|amber|night, eyebrow, title, titleWidth?, body, bodyWidth?, link: { label, to }, visual }`.
+`visual`: `{ width, height, pattern?: { src, width, height, x?, y? }, dots?: 'dark', glow?: CSS image, content, x, y }` — a fixed-size canvas with the mock-up at (x, y).
+
+### ScrollSlides (new)
+Figma "03 · By meeting type" + "Meeting types · scroll area" (`46:13442`, spec `46:29753`). Header (`title` + `accent` in #292d32, optional `titleTo`, `lead`), then slides (counter, title, lead, "What Acumeet captures" list, CTA, 576×440 tinted visual) with a segmented progress bar (segments up to the current slide are blue).
+On lg with a viewport ≥ 760px tall the stage pins under the nav and page scroll drives the slides (420px each); elsewhere it is a native horizontal scroll-snap row (swipe). Segments are ARIA tabs (click / arrows / Home / End scroll to the slide). No auto-advance; smooth scrolling is off under reduced motion.
+`slides: [{ title, lead, captures[], capturesLabel?, cta: { label, to }, tint: amber|blue|pink|mint|lilac, visual, visualWidth? (468) }]`.
+
+### SecurityBand (new)
+Figma "Security band" (`46:14132`). Dark 32px-radius band: 48px title, lead, CTA; a 420px stack of glassy rows on the right. Stacks below lg.
+`title`, `lead`, `cta`, `items: [{ icon, iconWidth, iconHeight, title, body }]`.
+
+### IndexList (new)
+Figma "04 · Industries" Row (`46:14155`). Intro column (48px title, optional `titleTo` link, lead, magenta waveform) + a numbered link list with magenta arrows.
+`title`, `titleTo?`, `lead`, `items: [{ title, body, to }]`, `tone: subtle | white`.
+
+### PillarTabs (new)
+Figma "EMI pillars" (component `46:29435`, used at `46:20847`). 360px numbered tabs + white panel (accent arcs, eyebrow pill, 36px title, body, "Key Benefits" box with accent checks, CTA). Auto-advances like Explorer (`useAutoAdvance`: pauses on hover/focus, stops after a pick, off under reduced motion; ARIA tabs). Below lg the tabs are a swipe row that keeps the active tab in view.
+`id`, `interval=7000`, `label`, `tone`, `items: [{ tab, eyebrow, title, body, benefits[], cta, accent: magenta|blue|purple|green|amber, pattern (880×360 SVG) }]`.
+
+### FlowSteps (new)
+Figma "03 · EMI Approach" Head + Flow (`46:20866`, `46:20869`). Night section, rings pattern, centred eyebrow + title with the light accent gradient (`--gradient-accent-dark`), numbered nodes joined by a magenta→blue line (last node filled magenta) over dark cards. Vertical timeline below lg.
+`eyebrow`, `title`, `accent`, `steps: [{ title, body }]`, `pattern: { src, width, height }`.
+
+### AudienceGrid (new)
+Figma "04 · EMI Audiences" (`46:20910`, `46:20912`). Title + tinted cards with a rings pattern, 52px icon tile, title and line. `size: 'wide'` = half row (630, 26px title), `'narrow'` = third (413, 21px). `tint: 'night'` is the dark card.
+`title`, `items: [{ title, body, icon, iconTone: night|blue|amber|green|purple|magenta, tint, pattern: { src, width, height }, size }]`.
+
+### Additive options (defaults unchanged)
+- `SolutionHero` (`wash`): `pattern` may also be an object `{ src, width, height }` (custom hairline field, top right; overview uses 720×884), `copyWidth` (default 600), `titleSize: 'hero' | 58 | 54`, `leadSize: 18 | 19`, and `lead` may be an array of paragraphs.
+- Visuals: `RedactionReview` takes `tone: 'dark' | 'highlight'` (amber tokens + blue pill "Redact"), `shadow`, `className`; `KeysStorageCard` takes `permissions={false}`; `ActionItemsCard` takes `avatarSize`. New visuals: `OverviewHeroVisual`, `OverviewIntegrationsCard`, `OverviewDecisionsCard`, `MeetingAnalyticsCard`, `MeetingRecordCard`, `AtlasAvatar`, `EmiHeroVisual`, `EmiMeetingCaptureCard`.
+- Tokens: `panel-amber`, `surface-night-card`, `surface-night-tile`, `ink-on-dark-subtle`, `ink-on-dark-faint`, `accent-blue|purple|green|amber`, `--gradient-accent-dark`.
+
+---
+
+## Added for Understand (03.06) and Connect (03.07)
+
+### Chapters (checked against the real sections, extended — old API unchanged)
+Verified against Understand `46:19376` and Connect `46:19702`: on both pages Figma **hides the chapter nav and the "CHAPTER 0N / 0M" counter** and shows one chapter as a static row (copy 560 + 56 gap + visual, py-120). The 4-chapter spec frame `46:21861` is only the component sheet.
+- One chapter (or `showNav={false}`) renders a plain row: no tablist/tabpanel, no auto-advance; the chapter title becomes an `h2` when the block has no `title`.
+- `showCounter` (defaults to `showNav`).
+- `tone: 'dark' | 'light'` — `light` = Understand: `surface-muted` section, `#292d32` title, `ink-700` copy, magenta ✓ with `#707070` text. `dark` (default) is unchanged (green ✓).
+- Per-chapter `panel: { width, height, tint, pattern, glow }` overrides the default 664×500 night / dark-dots / glow panel (Understand: `{ width: 656, height: 480, tint: 'mint', pattern: { type: 'rings', size: 'panel' }, glow: null }`).
+
+### Additive options (defaults unchanged)
+- `CardGrid`: `columns: 3 | 2` and `accentBreak` (default `true`). Understand's "✓ Card · …" audience cards (630×280, number + ↗ + hover State 2) are CardGrid cards with `columns={2}` and pattern size `'card-wide'` — not the EMI `AudienceGrid` (icon tiles, no hover state). The hover dot field switches to `card-wide-dark` automatically.
+- Patterns: `RINGS['card-wide']`, `HAIRLINES['card-wide']` (630×280), `DOTS['card-wide' | 'card-wide-dark']` (Figma exports only the 614×272 dot field, so the asset entry has `inset: 9` and `PatternImage` draws it at its own size, 9px from the top-left). `Rings` anchors `card-wide` top-right.
+- `WaveDrift` / `{ type: 'waveform', … }`: optional `color` recolours the bars through a CSS mask (multiplied by the asset's 12% alpha). Understand's dark split uses `{ type:'waveform', size:'panel', color:'rgb(245 245 245 / 0.333)' }` = Figma's white 4% bars (`46:3244`).
+- `VisualPanel` tints `amber` (`panel-amber`) and `grey` (new token `panel-grey` #f6f6f8, Stepper "Follow Through").
+- `Editorial`: `cta.size` (`'md'` default, `'lg'` for Connect's 43px buttons).
+- `SolutionHero` (`rings`): `secondaryStyle: 'button'` (default pill) | `'link'` (Connect "Talk to Our Team →", white, top-aligned with the button).
+- Visuals: `SummaryCard`, `DecisionsCard`, `AtlasChatCard` (24px Atlas avatar inline), `KnowledgeSearchCard`, `IntegrationsCard` (logo chips, `muted` items), `MeetingCaptureCard` ("Upcoming meetings", first row recording), `UnderstandHeroVisual`. Understand/Connect reuse `TranscriptCard`, `ActionItemsCard` (`avatarSize={20}`, as in Figma) and `MeetingAnalyticsCard` (`range="Last 30 days"`, 440 → `barWidth 30 / barPitch 40`, 460 → `32 / 42`).

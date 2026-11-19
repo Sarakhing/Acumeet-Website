@@ -8,14 +8,14 @@ import RelatedCard from './RelatedCard';
  * Figma "Explore more": "KEEP EXPLORING" overline + 36px title (optionally a
  * link) + a row of RelatedCards (4-up desktop, 2-up tablet, swipeable row on
  * mobile).
- * cards: RelatedCard props[]
+ * cards: RelatedCard props[]; eyebrow={null} hides the overline (Control).
  */
 export default function RelatedRow({ eyebrow = 'Keep exploring', title = 'Explore Acumeet solutions', titleTo, cards = [], className }) {
   return (
     <section className={cn('bg-surface-muted py-16 lg:py-24', className)}>
       <Container width="wide" className="flex flex-col gap-10 lg:gap-12">
         <div className="flex flex-col gap-2.5">
-          <Eyebrow>{eyebrow}</Eyebrow>
+          {eyebrow && <Eyebrow>{eyebrow}</Eyebrow>}
           <h2 className="text-[28px] font-medium leading-[1.12] tracking-[-0.72px] text-ink-800 sm:text-[36px]">
             {titleTo ? (
               <Link to={titleTo} className="hover:underline underline-offset-4">

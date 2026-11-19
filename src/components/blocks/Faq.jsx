@@ -46,8 +46,9 @@ function FaqItem({ q, a, open, onToggle }) {
  * defaultOpen: index of the item open on load (default 0, -1 = none) or 'all'
  *   (Solutions pages show every answer expanded). With 'all', items toggle
  *   independently; otherwise it behaves as a single-open accordion.
+ * eyebrow: overline above the title (default 'FAQ'; null hides it, as on Control).
  */
-export default function Faq({ title = 'Frequently asked questions', items = [], defaultOpen = 0 }) {
+export default function Faq({ title = 'Frequently asked questions', eyebrow = 'FAQ', items = [], defaultOpen = 0 }) {
   const multi = defaultOpen === 'all';
   const [open, setOpen] = useState(() =>
     multi ? new Set(items.map((_, i) => i)) : new Set(defaultOpen >= 0 ? [defaultOpen] : []),
@@ -64,7 +65,7 @@ export default function Faq({ title = 'Frequently asked questions', items = [], 
     <section className="bg-surface-white py-16 lg:py-[120px]">
       <Container width="wide" className="flex flex-col gap-10 lg:flex-row lg:gap-20">
         <div className="flex flex-col gap-4 lg:w-[400px] lg:shrink-0">
-          <Eyebrow>FAQ</Eyebrow>
+          {eyebrow && <Eyebrow>{eyebrow}</Eyebrow>}
           <h2 className="text-[30px] font-medium leading-[1.12] tracking-[-1.2px] text-ink-800 lg:text-heading-xl">
             {title}
           </h2>

@@ -1,0 +1,10 @@
+<svg preserveAspectRatio="none" overflow="visible" style="display: block;" width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+<circle id="Orb ring" cx="10" cy="10" r="10" fill="url(#paint0_linear_0_30)" fill-opacity="0.3"/>
+<defs>
+<linearGradient id="paint0_linear_0_30" x1="17.0711" y1="2.92893" x2="2.92893" y2="17.0711" gradientUnits="userSpaceOnUse">
+<stop stop-color="#0060FF"/>
+<stop offset="0.5" stop-color="#FFBD00"/>
+<stop offset="1" stop-color="#D6338A"/>
+</linearGradient>
+</defs>
+</svg>

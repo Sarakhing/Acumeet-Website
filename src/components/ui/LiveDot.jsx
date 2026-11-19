@@ -1,8 +1,9 @@
 import green from '@/assets/images/solutions/live-dot-green.svg';
 import magenta from '@/assets/images/solutions/live-dot-magenta.svg';
+import red from '@/assets/images/solutions/live-dot-red.svg';
 import { cn } from '@/utils/cn';
 
-const SRC = { green, magenta };
+const SRC = { green, magenta, red };
 
 /**
  * Figma "Live dot" (8×8). In compact chips Figma drops it into a 6px slot

@@ -1,0 +1,20 @@
+<svg preserveAspectRatio="none" overflow="visible" style="display: block;" width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+<g id="logos:jira" clip-path="url(#clip0_0_70)">
+<path id="Vector" d="M15.2911 0H7.60671C7.60669 0.455544 7.6964 0.90663 7.87073 1.3275C8.04505 1.74837 8.30056 2.13078 8.62268 2.4529C8.9448 2.77502 9.32721 3.03053 9.74808 3.20486C10.169 3.37918 10.62 3.46889 11.0756 3.46887H12.4911V4.83563C12.4924 6.74969 14.0437 8.30106 15.9578 8.30231V0.666625C15.9578 0.298563 15.6594 0 15.2911 0Z" fill="#2684FF"/>
+<path id="Vector_2" d="M11.4889 3.82917H3.80456C3.80574 5.74323 5.35706 7.2946 7.27118 7.29585H8.68674V8.66698C8.68918 10.581 10.2416 12.1314 12.1556 12.1314V4.49592C12.1556 4.12773 11.8571 3.82917 11.4889 3.82917Z" fill="url(#paint0_linear_0_70)"/>
+<path id="Vector_3" d="M7.68444 7.65521H0C0 9.57102 1.55312 11.1241 3.46887 11.1241H4.88888V12.4908C4.89012 14.4031 6.43875 15.9538 8.35112 15.9574V8.3219C8.35112 7.95371 8.05262 7.65521 7.68444 7.65521Z" fill="url(#paint1_linear_0_70)"/>
+</g>
+<defs>
+<linearGradient id="paint0_linear_0_70" x1="822.468" y1="5.16583" x2="497.571" y2="344.182" gradientUnits="userSpaceOnUse">
+<stop offset="0.18" stop-color="#0052CC"/>
+<stop offset="1" stop-color="#2684FF"/>
+</linearGradient>
+<linearGradient id="paint1_linear_0_70" x1="840.666" y1="11.4327" x2="464.842" y2="381.195" gradientUnits="userSpaceOnUse">
+<stop offset="0.18" stop-color="#0052CC"/>
+<stop offset="1" stop-color="#2684FF"/>
+</linearGradient>
+<clipPath id="clip0_0_70">
+<rect width="16" height="16" fill="white"/>
+</clipPath>
+</defs>
+</svg>

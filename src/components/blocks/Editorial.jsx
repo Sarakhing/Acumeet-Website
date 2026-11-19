@@ -13,9 +13,17 @@ const TONES = {
 /**
  * Figma "Editorial" (inside "03 · rows" / "02 · rows"): title on the left
  * (520px), copy column on the right. Stacks below lg.
- * paragraphs: string[]; cta: { label, to, intent? }; tone: subtle | white | dark
+ * paragraphs: string[]; cta: { label, to, intent?, size? ('md' default | 'lg' = Connect) }; tone: subtle | white | dark
  */
-export default function Editorial({ eyebrow, title, accent, paragraphs = [], cta, tone = 'subtle', className }) {
+export default function Editorial({
+  eyebrow,
+  title,
+  accent,
+  paragraphs = [],
+  cta,
+  tone = 'subtle',
+  className,
+}) {
   const dark = tone === 'dark';
   return (
     <section className={cn(TONES[tone], 'py-16 lg:py-28', className)}>
@@ -46,7 +54,11 @@ export default function Editorial({ eyebrow, title, accent, paragraphs = [], cta
           ))}
           {cta && (
             <div className="pt-2">
-              <Button to={cta.to} intent={cta.intent ?? (dark ? 'light' : 'secondary')} size="md">
+              <Button
+                to={cta.to}
+                intent={cta.intent ?? (dark ? 'light' : 'secondary')}
+                size={cta.size ?? 'md'}
+              >
                 {cta.label}
               </Button>
             </div>

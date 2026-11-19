@@ -14,7 +14,12 @@ const pad = (n) => String(n).padStart(2, '0');
  * grid, light text, white arrow). Cards are links when `to` is given.
  *
  * cards: [{ title, body, tint: lilac|pink|blue|mint, pattern: { type, size:'card' }, to? }]
+ * columns: 3 (default, 413px cards) | 2 (Understand "✓ Card · …" 630×280, use pattern size 'card-wide').
+ * accentBreak: accent on its own line (default true); false lets it wrap inline (Understand).
  */
+// Hover (State 2) dot field per card pattern size.
+const DARK_DOTS = { 'card-wide': 'card-wide-dark' };
+
 function Card({ card, index }) {
   const Tag = card.to ? Link : 'div';
   return (
@@ -30,7 +35,7 @@ function Card({ card, index }) {
         <Pattern {...card.pattern} />
       </div>
       <div className="absolute inset-0 opacity-0 transition-opacity duration-300 group-hover:opacity-100 group-focus-visible:opacity-100">
-        <DotGrid size="card-dark" />
+        <DotGrid size={DARK_DOTS[card.pattern?.size] ?? 'card-dark'} />
       </div>
       <div className="relative flex items-center">
         <span className="font-mono text-[13px] font-medium leading-[1.5] tracking-[0.52px] text-brand-magenta transition-colors group-hover:text-brand-magenta-soft group-focus-visible:text-brand-magenta-soft">
@@ -55,20 +60,36 @@ function Card({ card, index }) {
   );
 }
 
-export default function CardGrid({ title, accent, cards = [], tone = 'white', className }) {
+export default function CardGrid({
+  title,
+  accent,
+  cards = [],
+  tone = 'white',
+  columns = 3,
+  accentBreak = true,
+  className,
+}) {
   return (
-    <section className={cn(tone === 'subtle' ? 'bg-surface-muted' : 'bg-surface-white', 'py-16 lg:py-[120px]', className)}>
+    <section
+      className={cn(
+        tone === 'subtle' ? 'bg-surface-muted' : 'bg-surface-white',
+        'py-16 lg:py-[120px]',
+        className,
+      )}
+    >
       <Container width="wide" className="flex flex-col gap-10 lg:gap-12">
         {title && (
           <AccentTitle
             accent={accent}
-            accentBreak
+            accentBreak={accentBreak}
             className="max-w-[860px] text-[32px] font-medium leading-[1.12] tracking-[-1px] sm:text-[40px] lg:text-display-section"
           >
             {title}
           </AccentTitle>
         )}
-        <div className="grid grid-cols-1 gap-5 md:grid-cols-2 lg:grid-cols-3">
+        <div
+          className={cn('grid grid-cols-1 gap-5 md:grid-cols-2', columns === 3 && 'lg:grid-cols-3')}
+        >
           {cards.map((card, i) => (
             <Card key={card.title} card={card} index={i} />
           ))}

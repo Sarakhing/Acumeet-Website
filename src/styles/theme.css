@@ -178,6 +178,22 @@
   /* Used via bg-[image:var(--gradient-accent)] bg-clip-text */
   --gradient-accent: linear-gradient(90deg, #9e0059 0%, #0061ff 100%);
 
+  /* Solutions overview (03.01) + Enterprise Meeting Intelligence (03.08). Appended. */
+  --color-panel-amber: #fff8e8; /* amber tile / card tint */
+  --color-surface-night-card: #15151f; /* flow cards + nodes on night */
+  --color-surface-night-tile: #12121a; /* dark showcase tile */
+  --color-ink-on-dark-subtle: #a3a3b5;
+  --color-ink-on-dark-faint: #8e8ea0;
+  --color-accent-blue: #2185f6; /* EMI pillar accents */
+  --color-accent-purple: #6b3fd4;
+  --color-accent-green: #0e8a5f;
+  --color-accent-amber: #b7791f;
+  /* Accent phrase on dark sections ("Organisational Intelligence") */
+  --gradient-accent-dark: linear-gradient(90deg, #e580bf 0%, #73a6ff 100%);
+
+  /* Understand (03.06) + Connect (03.07). Appended. */
+  --color-panel-grey: #f6f6f8; /* Stepper "Follow Through" visual */
+
   --animate-progress: progress var(--progress-duration, 6s) linear both;
   --animate-drift: marquee var(--drift-duration, 30s) linear infinite;
 
