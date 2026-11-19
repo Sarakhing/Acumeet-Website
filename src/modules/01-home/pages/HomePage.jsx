@@ -28,6 +28,7 @@ export default function HomePage() {
       <InPracticeSection />
       <ResourcesSection />
       <CtaBand
+        size="home"
         title="Ready to Explore Acumeet?"
         lead="Discover how Acumeet can support your organisation's meeting workflows and enterprise requirements."
         primary={{ label: 'Book a Demo', to: ROUTES.bookDemo }}

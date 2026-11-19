@@ -14,7 +14,7 @@ export default function Marquee({ children, duration = 40, gap = 48, className, 
       )}
     >
       <div
-        className="flex w-max animate-marquee group-hover:[animation-play-state:paused]"
+        className="flex w-max animate-marquee group-hover:[animation-play-state:paused] motion-reduce:animate-none"
         style={{ '--marquee-duration': `${duration}s` }}
       >
         {[0, 1].map((copy) => (
