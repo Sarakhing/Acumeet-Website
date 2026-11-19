@@ -29,6 +29,7 @@ export const ROUTES = {
   support: '/support',
   pricing: '/pricing',
   company: '/company',
+  whyAcumeet: '/why-acumeet', // header mega menu (Solutions footer link)
   getStarted: '/get-started',
   bookDemo: '/get-started/book-a-demo',
   contactSales: '/get-started/contact-sales',

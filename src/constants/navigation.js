@@ -1,14 +1,5 @@
 import { ROUTES } from './routes';
 
-/** Header links — Figma "Navigation" (19:15125). */
-export const NAV_PRIMARY = [
-  { label: 'Product', to: ROUTES.products },
-  { label: 'Solutions', to: ROUTES.solutions.overview },
-  { label: 'Industries', to: ROUTES.industries },
-  { label: 'Security', to: ROUTES.security },
-  { label: 'Resources', to: ROUTES.resources },
-];
-
 export const NAV_SECONDARY = [
   { label: 'Pricing', to: ROUTES.pricing },
   { label: 'Sign in', to: ROUTES.signIn },
