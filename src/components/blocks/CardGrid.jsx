@@ -16,6 +16,8 @@ const pad = (n) => String(n).padStart(2, '0');
  * cards: [{ title, body, tint: lilac|pink|blue|mint, pattern: { type, size:'card' }, to? }]
  * columns: 3 (default, 413px cards) | 2 (Understand "✓ Card · …" 630×280, use pattern size 'card-wide').
  * accentBreak: accent on its own line (default true); false lets it wrap inline (Understand).
+ * card.span: 2 makes a card span two columns (Products 846+413 rows in a 3-col grid;
+ *   full width at md where the grid is 2 cols). Pair it with a wide pattern size.
  */
 // Hover (State 2) dot field per card pattern size.
 const DARK_DOTS = { 'card-wide': 'card-wide-dark' };
@@ -27,6 +29,7 @@ function Card({ card, index }) {
       {...(card.to ? { to: card.to } : {})}
       className={cn(
         'group relative flex min-h-[280px] flex-col gap-3.5 overflow-hidden rounded-tile p-8 transition-colors duration-300',
+        card.span === 2 && 'md:col-span-2',
         PANEL_TINTS[card.tint ?? 'lilac'],
         'hover:bg-surface-night focus-visible:bg-surface-night',
       )}
