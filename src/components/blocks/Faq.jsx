@@ -73,7 +73,7 @@ export default function Faq({ title = 'Frequently asked questions', eyebrow = 'F
         </div>
         <div className="flex min-w-0 flex-1 flex-col gap-3">
           {items.map((item, i) => (
-            <FaqItem key={item.q} {...item} open={open.has(i)} onToggle={() => toggle(i)} />
+            <FaqItem key={`${i}-${item.q}`} {...item} open={open.has(i)} onToggle={() => toggle(i)} />
           ))}
         </div>
       </Container>

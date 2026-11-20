@@ -7,7 +7,7 @@ import play from '@/assets/images/solutions/ic-play-blue-12.svg';
 import sparkleInk from '@/assets/images/solutions/ic-sparkle-ink-11.svg';
 import sparklePink from '@/assets/images/solutions/ic-sparkle-pink-14.svg';
 import sparkleBlue from '@/assets/images/solutions/ic-sparkle-blue-10.svg';
-import { AVATARS } from './people';
+import { AVATARS } from '@/components/visuals/people';
 
 const mask = {
   maskImage: `url(${chatbotMask})`,

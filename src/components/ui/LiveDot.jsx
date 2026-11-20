@@ -1,14 +1,15 @@
 import green from '@/assets/images/solutions/live-dot-green.svg';
 import magenta from '@/assets/images/solutions/live-dot-magenta.svg';
 import red from '@/assets/images/solutions/live-dot-red.svg';
+import crimson from '@/assets/images/products/live-dot-crimson-8.svg';
 import { cn } from '@/utils/cn';
 
-const SRC = { green, magenta, red };
+const SRC = { green, magenta, red, crimson };
 
 /**
  * Figma "Live dot" (8×8). In compact chips Figma drops it into a 6px slot
  * (size={6}) and lets it overflow — reproduced here. `pulse` adds the
- * pulse-dot animation.
+ * pulse-dot animation. tone: green | magenta | red | crimson (#e01c47, AI Transcription "Talk time").
  */
 export default function LiveDot({ tone = 'green', size = 8, pulse = false, className }) {
   return (

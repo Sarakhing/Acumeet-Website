@@ -9,13 +9,16 @@ import { AVATARS } from './people';
  * Figma "UI · Transcript" (Govern, 46:18915) — live transcript with speaker
  * lines and a live waveform. The last line is still being transcribed (muted).
  * lines: [{ name, time, text }]
+ * `shadow` ('mock' | 'float') and `className` let heroes float it (Meeting Capture hero).
  */
-export default function TranscriptCard({ lines = [], width = 440 }) {
+export default function TranscriptCard({ lines = [], width = 440, shadow = 'mock', className }) {
   return (
     <MockCard
       title="Transcript"
       gap={14}
       width={width}
+      shadow={shadow}
+      className={className}
       aside={
         <UiChip tone="red">
           <LiveDot tone="red" size={6} pulse />
@@ -25,17 +28,38 @@ export default function TranscriptCard({ lines = [], width = 440 }) {
     >
       {lines.map((l, i) => (
         <div key={l.time} className="flex items-start gap-2.5">
-          <img src={AVATARS[l.name]} alt="" width={26} height={26} className="size-[26px] shrink-0 rounded-[13px] object-cover" />
+          <img
+            src={AVATARS[l.name]}
+            alt=""
+            width={26}
+            height={26}
+            className="size-[26px] shrink-0 rounded-[13px] object-cover"
+          />
           <div className="flex min-w-px flex-1 flex-col gap-[3px] leading-[1.5]">
             <div className="flex items-center gap-2 whitespace-nowrap">
               <span className="text-[12px] font-medium text-ink-800">{l.name}</span>
               <span className="font-mono text-[11px] tracking-[0.44px] text-ink-500">{l.time}</span>
             </div>
-            <p className={cn('text-[13px]', i === lines.length - 1 ? 'text-ink-500' : 'text-ink-700')}>{l.text}</p>
+            <p
+              className={cn(
+                'text-[13px]',
+                i === lines.length - 1 ? 'text-ink-500' : 'text-ink-700',
+              )}
+            >
+              {l.text}
+            </p>
           </div>
         </div>
       ))}
-      <Waveform bars={56} barWidth={3} gap={4.14} height={28} color="rgb(158 0 89 / 0.35)" seed={11} />
+      {/* 3px bars on a 7.14px pitch filling the card's inner width (56 bars at 440) */}
+      <Waveform
+        bars={Math.floor((width - 40 + 4.14) / 7.14)}
+        barWidth={3}
+        gap={4.14}
+        height={28}
+        color="rgb(158 0 89 / 0.35)"
+        seed={11}
+      />
     </MockCard>
   );
 }

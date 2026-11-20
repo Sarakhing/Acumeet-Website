@@ -1,12 +1,12 @@
 import { createElement as h } from 'react';
 import { ROUTES } from '@/constants/routes';
 import IntegrationsCard from '../components/visuals/IntegrationsCard';
-import ActionItemsCard from '../components/visuals/ActionItemsCard';
-import MeetingCaptureCard from '../components/visuals/MeetingCaptureCard';
-import TranscriptCard from '../components/visuals/TranscriptCard';
-import SummaryCard from '../components/visuals/SummaryCard';
+import ActionItemsCard from '@/components/visuals/ActionItemsCard';
+import MeetingCaptureCard from '@/components/visuals/MeetingCaptureCard';
+import TranscriptCard from '@/components/visuals/TranscriptCard';
+import SummaryCard from '@/components/visuals/SummaryCard';
 import MeetingAnalyticsCard from '../components/visuals/MeetingAnalyticsCard';
-import { AVATARS } from '../components/visuals/people';
+import { AVATARS } from '@/components/visuals/people';
 import { solutionBreadcrumb } from './solutions';
 
 const faith = AVATARS['Faith Oluwale'];

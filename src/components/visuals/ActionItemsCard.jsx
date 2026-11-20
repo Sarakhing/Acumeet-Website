@@ -10,7 +10,14 @@ import { cn } from '@/utils/cn';
  * its highlighted state (grey fill, "Check loop" open checkbox).
  * tasks: [{ title, due, avatar }]
  */
-export default function ActionItemsCard({ tasks = [], open = 5, width = 400, shadow = 'float', avatarSize = 24, className }) {
+export default function ActionItemsCard({
+  tasks = [],
+  open = 5,
+  width = 400,
+  shadow = 'float',
+  avatarSize = 24,
+  className,
+}) {
   return (
     <MockCard
       title="Action items"
@@ -37,8 +44,12 @@ export default function ActionItemsCard({ tasks = [], open = 5, width = 400, sha
           ) : (
             <span className="size-4 shrink-0 rounded-[5px] border-[1.5px] border-[#c9ccd6] bg-surface-white" />
           )}
-          <span className="min-w-px flex-1 truncate text-[12px] font-medium leading-[1.5] text-ink-800">{t.title}</span>
-          <span className="whitespace-nowrap font-mono text-[11px] leading-[1.5] tracking-[0.44px] text-ink-500">{t.due}</span>
+          <span className="min-w-px flex-1 truncate text-[12px] font-medium leading-[1.5] text-ink-800">
+            {t.title}
+          </span>
+          <span className="whitespace-nowrap font-mono text-[11px] leading-[1.5] tracking-[0.44px] text-ink-500">
+            {t.due}
+          </span>
           <img
             src={t.avatar}
             alt=""

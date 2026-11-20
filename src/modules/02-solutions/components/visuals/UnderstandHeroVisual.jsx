@@ -1,6 +1,6 @@
-import ActionItemsCard from './ActionItemsCard';
+import ActionItemsCard from '@/components/visuals/ActionItemsCard';
 import MeetingAnalyticsCard from './MeetingAnalyticsCard';
-import { AVATARS } from './people';
+import { AVATARS } from '@/components/visuals/people';
 
 /**
  * Understand hero composition (Figma 46:19099): "UI · Analytics" (440) with

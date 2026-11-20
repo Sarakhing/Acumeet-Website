@@ -3,6 +3,7 @@ import SiteLayout from '@/layouts/SiteLayout';
 import ComingSoon from '@/modules/placeholder/ComingSoon';
 import { homeRoutes } from '@/modules/01-home';
 import { solutionsRoutes } from '@/modules/02-solutions';
+import { productsRoutes } from '@/modules/03-products';
 
 /**
  * Each Figma section is a module exporting its own lazy routes.
@@ -11,6 +12,11 @@ import { solutionsRoutes } from '@/modules/02-solutions';
 export const router = createBrowserRouter([
   {
     element: <SiteLayout />,
-    children: [...homeRoutes, ...solutionsRoutes, { path: '*', element: <ComingSoon /> }],
+    children: [
+      ...homeRoutes,
+      ...solutionsRoutes,
+      ...productsRoutes,
+      { path: '*', element: <ComingSoon /> },
+    ],
   },
 ]);

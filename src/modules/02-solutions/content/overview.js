@@ -26,7 +26,7 @@ import WorkspaceAccessCard from '../components/visuals/WorkspaceAccessCard';
 import RetentionPolicyCard from '../components/visuals/RetentionPolicyCard';
 import MeetingAnalyticsCard from '../components/visuals/MeetingAnalyticsCard';
 import OverviewDecisionsCard from '../components/visuals/OverviewDecisionsCard';
-import ActionItemsCard from '../components/visuals/ActionItemsCard';
+import ActionItemsCard from '@/components/visuals/ActionItemsCard';
 import MeetingRecordCard from '../components/visuals/MeetingRecordCard';
 import { SOLUTIONS } from './solutions';
 

@@ -101,7 +101,7 @@ Same as before. `lead={null}` drops the sub-line and `secondary={null}` gives a 
 - `components/ui`: `AccentTitle`, `ScaleToFit` (`width` = design px), `AppWindow` (`variant="chrome"` with traffic lights and a grey body, or `"titled"` with a title bar and `status` pill; `flushBottom`), `MockCard` ("UI · …" white card: `title`, `aside`, `gap`, `width`, `shadow`), `UiChip` (mock chips: `tone`, `shape`, `mono`; `tone="token"` for `[PERSON_NAME]`), `LiveDot`, `FloatChip`, `IconTile`, `DotEyebrow`, `AutoAdvanceTimer`.
 - `components/patterns`: `Rings`, `DotGrid` (an asset with `size`, or a CSS field with `tone`/`fade` without it), `Hairlines`, `WaveDrift` (animated), and `Pattern` (data switch).
 - `hooks`: `useAutoAdvance`, `usePrefersReducedMotion`.
-- Product mock-ups live in `modules/02-solutions/components/visuals/` (`RedactionReview`, `AuditLogCard`, `WorkspaceAccessCard`, `RetentionPolicyCard`, `KeysStorageCard`, `RolePermissionsWindow`, `EncryptionWindow`, `AuditTimelineWindow`, `ProtectHeroVisual`). Add new ones there and keep them fixed-size.
+- Product mock-ups live in `modules/02-solutions/components/visuals/` (cards shared with Products moved to `src/components/visuals/`, see "Products template" below; `RedactionReview`, `AuditLogCard`, `WorkspaceAccessCard`, `RetentionPolicyCard`, `KeysStorageCard`, `RolePermissionsWindow`, `EncryptionWindow`, `AuditTimelineWindow`, `ProtectHeroVisual`). Add new ones there and keep them fixed-size.
 - Assets: `src/assets/images/solutions/`. Figma patterns, icons and avatars are named `<use>-<w>x<h>.svg`.
 
 ### Not yet built (seen on other Solutions pages)
@@ -191,3 +191,33 @@ Verified against Understand `46:19376` and Connect `46:19702`: on both pages Fig
 - `Editorial`: `cta.size` (`'md'` default, `'lg'` for Connect's 43px buttons).
 - `SolutionHero` (`rings`): `secondaryStyle: 'button'` (default pill) | `'link'` (Connect "Talk to Our Team →", white, top-aligned with the button).
 - Visuals: `SummaryCard`, `DecisionsCard`, `AtlasChatCard` (24px Atlas avatar inline), `KnowledgeSearchCard`, `IntegrationsCard` (logo chips, `muted` items), `MeetingCaptureCard` ("Upcoming meetings", first row recording), `UnderstandHeroVisual`. Understand/Connect reuse `TranscriptCard`, `ActionItemsCard` (`avatarSize={20}`, as in Figma) and `MeetingAnalyticsCard` (`range="Last 30 days"`, 440 → `barWidth 30 / barPitch 40`, 460 → `32 / 42`).
+
+---
+
+## Products template (02.02 Meeting Capture, 02.03 AI Transcription)
+Figma section "03. Products" (`46:30442`). Module: `src/modules/03-products/` — `index.js` (`productsRoutes`, TODOs with Figma ids for the overview + 8 remaining pages), `content/products.js`, `content/<slug>.js`, `pages/<Name>Page.jsx`, `components/FeatureSplit.jsx`, `components/visuals/`.
+Routes: `ROUTES.product.<key>` (`overview`, `meetingCapture`, `aiTranscription`, `aiMeetingSummaries`, `actionItemManagement`, `speakerRecognition`, `aiRedaction`, `atlas`, `meetingIntelligence`, `knowledgeRepository`, `analytics`). `ROUTES.products` is still the overview string.
+
+### Recipe (a product page = these blocks, in Figma order)
+1. `<Breadcrumb items={productBreadcrumb('AI Transcription')} />` — Home / Product overview / page.
+2. Hero, one of:
+   - **wash** (02.02, 02.04, 02.05, 02.09…): `SolutionHero` with `eyebrow: 'Product · X'`, `eyebrowStyle: 'chip'`, `title` + `accent` (last word/phrase), `primary` (Book a Demo), `secondary` link (Explore Acumeet →), `visual` = a fixed-size composition in `components/visuals/<X>HeroVisual.jsx` (copy 600 wide at y=140; visual column origin = 1440-frame x 700, y 64 → place cards at Figma x−700, y−64; add ~64px bottom room for shadows) and `padBottom` to hit the Figma hero height (02.02: canvas 700 + `padBottom: 36` = 800).
+   - **rings** (02.03, 02.06, 02.08, 02.11): `variant: 'rings'`, `secondaryStyle: 'link'`, with `<HeroCarousel slides={…} />` as children (spec "✓ Hero carousel · 02.0X · …", 560px cards).
+3. Body blocks, any order per Figma: `Explorer` ("Tabs explorer" + "✓ Explorer · …", 780×520 panels), `FeatureSplit` (= `Split` + 656×480 `VisualPanel` from `{ visual: { tint, pattern, content } }`; products use `size: 'standard'` = 40px title / 17px body), `Stepper` ("✓ Stepper · …"), `CardGrid` ("Benefits" + "✓ Card · …"), `Statement`, `Editorial` ("03 · rows"), `Chapters`.
+4. `<Faq items={…} defaultOpen="all" />` (`title` varies: "Frequently asked questions" / "FAQs").
+5. `<RelatedRow {...exploreMore([...4 product keys])} />` — title "Explore the platform" → overview. Thumbnails are **positional** in every product row (lilac rings, pink dots, blue waveform, mint hairlines), `relatedProducts()` assigns them. Pass `exploreMore(keys, { eyebrow: 'Keep exploring' })` on pages where Figma shows the overline (02.04, 02.05, 02.09, 02.10, 02.11); 02.02/02.03 hide it.
+6. `<CtaBand title lead primary secondary />` (`secondary: null` for a single button, e.g. 02.03).
+
+### Block options added for Products (defaults unchanged)
+- `Stepper`: `accentBreak` (default `true`; products use `false` — "Why Meeting Capture **Matters**", "How Acumeet AI Meeting **Transcription Works**"). `body` is now optional: 02.02 uses sentence-length `label`s with no body, the panel then shows number + title only, and below `md` the track collapses to the four numbered dots (labels kept as `sr-only`). Labels are capped at Figma's 260px.
+- `Statement`: `tone="subtle"` (#fafafb, 52px ink title + gradient `accent`, 19px `ink-700` body, py-140) and `pattern="waveform"` (full-bleed magenta 4% bars, tiled from `WAVEFORM.panel`). 02.03 "Built for Business and Enterprise Meetings".
+- `Faq`: keys include the index (Figma 02.02 repeats a question).
+- `LiveDot`: `tone="crimson"` (#e01c47, `assets/images/products/live-dot-crimson-8.svg`).
+- `CardGrid` needs nothing new for 2-up benefit cards (`columns: 2`, pattern size `card-wide`). Note: later pages (02.05–02.11) use a mixed bento (846 + 413, then 3×413 cards, specs "✓ Card · …" 846×280 / 413×280) — that layout is **not built yet**; extend `CardGrid` additively (e.g. per-card `span`).
+
+### Shared visuals (`src/components/visuals/`)
+Moved from `modules/02-solutions/components/visuals/` (Solutions imports updated): `MeetingCaptureCard`, `TranscriptCard`, `SummaryCard`, `ActionItemsCard`, `KnowledgeSearchCard`, `people.js` (`AVATARS`). Additive props:
+- `MeetingCaptureCard`: `title` ("Zoom meetings", "Recent uploads"), `liveLabel` ("Processing"), `idleLabel` ("Transcribed"), `shadow`, `className`. The first row is always the live (pink, red chip) row.
+- `TranscriptCard`: `shadow`, `className`; the waveform bar count now follows `width` (56 bars at 440, as before).
+Product-only visuals (`modules/03-products/components/visuals/`): `MeetingCaptureHeroVisual` (02.02 hero), `TalkTimeCard` ("UI · Speaker talk time": `duration`, `speakers: [{ name, share, tone }]` — reuse it on Speaker Recognition 02.06).
+If another product needs a visual from `02-solutions` (e.g. `MeetingAnalyticsCard`, `DecisionsCard`, `AtlasChatCard`, `RedactionReview`, `IntegrationsCard`), move it to `src/components/visuals/` the same way.

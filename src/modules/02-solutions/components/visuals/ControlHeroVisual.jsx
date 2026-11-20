@@ -4,7 +4,7 @@ import sarah from '@/assets/images/solutions/avatar-task-sarah.jpg';
 import daniel from '@/assets/images/solutions/avatar-task-daniel.jpg';
 import rachel from '@/assets/images/solutions/avatar-task-rachel.jpg';
 import KeysStorageCard from './KeysStorageCard';
-import ActionItemsCard from './ActionItemsCard';
+import ActionItemsCard from '@/components/visuals/ActionItemsCard';
 
 /**
  * Control hero composition (Figma 46:16982): "UI · Keys & storage" with the

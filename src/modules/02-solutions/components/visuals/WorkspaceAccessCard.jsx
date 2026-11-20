@@ -1,6 +1,6 @@
 import MockCard from '@/components/ui/MockCard';
 import UiChip from '@/components/ui/UiChip';
-import { AVATARS } from './people';
+import { AVATARS } from '@/components/visuals/people';
 
 /** Figma "UI · Access" — workspace members with role dropdown chips. members: [{ name, role }] */
 export default function WorkspaceAccessCard({ members = [], width = 480 }) {

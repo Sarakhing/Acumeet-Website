@@ -9,13 +9,26 @@ import { cn } from '@/utils/cn';
  * first meeting is being recorded (pink row, magenta bar, red "Recording"
  * chip); the rest show "Acumeet joins".
  * meetings: [{ title, meta }]
+ * Products reuse it with other copy: `title` ("Zoom meetings", "Recent uploads"),
+ * `date` ("This week"), `liveLabel` ("Processing") and `idleLabel` ("Transcribed").
  */
-export default function MeetingCaptureCard({ date, meetings = [], width = 560 }) {
+export default function MeetingCaptureCard({
+  title = 'Upcoming meetings',
+  date,
+  meetings = [],
+  width = 560,
+  liveLabel = 'Recording',
+  idleLabel = 'Acumeet joins',
+  shadow = 'mock',
+  className,
+}) {
   return (
     <MockCard
-      title="Upcoming meetings"
+      title={title}
       gap={10}
       width={width}
+      shadow={shadow}
+      className={className}
       aside={
         <span className="whitespace-nowrap font-mono text-[11px] leading-[1.5] tracking-[0.44px] text-ink-500">
           {date}
@@ -45,10 +58,10 @@ export default function MeetingCaptureCard({ date, meetings = [], width = 560 })
             {live ? (
               <UiChip tone="red">
                 <LiveDot tone="red" size={6} pulse />
-                Recording
+                {liveLabel}
               </UiChip>
             ) : (
-              <UiChip tone="neutral">Acumeet joins</UiChip>
+              <UiChip tone="neutral">{idleLabel}</UiChip>
             )}
           </div>
         );

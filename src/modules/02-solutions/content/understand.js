@@ -1,13 +1,13 @@
 import { createElement as h } from 'react';
 import { ROUTES } from '@/constants/routes';
 import UnderstandHeroVisual from '../components/visuals/UnderstandHeroVisual';
-import TranscriptCard from '../components/visuals/TranscriptCard';
-import ActionItemsCard from '../components/visuals/ActionItemsCard';
+import TranscriptCard from '@/components/visuals/TranscriptCard';
+import ActionItemsCard from '@/components/visuals/ActionItemsCard';
 import AtlasChatCard from '../components/visuals/AtlasChatCard';
-import SummaryCard from '../components/visuals/SummaryCard';
+import SummaryCard from '@/components/visuals/SummaryCard';
 import DecisionsCard from '../components/visuals/DecisionsCard';
-import KnowledgeSearchCard from '../components/visuals/KnowledgeSearchCard';
-import { AVATARS } from '../components/visuals/people';
+import KnowledgeSearchCard from '@/components/visuals/KnowledgeSearchCard';
+import { AVATARS } from '@/components/visuals/people';
 import { SOLUTIONS, solutionBreadcrumb } from './solutions';
 
 const faith = AVATARS['Faith Oluwale'];

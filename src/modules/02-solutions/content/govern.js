@@ -1,7 +1,7 @@
 import { createElement as h } from 'react';
 import { ROUTES } from '@/constants/routes';
 import GovernHeroVisual from '../components/visuals/GovernHeroVisual';
-import TranscriptCard from '../components/visuals/TranscriptCard';
+import TranscriptCard from '@/components/visuals/TranscriptCard';
 import AuditLogCard from '../components/visuals/AuditLogCard';
 import RedactionReview from '../components/visuals/RedactionReview';
 import { SOLUTIONS, solutionBreadcrumb } from './solutions';
