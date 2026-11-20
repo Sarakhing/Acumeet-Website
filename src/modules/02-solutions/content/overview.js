@@ -19,15 +19,15 @@ import taskAvatar1 from '@/assets/images/home/industries-avatar-1.jpg';
 import taskAvatar2 from '@/assets/images/home/industries-avatar-4.jpg';
 import taskAvatar3 from '@/assets/images/home/industries-avatar-3.jpg';
 import OverviewHeroVisual from '../components/visuals/OverviewHeroVisual';
-import RedactionReview from '../components/visuals/RedactionReview';
+import RedactionReview from '@/components/visuals/RedactionReview';
 import KeysStorageCard from '../components/visuals/KeysStorageCard';
 import OverviewIntegrationsCard from '../components/visuals/OverviewIntegrationsCard';
 import WorkspaceAccessCard from '../components/visuals/WorkspaceAccessCard';
 import RetentionPolicyCard from '../components/visuals/RetentionPolicyCard';
-import MeetingAnalyticsCard from '../components/visuals/MeetingAnalyticsCard';
+import MeetingAnalyticsCard from '@/components/visuals/MeetingAnalyticsCard';
 import OverviewDecisionsCard from '../components/visuals/OverviewDecisionsCard';
 import ActionItemsCard from '@/components/visuals/ActionItemsCard';
-import MeetingRecordCard from '../components/visuals/MeetingRecordCard';
+import MeetingRecordCard from '@/components/visuals/MeetingRecordCard';
 import { SOLUTIONS } from './solutions';
 
 /* ------------------------------------------------------------------ */

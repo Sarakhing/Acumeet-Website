@@ -1,7 +1,7 @@
 import AppWindow from '@/components/ui/AppWindow';
 import FloatChip from '@/components/ui/FloatChip';
 import AuditLogCard from './AuditLogCard';
-import RedactionReview from './RedactionReview';
+import RedactionReview from '@/components/visuals/RedactionReview';
 
 /**
  * Protect hero composition (Figma 46:14211): App window with redaction review,

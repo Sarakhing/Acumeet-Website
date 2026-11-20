@@ -1,6 +1,6 @@
 import { createElement as h } from 'react';
 import { ROUTES } from '@/constants/routes';
-import RedactionReview from '../components/visuals/RedactionReview';
+import RedactionReview from '@/components/visuals/RedactionReview';
 import WorkspaceAccessCard from '../components/visuals/WorkspaceAccessCard';
 import RetentionPolicyCard from '../components/visuals/RetentionPolicyCard';
 import AuditLogCard from '../components/visuals/AuditLogCard';

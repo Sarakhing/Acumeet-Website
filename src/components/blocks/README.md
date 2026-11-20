@@ -220,4 +220,4 @@ Moved from `modules/02-solutions/components/visuals/` (Solutions imports updated
 - `MeetingCaptureCard`: `title` ("Zoom meetings", "Recent uploads"), `liveLabel` ("Processing"), `idleLabel` ("Transcribed"), `shadow`, `className`. The first row is always the live (pink, red chip) row.
 - `TranscriptCard`: `shadow`, `className`; the waveform bar count now follows `width` (56 bars at 440, as before).
 Product-only visuals (`modules/03-products/components/visuals/`): `MeetingCaptureHeroVisual` (02.02 hero), `TalkTimeCard` ("UI · Speaker talk time": `duration`, `speakers: [{ name, share, tone }]` — reuse it on Speaker Recognition 02.06).
-If another product needs a visual from `02-solutions` (e.g. `MeetingAnalyticsCard`, `DecisionsCard`, `AtlasChatCard`, `RedactionReview`, `IntegrationsCard`), move it to `src/components/visuals/` the same way.
+Also moved (before Products phase 2): `MeetingAnalyticsCard`, `DecisionsCard`, `AtlasChatCard`, `RedactionReview`, `IntegrationsCard`, `AtlasAvatar`, `MeetingRecordCard`. If another product needs a visual from `02-solutions`, move it to `src/components/visuals/` the same way.

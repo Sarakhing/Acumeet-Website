@@ -1,4 +1,4 @@
-import MeetingAnalyticsCard from './MeetingAnalyticsCard';
+import MeetingAnalyticsCard from '@/components/visuals/MeetingAnalyticsCard';
 import EmiMeetingCaptureCard from './EmiMeetingCaptureCard';
 
 /**

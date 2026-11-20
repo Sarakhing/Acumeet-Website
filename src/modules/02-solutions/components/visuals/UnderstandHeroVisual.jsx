@@ -1,5 +1,5 @@
 import ActionItemsCard from '@/components/visuals/ActionItemsCard';
-import MeetingAnalyticsCard from './MeetingAnalyticsCard';
+import MeetingAnalyticsCard from '@/components/visuals/MeetingAnalyticsCard';
 import { AVATARS } from '@/components/visuals/people';
 
 /**

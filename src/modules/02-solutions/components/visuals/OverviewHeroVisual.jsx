@@ -1,7 +1,7 @@
 import keyMagenta from '@/assets/images/solutions/ic-key-magenta-18.svg';
 import databaseBlue from '@/assets/images/solutions/ic-database-blue-18.svg';
 import KeysStorageCard from './KeysStorageCard';
-import RedactionReview from './RedactionReview';
+import RedactionReview from '@/components/visuals/RedactionReview';
 import AuditLogCard from './AuditLogCard';
 
 /**
