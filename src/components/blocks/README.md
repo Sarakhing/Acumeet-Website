@@ -221,3 +221,59 @@ Moved from `modules/02-solutions/components/visuals/` (Solutions imports updated
 - `TranscriptCard`: `shadow`, `className`; the waveform bar count now follows `width` (56 bars at 440, as before).
 Product-only visuals (`modules/03-products/components/visuals/`): `MeetingCaptureHeroVisual` (02.02 hero), `TalkTimeCard` ("UI · Speaker talk time": `duration`, `speakers: [{ name, share, tone }]` — reuse it on Speaker Recognition 02.06).
 Also moved (before Products phase 2): `MeetingAnalyticsCard`, `DecisionsCard`, `AtlasChatCard`, `RedactionReview`, `IntegrationsCard`, `AtlasAvatar`, `MeetingRecordCard`. If another product needs a visual from `02-solutions`, move it to `src/components/visuals/` the same way.
+
+---
+
+## Added for AI Redaction (02.07) and Atlas (02.08)
+All additive; defaults unchanged.
+- `SolutionHero` `variant="centered"` (02.07 hero `46:40051`): light wash with the same two glows, centred white chip eyebrow, 60px title, 700px lead, primary + outlined secondary button, then `visual` full width (`visualWidth`, scaled) over a 360px dot band. Optional `visualCompact` + `visualCompactWidth` (520) replace `visual` below `md` (phones get just the redaction card). Give the `visual` canvas ~60px bottom shadow room (lg bottom padding is 20).
+- `NumberedGrid` `size="compact"`: 40px title, 40px gap, py-112 (02.07 "How AI Redaction Works"). Items without `title` render the 16px ink body, as before.
+- `Split` `bulletStyle="dot"`: 6px magenta rounded marker, 15px `ink-800` text, 16px between items (02.08 "Ask Questions Naturally").
+- `AtlasChatCard` `scope` (default `'All meetings'`): header chip + composer filter label (`'Account'` on the 02.08 split).
+- 02.07 uses `CardGrid` `span: 2` with `pattern: { type:'rings', size:'card-wide' }` for the 846px card (no 846×280 asset exists; the 630 rings anchor top-right, so it matches). The dark financial split is `Split tone="dark"` + `VisualPanel` 664×500 `tint:'night'`, `{ type:'dots', size:'chapters' }` and a blue glow, CTA `intent:'ghost-light'`.
+- Product-only: `modules/03-products/components/AtlasCapabilityGrid.jsx` (02.08 "What you can do with Atlas", 7 icon cards 4+3, first card in the highlighted blue state; icons `assets/images/products/atlas-*-24x24.svg` / `-29x29.svg`), `components/visuals/RedactionHeroVisual.jsx` (+ `RedactionHeroVisualCompact`). 02.07 imports `RetentionPolicyCard` straight from `modules/02-solutions/components/visuals/`.
+
+---
+
+## Added for 02.09 Meeting Intelligence, 02.10 Knowledge Repository, 02.11 Analytics
+Pages: `MeetingIntelligencePage`, `KnowledgeRepositoryPage`, `AnalyticsPage` (+ `content/{meeting-intelligence,knowledge-repository,analytics}.js`). All options below are additive, defaults unchanged.
+- `Editorial`: `bullets: string[]` — 6px magenta marker + 15px ink-800 lines after the paragraphs ("Example: …" / "Business value: …"). Product rows use `cta.size: 'lg'` (43px buttons).
+- `Split`: `size: 'chapter'` (Chapter-style rows: 38px title, 16px body, wide layout) and `bulletStyle: 'tick'` (green ✓, 15px ink-700, 16px apart — 02.09) | `'none'` (no marker, same text — 02.10 where Figma hides the ✓). `bulletStyle: 'dot'` (added by Atlas) is used on the dark 02.09/02.10 splits with `cta.intent: 'ghost-light'`.
+- `SolutionHero` (wash): `titleSize: 46` (02.10, 3-line title in a 580 copy column; pass `copyWidth: 580`, `copyTop: 56`).
+- `RelatedRow`: `title={null}` hides the h2 (02.10 shows only the "Keep exploring" overline).
+- `Faq`: `waveform={false}` hides the waveform under the title (02.10).
+- `CardGrid` bento: span-2 cards use pattern `{ type: 'rings', size: 'card-span' }` (new `RINGS['card-span']`, 846×280, `assets/images/products/card-span-rings-846x280.svg`, anchored right top). Their hover state falls back to the CSS dark dot field (no 846 dark-dot asset in Figma).
+- Visuals: `SummaryCard` and `KnowledgeSearchCard` take `shadow` ('mock' | 'float') and `className`. New product visuals: `IntelligenceHeroVisual` (02.09 hero, 665×591), `KnowledgeHeroVisual` (02.10 hero, 660×650).
+- 02.10's dark split uses `Split` directly with a 664×500 `VisualPanel` (night, blue glow, `dots/chapters`) since `FeatureSplit` only builds 656×480 panels. 02.11 "Understand Participation and Engagement" is a one-chapter dark `Chapters` (`glow: 'blue'`).
+
+---
+
+## Added for Product overview (02.01)
+Page: `modules/03-products/pages/ProductOverviewPage.jsx` + `content/overview.js` (Figma `46:30443`).
+
+### ProductStage (new)
+Figma stages "03 · Capture" … "07 · Remember" (`46:31818`, `46:32821`, `46:34526`, `46:34588`). Stage header (light magenta 96px number, 40px title, hairline rule; the hidden "Stage 0N" overline is not rendered) and rows of tiles. Row lg columns follow tile `width` (760/496, 628/628); equal 2-up rows stay 2-up on md, others stack.
+`id`, `number`, `title`, `tone: white | muted`, `rows: [[tile]]`.
+Tile (`StageTile`, exported): `{ id, width, layout: 'stack' | 'split', reverse?, copyWidth? (split, 520), tint, eyebrow, title, titleSize: 26 | 24 (stack), titleWidth?, body, bodyWidth?, link: { label, to }, visual }`.
+- `stack`: visual on top (lg height = `visual.height`), copy bottom-aligned (36/28 padding, 15px body).
+- `split`: copy column (34px title, 17px body) beside the visual; `reverse` puts the visual left on lg. Below lg: copy first, then the scaled visual.
+- `tint`: `white` (bordered) | `lilac` | `lilac-deep` (#efeafb) | `pink` | `blue` | `mint` | `amber` | `amber-deep` (#fff6de) | `night` (#0b0b12) | `night-card` (#15151f); the last two use light copy.
+- `visual` is the Showcase tile canvas (`{ width, height, pattern?, glow?, content, x, y }`); `Showcase.jsx` now also exports `TileVisual`.
+
+### Additive options (defaults unchanged)
+- `ActionItemsCard`: `sync={['Jira','Asana','Trello']}` replaces the "Synced to Jira and Asana" footer with Figma's "Sync tasks to" logo chips (`assets/images/products/logo-trello-14x14.svg`).
+- Product-only (module) pieces: `components/ProductsOverviewHero.jsx` (centred light hero; full composition from sm, summary + Atlas prompt on phones), `components/ProductsOverviewSections.jsx` (`ProductsIndexNav`, `ProductsWorkspaceSection`, `ProductsPlatformCards`), visuals `ProductsOverviewHeroVisual` (1248×444, exports `ProductsAtlasPrompt`) and `ProductsWorkspaceWindow` (1120×638 "Meeting details" app window).
+
+---
+
+## Added for AI Meeting Summaries (02.04), Action Item Management (02.05) and Speaker Recognition (02.06)
+Pages: `modules/03-products/pages/{AiMeetingSummaries,ActionItemManagement,SpeakerRecognition}Page.jsx` + `content/{ai-meeting-summaries,action-item-management,speaker-recognition}.js`. Bento benefit rows (846 + 413, then 3 × 413) use `CardGrid` with `span: 2` on the first card and pattern size `card-wide` (rings anchor top-right, so the 630 asset reads correctly in the 846 card).
+
+### Additive options (defaults unchanged)
+- `Stepper`: 5 steps supported — with `steps.length === 5` the md+ track is 5 columns (02.04 "How It Works").
+- `Statement`:
+  - `tone="white"`: the `subtle` typography (52px ink title + gradient accent, 19px body) on a white section, py-112 (02.05 "02 · Overview" 46:39819).
+  - `accent` now also renders on `tone="dark"` / `"light"` (gradient across the heading box, like `AccentTitle`) — 02.04 "Designed for Business **Meetings**". Without `accent` nothing changes.
+  - `bodyWidth` (default 780; 02.05 uses 1000), `cta: { label, to }` (blue Button under the copy), `waveform` (260×36 magenta bars, Figma "Waveform · Live · bars 260×36").
+- New product visuals (`modules/03-products/components/visuals/`): `SummariesHeroVisual` (02.04 hero, 665×611 canvas, `padBottom: 46`), `ActionItemsHeroVisual` (02.05 hero, 665×722 canvas, `padBottom: 0`; Figma places the Atlas card 24px into the copy gutter at x=676 — here it starts at the column edge so ScaleToFit doesn't clip it).
+- 02.06 reuses `TalkTimeCard` (hero carousel 560, explorer 480, stepper 440), `TranscriptCard`, `MeetingAnalyticsCard` (`width: 560, barWidth: 42, barPitch: 52`), `SummaryCard`, `DecisionsCard`.

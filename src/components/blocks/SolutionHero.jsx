@@ -37,6 +37,7 @@ const HERO_TITLE_SIZES = {
   hero: 'lg:text-display-hero',
   58: 'lg:text-[58px] lg:tracking-[-1.74px]',
   54: 'lg:text-[54px] lg:tracking-[-1.62px]',
+  46: 'lg:text-[46px] lg:tracking-[-1.38px]', // Knowledge Repository (02.10)
 };
 
 /* ------------------------------------------------------------------ */
@@ -259,9 +260,93 @@ function RingsHero({
   );
 }
 
+/* ------------------------------------------------------------------ */
+/* variant="centered" — light gradient wash, centred copy, wide visual below (Products 02.07) */
+/* ------------------------------------------------------------------ */
+function CenteredWashHero({
+  eyebrow,
+  title,
+  accent,
+  lead,
+  primary,
+  secondary,
+  visual,
+  visualWidth,
+  visualCompact,
+  visualCompactWidth = 520,
+}) {
+  return (
+    <section className="relative overflow-hidden bg-[#fbfbfd]">
+      {/* Pattern · glow ×2 (centres at 1440-frame x 288 / 1224, y 180) */}
+      <div
+        aria-hidden="true"
+        className="pointer-events-none absolute inset-0"
+        style={{
+          backgroundImage:
+            'radial-gradient(648px 585px at calc(50% - 432px) 180px, rgb(204 219 255 / 0.95), rgb(255 255 255 / 0) 100%), radial-gradient(576px 540px at calc(50% + 504px) 180px, rgb(252 214 235 / 0.85), rgb(255 255 255 / 0) 100%)',
+        }}
+      />
+      {/* Pattern · dot grid — 360px band behind the visual. The `visual` canvas carries ~60px of bottom shadow room (Figma pb 80 = 20 + 60). */}
+      <DotGrid fade="edges" className="top-auto bottom-[31px] h-[360px]" />
+
+      <Container
+        width="wide"
+        className="relative flex flex-col items-center gap-12 pb-8 pt-12 sm:pt-16 lg:gap-16 lg:pb-5 lg:pt-24"
+      >
+        <div className="flex max-w-[960px] flex-col items-center gap-[22px] text-center">
+          {eyebrow && (
+            <p className="w-fit rounded-pill border border-border-muted bg-surface-white px-2.5 py-1 font-mono text-overline font-medium tracking-[0.44px] text-brand-magenta uppercase">
+              {eyebrow}
+            </p>
+          )}
+          <AccentTitle
+            as="h1"
+            accent={accent}
+            className="text-[38px] font-medium leading-[1.04] tracking-[-1.2px] sm:text-[48px] lg:text-[60px] lg:tracking-[-1.8px]"
+          >
+            {title}
+          </AccentTitle>
+          {lead && (
+            <p className="max-w-[700px] text-[17px] leading-[1.35] tracking-[-0.18px] text-ink-700 sm:text-[18px]">
+              {lead}
+            </p>
+          )}
+          {(primary || secondary) && (
+            <div className="flex flex-wrap items-center justify-center gap-3">
+              {primary && <Button to={primary.to}>{primary.label}</Button>}
+              {secondary && (
+                <Button to={secondary.to} intent="secondary">
+                  {secondary.label}
+                </Button>
+              )}
+            </div>
+          )}
+        </div>
+        {visual && (
+          <div className={cn('w-full min-w-0', visualCompact && 'hidden md:block')}>
+            <ScaleToFit width={visualWidth} align="center">
+              {visual}
+            </ScaleToFit>
+          </div>
+        )}
+        {/* Optional simpler composition for phones, where the wide canvas would scale too small */}
+        {visualCompact && (
+          <div className="w-full min-w-0 md:hidden">
+            <ScaleToFit width={visualCompactWidth} align="center">
+              {visualCompact}
+            </ScaleToFit>
+          </div>
+        )}
+      </Container>
+    </section>
+  );
+}
+
 /**
  * Solutions hero.
  * variant: 'wash' (light, copy left + `visual` right) | 'rings' (dark, centred, `children` = HeroCarousel)
+ *   | 'centered' (light wash, centred chip/title/lead/2 buttons, `visual` full width below; AI Redaction 02.07;
+ *     optional `visualCompact` / `visualCompactWidth` replace `visual` below md)
  * wash-only options (all optional, defaults = Protect): pattern 'dots' | 'hairlines' (Control),
  *   eyebrowStyle 'plain' | 'chip' (Govern), secondaryStyle 'link' | 'button' (Control),
  *   visualAlign 'start' | 'end', copyTop (lg copy offset, 76), padBottom (lg bottom padding, 111).
@@ -270,5 +355,6 @@ function RingsHero({
  */
 export default function SolutionHero({ variant = 'wash', visualWidth = 665, ...props }) {
   if (variant === 'rings') return <RingsHero {...props} />;
+  if (variant === 'centered') return <CenteredWashHero visualWidth={visualWidth} {...props} />;
   return <WashHero visualWidth={visualWidth} {...props} />;
 }

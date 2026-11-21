@@ -1,6 +1,8 @@
+import Button from '@/components/ui/Button';
 import Container from '@/components/ui/Container';
 import Eyebrow from '@/components/ui/Eyebrow';
 import DotGrid from '@/components/patterns/DotGrid';
+import Waveform from '@/components/patterns/Waveform';
 import AccentTitle from '@/components/ui/AccentTitle';
 import { WAVEFORM } from '@/components/patterns/patternAssets';
 import glowBlue from '@/assets/images/solutions/statement-glow-blue.svg';
@@ -15,6 +17,9 @@ import { cn } from '@/utils/cn';
  * paragraphs: string[]; accent: gradient phrase after the title (inline).
  * pattern="waveform": full-bleed magenta 4% bar field behind the copy (Figma "Pattern · waveform", 5px bars),
  *   tiled from the 656×480 panel waveform at 1/3 opacity (its bars are 12%).
+ * tone="white": as subtle on a white bg, py-112 (Action Item Management "02 · Overview" 46:39819).
+ * accent also renders (gradient) on tone="dark"/"light" when given (AI Meeting Summaries 46:35710).
+ * bodyWidth (default 780), cta: { label, to } (blue button), waveform: true = 260×36 magenta bars below.
  */
 export default function Statement({
   tone = 'dark',
@@ -24,17 +29,22 @@ export default function Statement({
   paragraphs = [],
   glows = true,
   pattern,
+  bodyWidth = 780,
+  cta,
+  waveform = false,
   className,
 }) {
   const dark = tone === 'dark';
-  const subtle = tone === 'subtle';
+  const white = tone === 'white';
+  const subtle = tone === 'subtle' || white;
   const big = dark || subtle;
   return (
     <section
       className={cn(
         'relative overflow-hidden',
         dark && 'bg-surface-night py-20 lg:py-[140px]',
-        subtle && 'bg-[#fafafb] py-20 lg:py-[140px]',
+        subtle && !white && 'bg-[#fafafb] py-20 lg:py-[140px]',
+        white && 'bg-surface-white py-20 lg:py-28',
         !big && 'bg-surface-white py-16 lg:py-[104px]',
         className,
       )}
@@ -90,17 +100,26 @@ export default function Statement({
           <h2
             className={cn(
               'text-balance font-medium leading-[1.12] lg:text-wrap',
+              accent && 'bg-[image:var(--gradient-accent)] bg-clip-text',
               dark
                 ? 'max-w-[1000px] text-[32px] tracking-[-0.9px] text-ink-on-dark sm:text-[42px] lg:text-[52px] lg:tracking-[-1.56px]'
                 : 'max-w-[920px] text-[30px] tracking-[-0.9px] text-ink-900 sm:text-[38px] lg:text-[46px] lg:tracking-[-1.15px]',
             )}
           >
-            {title}
+            {accent ? <span>{title}</span> : title}
+            {accent && (
+              <>
+                {' '}
+                {/* like AccentTitle, the gradient spans the whole heading box */}
+                <span className="text-transparent">{accent}</span>
+              </>
+            )}
           </h2>
         )}
         {paragraphs.map((p) => (
           <p
             key={p}
+            style={bodyWidth === 780 ? undefined : { maxWidth: bodyWidth }}
             className={cn(
               'max-w-[780px]',
               big
@@ -114,6 +133,17 @@ export default function Statement({
             {p}
           </p>
         ))}
+        {cta && <Button to={cta.to}>{cta.label}</Button>}
+        {waveform && (
+          <Waveform
+            bars={36}
+            barWidth={3}
+            gap={4.22}
+            height={36}
+            color="rgb(158 0 89 / 0.35)"
+            className="-mt-1 max-w-full overflow-hidden"
+          />
+        )}
       </Container>
     </section>
   );

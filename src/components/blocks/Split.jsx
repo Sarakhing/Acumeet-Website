@@ -24,7 +24,10 @@ const SECTION_TONES = {
  *
  * Content order: eyebrow → title(+accent) → body[] → bullets[] → footnote[] → cta.
  * bullets: [{ lead?, text }] — `lead` renders bold ("Access by role:").
- * bulletStyle: 'plain' | 'check' (blue check-circle, Figma "Icon/check").
+ * bulletStyle: 'plain' | 'check' (blue check-circle, Figma "Icon/check") | 'dot' (6px magenta marker,
+ *   15px ink-800 text, 16px apart — Atlas "Ask Questions Naturally") | 'tick' (green ✓, 15px ink-700,
+ *   16px apart — Meeting Intelligence) | 'none' (no marker, same text — Knowledge Repository).
+ * size="chapter" (02.09/02.10 Chapter-style Split): as wide, but 38px title and 16px body.
  * eyebrowStyle: 'pill' (DotEyebrow) | 'mono' (Eyebrow overline).
  * visual: a node, typically <VisualPanel>…</VisualPanel>. reverse: visual first on desktop.
  */
@@ -52,7 +55,9 @@ export default function Split({
       ? 'text-[16px] leading-[1.6] sm:text-[16.5px]'
       : body17
         ? 'text-[16px] leading-[1.5] sm:text-[17px]'
-        : 'text-[17px] leading-[1.5] sm:text-[18px]',
+        : size === 'chapter'
+          ? 'text-[16px] leading-[1.5]'
+          : 'text-[17px] leading-[1.5] sm:text-[18px]',
     dark ? 'text-ink-on-dark-muted' : feature ? 'text-ink-600' : 'text-ink-700',
   );
 
@@ -86,7 +91,9 @@ export default function Split({
                 ? 'text-[28px] leading-[1.15] tracking-[-0.68px] sm:text-[34px]'
                 : size === 'compact'
                   ? 'text-[28px] leading-[1.12] tracking-[-0.72px] sm:text-[32px] lg:text-[36px]'
-                  : 'text-[30px] leading-[1.12] tracking-[-1.2px] sm:text-[34px] lg:text-heading-xl',
+                  : size === 'chapter'
+                    ? 'text-[28px] leading-[1.12] tracking-[-0.76px] sm:text-[34px] lg:text-[38px]'
+                    : 'text-[30px] leading-[1.12] tracking-[-1.2px] sm:text-[34px] lg:text-heading-xl',
               dark && '[&>span:first-child]:text-ink-on-dark',
               !dark && feature && '[&>span:first-child]:text-ink-900',
             )}
@@ -99,9 +106,17 @@ export default function Split({
             </p>
           ))}
           {bullets.length > 0 && (
-            <ul className="flex flex-col gap-2.5">
+            <ul className={cn('flex flex-col', ['dot', 'tick', 'none'].includes(bulletStyle) ? 'gap-4' : 'gap-2.5')}>
               {bullets.map((b) => (
                 <li key={b.lead ?? b.text} className="flex items-start gap-2.5">
+                  {bulletStyle === 'tick' && (
+                    <span aria-hidden="true" className="text-[13px] font-medium leading-[1.5] text-[#12b76a]">
+                      ✓
+                    </span>
+                  )}
+                  {bulletStyle === 'dot' && (
+                    <span aria-hidden="true" className="size-1.5 shrink-0 rounded-[3px] bg-brand-magenta" />
+                  )}
                   {bulletStyle === 'check' && (
                     <span aria-hidden="true" className="mt-0.5 flex shrink-0 rounded-pill bg-[#eaf1ff] p-[3px]">
                       <span className="flex size-3 items-center justify-center">
@@ -109,7 +124,20 @@ export default function Split({
                       </span>
                     </span>
                   )}
-                  <p className={cn('max-w-[470px] text-[15px] leading-[1.55] sm:text-[15.5px]', dark ? 'text-ink-on-dark-muted' : 'text-ink-600')}>
+                  <p
+                    className={cn(
+                      ['dot', 'tick', 'none'].includes(bulletStyle)
+                        ? 'max-w-[520px] text-[15px] leading-[1.5]'
+                        : 'max-w-[470px] text-[15px] leading-[1.55] sm:text-[15.5px]',
+                      dark
+                        ? 'text-ink-on-dark-muted'
+                        : bulletStyle === 'dot'
+                          ? 'text-ink-800'
+                          : bulletStyle === 'tick' || bulletStyle === 'none'
+                            ? 'text-ink-700'
+                            : 'text-ink-600',
+                    )}
+                  >
                     {b.lead && <strong className={cn('font-semibold', dark ? 'text-ink-on-dark' : 'text-ink-900')}>{b.lead}</strong>}
                     {b.lead && ' '}
                     {b.text}

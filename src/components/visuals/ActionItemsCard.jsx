@@ -2,13 +2,18 @@ import MockCard from '@/components/ui/MockCard';
 import checkOpen from '@/assets/images/solutions/check-loop-open.svg';
 import jira from '@/assets/images/solutions/logo-jira.svg';
 import asana from '@/assets/images/solutions/logo-asana.svg';
+import trello from '@/assets/images/products/logo-trello-14x14.svg';
 import { cn } from '@/utils/cn';
+
+const SYNC_LOGOS = { Jira: jira, Asana: asana, Trello: trello };
 
 /**
  * Figma "UI · Action items" (Control hero, 46:17114) — task list with due dates,
  * owner avatars and a "Synced to Jira and Asana" footer. The first task is in
  * its highlighted state (grey fill, "Check loop" open checkbox).
  * tasks: [{ title, due, avatar }]
+ * sync (optional): ['Jira', 'Asana', 'Trello'] replaces the footer with the
+ *   "Sync tasks to" logo chips (Products overview 46:31780).
  */
 export default function ActionItemsCard({
   tasks = [],
@@ -16,6 +21,7 @@ export default function ActionItemsCard({
   width = 400,
   shadow = 'float',
   avatarSize = 24,
+  sync,
   className,
 }) {
   return (
@@ -60,17 +66,36 @@ export default function ActionItemsCard({
           />
         </div>
       ))}
-      <div className="flex items-center gap-2 border-t border-border-muted pt-2.5">
-        <span className="flex shrink-0 items-center gap-1">
-          <img src={jira} alt="" width={14} height={14} className="size-3.5" />
-          <img src={asana} alt="" width={14} height={14} className="size-3.5" />
-        </span>
-        <span className="min-w-px flex-1 text-[11px] text-[#6b7080]">Synced to Jira and Asana</span>
-        <span className="flex shrink-0 items-center gap-1 whitespace-nowrap rounded-[8px] border border-border-muted bg-surface-white px-2 py-1 font-medium text-[#1d1f21]">
-          <span className="text-[10px]">↗</span>
-          <span className="text-[11px]">Push all</span>
-        </span>
-      </div>
+      {sync ? (
+        <div className="flex items-center gap-1.5">
+          <span className="whitespace-nowrap text-[11px] leading-[1.5] text-ink-500">
+            Sync tasks to
+          </span>
+          {sync.map((name) => (
+            <span
+              key={name}
+              className="flex shrink-0 items-center gap-1.5 whitespace-nowrap rounded-pill border border-border-muted bg-surface-white px-2.5 py-1 text-[11px] font-medium leading-[1.5] text-ink-700"
+            >
+              <img src={SYNC_LOGOS[name]} alt="" width={14} height={14} className="size-3.5" />
+              {name}
+            </span>
+          ))}
+        </div>
+      ) : (
+        <div className="flex items-center gap-2 border-t border-border-muted pt-2.5">
+          <span className="flex shrink-0 items-center gap-1">
+            <img src={jira} alt="" width={14} height={14} className="size-3.5" />
+            <img src={asana} alt="" width={14} height={14} className="size-3.5" />
+          </span>
+          <span className="min-w-px flex-1 text-[11px] text-[#6b7080]">
+            Synced to Jira and Asana
+          </span>
+          <span className="flex shrink-0 items-center gap-1 whitespace-nowrap rounded-[8px] border border-border-muted bg-surface-white px-2 py-1 font-medium text-[#1d1f21]">
+            <span className="text-[10px]">↗</span>
+            <span className="text-[11px]">Push all</span>
+          </span>
+        </div>
+      )}
     </MockCard>
   );
 }

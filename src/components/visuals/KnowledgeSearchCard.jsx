@@ -4,11 +4,11 @@ import MockCard from '@/components/ui/MockCard';
  * Figma "UI · Knowledge search" (Understand explorer tab 5, 46:25032): search
  * field with typing caret and result count, then meeting results with a mono
  * date and the matching excerpt.
- * results: [{ meeting, date, excerpt }]
+ * results: [{ meeting, date, excerpt }]; shadow: 'mock' | 'float'; className (positioning).
  */
-export default function KnowledgeSearchCard({ query, results = [], width = 480 }) {
+export default function KnowledgeSearchCard({ query, results = [], width = 480, shadow = 'mock', className }) {
   return (
-    <MockCard gap={12} width={width}>
+    <MockCard gap={12} width={width} shadow={shadow} className={className}>
       <div className="flex items-center gap-2 rounded-[10px] border border-border-muted bg-[#f6f6f8] px-3 py-2.5">
         <span aria-hidden="true" className="text-[14px] leading-[1.5] text-ink-500">
           ⌕

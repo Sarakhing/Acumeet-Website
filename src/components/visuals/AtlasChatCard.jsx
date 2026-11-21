@@ -61,6 +61,7 @@ const pill =
  * source chips, suggested prompts and the composer with filters.
  * answer: (string | { b: string })[]  (`b` = bold)
  * quote: { name, time, text }; sources: string[]; prompts: string[]
+ * scope: header chip + composer filter label (default 'All meetings'; Atlas 02.08 split uses 'Account').
  */
 export default function AtlasChatCard({
   width = 460,
@@ -69,6 +70,7 @@ export default function AtlasChatCard({
   quote,
   sources = [],
   prompts = [],
+  scope = 'All meetings',
 }) {
   return (
     <div
@@ -80,7 +82,7 @@ export default function AtlasChatCard({
         <p className="text-[14px] font-semibold text-ink-800">Atlas</p>
         <span className="h-px min-w-px flex-1" />
         <span className={`${pill} border border-border-muted text-[10px] text-ink-500`}>
-          All meetings
+          {scope}
         </span>
       </div>
 
@@ -173,7 +175,7 @@ export default function AtlasChatCard({
             Standard
           </span>
           <span className={`${pill} border border-border-muted text-[10px] text-ink-700`}>
-            {'All meetings  ▾'}
+            {`${scope}  ▾`}
           </span>
           <span className={`${pill} border border-border-muted text-[10px] text-ink-700`}>
             {'Any date  ▾'}

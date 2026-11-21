@@ -20,7 +20,8 @@ const pad = (n) => String(n).padStart(2, '0');
  *   full width at md where the grid is 2 cols). Pair it with a wide pattern size.
  */
 // Hover (State 2) dot field per card pattern size.
-const DARK_DOTS = { 'card-wide': 'card-wide-dark' };
+// null = no exported asset: use the CSS dark dot field (22px pitch) — Products 846px span cards.
+const DARK_DOTS = { 'card-wide': 'card-wide-dark', 'card-span': null };
 
 function Card({ card, index }) {
   const Tag = card.to ? Link : 'div';
@@ -38,7 +39,11 @@ function Card({ card, index }) {
         <Pattern {...card.pattern} />
       </div>
       <div className="absolute inset-0 opacity-0 transition-opacity duration-300 group-hover:opacity-100 group-focus-visible:opacity-100">
-        <DotGrid size={DARK_DOTS[card.pattern?.size] ?? 'card-dark'} />
+        {DARK_DOTS[card.pattern?.size] === null ? (
+          <DotGrid tone="dark" />
+        ) : (
+          <DotGrid size={DARK_DOTS[card.pattern?.size] ?? 'card-dark'} />
+        )}
       </div>
       <div className="relative flex items-center">
         <span className="font-mono text-[13px] font-medium leading-[1.5] tracking-[0.52px] text-brand-magenta transition-colors group-hover:text-brand-magenta-soft group-focus-visible:text-brand-magenta-soft">

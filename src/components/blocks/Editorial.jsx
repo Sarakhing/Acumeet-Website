@@ -14,12 +14,14 @@ const TONES = {
  * Figma "Editorial" (inside "03 · rows" / "02 · rows"): title on the left
  * (520px), copy column on the right. Stacks below lg.
  * paragraphs: string[]; cta: { label, to, intent?, size? ('md' default | 'lg' = Connect) }; tone: subtle | white | dark
+ * bullets: string[] — 6px magenta marker + 15px text, after the paragraphs (Products 02.09/02.10 "Example: …").
  */
 export default function Editorial({
   eyebrow,
   title,
   accent,
   paragraphs = [],
+  bullets = [],
   cta,
   tone = 'subtle',
   className,
@@ -52,6 +54,23 @@ export default function Editorial({
               {p}
             </p>
           ))}
+          {bullets.length > 0 && (
+            <ul className="flex flex-col gap-4">
+              {bullets.map((b) => (
+                <li key={b} className="flex items-start gap-2.5">
+                  <span aria-hidden="true" className="size-1.5 shrink-0 rounded-[3px] bg-brand-magenta" />
+                  <p
+                    className={cn(
+                      'max-w-[600px] text-[15px] leading-[1.5]',
+                      dark ? 'text-ink-on-dark-soft' : 'text-ink-800',
+                    )}
+                  >
+                    {b}
+                  </p>
+                </li>
+              ))}
+            </ul>
+          )}
           {cta && (
             <div className="pt-2">
               <Button

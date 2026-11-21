@@ -47,8 +47,9 @@ function FaqItem({ q, a, open, onToggle }) {
  *   (Solutions pages show every answer expanded). With 'all', items toggle
  *   independently; otherwise it behaves as a single-open accordion.
  * eyebrow: overline above the title (default 'FAQ'; null hides it, as on Control).
+ * waveform: show the magenta waveform under the title (default true; false on Knowledge Repository 02.10).
  */
-export default function Faq({ title = 'Frequently asked questions', eyebrow = 'FAQ', items = [], defaultOpen = 0 }) {
+export default function Faq({ title = 'Frequently asked questions', eyebrow = 'FAQ', items = [], defaultOpen = 0, waveform = true }) {
   const multi = defaultOpen === 'all';
   const [open, setOpen] = useState(() =>
     multi ? new Set(items.map((_, i) => i)) : new Set(defaultOpen >= 0 ? [defaultOpen] : []),
@@ -69,7 +70,7 @@ export default function Faq({ title = 'Frequently asked questions', eyebrow = 'F
           <h2 className="text-[30px] font-medium leading-[1.12] tracking-[-1.2px] text-ink-800 lg:text-heading-xl">
             {title}
           </h2>
-          <Waveform bars={30} height={40} />
+          {waveform && <Waveform bars={30} height={40} />}
         </div>
         <div className="flex min-w-0 flex-1 flex-col gap-3">
           {items.map((item, i) => (

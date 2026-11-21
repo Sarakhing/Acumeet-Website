@@ -20,6 +20,7 @@ const pad = (n) => String(n).padStart(2, '0');
  *   Products pages: `label` can be a full sentence (multi-line tab) and `body` omitted —
  *   the panel then shows the number + title only (Meeting Capture "Why … Matters").
  * accentBreak (default true) puts the accent on its own line; false keeps it inline.
+ * 4 or 5 steps: with 5 (AI Meeting Summaries 02.04) the md+ track uses 5 columns.
  */
 export default function Stepper({
   eyebrow,
@@ -87,8 +88,9 @@ export default function Stepper({
           aria-label="Steps"
           onKeyDown={onKeyDown}
           className={cn(
-            'grid gap-4 md:grid-cols-4',
-            numbersOnMobile ? 'grid-cols-4 gap-2' : 'grid-cols-2',
+            'grid gap-4',
+            steps.length === 5 ? 'md:grid-cols-5' : 'md:grid-cols-4',
+            numbersOnMobile ? (steps.length === 5 ? 'grid-cols-5 gap-2' : 'grid-cols-4 gap-2') : 'grid-cols-2',
           )}
         >
           {steps.map((s, i) => {

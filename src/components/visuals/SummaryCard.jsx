@@ -8,10 +8,18 @@ const BAR = { amber: 'bg-brand-amber', green: 'bg-[#12b76a]', blue: 'bg-brand-bl
  * meeting title + blue "Summary" chip, three score tiles (label, %, progress
  * bar whose fill equals the %) and "Key insights" bullets.
  * scores: [{ label, value: number, bar: amber|green|blue }]; insights: string[]
+ * shadow: 'mock' (default) | 'float' (Meeting Intelligence hero); className for positioning.
  */
-export default function SummaryCard({ title, scores = [], insights = [], width = 440 }) {
+export default function SummaryCard({ title, scores = [], insights = [], width = 440, shadow = 'mock', className }) {
   return (
-    <MockCard title={title} gap={14} width={width} aside={<UiChip tone="blue">Summary</UiChip>}>
+    <MockCard
+      title={title}
+      gap={14}
+      width={width}
+      shadow={shadow}
+      className={className}
+      aside={<UiChip tone="blue">Summary</UiChip>}
+    >
       <div className="flex items-start gap-2">
         {scores.map((s) => (
           <div

@@ -21,7 +21,7 @@ const TILE_TINTS = {
  * visual: { width, height, pattern?: { src, width, height, x?, y? }, dots?: 'dark',
  *           glow?: CSS background-image, content, x, y }
  */
-function TileVisual({ visual }) {
+export function TileVisual({ visual }) {
   const { width, height, pattern, dots, glow, content, x = 0, y = 0 } = visual;
   return (
     <ScaleToFit width={width}>
