@@ -61,6 +61,7 @@ function WashHero({
   copyWidth = 600,
   titleSize = 'hero',
   leadSize = 18,
+  leadWidth = 560,
 }) {
   const leadClass = cn(
     'text-[17px] leading-[1.35] text-ink-700',
@@ -130,7 +131,7 @@ function WashHero({
           </AccentTitle>
           {lead &&
             (Array.isArray(lead) ? (
-              <div className="flex max-w-[560px] flex-col gap-6">
+              <div className="flex flex-col gap-6" style={{ maxWidth: leadWidth }}>
                 {lead.map((para) => (
                   <p key={para} className={leadClass}>
                     {para}
@@ -138,7 +139,9 @@ function WashHero({
                 ))}
               </div>
             ) : (
-              <p className={cn('max-w-[560px]', leadClass)}>{lead}</p>
+              <p className={leadClass} style={{ maxWidth: leadWidth }}>
+                {lead}
+              </p>
             ))}
           {(primary || secondary) && (
             <div className="flex flex-wrap items-center gap-x-3 gap-y-4">

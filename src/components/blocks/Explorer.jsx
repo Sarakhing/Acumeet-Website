@@ -1,4 +1,5 @@
 import { useId, useRef } from 'react';
+import { Link } from 'react-router';
 import Container from '@/components/ui/Container';
 import AccentTitle from '@/components/ui/AccentTitle';
 import AutoAdvanceTimer from '@/components/ui/AutoAdvanceTimer';
@@ -15,8 +16,10 @@ const pad = (n) => String(n).padStart(2, '0');
  * Pauses on hover/focus; manual selection or reduced motion stops auto-play.
  * Below lg the list stacks above the (scaled) panel.
  *
- * items: [{ title, body, tint, pattern: { type, size: 'explorer' }, visual, chip? }]
+ * items: [{ title, body, tint, pattern: { type, size: 'explorer' }, visual, chip?, link? }]
  *   chip defaults to "NN · title".
+ *   link: { label = 'Explore', to } — "Explore →" under the active tab's body
+ *   (Industries explorers: 24px below the body, 8px above the progress bar).
  */
 export default function Explorer({ title, accent, items = [], interval = 7000, tone = 'subtle', className }) {
   const auto = useAutoAdvance(items.length, { interval });
@@ -109,6 +112,20 @@ export default function Explorer({ title, accent, items = [], interval = 7000, t
                   {on && (
                     <>
                       <p className="max-w-[388px] text-[15px] leading-[1.5] text-ink-700">{item.body}</p>
+                      {item.link && (
+                        <Link
+                          to={item.link.to}
+                          className="group mt-4 inline-flex w-fit items-center gap-1.5 text-[14px] font-medium text-ink-800 underline-offset-4 hover:underline"
+                        >
+                          {item.link.label ?? 'Explore'}
+                          <span
+                            aria-hidden="true"
+                            className="text-brand-magenta transition-transform group-hover:translate-x-0.5"
+                          >
+                            →
+                          </span>
+                        </Link>
+                      )}
                       <div className="relative h-[3px] w-full max-w-[388px] overflow-hidden rounded-[2px] bg-[#efeff4]">
                         {auto.enabled ? (
                           <AutoAdvanceTimer

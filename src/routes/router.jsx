@@ -4,6 +4,7 @@ import ComingSoon from '@/modules/placeholder/ComingSoon';
 import { homeRoutes } from '@/modules/01-home';
 import { solutionsRoutes } from '@/modules/02-solutions';
 import { productsRoutes } from '@/modules/03-products';
+import { industriesRoutes } from '@/modules/04-industries';
 
 /**
  * Each Figma section is a module exporting its own lazy routes.
@@ -16,6 +17,7 @@ export const router = createBrowserRouter([
       ...homeRoutes,
       ...solutionsRoutes,
       ...productsRoutes,
+      ...industriesRoutes,
       { path: '*', element: <ComingSoon /> },
     ],
   },
