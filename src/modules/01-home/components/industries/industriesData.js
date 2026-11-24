@@ -50,7 +50,7 @@ export const INDUSTRIES = [
     description:
       'Keep credit committee discussions, customer conversations and operational reviews clearly documented.',
     cta: 'Explore banking',
-    to: `${ROUTES.industries}/banking`,
+    to: `${ROUTES.industries}/financial-services/banking`,
     meeting: {
       title: 'Credit approval meeting',
       meta: '25 Sep, 7 participants',
@@ -73,7 +73,7 @@ export const INDUSTRIES = [
     panelBg: 'bg-tint-green',
     description: 'Preserve the details behind claims reviews, underwriting discussions and policy decisions.',
     cta: 'Explore insurance',
-    to: `${ROUTES.industries}/insurance`,
+    to: `${ROUTES.industries}/financial-services/insurance`,
     meeting: {
       title: 'Claims review board',
       meta: '22 Sep, 6 participants',

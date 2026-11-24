@@ -1,4 +1,6 @@
+import { Link } from 'react-router';
 import { cn } from '@/utils/cn';
+import { ROUTES } from '@/constants/routes';
 import {
   VISUAL_CSS,
   TranscriptionVisual,
@@ -16,17 +18,20 @@ import {
 const ROW_1 = [
   {
     title: 'AI meeting transcription',
+    to: ROUTES.product.aiTranscription,
     body: 'Speaker-labelled transcripts without manual note-taking.',
     Visual: TranscriptionVisual,
     wide: true,
   },
   {
     title: 'Meeting summaries',
+    to: ROUTES.product.aiMeetingSummaries,
     body: 'Topics, decisions and next steps on one page.',
     Visual: SummariesVisual,
   },
   {
     title: 'Action items',
+    to: ROUTES.product.actionItemManagement,
     body: 'Owners and status tracked after the call.',
     Visual: ActionItemsVisual,
   },
@@ -35,32 +40,40 @@ const ROW_1 = [
 const ROW_2 = [
   {
     title: 'Speaker recognition',
+    to: ROUTES.product.speakerRecognition,
     body: 'See who said what, and who owns what.',
     Visual: SpeakerVisual,
   },
   {
     title: 'Redaction AI',
+    to: ROUTES.product.aiRedaction,
     body: 'Detect and mask personal and financial details in meeting records.',
     Visual: RedactionVisual,
   },
   {
     title: 'Atlas',
+    to: ROUTES.product.atlas,
     body: 'Ask questions across past meetings and get answers fast.',
     Visual: AtlasVisual,
     wide: true,
   },
 ];
 
-function CapabilityCard({ title, body, Visual, wide }) {
+function CapabilityCard({ title, body, Visual, wide, to }) {
   return (
     <article
       className={cn(
-        'flex flex-col justify-between gap-6 overflow-hidden rounded-panel border border-border-default bg-surface-white px-6 pt-6 lg:h-[340px] lg:gap-0',
+        'relative flex flex-col justify-between gap-6 overflow-hidden rounded-panel border border-border-default bg-surface-white px-6 pt-6 transition-shadow focus-within:ring-2 focus-within:ring-brand-blue hover:shadow-[0_18px_40px_-12px_rgba(31,51,120,0.14)] lg:h-[340px] lg:gap-0',
         wide && 'md:col-span-2 lg:col-span-1',
       )}
     >
       <div className="flex flex-col gap-1.5">
-        <h3 className="text-heading-4 text-ink-900">{title}</h3>
+        <h3 className="text-heading-4 text-ink-900">
+          {/* Stretched link: the whole card opens the product page. */}
+          <Link to={to} className="outline-none after:absolute after:inset-0 after:content-['']">
+            {title}
+          </Link>
+        </h3>
         <p className="text-body-sm text-ink-600">{body}</p>
       </div>
       <Visual />
