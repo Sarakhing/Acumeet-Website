@@ -21,7 +21,7 @@ const linkClass = ({ isActive }) =>
   );
 
 /**
- * Figma "Navigation · D Featured" (91:65978): fixed 68px header with a mega
+ * Figma "Navigation · D Featured" (120:64520): fixed 68px header with a mega
  * menu per primary item on lg+, and a drawer with accordions below lg.
  */
 export default function Navbar() {

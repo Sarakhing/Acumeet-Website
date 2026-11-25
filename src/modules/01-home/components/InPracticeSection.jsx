@@ -1,23 +1,32 @@
 import { useState } from 'react';
-import { Play } from 'lucide-react';
 import Button from '@/components/ui/Button';
 import Container from '@/components/ui/Container';
 import { ROUTES } from '@/constants/routes';
-import { cn } from '@/utils/cn';
 import videoPreview from '@/assets/images/home/in-practice-video.gif';
 
 const FILE_VIDEO = /\.(mp4|webm|ogg|ogv|mov|m4v)(\?|#|$)/i;
 
 /**
  * Figma "Video · Acumeet in practice" (46:9099). Shows the animated preview
- * with a play button; when `videoSrc` is supplied, clicking swaps in a
- * <video> (file URLs) or an <iframe> (embed URLs). Without a source the
- * button is inert.
+ * without a play icon (removed at the client's request). When `videoSrc` is
+ * supplied, clicking the preview swaps in a <video> (file URLs) or an
+ * <iframe> (embed URLs); without a source the preview is just an image.
  */
 function VideoPlayer({ videoSrc, title }) {
   const [playing, setPlaying] = useState(false);
   const canPlay = Boolean(videoSrc);
   const isFile = canPlay && FILE_VIDEO.test(videoSrc);
+  const preview = (
+    <img
+      src={videoPreview}
+      alt={canPlay ? '' : title}
+      width={1120}
+      height={630}
+      loading="lazy"
+      decoding="async"
+      className="absolute inset-0 size-full object-cover"
+    />
+  );
 
   return (
     <div className="relative aspect-video w-full overflow-hidden rounded-[16px] border border-[rgb(227_227_232/0.5)] bg-surface-white shadow-[0_24px_64px_-4px_rgb(11_11_18/0.14),0_1px_2px_0_rgb(11_11_18/0.08)] sm:rounded-[24px]">
@@ -33,30 +42,17 @@ function VideoPlayer({ videoSrc, title }) {
             className="absolute inset-0 size-full border-0"
           />
         )
+      ) : canPlay ? (
+        <button
+          type="button"
+          onClick={() => setPlaying(true)}
+          aria-label={`Play video: ${title}`}
+          className="absolute inset-0 block size-full cursor-pointer focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-brand-blue"
+        >
+          {preview}
+        </button>
       ) : (
-        <>
-          <img
-            src={videoPreview}
-            alt=""
-            width={1120}
-            height={630}
-            loading="lazy"
-            decoding="async"
-            className="absolute inset-0 size-full object-cover"
-          />
-          <button
-            type="button"
-            onClick={() => canPlay && setPlaying(true)}
-            aria-label={canPlay ? `Play video: ${title}` : `${title} (video coming soon)`}
-            aria-disabled={!canPlay || undefined}
-            className={cn(
-              'absolute inset-0 m-auto flex size-16 items-center justify-center rounded-full bg-surface-white text-brand-blue shadow-float transition-transform duration-200 focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-brand-blue sm:size-[76px]',
-              canPlay ? 'cursor-pointer hover:scale-105' : 'cursor-default',
-            )}
-          >
-            <Play aria-hidden="true" className="ml-1 size-6 fill-current sm:size-7" strokeWidth={1.5} />
-          </button>
-        </>
+        preview
       )}
     </div>
   );

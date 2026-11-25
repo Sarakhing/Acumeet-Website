@@ -9,12 +9,18 @@ import segilola from '@/assets/logos/customers/segilola.png';
 /**
  * Figma "09 · Customer proof" (46:8437) using
  * "Marquee · Customer logos (unending)" (46:10866).
- * Logos are desaturated in Figma (black saturation blend) → CSS grayscale.
+ * Logos show in full colour (Figma dropped the desaturation blend).
  * `crop` reproduces Figma's image-fill crop where the frame trims whitespace.
  */
 const LOGOS = [
   { name: 'IHS Towers', src: ihs, w: 85.425, h: 47.556 },
-  { name: 'Snapnet', src: snapnet, w: 175.251, h: 52.575 },
+  {
+    name: 'Snapnet',
+    src: snapnet,
+    w: 175.251,
+    h: 52.575,
+    crop: { width: '100%', height: '333.33%', left: '0', top: '-111.67%' },
+  },
   { name: 'HC Matrix HR Solutions', src: hcMatrix, w: 175.251, h: 51.293 },
   {
     name: 'PalmPay',
@@ -29,7 +35,7 @@ const LOGOS = [
 function LogoItem({ logo }) {
   return (
     <div
-      className="relative shrink-0 overflow-hidden grayscale"
+      className="relative shrink-0 overflow-hidden"
       style={{ width: `calc(${logo.w}px * var(--logo-scale))`, height: `calc(${logo.h}px * var(--logo-scale))` }}
     >
       <img
