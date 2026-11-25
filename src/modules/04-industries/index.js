@@ -40,4 +40,5 @@ export const industriesRoutes = [
   { path: rel(I.telecommunications), element: sections(() => import('./content/telecommunications')) }, // 04.13 · 48:293592
   { path: rel(I.publicSector), element: sections(() => import('./content/public-sector')) }, // 04.14 · 48:293890
   { path: rel(I.enterprise), element: sections(() => import('./content/enterprise')) }, // 04.15 · 48:294092
+  { path: rel(I.otherRegulated), element: sections(() => import('./content/other-regulated-industries')) }, // 04.16 · 48:294434
 ];
