@@ -106,3 +106,17 @@ export const NOTE_CTAS = [
   { label: 'Book a Demo', to: ROUTES.bookDemo },
   { label: 'Contact Our Team', to: ROUTES.contactSales },
 ];
+
+/**
+ * Follow-through split ("Make Follow-Through Easier", 704 tall): pink rings panel
+ * on the left with an action-items card, title + body, Book a Demo + "Contact Our Team →".
+ */
+export const followSplit = (title, body, content) => ({
+  size: 'compact',
+  reverse: true,
+  title,
+  body: [body],
+  cta: { label: 'Book a Demo', to: ROUTES.bookDemo },
+  secondary: { label: 'Contact Our Team', to: ROUTES.contactSales },
+  visual: { tint: 'pink', pattern: { type: 'rings', size: 'panel' }, content },
+});
