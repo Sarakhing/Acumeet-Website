@@ -11,7 +11,18 @@ const I = ROUTES.industry;
 const IndustriesOverviewPage = lazy(() => import('./pages/IndustriesOverviewPage'));
 const FinancialServicesPage = lazy(() => import('./pages/FinancialServicesPage'));
 
+/** Detail pages share IndustryDetailPage; each loads its own content chunk. */
+const detail = (loadContent) =>
+  createElement(
+    lazy(() =>
+      Promise.all([import('./pages/IndustryDetailPage'), loadContent()]).then(([page, content]) => ({
+        default: () => createElement(page.default, { content: content.default }),
+      })),
+    ),
+  );
+
 export const industriesRoutes = [
   { path: rel(I.overview), element: createElement(IndustriesOverviewPage) }, // 04.00 · 48:287759
   { path: rel(I.financialServices), element: createElement(FinancialServicesPage) }, // 04.01 · 48:287949
+  { path: rel(I.banking), element: detail(() => import('./content/banking')) }, // 04.02 · 48:288112
 ];

@@ -65,7 +65,7 @@ const avatar = (name) => AVATARS[name];
 export const financialServices = {
   breadcrumb: [
     { label: 'Home', to: ROUTES.home },
-    { label: 'Industries', to: INDUSTRIES.overview.to },
+    { label: 'Industries Overview', to: INDUSTRIES.overview.to },
     { label: 'Financial Services' },
   ],
 
