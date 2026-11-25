@@ -22,7 +22,7 @@ const pad = (n) => String(n).padStart(2, '0');
  */
 // Hover (State 2) dot field per card pattern size.
 // null = no exported asset: use the CSS dark dot field (22px pitch) — Products 846px span cards.
-const DARK_DOTS = { 'card-wide': 'card-wide-dark', 'card-span': null };
+const DARK_DOTS = { 'card-wide': 'card-wide-dark', 'card-span': null, 'workflow-span': null };
 
 function Card({ card, index }) {
   const Tag = card.to ? Link : 'div';

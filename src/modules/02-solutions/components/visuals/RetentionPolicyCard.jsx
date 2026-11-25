@@ -2,13 +2,15 @@ import MockCard from '@/components/ui/MockCard';
 import UiChip from '@/components/ui/UiChip';
 import dot from '@/assets/images/solutions/dot-green.svg';
 
-/** Figma "UI · Retention policy". rules: [{ label, keep }] */
-export default function RetentionPolicyCard({ rules = [], status = 'Active', width = 480 }) {
+/** Figma "UI · Retention policy". rules: [{ label, keep }]; shadow: mock | float (MockCard). */
+export default function RetentionPolicyCard({ rules = [], status = 'Active', width = 480, shadow, className }) {
   return (
     <MockCard
       title="Retention policy"
       gap={12}
       width={width}
+      shadow={shadow}
+      className={className}
       aside={
         <UiChip tone="green">
           <img src={dot} alt="" width={6} height={6} className="size-1.5" />

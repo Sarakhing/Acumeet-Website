@@ -277,6 +277,12 @@ function CenteredWashHero({
   visualWidth,
   visualCompact,
   visualCompactWidth = 520,
+  pattern = 'dots',
+  titleSize = 60,
+  leadSize = 18,
+  copyWidth = 960,
+  secondaryStyle = 'button',
+  visualGap = 64,
 }) {
   return (
     <section className="relative overflow-hidden bg-[#fbfbfd]">
@@ -289,14 +295,27 @@ function CenteredWashHero({
             'radial-gradient(648px 585px at calc(50% - 432px) 180px, rgb(204 219 255 / 0.95), rgb(255 255 255 / 0) 100%), radial-gradient(576px 540px at calc(50% + 504px) 180px, rgb(252 214 235 / 0.85), rgb(255 255 255 / 0) 100%)',
         }}
       />
-      {/* Pattern · dot grid — 360px band behind the visual. The `visual` canvas carries ~60px of bottom shadow room (Figma pb 80 = 20 + 60). */}
-      <DotGrid fade="edges" className="top-auto bottom-[31px] h-[360px]" />
+      {pattern === 'hairlines' ? (
+        /* Pattern · hairlines — full-bleed hatch/0B0B12/0.05 (Use Cases 05.00 / 05.07 / 05.13): "/" lines, 16px horizontal pitch */
+        <div
+          aria-hidden="true"
+          className="pointer-events-none absolute inset-0"
+          style={{
+            backgroundImage:
+              'repeating-linear-gradient(135deg, rgb(11 11 18 / 0.05) 0 1px, transparent 1px 11.314px)',
+          }}
+        />
+      ) : (
+        /* Pattern · dot grid — 360px band behind the visual. The `visual` canvas carries ~60px of bottom shadow room (Figma pb 80 = 20 + 60). */
+        <DotGrid fade="edges" className="top-auto bottom-[31px] h-[360px]" />
+      )}
 
       <Container
         width="wide"
-        className="relative flex flex-col items-center gap-12 pb-8 pt-12 sm:pt-16 lg:gap-16 lg:pb-5 lg:pt-24"
+        className="relative flex flex-col items-center gap-12 pb-8 pt-12 sm:pt-16 lg:gap-(--hero-visual-gap) lg:pb-5 lg:pt-24"
+        style={{ '--hero-visual-gap': `${visualGap}px` }}
       >
-        <div className="flex max-w-[960px] flex-col items-center gap-[22px] text-center">
+        <div className="flex flex-col items-center gap-[22px] text-center" style={{ maxWidth: copyWidth }}>
           {eyebrow && (
             <p className="w-fit rounded-pill border border-border-muted bg-surface-white px-2.5 py-1 font-mono text-overline font-medium tracking-[0.44px] text-brand-magenta uppercase">
               {eyebrow}
@@ -305,23 +324,39 @@ function CenteredWashHero({
           <AccentTitle
             as="h1"
             accent={accent}
-            className="text-[38px] font-medium leading-[1.04] tracking-[-1.2px] sm:text-[48px] lg:text-[60px] lg:tracking-[-1.8px]"
+            className={cn(
+              'text-[38px] font-medium leading-[1.04] tracking-[-1.2px] sm:text-[48px]',
+              titleSize === 62 ? 'lg:text-[62px] lg:tracking-[-1.86px]' : 'lg:text-[60px] lg:tracking-[-1.8px]',
+            )}
           >
             {title}
           </AccentTitle>
           {lead && (
-            <p className="max-w-[700px] text-[17px] leading-[1.35] tracking-[-0.18px] text-ink-700 sm:text-[18px]">
+            <p
+              className={cn(
+                'max-w-[700px] text-[17px] leading-[1.35] text-ink-700',
+                leadSize === 19 ? 'tracking-[-0.19px] sm:text-[19px]' : 'tracking-[-0.18px] sm:text-[18px]',
+              )}
+            >
               {lead}
             </p>
           )}
           {(primary || secondary) && (
-            <div className="flex flex-wrap items-center justify-center gap-3">
-              {primary && <Button to={primary.to}>{primary.label}</Button>}
-              {secondary && (
-                <Button to={secondary.to} intent="secondary">
-                  {secondary.label}
-                </Button>
+            <div
+              className={cn(
+                'flex flex-wrap justify-center gap-3',
+                secondaryStyle === 'link' ? 'items-start' : 'items-center',
               )}
+            >
+              {primary && <Button to={primary.to}>{primary.label}</Button>}
+              {secondary &&
+                (secondaryStyle === 'link' ? (
+                  <ArrowLink to={secondary.to}>{secondary.label}</ArrowLink>
+                ) : (
+                  <Button to={secondary.to} intent="secondary">
+                    {secondary.label}
+                  </Button>
+                ))}
             </div>
           )}
         </div>
@@ -349,7 +384,9 @@ function CenteredWashHero({
  * Solutions hero.
  * variant: 'wash' (light, copy left + `visual` right) | 'rings' (dark, centred, `children` = HeroCarousel)
  *   | 'centered' (light wash, centred chip/title/lead/2 buttons, `visual` full width below; AI Redaction 02.07;
- *     optional `visualCompact` / `visualCompactWidth` replace `visual` below md)
+ *     optional `visualCompact` / `visualCompactWidth` replace `visual` below md; Use Cases add
+ *     pattern 'hairlines' (full-bleed hatch), titleSize 62, leadSize 19, copyWidth (960), secondaryStyle 'link',
+ *     visualGap (lg gap between copy and visual, 64))
  * wash-only options (all optional, defaults = Protect): pattern 'dots' | 'hairlines' (Control),
  *   eyebrowStyle 'plain' | 'chip' (Govern), secondaryStyle 'link' | 'button' (Control),
  *   visualAlign 'start' | 'end', copyTop (lg copy offset, 76), padBottom (lg bottom padding, 111).

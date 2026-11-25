@@ -9,14 +9,16 @@ const KIND = {
 /**
  * Figma "UI · Meeting intelligence" — "Decisions & topics" (Understand explorer
  * tab 2, 46:23501): mono date, Decision / Risk rows and purple topic chips.
- * rows: [{ kind: decision|risk, text }]; topics: string[]
+ * rows: [{ kind: decision|risk, text }]; topics: string[]; shadow: mock | float (MockCard).
  */
-export default function DecisionsCard({ date, rows = [], topics = [], width = 480 }) {
+export default function DecisionsCard({ date, rows = [], topics = [], width = 480, shadow, className }) {
   return (
     <MockCard
       title="Decisions & topics"
       gap={12}
       width={width}
+      shadow={shadow}
+      className={className}
       aside={
         <span className="whitespace-nowrap font-mono text-[11px] leading-[1.5] tracking-[0.44px] text-ink-500">
           {date}

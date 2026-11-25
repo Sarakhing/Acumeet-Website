@@ -3,6 +3,7 @@ import teams from '@/assets/logos/integrations/microsoft-teams.png';
 import zoom from '@/assets/logos/integrations/zoom.png';
 import meet from '@/assets/logos/integrations/google-meet.png';
 import slack from '@/assets/logos/integrations/slack.png';
+import outlook from '@/assets/logos/integrations/outlook.png';
 import jira from '@/assets/images/solutions/logo-jira-16.svg';
 import asana from '@/assets/images/solutions/logo-asana-16.svg';
 import salesforce from '@/assets/images/solutions/logo-salesforce-16.svg';
@@ -18,6 +19,7 @@ const LOGOS = {
   Zoom: { src: zoom, tile: 12.632 },
   'Google Meet': { src: meet, tile: 13.176 },
   Slack: { src: slack, tile: 13.176 },
+  Outlook: { src: outlook, tile: 13.176 }, // Use Cases explorer "UI · Connect"
   Jira: { src: jira },
   Asana: { src: asana },
   Salesforce: { src: salesforce },

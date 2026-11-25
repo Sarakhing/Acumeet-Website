@@ -305,3 +305,30 @@ Figma section "04 · Industries" (`48:287758`). Module: `src/modules/04-industri
 - `CardGrid`: `lead` under the title (04.01 workflows).
 - `Split`, `Statement`, `Editorial`: `secondary: { label, to }` — "Label →" link beside the CTA.
 - Module components: `InfoNote` (34px title in a 440 column + 17px copy + two outlined buttons, px-120, py-112) and `HeroCanvas`.
+
+---
+
+## Use Cases (05.00–05.13)
+Figma section "05 · Use Cases" (`48:305346`). Module: `src/modules/05-use-cases/`. Routes: `ROUTES.useCase.<key>` (slugs = mega menu; `ROUTES.useCases` is still the overview string). All block options below are additive; defaults unchanged.
+
+### Pages
+- `pages/UseCasesOverviewPage.jsx` (05.00) — centred hero → `UseCaseGrid` ("Choose Your Use Case", module component: 13 tinted 410px cards cycling pink/blue/mint/amber/grey/lilac, each a link) → explorer → "Connect" split (mint panel with centred 30px-pitch rings, drawn as a CSS gradient) → `Editorial` → split → `LinkCardGrid` directory → FAQ → related (no overline) → CTA. The hidden "Index · Choose Your Use Case" frame is not built.
+- `pages/UseCaseDetailPage.jsx` — all 13 detail pages: breadcrumb → hero (+ `carousel`) → `challenge` → `explorer` → `workflows` → `outcomes` → optional `note` (05.01–05.05) → `faq` → `related` → `cta`. One content file per page in `content/<slug>.js`.
+
+### Content builders (`content/detail.js`, `content/use-cases.js`)
+- Heroes:
+  - `ringsHero({ eyebrow, title, lead, secondary, slides: [[tab, 560px card]] })` — dark rings + HeroCarousel (05.01, 05.05, 05.08, 05.09, 05.11).
+  - `windowHero({ …, window: 500px card, overlay: 360px card, overlayY, height })` — wash hero with an app window at 1440-frame (760, 100), the overlapping card at x 700 / Figma y `overlayY`, and the "Live in your workspace" chip (05.02, 05.04, 05.06, 05.12).
+  - `stackedHero({ …, titleSize, back: 440px card, front: 400px card, frontY, height })` — hairlines wash hero, outlined secondary button, no accent (05.03, 05.10).
+  - `centeredHero({ …, height, copyHeight, top, gap, items: [[x, y, node, figmaRotation]], compact })` — centred hero over a full-bleed hatch with tilted cards (05.00, 05.07, 05.13). Figma rotations are counter-clockwise, so the builder negates them for CSS.
+- `explorer(title, accent, [[tab, body, visual]])` — positional panels: lilac dots, pink rings, blue hairlines, mint waveform, amber dots (5th tab).
+- `workflows(title, accent, [[title, body]])` — positional cards: lilac rings, pink dots, blue hairlines, mint rings, amber dots, grey hairlines. Five cards = bento (first card `span: 2`), six = 3 × 2.
+- `challenge(title, paragraphs, card)` (pink rings, visual left), `outcomes(title, lines, card)` (blue dots, visual right), `note(title, body, card)` (lilac hairlines, visual left), `faq([[q, a]])` (all open).
+- `exploreUseCases(keys, { eyebrow })` (cards read "Use Cases"; positional thumbnails like Products), `ucBreadcrumb(label)`, `ucCta(title, lead)` (Book a Demo + Talk to Our Team). Helpers don't start with `use…` so ESLint doesn't treat them as hooks.
+
+### Shared changes
+- `src/components/visuals/mocks.js` (new) — the "UI · …" card builders, moved out of Industries `content/detail.js` (which re-exports them) and extended: `decisions`, `actions`, `summary`, `search`, `capture`, `audit`, `analytics(range, [sentiment, engagement, quality], { width })` (bar size follows width 350/440/560), `redaction(count, sentence, rows)` (`[TOKEN]` parts become chips), `atlas({…})`, `access(members)`, `retention(rules)`, `integrations(names, connected)`, `appWindow`, `floatChip`, `heroCanvas`.
+- `src/components/visuals/HeroCanvas.jsx` (moved from Industries) — items take an optional `rotate` (CSS degrees, top-left pivot).
+- `SolutionHero` `variant="centered"`: `pattern: 'hairlines'` (full-bleed hatch/0B0B12/0.05), `titleSize: 62`, `leadSize: 19`, `copyWidth` (960), `secondaryStyle: 'link'`, `visualGap` (lg gap between copy and visual, 64).
+- Pattern assets: `RINGS.workflow` / `RINGS['workflow-span']` (413×280 / 846×280, the 40px-pitch `rings/9E0059/0.35` field cropped at Figma's offsets; `assets/images/use-cases/`). Use them for these cards; the older `card` / `card-span` rings have a 24px pitch.
+- `DecisionsCard`, `WorkspaceAccessCard`, `RetentionPolicyCard`: optional `shadow` (`'float'` in heroes) and `className`. `IntegrationsCard`: `Outlook` logo.

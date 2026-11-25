@@ -12,6 +12,7 @@
  *   (hairlines.hero 680×900 = Control wash hero; waveform.panel 656×480 = Govern Split panels)
  *   card-wide 630×280 (Understand 2-up audience cards; dots use `inset`: the asset is drawn at its own size, inset px from top-left)
  *   card-span 846×280 (Products bento span-2 card; rings only)
+ *   workflow / workflow-span 413×280 / 846×280 (Use Cases workflow cards; rings only, 40px pitch)
  */
 import heroRings from '@/assets/images/solutions/hero-rings-1440x900.svg';
 import explorerRings from '@/assets/images/solutions/explorer-rings-780x520.svg';
@@ -22,6 +23,8 @@ import bentoRings from '@/assets/images/solutions/bento-rings-382x182.svg';
 import miniRings from '@/assets/images/solutions/related-rings-260x120.svg';
 import cardWideRings from '@/assets/images/solutions/card-wide-rings-630x280.svg';
 import cardSpanRings from '@/assets/images/products/card-span-rings-846x280.svg';
+import workflowRings from '@/assets/images/use-cases/workflow-rings-413x280.svg';
+import workflowSpanRings from '@/assets/images/use-cases/workflow-span-rings-846x280.svg';
 
 import explorerDots from '@/assets/images/solutions/explorer-dot-grid-780x520.svg';
 import chaptersDotsDark from '@/assets/images/solutions/chapters-dot-grid-dark-664x500.svg';
@@ -53,6 +56,9 @@ export const RINGS = {
   mini: { src: miniRings, w: 260, h: 120 },
   'card-wide': { src: cardWideRings, w: 630, h: 280 }, // Understand audience cards (2-up)
   'card-span': { src: cardSpanRings, w: 846, h: 280 }, // Products bento 846×280 card (CardGrid span: 2)
+  // Use Cases "✓ Card · …": the 2000px 40px-pitch rings/9E0059/0.35 field, centred at (383, 30) / (816, 30)
+  workflow: { src: workflowRings, w: 413, h: 280 },
+  'workflow-span': { src: workflowSpanRings, w: 846, h: 280 },
 };
 
 export const DOTS = {
