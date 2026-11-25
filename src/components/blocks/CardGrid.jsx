@@ -1,10 +1,10 @@
 import { Link } from 'react-router';
 import Container from '@/components/ui/Container';
-import AccentTitle from '@/components/ui/AccentTitle';
 import Pattern from '@/components/patterns/Pattern';
 import DotGrid from '@/components/patterns/DotGrid';
 import { cn } from '@/utils/cn';
 import { PANEL_TINTS } from './VisualPanel';
+import SectionHeading from './SectionHeading';
 
 const pad = (n) => String(n).padStart(2, '0');
 
@@ -16,6 +16,7 @@ const pad = (n) => String(n).padStart(2, '0');
  * cards: [{ title, body, tint: lilac|pink|blue|mint, pattern: { type, size:'card' }, to? }]
  * columns: 3 (default, 413px cards) | 2 (Understand "✓ Card · …" 630×280, use pattern size 'card-wide').
  * lead (optional): 18px line under the title, 16px gap (Industries FS "Explore Financial Services Workflows").
+ * eyebrow / titleSize (optional): mono overline and 48px title (Security "Benefits" heads) — see SectionHeading.
  * accentBreak: accent on its own line (default true); false lets it wrap inline (Understand).
  * card.span: 2 makes a card span two columns (Products 846+413 rows in a 3-col grid;
  *   full width at md where the grid is 2 cols). Pair it with a wide pattern size.
@@ -72,6 +73,8 @@ function Card({ card, index }) {
 export default function CardGrid({
   title,
   accent,
+  eyebrow,
+  titleSize,
   lead,
   cards = [],
   tone = 'white',
@@ -89,20 +92,14 @@ export default function CardGrid({
     >
       <Container width="wide" className="flex flex-col gap-10 lg:gap-12">
         {title && (
-          <div className="flex flex-col gap-4">
-            <AccentTitle
-              accent={accent}
-              accentBreak={accentBreak}
-              className="max-w-[860px] text-[32px] font-medium leading-[1.12] tracking-[-1px] sm:text-[40px] lg:text-display-section"
-            >
-              {title}
-            </AccentTitle>
-            {lead && (
-              <p className="max-w-[780px] text-[17px] leading-[1.35] tracking-[-0.18px] text-ink-700 sm:text-[18px]">
-                {lead}
-              </p>
-            )}
-          </div>
+          <SectionHeading
+            eyebrow={eyebrow}
+            title={title}
+            accent={accent}
+            accentBreak={accentBreak}
+            lead={lead}
+            titleSize={titleSize}
+          />
         )}
         <div
           className={cn('grid grid-cols-1 gap-5 md:grid-cols-2', columns === 3 && 'lg:grid-cols-3')}

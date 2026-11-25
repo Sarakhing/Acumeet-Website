@@ -7,7 +7,7 @@ import CtaBand from '@/components/blocks/CtaBand';
 import Statement from '@/components/blocks/Statement';
 import Editorial from '@/components/blocks/Editorial';
 import FeatureSplit from '@/modules/03-products/components/FeatureSplit';
-import InfoNote from '../components/InfoNote';
+import InfoNote from '@/components/blocks/InfoNote';
 
 /**
  * Industries detail page (FS sub-pages 04.02–04.12): breadcrumb → hero (wash

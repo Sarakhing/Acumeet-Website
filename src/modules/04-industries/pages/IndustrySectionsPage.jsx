@@ -9,7 +9,7 @@ import Split from '@/components/blocks/Split';
 import RelatedRow from '@/components/blocks/RelatedRow';
 import CtaBand from '@/components/blocks/CtaBand';
 import FeatureSplit from '@/modules/03-products/components/FeatureSplit';
-import InfoNote from '../components/InfoNote';
+import InfoNote from '@/components/blocks/InfoNote';
 
 const BLOCKS = {
   explorer: Explorer,

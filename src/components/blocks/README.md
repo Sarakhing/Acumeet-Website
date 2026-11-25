@@ -332,3 +332,30 @@ Figma section "05 · Use Cases" (`48:305346`). Module: `src/modules/05-use-cases
 - `SolutionHero` `variant="centered"`: `pattern: 'hairlines'` (full-bleed hatch/0B0B12/0.05), `titleSize: 62`, `leadSize: 19`, `copyWidth` (960), `secondaryStyle: 'link'`, `visualGap` (lg gap between copy and visual, 64).
 - Pattern assets: `RINGS.workflow` / `RINGS['workflow-span']` (413×280 / 846×280, the 40px-pitch `rings/9E0059/0.35` field cropped at Figma's offsets; `assets/images/use-cases/`). Use them for these cards; the older `card` / `card-span` rings have a 24px pitch.
 - `DecisionsCard`, `WorkspaceAccessCard`, `RetentionPolicyCard`: optional `shadow` (`'float'` in heroes) and `className`. `IntegrationsCard`: `Outlook` logo.
+
+---
+
+## Security (06.01–06.07)
+Figma section "06 · Security" (`48:325158`). Module: `src/modules/06-security/`. Routes: `ROUTES.securityPage.<key>` (slugs = mega menu; `ROUTES.security` is still the overview string). All block options below are additive; defaults unchanged.
+
+### Page
+- `pages/SecurityPage.jsx` renders all seven pages: breadcrumb → hero (+ `carousel`) → `sections: [{ type, ...props }]` → FAQ → optional related row → CTA. Section types: `info` (InfoNote), `split` (FeatureSplit), `explorer`, `cards` (CardGrid), `chapters`, `directory` (LinkCardGrid).
+- Each page has its own content file in `content/<slug>.js`. The builders are in `content/security.js`:
+  - `info(title, body)`
+  - `split(props)`
+  - `explorer({ eyebrow?, title, accent, lead?, titleSize? }, [[tab, body, visual]])` — 48px topic title by default. Panels are positional: lilac dots, pink rings, blue hairlines, mint waveform, amber dots, grey rings.
+  - `cards(head, [[title, body]])` — 3 cards = 413px row, 4 cards = 2 × 2 with `card-wide` patterns. Tints are lilac rings, pink dots, blue hairlines, mint rings.
+  - `chapters([[tab, title, body | { checks }, visual]])`
+  - `faq`, `exploreSecurity(keys)`, `secBreadcrumb`, `secCta(title)` (blank sub-line + "Book a demo")
+  - `HERO_ACTIONS` ("Discuss your security requirements" → contact sales, "Contact the security team →" → `/support/security`).
+- Heroes use the shared presets: rings + carousel (06.01, 06.04, 06.07), window (06.02, 06.05), centred tilted (06.03, 06.06).
+
+### Shared changes
+- `src/components/blocks/heroPresets.js` (new) — `ringsHero`, `windowHero`, `stackedHero` and `centeredHero` moved out of Use Cases `content/detail.js` (which re-exports them). All of them now take an optional `primary` (default "Book a Demo").
+- `src/components/blocks/SectionHeading.jsx` (new) — overline + accent title + lead. Explorer and CardGrid use it.
+  - `titleSize`: `'section'` (52, default), `48` (topic heads, 860 wide), or `44` (intro head: 748 wide, 17px/1.55 lead, 16px padding — 06.05 / 06.06).
+- `Explorer`: `eyebrow`, `lead`, `titleSize`.
+- `CardGrid`: `eyebrow`, `titleSize`.
+- `InfoNote` moved from Industries to `src/components/blocks/`. `ctas` is now optional, and it takes `tone: 'white' | 'subtle'`.
+- `mocks.js`: `keys([keyAction, storageAction], { width, shadow })` ("UI · Keys & storage"); `CONNECTED` (the integrations list). `KeysStorageCard` takes `shadow` and `className`.
+- Homepage Security tiles now link to the matching Security pages. The old `/security#…` anchors don't exist on the overview.

@@ -1,11 +1,11 @@
 import { useId, useRef } from 'react';
 import { Link } from 'react-router';
 import Container from '@/components/ui/Container';
-import AccentTitle from '@/components/ui/AccentTitle';
 import AutoAdvanceTimer from '@/components/ui/AutoAdvanceTimer';
 import useAutoAdvance from '@/hooks/useAutoAdvance';
 import { cn } from '@/utils/cn';
 import VisualPanel from './VisualPanel';
+import SectionHeading from './SectionHeading';
 
 const pad = (n) => String(n).padStart(2, '0');
 
@@ -20,8 +20,20 @@ const pad = (n) => String(n).padStart(2, '0');
  *   chip defaults to "NN · title".
  *   link: { label = 'Explore', to } — "Explore →" under the active tab's body
  *   (Industries explorers: 24px below the body, 8px above the progress bar).
+ * Heading options (Security topic sections): `eyebrow` (11px mono overline), `lead`
+ *   (18px, 780 wide), `titleSize` ('section' default | 48). Overline/title/lead are 16px apart.
  */
-export default function Explorer({ title, accent, items = [], interval = 7000, tone = 'subtle', className }) {
+export default function Explorer({
+  title,
+  accent,
+  eyebrow,
+  lead,
+  titleSize = 'section',
+  items = [],
+  interval = 7000,
+  tone = 'subtle',
+  className,
+}) {
   const auto = useAutoAdvance(items.length, { interval });
   const baseId = useId();
   const tabRefs = useRef([]);
@@ -51,12 +63,7 @@ export default function Explorer({ title, accent, items = [], interval = 7000, t
     <section className={cn(tone === 'white' ? 'bg-surface-white' : 'bg-surface-muted', 'py-16 lg:py-[120px]', className)}>
       <Container width="wide" className="flex flex-col gap-10 lg:gap-12">
         {title && (
-          <AccentTitle
-            accent={accent}
-            className="max-w-[860px] text-[32px] font-medium leading-[1.12] tracking-[-1px] sm:text-[40px] lg:text-display-section"
-          >
-            {title}
-          </AccentTitle>
+          <SectionHeading eyebrow={eyebrow} title={title} accent={accent} lead={lead} titleSize={titleSize} />
         )}
 
         <div className="flex flex-col gap-8 lg:flex-row lg:items-start lg:gap-10" {...auto.hoverProps} {...auto.focusProps}>

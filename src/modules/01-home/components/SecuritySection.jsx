@@ -18,35 +18,35 @@ const CONTROLS = [
     description: 'Who can see each meeting',
     icon: iconAccessControl,
     ring: 'border-[rgba(240,107,174,0.45)]',
-    hash: 'access-control',
+    to: ROUTES.securityPage.identityAccess, // was /security#access-control
   },
   {
     title: 'Retention',
     description: 'How long records are kept',
     icon: iconRetention,
     ring: 'border-[rgba(110,168,255,0.45)]',
-    hash: 'retention',
+    to: ROUTES.securityPage.dataLifecycle, // was /security#retention
   },
   {
     title: 'Model training',
     description: 'Never used to train public AI models',
     icon: iconModelTraining,
     ring: 'border-[rgba(167,139,250,0.45)]',
-    hash: 'model-training',
+    to: ROUTES.securityPage.aiSecurity, // was /security#model-training
   },
   {
     title: 'SSO and audit logs',
     description: 'Enterprise sign-in and activity history',
     icon: iconSsoAudit,
     ring: 'border-[rgba(74,222,155,0.45)]',
-    hash: 'sso-and-audit-logs',
+    to: ROUTES.securityPage.auditMonitoring, // was /security#sso-and-audit-logs
   },
   {
     title: 'Storage and keys',
     description: 'Customer-controlled',
     icon: iconStorageKeys,
     ring: 'border-[rgba(245,185,74,0.45)]',
-    hash: 'storage-and-keys',
+    to: ROUTES.securityPage.dataSecurity, // was /security#storage-and-keys
   },
 ];
 
@@ -56,11 +56,11 @@ const BACKGROUND = [
   'radial-gradient(554px 218px at 93.85% 64%, rgba(158,0,89,0.42), rgba(158,0,89,0))',
 ].join(', ');
 
-function ControlTile({ title, description, icon, ring, hash }) {
+function ControlTile({ title, description, icon, ring, to }) {
   return (
     <li>
       <Link
-        to={`${ROUTES.security}#${hash}`}
+        to={to}
         className="group flex h-full items-start gap-[18px] rounded-[12px] border border-white/12 bg-white/5 px-[18px] py-3 transition-colors duration-200 hover:border-white/20 hover:bg-white/8 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-white"
       >
         <span
@@ -109,7 +109,7 @@ export default function SecuritySection() {
           </p>
           <ul className="grid w-full grid-cols-1 gap-x-3 gap-y-3 sm:grid-cols-2 sm:gap-y-4">
             {CONTROLS.map((control) => (
-              <ControlTile key={control.hash} {...control} />
+              <ControlTile key={control.title} {...control} />
             ))}
           </ul>
           <Button to={ROUTES.security} intent="primary" size="lg">

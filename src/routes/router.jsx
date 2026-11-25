@@ -6,6 +6,7 @@ import { solutionsRoutes } from '@/modules/02-solutions';
 import { productsRoutes } from '@/modules/03-products';
 import { industriesRoutes } from '@/modules/04-industries';
 import { useCasesRoutes } from '@/modules/05-use-cases';
+import { securityRoutes } from '@/modules/06-security';
 
 /**
  * Each Figma section is a module exporting its own lazy routes.
@@ -20,6 +21,7 @@ export const router = createBrowserRouter([
       ...productsRoutes,
       ...industriesRoutes,
       ...useCasesRoutes,
+      ...securityRoutes,
       { path: '*', element: <ComingSoon /> },
     ],
   },

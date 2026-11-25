@@ -69,6 +69,16 @@ export const ROUTES = {
     enterpriseKnowledgeManagement: '/use-cases/enterprise-knowledge-management',
   },
   security: '/security',
+  // Security pages (Figma "06 · Security"); slugs match the header mega menu.
+  securityPage: {
+    overview: '/security',
+    zeroTrust: '/security/zero-trust-architecture',
+    identityAccess: '/security/identity-access',
+    dataSecurity: '/security/data-security',
+    aiSecurity: '/security/ai-security',
+    auditMonitoring: '/security/audit-monitoring',
+    dataLifecycle: '/security/data-lifecycle',
+  },
   trustCenter: '/trust-center',
   compliance: '/compliance',
   integrations: '/integrations',

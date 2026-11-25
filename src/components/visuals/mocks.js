@@ -15,6 +15,7 @@ import { AVATARS } from '@/components/visuals/people';
 import AuditLogCard from '@/modules/02-solutions/components/visuals/AuditLogCard';
 import WorkspaceAccessCard from '@/modules/02-solutions/components/visuals/WorkspaceAccessCard';
 import RetentionPolicyCard from '@/modules/02-solutions/components/visuals/RetentionPolicyCard';
+import KeysStorageCard from '@/modules/02-solutions/components/visuals/KeysStorageCard';
 
 /**
  * Data builders for the Figma "UI · …" mock-up cards, shared by content files
@@ -119,6 +120,13 @@ export const access = (members, { width = 440, shadow = 'mock' } = {}) =>
 /** "Retention policy": retention([[label, keep], …], { status, width, shadow }). */
 export const retention = (rules, { status = 'Default', width = 360, shadow = 'mock' } = {}) =>
   h(RetentionPolicyCard, { width, shadow, status, rules: rules.map(([label, keep]) => ({ label, keep })) });
+
+/** "Keys & storage" (BYOK / BYOS): keys([keyAction, storageAction], { width, shadow }) — e.g. ['Connected', 'Configure']. */
+export const keys = (actionLabels = ['Configure', 'Configure'], { width = 400, shadow = 'mock' } = {}) =>
+  h(KeysStorageCard, { width, shadow, actions: actionLabels });
+
+/** Integrations listed in every Use Cases / Security "UI · Connect" card ("6 connected"). */
+export const CONNECTED = ['Microsoft Teams', 'Zoom', 'Google Meet', 'Slack', 'Outlook', 'Jira', 'Asana'];
 
 /** "Integrations": integrations(['Microsoft Teams', …], connected, { width }). */
 export const integrations = (names, connected, { width = 460 } = {}) =>

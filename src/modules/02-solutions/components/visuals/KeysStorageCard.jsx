@@ -37,9 +37,11 @@ export default function KeysStorageCard({
   storageIcon = DEFAULT_STORAGE,
   iconSize = 32,
   permissions = true, // false drops the "Acumeet can" box (Solutions overview hero)
+  shadow, // mock (default) | float (heroes)
+  className,
 }) {
   return (
-    <MockCard title="Data & storage" gap={12} width={width} aside={<UiChip tone="purple">Enterprise</UiChip>}>
+    <MockCard title="Data & storage" gap={12} width={width} shadow={shadow} className={className} aside={<UiChip tone="purple">Enterprise</UiChip>}>
       <Row icon={keyOverride.src} tone={keyOverride.tone} iconSize={iconSize} title="Bring your own key" provider="Azure Key Vault" action={actions[0]} />
       <Row icon={storageIcon.src} tone={storageIcon.tone} iconSize={iconSize} title="Bring your own storage" provider="Azure Blob Storage" action={actions[1]} />
       {permissions && (
