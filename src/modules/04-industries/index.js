@@ -33,4 +33,5 @@ export const industriesRoutes = [
   { path: rel(I.fraudInvestigations), element: detail(() => import('./content/fraud-investigations')) }, // 04.08 · 48:289851
   { path: rel(I.boardMeetings), element: detail(() => import('./content/board-meetings')) }, // 04.09 · 48:289960
   { path: rel(I.auditMeetings), element: detail(() => import('./content/audit-meetings')) }, // 04.10 · 48:291127
+  { path: rel(I.amlReviews), element: detail(() => import('./content/aml-reviews')) }, // 04.11 · 48:292310
 ];

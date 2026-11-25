@@ -5,6 +5,7 @@ import Explorer from '@/components/blocks/Explorer';
 import RelatedRow from '@/components/blocks/RelatedRow';
 import CtaBand from '@/components/blocks/CtaBand';
 import Statement from '@/components/blocks/Statement';
+import Editorial from '@/components/blocks/Editorial';
 import FeatureSplit from '@/modules/03-products/components/FeatureSplit';
 import InfoNote from '../components/InfoNote';
 
@@ -23,6 +24,7 @@ export default function IndustryDetailPage({ content: c }) {
       {c.split && <FeatureSplit {...c.split} />}
       {c.statement && <Statement {...c.statement} />}
       {c.note && <InfoNote {...c.note} />}
+      {c.editorial && <Editorial {...c.editorial} />}
       <RelatedRow {...c.related} />
       <CtaBand {...c.cta} />
     </>

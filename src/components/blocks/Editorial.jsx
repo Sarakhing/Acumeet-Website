@@ -1,3 +1,4 @@
+import { Link } from 'react-router';
 import Button from '@/components/ui/Button';
 import Container from '@/components/ui/Container';
 import Eyebrow from '@/components/ui/Eyebrow';
@@ -14,6 +15,7 @@ const TONES = {
  * Figma "Editorial" (inside "03 · rows" / "02 · rows"): title on the left
  * (520px), copy column on the right. Stacks below lg.
  * paragraphs: string[]; cta: { label, to, intent?, size? ('md' default | 'lg' = Connect) }; tone: subtle | white | dark
+ * secondary: { label, to } — "Label →" link beside the cta (Industries AML "Clarify the Role…").
  * bullets: string[] — 6px magenta marker + 15px text, after the paragraphs (Products 02.09/02.10 "Example: …").
  */
 export default function Editorial({
@@ -23,6 +25,7 @@ export default function Editorial({
   paragraphs = [],
   bullets = [],
   cta,
+  secondary,
   tone = 'subtle',
   className,
 }) {
@@ -71,15 +74,31 @@ export default function Editorial({
               ))}
             </ul>
           )}
-          {cta && (
-            <div className="pt-2">
-              <Button
-                to={cta.to}
-                intent={cta.intent ?? (dark ? 'light' : 'secondary')}
-                size={cta.size ?? 'md'}
-              >
-                {cta.label}
-              </Button>
+          {(cta || secondary) && (
+            <div className="flex flex-wrap items-center gap-x-3 gap-y-4 pt-2">
+              {cta && (
+                <Button
+                  to={cta.to}
+                  intent={cta.intent ?? (dark ? 'light' : 'secondary')}
+                  size={cta.size ?? 'md'}
+                >
+                  {cta.label}
+                </Button>
+              )}
+              {secondary && (
+                <Link
+                  to={secondary.to}
+                  className={cn(
+                    'group inline-flex items-center gap-1.5 text-[15px] font-medium leading-[1.5] underline-offset-4 hover:underline',
+                    dark ? 'text-ink-on-dark' : 'text-ink-800',
+                  )}
+                >
+                  {secondary.label}
+                  <span aria-hidden="true" className="text-brand-magenta transition-transform group-hover:translate-x-0.5">
+                    →
+                  </span>
+                </Link>
+              )}
             </div>
           )}
         </div>
