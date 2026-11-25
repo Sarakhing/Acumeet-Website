@@ -28,4 +28,5 @@ export const industriesRoutes = [
   { path: rel(I.insurance), element: detail(() => import('./content/insurance')) }, // 04.03 · 48:288221
   { path: rel(I.executiveMeetings), element: detail(() => import('./content/executive-meetings')) }, // 04.04 · 48:289384
   { path: rel(I.creditCommittees), element: detail(() => import('./content/credit-committees')) }, // 04.05 · 48:289461
+  { path: rel(I.riskCommittees), element: detail(() => import('./content/risk-committees')) }, // 04.06 · 48:289571
 ];
