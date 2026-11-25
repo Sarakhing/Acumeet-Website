@@ -8,6 +8,7 @@ import SummaryCard from '@/components/visuals/SummaryCard';
 import KnowledgeSearchCard from '@/components/visuals/KnowledgeSearchCard';
 import MeetingCaptureCard from '@/components/visuals/MeetingCaptureCard';
 import { AVATARS } from '@/components/visuals/people';
+import AuditLogCard from '@/modules/02-solutions/components/visuals/AuditLogCard';
 import HeroCanvas from '../components/visuals/HeroCanvas';
 import { INDUSTRIES } from './industries';
 
@@ -64,6 +65,10 @@ export const search = (query, results, { width = 480, shadow = 'mock' } = {}) =>
 /** "Upcoming meetings": capture(date, [[title, meta], …], { width }). First row is recording. */
 export const capture = (date, meetings, { width = 400, shadow = 'mock' } = {}) =>
   h(MeetingCaptureCard, { width, shadow, date, meetings: meetings.map(([title, meta]) => ({ title, meta })) });
+
+/** "Audit log": audit([[time, action, actor], …], { width }). First event is live. */
+export const audit = (events, { width = 440, shadow = 'mock' } = {}) =>
+  h(AuditLogCard, { width, shadow, events: events.map(([time, action, actor]) => ({ time, action, actor })) });
 
 /** Chrome app window wrapping a card (hero compositions). */
 export const appWindow = (width, child) => h('div', { style: { width } }, h(AppWindow, null, child));
