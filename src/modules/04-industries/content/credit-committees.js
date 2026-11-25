@@ -20,8 +20,8 @@ export default {
   hero: {
     eyebrow: 'Credit Committees',
     eyebrowStyle: 'chip',
-    title: 'Create Clearer Records of Credit Committee',
-    accent: 'Decisions',
+    title: 'Create Clearer Records of Credit',
+    accent: 'Committee Decisions',
     lead: 'Acumeet helps teams document credit discussions, capture agreed outcomes and organise follow-up actions without replacing credit assessment or approval systems.',
     visual: heroCanvas(553, [
       [

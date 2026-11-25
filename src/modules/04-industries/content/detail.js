@@ -136,3 +136,23 @@ export const disclaimer = (title, accent, body) => ({
   cta: { label: 'Book a Demo', to: ROUTES.bookDemo },
   secondary: { label: 'Contact Our Team', to: ROUTES.contactSales },
 });
+
+/**
+ * Banking-style wash hero (630 tall, dot grid): app window with "Decisions & topics"
+ * (500 card) + overlapping 360 action-items card + "Live in your workspace" chip.
+ * windowHero({ eyebrow, title, accent, lead, decisions: [date, decided[], risk, topics[]], actions: [open, tasks] })
+ */
+export const windowHero = ({ eyebrow, title, accent, lead, decisions: d, actions: [open, tasks] }) => ({
+  eyebrow,
+  eyebrowStyle: 'chip',
+  title,
+  accent,
+  lead,
+  visual: heroCanvas(553, [
+    [60, 36, appWindow(600, decisions(d[0], d[1], d[2], d[3], 500))],
+    [0, 213, actions(open, tasks, { width: 360, shadow: 'float' })],
+    [480, 0, floatChip()],
+  ]),
+  visualWidth: 660,
+  padBottom: 13,
+});
