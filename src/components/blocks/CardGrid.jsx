@@ -105,7 +105,7 @@ export default function CardGrid({
           className={cn('grid grid-cols-1 gap-5 md:grid-cols-2', columns === 3 && 'lg:grid-cols-3')}
         >
           {cards.map((card, i) => (
-            <Card key={card.title} card={card} index={i} />
+            <Card key={`${i}-${card.title}`} card={card} index={i} />
           ))}
         </div>
       </Container>

@@ -14,8 +14,9 @@ const TITLE_SIZES = {
  * Block heading: optional 11px mono overline, title with a gradient `accent`, optional
  * 18px lead (780 wide). Items are 16px apart (Figma "Head", Security 06.03 48:325516).
  * titleSize: 'section' (52) | 48 (topic heads) | 44 (intro head: 748 wide, 17px/1.55 lead, 16px padding).
+ * leadSize: 'lg' (18px) | 'md' (17px/1.55, 760 wide) — defaults to 'md' for the 44px head, 'lg' otherwise.
  */
-export default function SectionHeading({ eyebrow, title, accent, accentBreak, lead, titleSize = 'section' }) {
+export default function SectionHeading({ eyebrow, title, accent, accentBreak, lead, titleSize = 'section', leadSize }) {
   const heading = (
     <AccentTitle
       accent={accent}
@@ -30,6 +31,7 @@ export default function SectionHeading({ eyebrow, title, accent, accentBreak, le
   );
   if (!eyebrow && !lead) return heading;
   const intro = titleSize === 44;
+  const smallLead = leadSize ? leadSize === 'md' : intro; // 'md' = 17px/1.55, 748 wide
   return (
     <div className={cn('flex flex-col gap-4', intro && 'lg:py-4')}>
       {eyebrow && (
@@ -40,7 +42,7 @@ export default function SectionHeading({ eyebrow, title, accent, accentBreak, le
         <p
           className={cn(
             'text-[17px] text-ink-700',
-            intro ? 'max-w-[748px] leading-[1.55]' : 'max-w-[780px] leading-[1.35] tracking-[-0.18px] sm:text-[18px]',
+            smallLead ? 'max-w-[760px] leading-[1.55]' : 'max-w-[780px] leading-[1.35] tracking-[-0.18px] sm:text-[18px]',
           )}
         >
           {lead}

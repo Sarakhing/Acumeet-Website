@@ -10,6 +10,7 @@ import MeetingAnalyticsCard from '@/components/visuals/MeetingAnalyticsCard';
 import RedactionReview from '@/components/visuals/RedactionReview';
 import AtlasChatCard from '@/components/visuals/AtlasChatCard';
 import IntegrationsCard from '@/components/visuals/IntegrationsCard';
+import TranscriptCard from '@/components/visuals/TranscriptCard';
 import HeroCanvas from '@/components/visuals/HeroCanvas';
 import { AVATARS } from '@/components/visuals/people';
 import AuditLogCard from '@/modules/02-solutions/components/visuals/AuditLogCard';
@@ -131,6 +132,10 @@ export const CONNECTED = ['Microsoft Teams', 'Zoom', 'Google Meet', 'Slack', 'Ou
 /** "Integrations": integrations(['Microsoft Teams', …], connected, { width }). */
 export const integrations = (names, connected, { width = 460 } = {}) =>
   h(IntegrationsCard, { width, connected, items: names.map((name) => ({ name })) });
+
+/** "Transcript" (live): transcript([[name, time, text], …], { width }). The last line is still being transcribed. */
+export const transcript = (lines, { width = 440, shadow = 'mock' } = {}) =>
+  h(TranscriptCard, { width, shadow, lines: lines.map(([name, time, text]) => ({ name, time, text })) });
 
 /** Chrome app window wrapping a card (hero compositions). */
 export const appWindow = (width, child) => h('div', { style: { width } }, h(AppWindow, null, child));

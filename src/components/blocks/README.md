@@ -359,3 +359,36 @@ Figma section "06 · Security" (`48:325158`). Module: `src/modules/06-security/`
 - `InfoNote` moved from Industries to `src/components/blocks/`. `ctas` is now optional, and it takes `tone: 'white' | 'subtle'`.
 - `mocks.js`: `keys([keyAction, storageAction], { width, shadow })` ("UI · Keys & storage"); `CONNECTED` (the integrations list). `KeysStorageCard` takes `shadow` and `className`.
 - Homepage Security tiles now link to the matching Security pages. The old `/security#…` anchors don't exist on the overview.
+
+---
+
+## Trust Center (07.01, 07.03, 07.05–07.11, 07.13)
+Figma section "07 · Trust Center" (`48:336975`). Module: `src/modules/07-trust-center/`. Routes: `ROUTES.trustPage.<key>` (slugs = mega menu; `ROUTES.trustCenter` is still the overview string).
+- Not built:
+  - 07.02 Security, 07.04 Compliance and 07.12 Compliance Documentation. Figma marks them as "shared" entries that point at 06.01 / 08.01 / 08.11.
+  - "03a · Trust Center", an earlier overview draft.
+
+### Page
+- `pages/TrustCenterPage.jsx` is a `BlockPage` that adds three Trust Center section types:
+  - `principles` — `components/PrinciplesIndex.jsx`. Figma "Index · Control comes first": a filter of pills and 6 white principle cards. Badges and rings tint in Figma order (`assets/images/trust-center/principle-rings-*-413x110.svg`). Figma doesn't assign cards to filters, so the content file sets `group` per card.
+  - `lifecycle` — `components/LifecycleStrip.jsx`. Figma "Index · Control data from collection to deletion": a dark numbered strip; `highlight` marks the magenta stage.
+  - `docs` — `components/DocCardGrid.jsx`. Figma "Checklist": document / provider cards in `rows` (e.g. `[4, 3]`). The first card is featured. Each card has its own colour and a `DocIcon` (inline duotone SVG: file-text, user-check, cloud, sparkle, pulse, shield-check).
+- Builders in `content/trust-center.js`:
+  - `statement(title, accent, { eyebrow = 'Overview', paragraphs })` — subtle waveform `Statement`
+  - `explorer(head, items)`
+  - `cards(head, list)` — 413px benefit cards
+  - `docs(head, [[title, '#hex', icon]])`
+  - `split(title, bullet, visual, reverse)` — dot bullet
+  - `chapters`, `faq(items, title?)`
+  - `exploreTrust(keys)`, `tcBreadcrumb`, `tcCta(title, lead, primaryLabel)`
+  - Links: `REQUEST(label)` → contact sales, `BOOK_DEMO`, `VISIT_TRUST`
+- Shared mock data (members, the supplier Atlas card, default retention rows) lives in `content/shared.js`.
+
+### Shared changes
+- `src/components/blocks/BlockPage.jsx` (new) is the data-driven page used by Security and Trust Center.
+  - Order: hero (+ carousel) → `sections` → optional FAQ / related → CTA.
+  - Base section types: info, explorer, cards, chapters, split, directory, statement. Modules add their own types via `sections`.
+  - `SecurityPage` is now a thin wrapper around it.
+- `SectionHeading`: `leadSize` (`'lg'` 18px | `'md'` 17px/1.55). `CardGrid` heads can use `titleSize: 44` (Trust Center 07.01 "Access limited…").
+- `CardGrid` keys cards by index + title (07.13 has three identical "[Date]" placeholders).
+- `mocks.js`: `transcript([[name, time, text]], { width })`.
