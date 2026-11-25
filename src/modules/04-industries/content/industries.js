@@ -16,17 +16,72 @@ export const INDUSTRIES = {
     to: I.financialServices,
     figma: '48:287949',
   },
-  banking: { title: 'Banking', to: I.banking, figma: '48:288112' },
-  insurance: { title: 'Insurance', to: I.insurance, figma: '48:288221' },
-  executiveMeetings: { title: 'Executive Meetings', to: I.executiveMeetings, figma: '48:289384' },
-  creditCommittees: { title: 'Credit Committees', to: I.creditCommittees, figma: '48:289461' },
-  riskCommittees: { title: 'Risk Committees', to: I.riskCommittees, figma: '48:289571' },
-  complianceMeetings: { title: 'Compliance Meetings', to: I.complianceMeetings, figma: '48:289785' },
-  fraudInvestigations: { title: 'Fraud Investigations', to: I.fraudInvestigations, figma: '48:289851' },
-  boardMeetings: { title: 'Board Meetings', to: I.boardMeetings, figma: '48:289960' },
-  auditMeetings: { title: 'Audit Meetings', to: I.auditMeetings, figma: '48:291127' },
-  amlReviews: { title: 'AML Reviews', to: I.amlReviews, figma: '48:292310' },
-  customerStrategy: { title: 'Customer Strategy', to: I.customerStrategy, figma: '48:292421' },
+  banking: {
+    title: 'Banking',
+    description: 'Bring Clarity to Banking Conversations and Decisions',
+    to: I.banking,
+    figma: '48:288112',
+  },
+  insurance: {
+    title: 'Insurance',
+    description: 'Make Insurance Meetings More Structured and Actionable',
+    to: I.insurance,
+    figma: '48:288221',
+  },
+  executiveMeetings: {
+    title: 'Executive Meetings',
+    description: 'Turn Executive Discussions Into Clear Priorities and Action',
+    to: I.executiveMeetings,
+    figma: '48:289384',
+  },
+  creditCommittees: {
+    title: 'Credit Committees',
+    description: 'Create Clearer Records of Credit Committee Decisions',
+    to: I.creditCommittees,
+    figma: '48:289461',
+  },
+  riskCommittees: {
+    title: 'Risk Committees',
+    description: 'Keep Risk Discussions, Decisions and Actions Connected',
+    to: I.riskCommittees,
+    figma: '48:289571',
+  },
+  complianceMeetings: {
+    title: 'Compliance Meetings',
+    description: 'Make Compliance Discussions Easier to Document and Follow Up',
+    to: I.complianceMeetings,
+    figma: '48:289785',
+  },
+  fraudInvestigations: {
+    title: 'Fraud Investigations',
+    description: 'Organise Investigation Discussions and Follow-Up Actions',
+    to: I.fraudInvestigations,
+    figma: '48:289851',
+  },
+  boardMeetings: {
+    title: 'Board Meetings',
+    description: 'Preserve Board Decisions and Support Follow-Through',
+    to: I.boardMeetings,
+    figma: '48:289960',
+  },
+  auditMeetings: {
+    title: 'Audit Meetings',
+    description: 'Turn Audit Discussions Into Trackable Follow-Up',
+    to: I.auditMeetings,
+    figma: '48:291127',
+  },
+  amlReviews: {
+    title: 'AML Reviews',
+    description: 'Bring Structure to Anti-Money Laundering Review Meetings',
+    to: I.amlReviews,
+    figma: '48:292310',
+  },
+  customerStrategy: {
+    title: 'Customer Strategy',
+    description: 'Turn Customer Conversations Into Clear Next Steps',
+    to: I.customerStrategy,
+    figma: '48:292421',
+  },
   telecommunications: {
     title: 'Telecommunications',
     description: 'Turn Telecommunications Meetings Into Coordinated Action',
@@ -70,11 +125,19 @@ export const relatedIndustries = (...keys) =>
     ...SLOTS[i % SLOTS.length],
   }));
 
-/** "Explore Industries" row (Figma: no overline, 36px title). */
-export const exploreIndustries = (keys) => ({
-  eyebrow: null,
+/** "Explore Industries" row (36px title). The overview hides the "Keep exploring" overline; FS pages show it. */
+export const exploreIndustries = (keys, { eyebrow = null } = {}) => ({
+  eyebrow,
   title: 'Explore Industries',
   cards: relatedIndustries(...keys),
+});
+
+/** Figma "CTA band" on every Industries page: the page headline, a blank sub-line, one "Book a demo" button. */
+export const industryCta = (title) => ({
+  title,
+  lead: '\u00a0',
+  primary: { label: 'Book a demo', to: ROUTES.bookDemo },
+  secondary: null,
 });
 
 /** Directory link card for an industry: { title, description, to }. */

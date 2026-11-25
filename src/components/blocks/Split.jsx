@@ -1,3 +1,4 @@
+import { Link } from 'react-router';
 import Button from '@/components/ui/Button';
 import Container from '@/components/ui/Container';
 import Eyebrow from '@/components/ui/Eyebrow';
@@ -22,7 +23,8 @@ const SECTION_TONES = {
  * size="standard" (Control "Split"): as wide, but 17px body.
  * size="compact"  (Govern "02 · rows" Split): as wide, but 36px title and 17px body.
  *
- * Content order: eyebrow → title(+accent) → body[] → bullets[] → footnote[] → cta.
+ * Content order: eyebrow → title(+accent) → body[] → bullets[] → footnote[] → cta (+ secondary).
+ * secondary: { label, to } — "Label →" text link beside the cta button (Industries splits).
  * bullets: [{ lead?, text }] — `lead` renders bold ("Access by role:").
  * bulletStyle: 'plain' | 'check' (blue check-circle, Figma "Icon/check") | 'dot' (6px magenta marker,
  *   15px ink-800 text, 16px apart — Atlas "Ask Questions Naturally") | 'tick' (green ✓, 15px ink-700,
@@ -43,6 +45,7 @@ export default function Split({
   bulletStyle = 'plain',
   footnote = [],
   cta,
+  secondary,
   visual,
   reverse = false,
   className,
@@ -151,11 +154,27 @@ export default function Split({
               {p}
             </p>
           ))}
-          {cta && (
-            <div className="pt-0.5">
-              <Button to={cta.to} intent={cta.intent ?? 'primary'}>
-                {cta.label}
-              </Button>
+          {(cta || secondary) && (
+            <div className="flex flex-wrap items-center gap-x-3 gap-y-4 pt-0.5">
+              {cta && (
+                <Button to={cta.to} intent={cta.intent ?? 'primary'}>
+                  {cta.label}
+                </Button>
+              )}
+              {secondary && (
+                <Link
+                  to={secondary.to}
+                  className={cn(
+                    'group inline-flex items-center gap-1.5 text-[15px] font-medium leading-[1.5] underline-offset-4 hover:underline',
+                    dark ? 'text-ink-on-dark' : 'text-ink-800',
+                  )}
+                >
+                  {secondary.label}
+                  <span aria-hidden="true" className="transition-transform group-hover:translate-x-0.5">
+                    →
+                  </span>
+                </Link>
+              )}
             </div>
           )}
         </div>
