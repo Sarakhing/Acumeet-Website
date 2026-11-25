@@ -11,15 +11,17 @@ const I = ROUTES.industry;
 const IndustriesOverviewPage = lazy(() => import('./pages/IndustriesOverviewPage'));
 const FinancialServicesPage = lazy(() => import('./pages/FinancialServicesPage'));
 
-/** Detail pages share IndustryDetailPage; each loads its own content chunk. */
-const detail = (loadContent) =>
+/** Pages rendered by a shared page component from a content module (each loads its own chunk). */
+const withContent = (loadPage) => (loadContent) =>
   createElement(
     lazy(() =>
-      Promise.all([import('./pages/IndustryDetailPage'), loadContent()]).then(([page, content]) => ({
+      Promise.all([loadPage(), loadContent()]).then(([page, content]) => ({
         default: () => createElement(page.default, { content: content.default }),
       })),
     ),
   );
+const detail = withContent(() => import('./pages/IndustryDetailPage')); // FS sub-pages
+const sections = withContent(() => import('./pages/IndustrySectionsPage')); // top-level industries
 
 export const industriesRoutes = [
   { path: rel(I.overview), element: createElement(IndustriesOverviewPage) }, // 04.00 · 48:287759
@@ -35,4 +37,5 @@ export const industriesRoutes = [
   { path: rel(I.auditMeetings), element: detail(() => import('./content/audit-meetings')) }, // 04.10 · 48:291127
   { path: rel(I.amlReviews), element: detail(() => import('./content/aml-reviews')) }, // 04.11 · 48:292310
   { path: rel(I.customerStrategy), element: detail(() => import('./content/customer-strategy')) }, // 04.12 · 48:292421
+  { path: rel(I.telecommunications), element: sections(() => import('./content/telecommunications')) }, // 04.13 · 48:293592
 ];
