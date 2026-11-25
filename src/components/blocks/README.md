@@ -392,3 +392,23 @@ Figma section "07 · Trust Center" (`48:336975`). Module: `src/modules/07-trust-
 - `SectionHeading`: `leadSize` (`'lg'` 18px | `'md'` 17px/1.55). `CardGrid` heads can use `titleSize: 44` (Trust Center 07.01 "Access limited…").
 - `CardGrid` keys cards by index + title (07.13 has three identical "[Date]" placeholders).
 - `mocks.js`: `transcript([[name, time, text]], { width })`.
+
+## Compliance (08.01–08.11)
+Figma section "08 · Compliance" (`48:369038`). Module: `src/modules/08-compliance/`. Routes: `ROUTES.compliancePage.<key>` (slugs = mega menu; `ROUTES.compliance` is still the overview string).
+- Not built: "03b · Compliance", an earlier draft.
+
+### Page
+- `pages/CompliancePage.jsx` is a `BlockPage` that adds one Compliance section type:
+  - `infoCards` — `components/InfoCards.jsx`. Figma "02 · Clear commitments" / "08 · Responsible handling" / "11 · Find the information": a 12px magenta mono overline, 40px title and 17px paragraphs, then grey numbered cards in 3 columns (or `columns: 2`) and an optional outlined button.
+- `components/ComplianceBadge.jsx`: the "Badge / GDPR" and "Badge / NDPR" shields, drawn as inline SVG with live text (`region`, `label`).
+- Builders in `content/compliance.js`:
+  - `split({ eyebrow?, title, body[], bullet: [lead, text], cta, secondary?, visual, reverse })` — mono overline and a dot bullet with a bold lead
+  - `panel(tint, patternType, content)` — 656×480 split panel
+  - `infoCards(head, [[title, body]])`, `explorer(head, items)`, `statement(title, accent)`, `faq(items)`
+  - `exploreCompliance(keys)`, `RELATED` (the usual four), `compBreadcrumb`, `DEFAULT_CTA`, `compCta(title, lead, primary, secondary)`
+  - Links: `CONTACT(label)` → contact sales, `REQUEST_DOCS`, `VISIT_TRUST`, `BOOK_DEMO`, `PRIVACY_NOTICE`
+- `content/shared.js` holds the repeated mock data: the compliance tasks, NIN redaction sentence, summary insights, the two card lists and the float hero cards. It re-exports `members`, `POLICY_ROWS` and `supplierAtlas` from the Trust Center.
+
+### Shared changes
+- `SectionHeading`: `lead` may be an array of paragraphs (08.01 "Responsible AI" explorer head).
+- `mocks.js`: `documents([[title, 'public' | 'request']], { width })` → new `src/components/visuals/DocumentsCard.jsx` (Figma "UI · Documents").

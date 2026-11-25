@@ -15,6 +15,7 @@ const TITLE_SIZES = {
  * 18px lead (780 wide). Items are 16px apart (Figma "Head", Security 06.03 48:325516).
  * titleSize: 'section' (52) | 48 (topic heads) | 44 (intro head: 748 wide, 17px/1.55 lead, 16px padding).
  * leadSize: 'lg' (18px) | 'md' (17px/1.55, 760 wide) — defaults to 'md' for the 44px head, 'lg' otherwise.
+ * lead may be an array of paragraphs (Compliance 08.01 "Responsible AI" head), each 16px apart.
  */
 export default function SectionHeading({ eyebrow, title, accent, accentBreak, lead, titleSize = 'section', leadSize }) {
   const heading = (
@@ -38,16 +39,17 @@ export default function SectionHeading({ eyebrow, title, accent, accentBreak, le
         <p className="font-mono text-[11px] uppercase leading-[1.5] tracking-[0.66px] text-ink-500">{eyebrow}</p>
       )}
       {heading}
-      {lead && (
+      {[lead].flat().filter(Boolean).map((p) => (
         <p
+          key={p}
           className={cn(
             'text-[17px] text-ink-700',
             smallLead ? 'max-w-[760px] leading-[1.55]' : 'max-w-[780px] leading-[1.35] tracking-[-0.18px] sm:text-[18px]',
           )}
         >
-          {lead}
+          {p}
         </p>
-      )}
+      ))}
     </div>
   );
 }

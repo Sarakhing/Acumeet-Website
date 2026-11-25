@@ -11,6 +11,7 @@ import RedactionReview from '@/components/visuals/RedactionReview';
 import AtlasChatCard from '@/components/visuals/AtlasChatCard';
 import IntegrationsCard from '@/components/visuals/IntegrationsCard';
 import TranscriptCard from '@/components/visuals/TranscriptCard';
+import DocumentsCard from '@/components/visuals/DocumentsCard';
 import HeroCanvas from '@/components/visuals/HeroCanvas';
 import { AVATARS } from '@/components/visuals/people';
 import AuditLogCard from '@/modules/02-solutions/components/visuals/AuditLogCard';
@@ -136,6 +137,10 @@ export const integrations = (names, connected, { width = 460 } = {}) =>
 /** "Transcript" (live): transcript([[name, time, text], …], { width }). The last line is still being transcribed. */
 export const transcript = (lines, { width = 440, shadow = 'mock' } = {}) =>
   h(TranscriptCard, { width, shadow, lines: lines.map(([name, time, text]) => ({ name, time, text })) });
+
+/** "Documents": documents([[title, 'public' | 'request'], …], { width }). */
+export const documents = (docs, { width = 350, shadow = 'mock' } = {}) =>
+  h(DocumentsCard, { width, shadow, docs: docs.map(([title, access]) => ({ title, access })) });
 
 /** Chrome app window wrapping a card (hero compositions). */
 export const appWindow = (width, child) => h('div', { style: { width } }, h(AppWindow, null, child));
