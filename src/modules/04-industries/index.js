@@ -38,4 +38,5 @@ export const industriesRoutes = [
   { path: rel(I.amlReviews), element: detail(() => import('./content/aml-reviews')) }, // 04.11 · 48:292310
   { path: rel(I.customerStrategy), element: detail(() => import('./content/customer-strategy')) }, // 04.12 · 48:292421
   { path: rel(I.telecommunications), element: sections(() => import('./content/telecommunications')) }, // 04.13 · 48:293592
+  { path: rel(I.publicSector), element: sections(() => import('./content/public-sector')) }, // 04.14 · 48:293890
 ];

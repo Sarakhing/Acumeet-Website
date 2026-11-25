@@ -1,7 +1,7 @@
 import { createElement as h } from 'react';
 import { ROUTES } from '@/constants/routes';
 import KeysStorageCard from '@/modules/02-solutions/components/visuals/KeysStorageCard';
-import { exploreIndustries } from './industries';
+import { exploreIndustries, industryCtaFull } from './industries';
 import { actions, decisions, heroCanvas, industryBreadcrumb } from './detail';
 
 const BOOK = { label: 'Book a Demo', to: ROUTES.bookDemo };
@@ -145,10 +145,5 @@ export default {
   related: exploreIndustries(['publicSector', 'enterprise', 'otherRegulated', 'overview'], { eyebrow: 'Keep exploring' }),
 
   /** CTA band (48:293887) — with sub-line and two buttons (563 tall). */
-  cta: {
-    title: 'Turn Telecommunications Meetings Into Coordinated Action',
-    lead: 'Turn important conversations into structured meeting knowledge, clearer decisions and trackable follow-up actions with Acumeet.',
-    primary: BOOK,
-    secondary: CONTACT,
-  },
+  cta: industryCtaFull('Turn Telecommunications Meetings Into Coordinated Action'),
 };

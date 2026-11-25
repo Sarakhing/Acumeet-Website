@@ -140,6 +140,14 @@ export const industryCta = (title) => ({
   secondary: null,
 });
 
+/** Top-level industry pages (04.13–04.16): headline + sub-line + Book a Demo / Contact Our Team. */
+export const industryCtaFull = (title) => ({
+  title,
+  lead: 'Turn important conversations into structured meeting knowledge, clearer decisions and trackable follow-up actions with Acumeet.',
+  primary: { label: 'Book a Demo', to: ROUTES.bookDemo },
+  secondary: { label: 'Contact Our Team', to: ROUTES.contactSales },
+});
+
 /** Directory link card for an industry: { title, description, to }. */
 export const linkCard = (key) => {
   const { title, description, to } = INDUSTRIES[key];

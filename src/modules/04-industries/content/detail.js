@@ -142,7 +142,7 @@ export const disclaimer = (title, accent, body) => ({
  * (500 card) + overlapping 360 action-items card + "Live in your workspace" chip.
  * windowHero({ eyebrow, title, accent, lead, decisions: [date, decided[], risk, topics[]], actions: [open, tasks] })
  */
-export const windowHero = ({ eyebrow, title, accent, lead, decisions: d, actions: [open, tasks] }) => ({
+export const windowHero = ({ eyebrow, title, accent, lead, decisions: d, actions: [open, tasks], ...rest }) => ({
   eyebrow,
   eyebrowStyle: 'chip',
   title,
@@ -155,4 +155,5 @@ export const windowHero = ({ eyebrow, title, accent, lead, decisions: d, actions
   ]),
   visualWidth: 660,
   padBottom: 13,
+  ...rest,
 });
