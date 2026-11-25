@@ -277,3 +277,31 @@ Pages: `modules/03-products/pages/{AiMeetingSummaries,ActionItemManagement,Speak
   - `bodyWidth` (default 780; 02.05 uses 1000), `cta: { label, to }` (blue Button under the copy), `waveform` (260×36 magenta bars, Figma "Waveform · Live · bars 260×36").
 - New product visuals (`modules/03-products/components/visuals/`): `SummariesHeroVisual` (02.04 hero, 665×611 canvas, `padBottom: 46`), `ActionItemsHeroVisual` (02.05 hero, 665×722 canvas, `padBottom: 0`; Figma places the Atlas card 24px into the copy gutter at x=676 — here it starts at the column edge so ScaleToFit doesn't clip it).
 - 02.06 reuses `TalkTimeCard` (hero carousel 560, explorer 480, stepper 440), `TranscriptCard`, `MeetingAnalyticsCard` (`width: 560, barWidth: 42, barPitch: 52`), `SummaryCard`, `DecisionsCard`.
+
+---
+
+## Industries (04.00–04.16)
+Figma section "04 · Industries" (`48:287758`). Module: `src/modules/04-industries/`. Routes: `ROUTES.industry.<key>` (slugs = mega menu). All options below are additive; defaults unchanged.
+
+### Pages
+- `pages/IndustriesOverviewPage.jsx` (04.00) and `pages/FinancialServicesPage.jsx` (04.01) — bespoke.
+- `pages/IndustryDetailPage.jsx` — the 11 FS sub-pages (04.02–04.12): breadcrumb → hero (+ `carousel`) → `explorer` → optional `split` / `statement` / `note` / `editorial` → `related` → `cta`.
+- `pages/IndustrySectionsPage.jsx` — 04.13–04.16: hero → `sections: [{ type, ...props }]` (`split`, `rawSplit`, `editorial`, `statement`, `cards`, `explorer`, `note`) → related → CTA.
+- `index.js` wires both shared pages through `withContent(page)(content)` so each page still loads its own chunk.
+
+### Content builders (`content/detail.js`, `content/industries.js`)
+- Cards: `decisions(date, decided[], risk, topics[], width)`, `actions(open, [[title, due]], { width, shadow })`, `summary(title, [q, s, e], insights[], opts)`, `search(query, [[meeting, date, excerpt]], opts)`, `capture(date, [[title, meta]], opts)`, `audit([[time, action, actor]], opts)`, `appWindow(width, node)`, `floatChip()`.
+- `heroCanvas(height, [[x, y, node]], width)` → `components/visuals/HeroCanvas.jsx` (wash heroes: origin 1440-frame x 700/680, y 64; centred heroes: x 80, y = copy bottom + 64, width 1280).
+- `windowHero({...})` = Banking-style 630 wash hero (app window + 360 action items + float chip). Those heroes are the only Industries heroes with a gradient title accent.
+- `explorerItems([...])` adds the positional explorer panels (lilac dots, pink rings, blue hairlines, mint waveform).
+- `followSplit(title, body, card)` (pink rings panel, Book a Demo + "Contact Our Team →"), `disclaimer(title, accent, body)` (subtle waveform `Statement`).
+- `exploreIndustries(keys, { eyebrow })` — check the Figma "Explore more" height: 607 = "Keep exploring" shown, 580 = hidden. `industryCta(title)` (blank sub-line, one button) for 04.00–04.12; `industryCtaFull(title)` (sub-line + two buttons) for 04.13–04.16.
+- Breadcrumbs: `fsBreadcrumb(label)` / `industryBreadcrumb(label)` → "Home / Industries Overview / …". Figma's 04.01 breadcrumb instance still holds placeholder text ("Solutions overview / Protect").
+
+### New / extended blocks
+- `LinkCardGrid` (new) — Figma "Directory · …" + "Link card" (`46:5594`): mono overline + 44px title, 3-up 413×320 cards (pink 112px tile with five 25% magenta rings `assets/images/industries/link-card-ring-*.svg`, 40px mono number, title, description, "Explore →"). `LinkCard` exported.
+- `Explorer`: `item.link: { label = 'Explore', to }` — "Explore →" under the active tab body (04.00).
+- `SolutionHero` (wash): `leadWidth` (default 560; Industries 540).
+- `CardGrid`: `lead` under the title (04.01 workflows).
+- `Split`, `Statement`, `Editorial`: `secondary: { label, to }` — "Label →" link beside the CTA.
+- Module components: `InfoNote` (34px title in a 440 column + 17px copy + two outlined buttons, px-120, py-112) and `HeroCanvas`.
