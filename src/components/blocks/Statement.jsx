@@ -1,3 +1,4 @@
+import { Link } from 'react-router';
 import Button from '@/components/ui/Button';
 import Container from '@/components/ui/Container';
 import Eyebrow from '@/components/ui/Eyebrow';
@@ -19,7 +20,7 @@ import { cn } from '@/utils/cn';
  *   tiled from the 656×480 panel waveform at 1/3 opacity (its bars are 12%).
  * tone="white": as subtle on a white bg, py-112 (Action Item Management "02 · Overview" 46:39819).
  * accent also renders (gradient) on tone="dark"/"light" when given (AI Meeting Summaries 46:35710).
- * bodyWidth (default 780), cta: { label, to } (blue button), waveform: true = 260×36 magenta bars below.
+ * bodyWidth (default 780), cta: { label, to } (blue button), secondary: { label, to } ("Label →" link beside it, Industries), waveform: true = 260×36 magenta bars below.
  */
 export default function Statement({
   tone = 'dark',
@@ -31,6 +32,7 @@ export default function Statement({
   pattern,
   bodyWidth = 780,
   cta,
+  secondary,
   waveform = false,
   className,
 }) {
@@ -133,7 +135,25 @@ export default function Statement({
             {p}
           </p>
         ))}
-        {cta && <Button to={cta.to}>{cta.label}</Button>}
+        {(cta || secondary) && (
+          <div className="flex flex-wrap items-center justify-center gap-x-3 gap-y-4">
+            {cta && <Button to={cta.to}>{cta.label}</Button>}
+            {secondary && (
+              <Link
+                to={secondary.to}
+                className={cn(
+                  'group inline-flex items-center gap-1.5 text-[15px] font-medium leading-[1.5] underline-offset-4 hover:underline',
+                  dark ? 'text-ink-on-dark' : 'text-ink-800',
+                )}
+              >
+                {secondary.label}
+                <span aria-hidden="true" className="text-brand-magenta transition-transform group-hover:translate-x-0.5">
+                  →
+                </span>
+              </Link>
+            )}
+          </div>
+        )}
         {waveform && (
           <Waveform
             bars={36}

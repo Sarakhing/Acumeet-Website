@@ -120,3 +120,14 @@ export const followSplit = (title, body, content) => ({
   secondary: { label: 'Contact Our Team', to: ROUTES.contactSales },
   visual: { tint: 'pink', pattern: { type: 'rings', size: 'panel' }, content },
 });
+
+/** Subtle waveform statement (Credit Committees "A Documentation Aid…", 537 tall): Book a Demo + "Contact Our Team →". */
+export const disclaimer = (title, accent, body) => ({
+  tone: 'subtle',
+  pattern: 'waveform',
+  title,
+  accent,
+  paragraphs: [body],
+  cta: { label: 'Book a Demo', to: ROUTES.bookDemo },
+  secondary: { label: 'Contact Our Team', to: ROUTES.contactSales },
+});
