@@ -25,4 +25,5 @@ export const industriesRoutes = [
   { path: rel(I.overview), element: createElement(IndustriesOverviewPage) }, // 04.00 · 48:287759
   { path: rel(I.financialServices), element: createElement(FinancialServicesPage) }, // 04.01 · 48:287949
   { path: rel(I.banking), element: detail(() => import('./content/banking')) }, // 04.02 · 48:288112
+  { path: rel(I.insurance), element: detail(() => import('./content/insurance')) }, // 04.03 · 48:288221
 ];
