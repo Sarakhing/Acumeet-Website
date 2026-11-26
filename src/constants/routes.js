@@ -245,6 +245,16 @@ export const ROUTES = {
   },
   whyAcumeet: '/why-acumeet', // header mega menu (Solutions footer link)
   getStarted: '/get-started',
+  // Get Started pages (Figma "18 · Get Started"). Sign Up is a standalone page (no site nav).
+  getStartedPage: {
+    overview: '/get-started',
+    signUp: '/get-started/sign-up',
+    bookDemo: '/get-started/book-a-demo',
+    enterpriseDemo: '/get-started/enterprise-demo',
+    poc: '/get-started/request-a-poc',
+    contactSales: '/get-started/contact-sales',
+    contactEnterprise: '/get-started/contact-enterprise-team',
+  },
   bookDemo: '/get-started/book-a-demo',
   contactSales: '/get-started/contact-sales',
   signIn: '/sign-in',

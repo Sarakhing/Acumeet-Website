@@ -594,3 +594,28 @@ These pages use Figma's separate "D ·" design: white / #f7f7fa / #0b0b12 sectio
 
 ### Shared changes
 - `DuoIcon` also reads `src/assets/images/company/ic-*.svg` (adds calendar-check, exported from Figma).
+
+## Get Started (18.01–18.07)
+Figma section "18 · Get Started" (`49:196073`). Module: `src/modules/18-get-started/`. Routes: `ROUTES.getStartedPage.<key>`:
+- `/get-started`
+- `/get-started/sign-up`
+- `/get-started/book-a-demo`
+- `/get-started/enterprise-demo`
+- `/get-started/request-a-poc`
+- `/get-started/contact-sales` (also 16.07)
+- `/get-started/contact-enterprise-team`
+
+These pages use the Company "D ·" primitives from `17-company/components`.
+
+### Page
+- `pages/GetStartedPage.jsx`: breadcrumb → `sections`. The section types are:
+  - `hero` (18.01, grid + glow)
+  - `choose` (dark Sign Up card, pink Book a Demo card, four link cards)
+  - `notSure`
+  - `heroForm`: pill, 52px title (`titleSize` 44 for long titles), lead, magenta-ruled value note, optional numbered `steps`, Trust Center / Privacy links, and a `LeadForm`.
+- `components/LeadForm.jsx`: a config-driven form. Field types are text, email, textarea, the industry select and multi-select chips. `half` fields pair up. It shows Figma's "Submitted" state. There is no backend yet: submitting only validates.
+- `pages/SignUpPage.jsx`: 18.02, a standalone route outside `SiteLayout` (`signUpRoute`) with no site nav or footer. It is a split screen with the account form and a dark testimonial panel (hidden below lg). SSO and email sign-up are not wired yet; they show an inline note.
+- `content/getStarted.js` holds the helpers: `heroForm`, `gsBreadcrumb`, the shared field definitions, `chips` and `textarea`.
+
+### Shared changes
+- The Company Contact page's "Contact enterprise team" link now points to 18.07.

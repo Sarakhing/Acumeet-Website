@@ -33,7 +33,7 @@ export default {
           title: 'Enterprise team',
           body: 'Talk to us about the requirements behind a secure, governed rollout.',
           link: 'Contact enterprise team',
-          to: ROUTES.enterprise,
+          to: ROUTES.getStartedPage.contactEnterprise,
         },
         {
           icon: 'lifebuoy',
