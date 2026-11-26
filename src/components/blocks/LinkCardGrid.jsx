@@ -64,10 +64,13 @@ export function LinkCard({ number, title, description, to, className }) {
  * Figma "Directory · …" (Industries overview 48:287927): mono overline + 44px
  * title, then a 3-up grid of LinkCards (413×320, 20px gaps). 2-up on md, 1-up on phones.
  * items: [{ title, description, to }] — numbered 01, 02… in order.
+ * columns: 3 (default) | 4 (Enterprise 11.01 "Related pages"); tone: 'muted' (default) | 'white'.
  */
-export default function LinkCardGrid({ eyebrow, title, items = [], className }) {
+export default function LinkCardGrid({ eyebrow, title, items = [], columns = 3, tone = 'muted', className }) {
   return (
-    <section className={cn('bg-surface-muted py-16 lg:py-28', className)}>
+    <section
+      className={cn(tone === 'white' ? 'bg-surface-white' : 'bg-surface-muted', 'py-16 lg:py-28', className)}
+    >
       <Container width="wide" className="flex flex-col gap-10">
         <div className="flex flex-col gap-3">
           {eyebrow && (
@@ -77,7 +80,7 @@ export default function LinkCardGrid({ eyebrow, title, items = [], className }) 
             {title}
           </h2>
         </div>
-        <ul className="grid gap-5 md:grid-cols-2 lg:grid-cols-3">
+        <ul className={cn('grid gap-5 md:grid-cols-2', columns === 4 ? 'lg:grid-cols-4' : 'lg:grid-cols-3')}>
           {items.map((item, i) => (
             <li key={item.to}>
               <LinkCard number={pad(i + 1)} {...item} className="h-full" />

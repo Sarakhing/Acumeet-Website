@@ -431,7 +431,7 @@ Figma section "09 · Integrations" (`48:383882`). Module: `src/modules/09-integr
 - `mocks.js`: `CRM_CONNECTED` (the 8-chip list). `integrations(…, { muted })` greys Salesforce / HubSpot by default.
 
 ## Deployment (10.01–10.10)
-Figma section "10 · Deployment" (`48:393382`). Module: `src/modules/10-deployment/`. Routes: `ROUTES.deploymentPage.<key>` (`ROUTES.deployment` is still the overview string). 10.07 Data Residency and 10.11 Implementation are Figma "shared" entries: their keys point at the Trust Center page (07.06) and `/enterprise/implementation` (11.08, not built yet), and they have no route here.
+Figma section "10 · Deployment" (`48:393382`). Module: `src/modules/10-deployment/`. Routes: `ROUTES.deploymentPage.<key>` (`ROUTES.deployment` is still the overview string). 10.07 Data Residency and 10.11 Implementation are Figma "shared" entries: their keys point at the Trust Center page (07.06) and `/enterprise/implementation` (11.08), and they have no route here.
 
 ### Page
 - `pages/DeploymentPage.jsx` is a `BlockPage` that adds `stepper` (the shared `Stepper` block) as a section type.
@@ -439,3 +439,22 @@ Figma section "10 · Deployment" (`48:393382`). Module: `src/modules/10-deployme
 - `components/DeploymentOptionsCard.jsx` — Figma "UI · Deployment options" (350 wide): a radio list of the five approaches with one highlighted. The 10.01 explorer shows it with the tab's option selected (`options(i)`). Icons are in `assets/images/deployment/`.
 - Builders in `content/deployment.js`: `chapters`, `faq`, `depCta(title)`, `exploreDeployment(keys)`, `RELATED`, `depBreadcrumb`, `CONTACT(label)` → contact sales, `options(selected)`.
 - `content/shared.js`: deployment task lists (`tasks`, `rollout`) and the "Key value points" summary (`keySummary`).
+
+## Enterprise (11.01–11.18)
+Figma section "11 · Enterprise" (`49:67845`). Module: `src/modules/11-enterprise/`. Routes: `ROUTES.enterprisePage.<key>`; the PoC pages sit under `/enterprise/proof-of-concept/…`. 11.08 Implementation is also Deployment's "Enterprise Implementation" entry.
+
+### Page
+- `pages/EnterprisePage.jsx` is a `BlockPage` that puts `EnterpriseTabs` under the breadcrumb (`content.tab = { active, label }`; 11.08 has no tabs). `BlockPage` gained a `subnav` prop for this.
+- Enterprise section types:
+  - `checklist` — `components/Checklist.jsx`. A 44px head, then 4, 5 (3 + 2) or 6 (3 + 3) cards with a duotone icon tile, a mono number and a label. The first card is highlighted, and the highlight follows hover / focus.
+  - `index` — `components/EnterpriseIndex.jsx`. `tiles`: 4-up tiles with an icon or integration logo and corner rings; tiles with `to` add "↗". `steps`: the four "STEP n" cards on 11.16.
+  - `intro`, `journey`, `spotlight` — the 11.01 blocks: `OverviewIntro`, `EnterpriseJourney` (every page grouped by stage) and `PocSpotlight`.
+  - `stepper` — the shared `Stepper` (11.08).
+- `components/EnterpriseTabs.jsx` — the dark "ENTERPRISE / page" pill and a scrolling, grouped tab track with prev / next buttons. The active tab scrolls into view. PoC sub-pages highlight "Proof of concept".
+- `components/DuoIcon.jsx` — recolours the mega-menu duotone icons at runtime: the tone layer takes `tone` and the line layer is ink. It also covers `deployment/ic-*.svg` and `enterprise/ic-*.svg` (funnel-simple).
+- Builders in `content/enterprise.js`: the `ENTERPRISE` catalogue and `GROUPS`, `statement`, `checklist`, `exploreEnterprise`, `RELATED`, `entBreadcrumb(label, { poc })`, and links (`DEMO`, `REQUEST_POC`, `TALK`, `TRUST`, `CONTACT`).
+- `content/shared.js`: `entPage(key, { hero: 'centered' | 'rings' | 'window', … })` returns tab + hero (+ carousel) + a CTA band that repeats the hero. It reuses the Deployment task / summary builders.
+
+### Shared changes
+- `LinkCardGrid`: `columns: 4` and `tone: 'white'` (11.01 "Related pages").
+- `BlockPage`: `subnav` slot.

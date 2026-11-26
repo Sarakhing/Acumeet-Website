@@ -67,7 +67,7 @@ export const DEPLOYMENT = {
   implementation: {
     title: 'Implementation',
     tagline: 'Move from deployment decision to a controlled rollout.',
-    to: D.implementation, // shared → 11.08
+    to: D.implementation, // shared → 11.08 (Enterprise module)
   },
 };
 
