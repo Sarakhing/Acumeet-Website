@@ -151,7 +151,11 @@ function WashHero({
           {extra}
           {(primary || secondary) && (
             <div className="flex flex-wrap items-center gap-x-3 gap-y-4">
-              {primary && <Button to={primary.to}>{primary.label}</Button>}
+              {primary && (
+                <Button to={primary.to} onClick={primary.onClick}>
+                  {primary.label}
+                </Button>
+              )}
               {secondary &&
                 (secondaryStyle === 'button' ? (
                   <Button to={secondary.to} intent="secondary">
@@ -244,7 +248,11 @@ function RingsHero({
               secondaryStyle === 'link' ? 'items-start' : 'items-center',
             )}
           >
-            {primary && <Button to={primary.to}>{primary.label}</Button>}
+            {primary && (
+              <Button to={primary.to} onClick={primary.onClick}>
+                {primary.label}
+              </Button>
+            )}
             {secondary && secondaryStyle === 'link' && (
               /* Connect "Explore link": white 15px label + white arrow, top-aligned with the button */
               <Link
@@ -372,7 +380,11 @@ function CenteredWashHero({
                 secondaryStyle === 'link' ? 'items-start' : 'items-center',
               )}
             >
-              {primary && <Button to={primary.to}>{primary.label}</Button>}
+              {primary && (
+                <Button to={primary.to} onClick={primary.onClick}>
+                  {primary.label}
+                </Button>
+              )}
               {secondary &&
                 (secondaryStyle === 'link' ? (
                   <ArrowLink to={secondary.to}>{secondary.label}</ArrowLink>

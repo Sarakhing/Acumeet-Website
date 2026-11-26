@@ -619,3 +619,30 @@ These pages use the Company "D ·" primitives from `17-company/components`.
 
 ### Shared changes
 - The Company Contact page's "Contact enterprise team" link now points to 18.07.
+
+## Legal (19.01–19.06)
+Figma section "19 · Legal" (`67:73552`). Module: `src/modules/19-legal/`. Routes: `ROUTES.legal.<key>`:
+- `/legal/privacy-policy`
+- `/legal/terms`
+- `/legal/cookie-policy`
+- `/legal/data-processing-agreement`
+- `/legal/acceptable-use-policy`
+- `/legal/security-policy`
+
+### Page
+- `pages/LegalPage.jsx` is a `BlockPage` that adds a `document` section type: `components/LegalDocument.jsx`.
+  - A sticky "Contents" card highlights the section you have scrolled to.
+  - Sections have a top rule and 24px headings, with magenta-dot bullets, amber drafting callouts, tables and key/value tables.
+- `content/doc-*.js` hold the document text verbatim from Figma in a compact format, so legal can edit them as text:
+  - `## ` heading
+  - `- ` bullet
+  - `! title :: body` callout
+  - `| a | b` table (the first row is the header)
+  - `|| key | value` key/value table
+  - any other line is a paragraph
+- `content/legal.js`: the `LEGAL` catalogue and `legalPage(key, doc, { directory?, related? })`. That builds a centred hairline hero (the last word of the title is the accent), the document, the directory or "Explore Legal" row, and the CTA band.
+- "Download PDF" opens the browser's print dialog until real PDFs are published.
+
+### Shared changes
+- `SolutionHero`: `primary.onClick` is passed through to the button.
+- `ROUTES.legal` gains `cookies`, `dpa`, `acceptableUse` and `security`.

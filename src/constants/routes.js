@@ -258,8 +258,13 @@ export const ROUTES = {
   bookDemo: '/get-started/book-a-demo',
   contactSales: '/get-started/contact-sales',
   signIn: '/sign-in',
+  // Legal pages (Figma "19 · Legal").
   legal: {
     privacy: '/legal/privacy-policy',
     terms: '/legal/terms',
+    cookies: '/legal/cookie-policy',
+    dpa: '/legal/data-processing-agreement',
+    acceptableUse: '/legal/acceptable-use-policy',
+    security: '/legal/security-policy',
   },
 };

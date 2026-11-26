@@ -19,6 +19,7 @@ import { supportRoutes } from '@/modules/15-support';
 import { pricingRoutes } from '@/modules/16-pricing';
 import { companyRoutes } from '@/modules/17-company';
 import { getStartedRoutes, signUpRoute } from '@/modules/18-get-started';
+import { legalRoutes } from '@/modules/19-legal';
 
 /**
  * Each Figma section is a module exporting its own lazy routes.
@@ -46,6 +47,7 @@ export const router = createBrowserRouter([
       ...pricingRoutes,
       ...companyRoutes,
       ...getStartedRoutes,
+      ...legalRoutes,
       { path: '*', element: <ComingSoon /> },
     ],
   },
