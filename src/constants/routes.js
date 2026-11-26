@@ -231,6 +231,18 @@ export const ROUTES = {
     faqs: '/pricing/faqs',
   },
   company: '/company',
+  // Company pages (Figma "17 · Company").
+  companyPage: {
+    hub: '/company',
+    about: '/company/about',
+    snapnet: '/company/about-snapnet',
+    technology: '/company/technology',
+    securityPhilosophy: '/company/security-philosophy',
+    partners: '/company/partners',
+    careers: '/company/careers',
+    contact: '/company/contact',
+    news: '/company/news',
+  },
   whyAcumeet: '/why-acumeet', // header mega menu (Solutions footer link)
   getStarted: '/get-started',
   bookDemo: '/get-started/book-a-demo',

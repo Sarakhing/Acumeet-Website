@@ -559,3 +559,38 @@ Figma section "16 · Pricing". Module: `src/modules/16-pricing/`. Routes: `ROUTE
 - `BlockPage`: `hero` is optional, because 16.01 and 16.03 open on a section.
 - Support `PlansCard`: a `selected` plan (default Teams).
 - `Checklist`: a `flush` prop (the default is unchanged: flush when there is an eyebrow).
+
+## Company (17.01–17.09)
+Figma section "17 · Company" (`49:187600`). Module: `src/modules/17-company/`. Routes: `ROUTES.companyPage.<key>`:
+- `/company` (hub)
+- `/company/about`
+- `/company/about-snapnet`
+- `/company/technology`
+- `/company/security-philosophy`
+- `/company/partners`
+- `/company/careers`
+- `/company/contact`
+- `/company/news`
+
+These pages use Figma's separate "D ·" design: white / #f7f7fa / #0b0b12 sections, Geist type, mono overlines, faint magenta rings and dark glow panels. Because of that, they are built from module components rather than `BlockPage` blocks.
+
+### Page
+- `pages/CompanyPage.jsx`: breadcrumb → `sections: [{ type, ...props }]` → optional gradient `CtaBand`.
+- `components/primitives.jsx`: tints, `Pill`, `Overline`, `ArrowLink`, `DButton` (`#…` targets render as anchors), `Rings`, `CornerRings`, `Glow`, `DarkGlows`, `GridLines`, `CornerArrow`.
+- `components/DHero.jsx`:
+  - `hero`: pill, 64/68px title, lead, buttons. `align` is center or left. Optional six-stage `Flow` strip.
+- `components/DSections.jsx`:
+  - `split`: two columns, in muted, white or dark tone, with optional `lead`, `chips` and an `aside` (`MarketCard`).
+  - `cards`: card grid. Variants: link, tint, value, icon. Options: `framed` and the paddings.
+  - `solve`: heading, `Flow` and six tint cards.
+  - `centered`, `closing` (centre or row layout), `belief`.
+  - `stack`, `platforms` (tint or outline tiles), `goDeeper`.
+  - `principles`, `story` (bracketed placeholders render amber).
+- `components/DInteractive.jsx`:
+  - `roles`: team filters and an empty state.
+  - `message`: contact tiles and `ContactForm`. There is no backend yet: the form validates and shows Figma's "Submitted" state.
+  - `newsroom`: category filters, a featured story and a story grid. "Load more" is hidden until there are real stories.
+- `content/company.js`: the `COMPANY` catalogue, `companyCards`, `STAGES`, `PLATFORMS`, `coBreadcrumb` and `ctaBand`.
+
+### Shared changes
+- `DuoIcon` also reads `src/assets/images/company/ic-*.svg` (adds calendar-check, exported from Figma).

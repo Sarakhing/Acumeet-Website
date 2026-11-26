@@ -1,13 +1,14 @@
 /**
  * Duotone "Ic / …" icon recoloured at runtime: the tone layer (the `opacity="0.7"` path) takes
  * `tone`, the line layer is ink (or `line`, e.g. white on dark cards). Sources are the mega-menu icons (any tint — only the shapes are
- * used), plus the Deployment / Enterprise extras (cloud, funnel-simple).
+ * used), plus the Deployment / Enterprise / Company extras (cloud, funnel-simple, calendar-check).
  */
 const RAW = import.meta.glob(
   [
     '/src/assets/icons/nav/*.svg',
     '/src/assets/images/deployment/ic-*.svg',
     '/src/assets/images/enterprise/ic-*.svg',
+    '/src/assets/images/company/ic-*.svg',
   ],
   { eager: true, query: '?raw', import: 'default' },
 );
