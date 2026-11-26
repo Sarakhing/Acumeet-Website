@@ -15,9 +15,19 @@ const TITLE_SIZES = {
  * 18px lead (780 wide). Items are 16px apart (Figma "Head", Security 06.03 48:325516).
  * titleSize: 'section' (52) | 48 (topic heads) | 44 (intro head: 748 wide, 17px/1.55 lead, 16px padding).
  * leadSize: 'lg' (18px) | 'md' (17px/1.55, 760 wide) — defaults to 'md' for the 44px head, 'lg' otherwise.
+ * flush: drops the 44px head's 16px vertical padding (Resources 13.09 checklist with an overline).
  * lead may be an array of paragraphs (Compliance 08.01 "Responsible AI" head), each 16px apart.
  */
-export default function SectionHeading({ eyebrow, title, accent, accentBreak, lead, titleSize = 'section', leadSize }) {
+export default function SectionHeading({
+  eyebrow,
+  title,
+  accent,
+  accentBreak,
+  lead,
+  titleSize = 'section',
+  leadSize,
+  flush = false,
+}) {
   const heading = (
     <AccentTitle
       accent={accent}
@@ -34,22 +44,29 @@ export default function SectionHeading({ eyebrow, title, accent, accentBreak, le
   const intro = titleSize === 44;
   const smallLead = leadSize ? leadSize === 'md' : intro; // 'md' = 17px/1.55, 748 wide
   return (
-    <div className={cn('flex flex-col gap-4', intro && 'lg:py-4')}>
+    <div className={cn('flex flex-col gap-4', intro && !flush && 'lg:py-4')}>
       {eyebrow && (
-        <p className="font-mono text-[11px] uppercase leading-[1.5] tracking-[0.66px] text-ink-500">{eyebrow}</p>
+        <p className="font-mono text-[11px] uppercase leading-[1.5] tracking-[0.66px] text-ink-500">
+          {eyebrow}
+        </p>
       )}
       {heading}
-      {[lead].flat().filter(Boolean).map((p) => (
-        <p
-          key={p}
-          className={cn(
-            'text-[17px] text-ink-700',
-            smallLead ? 'max-w-[760px] leading-[1.55]' : 'max-w-[780px] leading-[1.35] tracking-[-0.18px] sm:text-[18px]',
-          )}
-        >
-          {p}
-        </p>
-      ))}
+      {[lead]
+        .flat()
+        .filter(Boolean)
+        .map((p) => (
+          <p
+            key={p}
+            className={cn(
+              'text-[17px] text-ink-700',
+              smallLead
+                ? 'max-w-[760px] leading-[1.55]'
+                : 'max-w-[780px] leading-[1.35] tracking-[-0.18px] sm:text-[18px]',
+            )}
+          >
+            {p}
+          </p>
+        ))}
     </div>
   );
 }

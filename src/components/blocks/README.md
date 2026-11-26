@@ -478,3 +478,24 @@ Figma section "12 · Compare" (`49:115722`). Module: `src/modules/12-compare/`. 
 ### Shared changes
 - `SolutionHero`: the `rings` and `centered` variants take `minHeight` (lg). A rings hero with no carousel gets bottom padding on small screens.
 - `IntegrationsSection` (home): optional `className`.
+
+## Resources (13.01–13.12)
+Figma section "13 · Resources" (`49:138233`). Module: `src/modules/13-resources/`. Routes: `ROUTES.resourcesPage.<key>`, with slugs that match the mega menu. Blog Categories is `/resources/blog/categories`.
+
+### Page
+- `pages/ResourcesPage.jsx` is a `BlockPage` that adds:
+  - `index` — `components/ResourceIndex.jsx`. Bento grid (13.01, 13.03, 13.12): the first tile is dark and spans two columns. Each tile has a 140px tinted pattern header with a big mono number, a title, a body and an optional "Link →".
+  - `listing` — `components/ResourceListing.jsx`. Category chips that really filter (each item has `tags`), an optional featured card (webinars) and 3-up "Resource card"s. The covers are `assets/images/resources/cover-*.webp`: Figma's six "Cover/…" artworks, cropped from card exports. Cards without `to` are plain text, since no article pages exist yet.
+  - `stories` — `components/CustomerStories.jsx`. Story search and industry chips (both filter), a featured story, story cards and a night quote band.
+  - `calculator` — `components/ProductivityCalculator.jsx`. Three sliders drive the "Your estimate" card and the monthly / yearly cost splits. The defaults reproduce Figma: 24 · 35 · 45 → 61 hrs, $2,730, $32,760.
+  - `placeholder` — `components/ListingPlaceholder.jsx` (13.04 skeleton cards).
+  - `checklist` — the shared Checklist, which now takes `eyebrow` (and then a flush 44px head) and `id`.
+- Builders in `content/resources.js`:
+  - the `RESOURCES` catalogue
+  - `listing(…)`, which rotates covers in Figma's order
+  - `pricingSearch`, `knowTasks` / `tasks`, `knowSummary`, `talkTime` (the Products `TalkTimeCard`)
+  - `statement`, `exploreResources`, `RELATED`, `resBreadcrumb`, `resCta`
+
+### Shared changes
+- `SectionHeading`: `flush` drops the 44px head's vertical padding.
+- `Checklist`: `eyebrow` and `id` props.

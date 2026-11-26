@@ -61,16 +61,26 @@ function Mark({ it, on, color }) {
  * layout: 'grid' (4 · 3+2 · 3+3 · 4+4) | 'questions' (Compare "Five questions": 2-up 137px cards,
  *   15px labels, the odd last card full width, no highlight).
  */
-export default function Checklist({ title, accent, lead, items = [], layout = 'grid' }) {
+export default function Checklist({
+  id,
+  eyebrow,
+  title,
+  accent,
+  lead,
+  items = [],
+  layout = 'grid',
+}) {
   const [active, setActive] = useState(0);
   const questions = layout === 'questions';
   const span = questions ? pairs(items.length) : (SPAN[items.length] ?? SPAN[4]);
   const perRow = items.length === 8 ? 4 : 3;
   const twoRows = items.length > 4 && items.length !== 8;
   return (
-    <section className="bg-surface-muted py-16 lg:py-[120px]">
+    <section id={id} className="scroll-mt-20 bg-surface-muted py-16 lg:py-[120px]">
       <Container width="wide" className="flex flex-col gap-12">
         <SectionHeading
+          eyebrow={eyebrow}
+          flush={Boolean(eyebrow)}
           title={title}
           accent={accent}
           accentBreak={false}
