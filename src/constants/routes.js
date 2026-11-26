@@ -161,6 +161,17 @@ export const ROUTES = {
     pocSuccess: '/enterprise/proof-of-concept/success-criteria',
   },
   compare: '/compare',
+  // Compare pages (Figma "12 · Compare"); slugs match the footer. 12.08 is the /compare overview.
+  comparePage: {
+    overview: '/compare',
+    why: '/why-acumeet',
+    aiAssistants: '/compare/ai-meeting-assistants',
+    meetingNotes: '/compare/traditional-meeting-notes',
+    enterprisePlatforms: '/compare/enterprise-platforms',
+    fireflies: '/compare/fireflies',
+    otter: '/compare/otter',
+    teamsPremium: '/compare/microsoft-teams-premium',
+  },
   resources: '/resources',
   developers: '/developers',
   support: '/support',

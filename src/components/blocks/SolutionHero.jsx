@@ -105,7 +105,11 @@ function WashHero({
       <Container
         width="wide"
         className="relative flex flex-col gap-12 pb-16 pt-12 sm:pt-16 lg:flex-row lg:items-start lg:gap-5 lg:pb-(--hero-pb) lg:pt-16"
-        style={{ '--hero-copy-top': `${copyTop}px`, '--hero-pb': `${padBottom}px`, '--hero-copy-w': `${copyWidth}px` }}
+        style={{
+          '--hero-copy-top': `${copyTop}px`,
+          '--hero-pb': `${padBottom}px`,
+          '--hero-copy-w': `${copyWidth}px`,
+        }}
       >
         <div className="flex max-w-(--hero-copy-w) flex-col gap-[22px] lg:mt-(--hero-copy-top) lg:w-(--hero-copy-w) lg:shrink-0">
           {eyebrow && (
@@ -180,10 +184,14 @@ function RingsHero({
   primary,
   secondary,
   secondaryStyle = 'button',
+  minHeight,
   children,
 }) {
   return (
-    <section className="relative overflow-hidden bg-surface-night">
+    <section
+      className="relative overflow-hidden bg-surface-night lg:min-h-(--hero-min-h)"
+      style={minHeight ? { '--hero-min-h': `${minHeight}px` } : undefined}
+    >
       <div
         aria-hidden="true"
         className="pointer-events-none absolute inset-0"
@@ -201,7 +209,10 @@ function RingsHero({
 
       <Container
         width="wide"
-        className="relative flex flex-col items-center gap-6 pt-16 text-center sm:pt-24 lg:gap-7 lg:pt-[120px]"
+        className={cn(
+          'relative flex flex-col items-center gap-6 pt-16 text-center sm:pt-24 lg:gap-7 lg:pt-[120px]',
+          !children && 'pb-16 sm:pb-20 lg:pb-0',
+        )}
       >
         {eyebrow && (
           <p className="rounded-pill border border-border-night bg-surface-night-chip px-2.5 py-1 font-mono text-overline font-medium tracking-[0.44px] text-brand-magenta-soft uppercase">
@@ -277,6 +288,7 @@ function CenteredWashHero({
   visualWidth,
   visualCompact,
   visualCompactWidth = 520,
+  minHeight,
   pattern = 'dots',
   titleSize = 60,
   leadSize = 18,
@@ -285,7 +297,10 @@ function CenteredWashHero({
   visualGap = 64,
 }) {
   return (
-    <section className="relative overflow-hidden bg-[#fbfbfd]">
+    <section
+      className="relative overflow-hidden bg-[#fbfbfd] lg:min-h-(--hero-min-h)"
+      style={minHeight ? { '--hero-min-h': `${minHeight}px` } : undefined}
+    >
       {/* Pattern · glow ×2 (centres at 1440-frame x 288 / 1224, y 180) */}
       <div
         aria-hidden="true"
@@ -315,7 +330,10 @@ function CenteredWashHero({
         className="relative flex flex-col items-center gap-12 pb-8 pt-12 sm:pt-16 lg:gap-(--hero-visual-gap) lg:pb-5 lg:pt-24"
         style={{ '--hero-visual-gap': `${visualGap}px` }}
       >
-        <div className="flex flex-col items-center gap-[22px] text-center" style={{ maxWidth: copyWidth }}>
+        <div
+          className="flex flex-col items-center gap-[22px] text-center"
+          style={{ maxWidth: copyWidth }}
+        >
           {eyebrow && (
             <p className="w-fit rounded-pill border border-border-muted bg-surface-white px-2.5 py-1 font-mono text-overline font-medium tracking-[0.44px] text-brand-magenta uppercase">
               {eyebrow}
@@ -326,7 +344,9 @@ function CenteredWashHero({
             accent={accent}
             className={cn(
               'text-[38px] font-medium leading-[1.04] tracking-[-1.2px] sm:text-[48px]',
-              titleSize === 62 ? 'lg:text-[62px] lg:tracking-[-1.86px]' : 'lg:text-[60px] lg:tracking-[-1.8px]',
+              titleSize === 62
+                ? 'lg:text-[62px] lg:tracking-[-1.86px]'
+                : 'lg:text-[60px] lg:tracking-[-1.8px]',
             )}
           >
             {title}
@@ -335,7 +355,9 @@ function CenteredWashHero({
             <p
               className={cn(
                 'max-w-[700px] text-[17px] leading-[1.35] text-ink-700',
-                leadSize === 19 ? 'tracking-[-0.19px] sm:text-[19px]' : 'tracking-[-0.18px] sm:text-[18px]',
+                leadSize === 19
+                  ? 'tracking-[-0.19px] sm:text-[19px]'
+                  : 'tracking-[-0.18px] sm:text-[18px]',
               )}
             >
               {lead}
@@ -390,6 +412,7 @@ function CenteredWashHero({
  * wash-only options (all optional, defaults = Protect): pattern 'dots' | 'hairlines' (Control),
  *   eyebrowStyle 'plain' | 'chip' (Govern), secondaryStyle 'link' | 'button' (Control),
  *   visualAlign 'start' | 'end', copyTop (lg copy offset, 76), padBottom (lg bottom padding, 111).
+ * rings / centered: minHeight (lg minimum height — copy-only heroes, Compare 12.01–12.08).
  * rings-only option: secondaryStyle 'button' (default, white outlined pill) | 'link' (Connect: white text + →).
  * See src/components/blocks/README.md for props.
  */

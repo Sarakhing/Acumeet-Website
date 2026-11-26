@@ -38,7 +38,9 @@ function IntegrationPill({ name, logo, inset = 'top-[3px] left-[3px] size-[31.29
           className={cn('absolute max-w-none object-cover', inset)}
         />
       </span>
-      <span className="text-[16px] leading-[1.4] font-medium whitespace-nowrap text-ink-900">{name}</span>
+      <span className="text-[16px] leading-[1.4] font-medium whitespace-nowrap text-ink-900">
+        {name}
+      </span>
     </li>
   );
 }
@@ -48,13 +50,14 @@ function IntegrationPill({ name, logo, inset = 'top-[3px] left-[3px] size-[31.29
  * "Marquee · Integrations logo row" (46:10757): one 949px loop
  * (24px side padding, 16px gaps) repeated seamlessly.
  */
-export default function IntegrationsSection() {
+/** `className` extends the section (Compare 12.07 / 12.08 use it for an 800px band). */
+export default function IntegrationsSection({ className } = {}) {
   const headingId = `${useId()}-integrations-heading`;
 
   return (
     <section
       aria-labelledby={headingId}
-      className="overflow-hidden py-16 sm:py-20 lg:py-[100px]"
+      className={cn('overflow-hidden py-16 sm:py-20 lg:py-[100px]', className)}
       style={{ backgroundImage: GLOW_BACKGROUND }}
     >
       <Container className="flex flex-col items-center gap-6 text-center">
@@ -66,7 +69,8 @@ export default function IntegrationsSection() {
             Works where your meetings already happen
           </h2>
           <p className="max-w-[620px] text-[16px] leading-[1.4] text-ink-600 sm:text-[18px]">
-            Connect Microsoft Teams, Zoom and Google Meet, then send actions to the tools your team already uses.
+            Connect Microsoft Teams, Zoom and Google Meet, then send actions to the tools your team
+            already uses.
           </p>
         </div>
 

@@ -458,3 +458,23 @@ Figma section "11 · Enterprise" (`49:67845`). Module: `src/modules/11-enterpris
 ### Shared changes
 - `LinkCardGrid`: `columns: 4` and `tone: 'white'` (11.01 "Related pages").
 - `BlockPage`: `subnav` slot.
+
+## Compare (12.01–12.08)
+Figma section "12 · Compare" (`49:115722`). Module: `src/modules/12-compare/`. Routes: `ROUTES.comparePage.<key>`, with slugs that match the footer. 12.01 Why Acumeet lives at `/why-acumeet` (the mega-menu link) and 12.08 Competitive Comparison is the `/compare` overview.
+
+### Page
+- `pages/ComparePage.jsx` is a `BlockPage` that adds:
+  - `table` — `components/CompareTable.jsx`. Header with the competitor mark and a blue "Acumeet" column, then criterion rows with the Acumeet column on a pale blue wash. Below md it scrolls sideways.
+  - `vs` — `components/VsBanner.jsx`. Notched Acumeet and competitor cards meeting at a "vs" disc on a pink wash. On phones they stack as plain outlined cards.
+  - `checklist` — the Enterprise `Checklist`, extended with `layout: 'questions'` (2-up, odd last card full width, no highlight), an 8-tile 4 + 4 grid, `item.to` links and `item.image` app marks.
+  - `logos` / `integrations` — the home `CustomerLogos` and `IntegrationsSection`. The integrations band gets an 800px minimum height through its new `className` prop.
+- Builders in `content/compare.js`:
+  - the `COMPARE` catalogue (tile label, VS name, app mark)
+  - `darkHero` / `lightHero` (copy-only heroes, Figma height via `minHeight`)
+  - `statement(title, accent, body, 'subtle' | 'dark')`, `vs(key)`, `table(key, …)`
+  - `COMPARE_TILES` ("Compare Acumeet"), `whyChoose([…4 visuals])`, `fitSplit` (dot-bullet rows), `exploreCompare`, `RELATED`
+- App marks are in `assets/images/compare/mark-*.png` (4× exports of the Figma "Competitor mark" tiles).
+
+### Shared changes
+- `SolutionHero`: the `rings` and `centered` variants take `minHeight` (lg). A rings hero with no carousel gets bottom padding on small screens.
+- `IntegrationsSection` (home): optional `className`.
