@@ -44,7 +44,7 @@ export const VISUAL_CSS = `
 }
 .cap-reveal { animation: cap-reveal 6s ease-in-out infinite; }
 .cap-swap-in { animation: cap-swap-in 6s ease-in-out infinite; }
-.cap-swap-out { animation: cap-swap-out 6s ease-in-out infinite; }
+.cap-swap-out { opacity: 0; animation: cap-swap-out 6s ease-in-out infinite; } /* rests hidden: the final state shows only "Done" */
 .cap-mask { animation: cap-mask 6s ease-in-out infinite; }
 .cap-bar { animation: cap-bar 6s cubic-bezier(0.4, 0, 0.2, 1) infinite; }
 `;

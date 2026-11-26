@@ -135,7 +135,7 @@ export default function MegaMenuPanel({
         animate && 'animate-mega-in motion-reduce:animate-none',
       )}
     >
-      <div className="mx-auto flex w-full max-w-site items-start gap-10 px-8 pb-9 pt-8 xl:px-0">
+      <div className="mx-auto flex w-full max-w-(--container-page) items-start gap-10 px-(--gutter) pb-9 pt-8">
         <div className="flex min-w-0 flex-1 flex-col gap-6">
           <div className="flex w-full items-start gap-7">
             {panel.columns.map((groups, ci) => (

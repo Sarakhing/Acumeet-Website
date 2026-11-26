@@ -1,7 +1,7 @@
 import { useEffect, useId, useRef, useState, useSyncExternalStore } from 'react';
 import Button from '@/components/ui/Button';
 import Container from '@/components/ui/Container';
-import { ROUTES } from '@/constants/routes';
+import { EXTERNAL } from '@/constants/routes';
 import { cn } from '@/utils/cn';
 
 const SCORE = 62;
@@ -171,8 +171,14 @@ export default function RiskAssessmentSection() {
                 Answer a few questions about how your teams meet, record and follow up. See where decisions,
                 actions and sensitive information are most likely to go missing.
               </p>
-              <Button to={`${ROUTES.resources}/meeting-risk-assessment`} className="mt-[38px]">
+              <Button
+                href={EXTERNAL.riskAssessment}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="mt-[38px]"
+              >
                 Check My Risk Score
+                <span className="sr-only"> (opens in a new tab)</span>
               </Button>
               <div className="mt-5 flex w-full flex-col gap-1.5 border-l-2 border-border-default py-1 pl-[18px]">
                 <h3 className="text-heading-4 text-ink-900">See Where Your Meetings May Be Losing Accountability</h3>

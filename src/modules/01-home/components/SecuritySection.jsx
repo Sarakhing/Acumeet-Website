@@ -118,7 +118,7 @@ export default function SecuritySection() {
         </div>
 
         {/* Figma "Controls panel": 656×650 on desktop, extending 80px into the right gutter. */}
-        <div className="flex w-full min-w-0 justify-center xl:h-[650px] xl:flex-1 xl:items-center xl:-mr-20">
+        <div className="flex w-full min-w-0 justify-center xl:h-[650px] xl:flex-1 xl:items-center">
           <SecurityProductCards />
         </div>
       </Container>

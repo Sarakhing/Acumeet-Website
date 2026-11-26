@@ -2,7 +2,9 @@ import { useState } from 'react';
 import Button from '@/components/ui/Button';
 import Container from '@/components/ui/Container';
 import { ROUTES } from '@/constants/routes';
+import { cn } from '@/utils/cn';
 import videoPreview from '@/assets/images/home/in-practice-video.gif';
+import videoPoster from '@/assets/images/home/in-practice-poster.jpg';
 
 const FILE_VIDEO = /\.(mp4|webm|ogg|ogv|mov|m4v)(\?|#|$)/i;
 
@@ -14,6 +16,8 @@ const FILE_VIDEO = /\.(mp4|webm|ogg|ogv|mov|m4v)(\?|#|$)/i;
  */
 function VideoPlayer({ videoSrc, title }) {
   const [playing, setPlaying] = useState(false);
+  // The 3.3 MB GIF loads lazily; a 34 KB still from it shows until then (no empty white box).
+  const [loaded, setLoaded] = useState(false);
   const canPlay = Boolean(videoSrc);
   const isFile = canPlay && FILE_VIDEO.test(videoSrc);
   const preview = (
@@ -24,12 +28,18 @@ function VideoPlayer({ videoSrc, title }) {
       height={630}
       loading="lazy"
       decoding="async"
-      className="absolute inset-0 size-full object-cover"
+      onLoad={() => setLoaded(true)}
+      className={cn(
+        'absolute inset-0 size-full object-cover transition-opacity duration-500',
+        loaded ? 'opacity-100' : 'opacity-0',
+      )}
     />
   );
 
   return (
-    <div className="relative aspect-video w-full overflow-hidden rounded-[16px] border border-[rgb(227_227_232/0.5)] bg-surface-white shadow-[0_24px_64px_-4px_rgb(11_11_18/0.14),0_1px_2px_0_rgb(11_11_18/0.08)] sm:rounded-[24px]">
+    <div className="relative aspect-video w-full overflow-hidden rounded-[16px] border border-[rgb(227_227_232/0.5)] bg-surface-white bg-cover bg-center shadow-[0_24px_64px_-4px_rgb(11_11_18/0.14),0_1px_2px_0_rgb(11_11_18/0.08)] sm:rounded-[24px]"
+      style={{ backgroundImage: `url(${videoPoster})` }}
+    >
       {playing && canPlay ? (
         isFile ? (
           <video src={videoSrc} title={title} controls autoPlay playsInline className="absolute inset-0 size-full bg-ink-800 object-cover" />

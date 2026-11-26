@@ -86,7 +86,7 @@ export default function UseCaseCarousel({ eyebrow, title, lead, items = [] }) {
         <ul
           ref={track}
           onScroll={onScroll}
-          className="-mx-5 flex snap-x snap-mandatory gap-4 overflow-x-auto px-5 pb-2 [scrollbar-width:none] sm:-mx-8 sm:px-8 xl:mx-0 xl:px-0 [&::-webkit-scrollbar]:hidden"
+          className="-mx-(--gutter) flex snap-x snap-mandatory scroll-px-(--gutter) gap-4 overflow-x-auto px-(--gutter) pb-2 [scrollbar-width:none] [&::-webkit-scrollbar]:hidden"
         >
           {items.map((it, i) => (
             <li

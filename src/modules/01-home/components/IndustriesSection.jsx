@@ -112,7 +112,7 @@ export default function IndustriesSection() {
         </div>
 
         {/* Tabs (46:10379) — scrolls horizontally on narrow screens */}
-        <div className="-mx-5 mt-8 overflow-x-auto px-5 pt-1 pb-6 [scrollbar-width:none] sm:-mx-8 sm:px-8 lg:mt-10 xl:mx-0 xl:px-0 [&::-webkit-scrollbar]:hidden">
+        <div className="-mx-(--gutter) mt-8 overflow-x-auto px-(--gutter) pt-1 pb-6 [scrollbar-width:none] lg:mt-10 [&::-webkit-scrollbar]:hidden">
           <div
             role="tablist"
             aria-label="Industries"

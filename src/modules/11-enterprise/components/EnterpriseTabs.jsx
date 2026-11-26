@@ -46,7 +46,7 @@ export default function EnterpriseTabs({ active, label }) {
 
   return (
     <nav aria-label="Enterprise" className="border-b border-[#e4e4e7] bg-surface-white">
-      <div className="mx-auto flex max-w-[1440px] items-center gap-4 px-4 py-3 sm:px-6 lg:px-[120px] lg:py-5">
+      <div className="mx-auto flex max-w-(--container-page) items-center gap-4 px-(--gutter) py-3 lg:py-5">
         <div className="hidden h-[47px] shrink-0 items-center gap-2.5 rounded-[14px] bg-[#0b0b0d] py-2 pl-2 pr-3.5 md:flex">
           <span className="flex size-[30px] items-center justify-center rounded-[8px] bg-surface-white">
             <img src={mark} alt="" width={18} height={14} className="h-[14px] w-[18px]" />

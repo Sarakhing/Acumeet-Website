@@ -1,6 +1,21 @@
 @import './theme.css';
 
 @layer base {
+  /* Page gutter: 20px phones, 32px tablets, 64px at 1024 rising to 100px at 1440 and above. */
+  :root {
+    --gutter: 20px;
+  }
+  @media (min-width: 640px) {
+    :root {
+      --gutter: 32px;
+    }
+  }
+  @media (min-width: 1024px) {
+    :root {
+      --gutter: clamp(64px, calc(64px + (100vw - 1024px) * 0.0865), 100px);
+    }
+  }
+
   html {
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;

@@ -57,7 +57,7 @@ export default function ProductsOverviewHero({ chip, title, lead, primary, secon
       </Container>
 
       {/* Full composition from sm up (scaled), summary + Atlas prompt on phones. */}
-      <div className="relative mx-auto mt-12 hidden w-full max-w-[1248px] px-5 sm:block sm:px-8 lg:mt-[72px] xl:px-0">
+      <div className="relative mx-auto mt-12 hidden w-full max-w-[calc(1248px+2*var(--gutter))] px-(--gutter) sm:block lg:mt-[72px]">
         <ScaleToFit width={1248}>
           <ProductsOverviewHeroVisual />
         </ScaleToFit>

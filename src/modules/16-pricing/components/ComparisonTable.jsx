@@ -61,7 +61,7 @@ export default function ComparisonTable({ title, accent, lead }) {
           <p className="max-w-[700px] text-[17.5px] leading-[1.55] text-[#55575d]">{lead}</p>
         </div>
 
-        <div className="relative -mx-5 overflow-x-auto px-5 sm:-mx-8 sm:px-8 xl:mx-0 xl:px-0">
+        <div className="relative -mx-(--gutter) overflow-x-auto px-(--gutter)">
           <table className="w-full min-w-[910px] lg:min-w-[950px] table-fixed border-collapse text-left">
             <colgroup>
               <col className="w-[160px] sm:w-[200px] lg:w-[450px]" />

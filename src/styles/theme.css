@@ -106,8 +106,9 @@
   --shadow-float: 0 12px 40px -12px rgb(10 10 11 / 0.18);
 
   /* ---------- Layout ---------- */
-  --container-site: 1200px;
-  --container-wide: 1280px;
+  /* One page container for every section: 1240px of content inside a 100px gutter at 1440,
+     the gutter scaling down on smaller screens (see --gutter in index.css). */
+  --container-page: 1440px;
   --spacing-nav: 68px;
 
   /* ---------- Gradients (used via bg-[image:var(--gradient-brand)]) ---------- */

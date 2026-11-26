@@ -268,3 +268,9 @@ export const ROUTES = {
     security: '/legal/security-policy',
   },
 };
+
+/** Off-site destinations (opened in a new tab). */
+export const EXTERNAL = {
+  // Meeting Risk Assessment tool (home "Check My Risk Score").
+  riskAssessment: 'https://tools.acumeet.ai/v2.0/',
+};

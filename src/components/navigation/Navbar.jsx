@@ -126,7 +126,7 @@ export default function Navbar() {
       >
         <nav
           aria-label="Primary"
-          className="mx-auto flex h-nav w-full max-w-site items-center justify-between px-5 sm:px-8 xl:px-0"
+          className="mx-auto flex h-nav w-full max-w-(--container-page) items-center justify-between px-(--gutter)"
         >
           <div className="flex items-center gap-[30px]">
             <Logo />

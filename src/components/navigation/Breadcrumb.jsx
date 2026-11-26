@@ -7,7 +7,7 @@ import { Link } from 'react-router';
 export default function Breadcrumb({ items }) {
   return (
     <nav aria-label="Breadcrumb" className="border-b border-border-muted bg-surface-white">
-      <ol className="mx-auto flex w-full max-w-wide items-center gap-2.5 overflow-x-auto whitespace-nowrap px-5 py-3.5 text-[13px] sm:px-8 xl:px-0">
+      <ol className="mx-auto flex w-full max-w-(--container-page) items-center gap-2.5 overflow-x-auto whitespace-nowrap px-(--gutter) py-3.5 text-[13px]">
         {items.map((item, i) => {
           const last = i === items.length - 1;
           return (

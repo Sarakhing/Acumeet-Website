@@ -3,18 +3,20 @@ import Button from '@/components/ui/Button';
 import Container from '@/components/ui/Container';
 import { ROUTES } from '@/constants/routes';
 import { cn } from '@/utils/cn';
+import { PLANS as PRICING_PLANS } from '@/modules/16-pricing/content/plans';
 
 /**
- * Plan summary shown on the Home teaser.
- * TODO: move to a shared pricing data file when the Pricing section is built.
+ * Plan summary shown on the Home teaser — names, prices and audience lines come from the
+ * Pricing section's plan data so the two pages stay in sync. Figma's teaser marks Team as
+ * "Popular" (the Pricing page outlines Business); `popular` keeps the teaser's choice.
  */
-const PLANS = [
-  { id: 'free', name: 'Free', price: '$0', audience: 'Evaluating Acumeet' },
-  { id: 'individual', name: 'Individual', price: '$7.99', audience: 'Solo professionals' },
-  { id: 'teams', name: 'Teams', price: '$14.99', audience: 'Small teams', popular: true },
-  { id: 'business', name: 'Business', price: '$24.99', audience: 'Larger organisations' },
-  { id: 'enterprise', name: 'Enterprise', price: 'Custom', audience: 'Advanced requirements' },
-];
+const PLANS = PRICING_PLANS.map((p) => ({
+  id: p.id,
+  name: p.name,
+  price: p.yearly,
+  audience: p.audience,
+  popular: p.id === 'team',
+}));
 
 function PlanCard({ plan }) {
   const { name, price, audience, popular } = plan;

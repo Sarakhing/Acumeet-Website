@@ -1,20 +1,23 @@
 import { cn } from '@/utils/cn';
 
 /**
- * Horizontal page gutter. Figma frames are 1440 wide with 120px gutters
- * (content 1200) or 80px gutters (content 1280). On smaller screens the
- * gutter collapses to 20/32px.
+ * The page container. Every section uses the same gutter (--gutter: 20px phones, 32px
+ * tablets, 64px at 1024 scaling to 100px at 1440+) inside a 1440px max width, so content is
+ * 1240px at 1440 and all left / right edges line up site-wide.
+ * width: 'page' (default; 'site' / 'wide' are aliases kept for existing callers) |
+ *   'narrow' (1000px content) | 'prose' (810px content).
  */
 const WIDTHS = {
-  site: 'max-w-site',
-  wide: 'max-w-wide',
-  narrow: 'max-w-[1000px]',
-  prose: 'max-w-[810px]',
+  page: 'max-w-(--container-page)',
+  site: 'max-w-(--container-page)',
+  wide: 'max-w-(--container-page)',
+  narrow: 'max-w-[calc(1000px+2*var(--gutter))]',
+  prose: 'max-w-[calc(810px+2*var(--gutter))]',
 };
 
-export default function Container({ as: Tag = 'div', width = 'site', className, children, ...props }) {
+export default function Container({ as: Tag = 'div', width = 'page', className, children, ...props }) {
   return (
-    <Tag className={cn('mx-auto w-full px-5 sm:px-8 xl:px-0', WIDTHS[width], className)} {...props}>
+    <Tag className={cn('mx-auto w-full px-(--gutter)', WIDTHS[width], className)} {...props}>
       {children}
     </Tag>
   );
