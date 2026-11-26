@@ -14,6 +14,7 @@ const SYNC_LOGOS = { Jira: jira, Asana: asana, Trello: trello };
  * tasks: [{ title, due, avatar }]
  * sync (optional): ['Jira', 'Asana', 'Trello'] replaces the footer with the
  *   "Sync tasks to" logo chips (Products overview 46:31780).
+ * footer={false} drops the footer (Integrations 09.03 / 09.09 hero carousels).
  */
 export default function ActionItemsCard({
   tasks = [],
@@ -22,6 +23,7 @@ export default function ActionItemsCard({
   shadow = 'float',
   avatarSize = 24,
   sync,
+  footer = true,
   className,
 }) {
   return (
@@ -81,7 +83,7 @@ export default function ActionItemsCard({
             </span>
           ))}
         </div>
-      ) : (
+      ) : footer && (
         <div className="flex items-center gap-2 border-t border-border-muted pt-2.5">
           <span className="flex shrink-0 items-center gap-1">
             <img src={jira} alt="" width={14} height={14} className="size-3.5" />

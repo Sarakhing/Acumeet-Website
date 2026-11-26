@@ -4,11 +4,14 @@ import Eyebrow from '@/components/ui/Eyebrow';
 import { cn } from '@/utils/cn';
 import RelatedCard from './RelatedCard';
 
+const LG_COLS = { 2: 'lg:grid-cols-2', 3: 'lg:grid-cols-3' };
+
 /**
  * Figma "Explore more": "KEEP EXPLORING" overline + 36px title (optionally a
  * link) + a row of RelatedCards (4-up desktop, 2-up tablet, swipeable row on
  * mobile).
  * cards: RelatedCard props[]; eyebrow={null} hides the overline (Control); title={null} hides the title (Knowledge Repository 02.10).
+ * Two or three cards fill the row on desktop (Integrations 09.03: 2 × 632, 09.04: 3 × 416).
  */
 export default function RelatedRow({ eyebrow = 'Keep exploring', title = 'Explore Acumeet solutions', titleTo, cards = [], className }) {
   return (
@@ -28,7 +31,7 @@ export default function RelatedRow({ eyebrow = 'Keep exploring', title = 'Explor
             </h2>
           )}
         </div>
-        <ul className="-mx-5 flex snap-x snap-mandatory gap-4 overflow-x-auto px-5 pb-2 sm:mx-0 sm:grid sm:grid-cols-2 sm:overflow-visible sm:px-0 sm:pb-0 lg:grid-cols-4">
+        <ul className={cn('-mx-5 flex snap-x snap-mandatory gap-4 overflow-x-auto px-5 pb-2 sm:mx-0 sm:grid sm:grid-cols-2 sm:overflow-visible sm:px-0 sm:pb-0', LG_COLS[cards.length] ?? 'lg:grid-cols-4')}>
           {cards.map((c) => (
             <li key={c.to} className="w-[280px] shrink-0 snap-start sm:w-auto">
               <RelatedCard {...c} className="h-full" />

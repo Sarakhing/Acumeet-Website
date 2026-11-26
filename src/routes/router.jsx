@@ -9,6 +9,7 @@ import { useCasesRoutes } from '@/modules/05-use-cases';
 import { securityRoutes } from '@/modules/06-security';
 import { trustCenterRoutes } from '@/modules/07-trust-center';
 import { complianceRoutes } from '@/modules/08-compliance';
+import { integrationsRoutes } from '@/modules/09-integrations';
 
 /**
  * Each Figma section is a module exporting its own lazy routes.
@@ -26,6 +27,7 @@ export const router = createBrowserRouter([
       ...securityRoutes,
       ...trustCenterRoutes,
       ...complianceRoutes,
+      ...integrationsRoutes,
       { path: '*', element: <ComingSoon /> },
     ],
   },

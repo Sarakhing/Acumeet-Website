@@ -38,12 +38,13 @@ export const decisions = (date, decided, risk, topics, width = 480, opts = {}) =
     ...opts,
   });
 
-/** "Action items": actions(open, [[title, due], …], { width, shadow }). */
-export const actions = (open, tasks, { width = 480, shadow = 'mock' } = {}) =>
+/** "Action items": actions(open, [[title, due], …], { width, shadow, footer }). */
+export const actions = (open, tasks, { width = 480, shadow = 'mock', footer = true } = {}) =>
   h(ActionItemsCard, {
     width,
     open,
     shadow,
+    footer,
     avatarSize: 20,
     tasks: tasks.map(([title, due], i) => ({ title, due, avatar: AVATARS[PEOPLE[i % PEOPLE.length]] })),
   });
@@ -130,9 +131,12 @@ export const keys = (actionLabels = ['Configure', 'Configure'], { width = 400, s
 /** Integrations listed in every Use Cases / Security "UI · Connect" card ("6 connected"). */
 export const CONNECTED = ['Microsoft Teams', 'Zoom', 'Google Meet', 'Slack', 'Outlook', 'Jira', 'Asana'];
 
-/** "Integrations": integrations(['Microsoft Teams', …], connected, { width }). */
-export const integrations = (names, connected, { width = 460 } = {}) =>
-  h(IntegrationsCard, { width, connected, items: names.map((name) => ({ name })) });
+/** Integrations in the 8-chip "UI · Connect" card (Salesforce / HubSpot muted, "6 connected"). */
+export const CRM_CONNECTED = ['Microsoft Teams', 'Zoom', 'Google Meet', 'Slack', 'Jira', 'Asana', 'Salesforce', 'HubSpot'];
+
+/** "Integrations": integrations(['Microsoft Teams', …], connected, { width, muted }). `muted` names get grey labels. */
+export const integrations = (names, connected, { width = 460, muted = ['Salesforce', 'HubSpot'] } = {}) =>
+  h(IntegrationsCard, { width, connected, items: names.map((name) => ({ name, muted: muted.includes(name) })) });
 
 /** "Transcript" (live): transcript([[name, time, text], …], { width }). The last line is still being transcribed. */
 export const transcript = (lines, { width = 440, shadow = 'mock' } = {}) =>

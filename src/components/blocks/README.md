@@ -412,3 +412,20 @@ Figma section "08 · Compliance" (`48:369038`). Module: `src/modules/08-complian
 ### Shared changes
 - `SectionHeading`: `lead` may be an array of paragraphs (08.01 "Responsible AI" explorer head).
 - `mocks.js`: `documents([[title, 'public' | 'request']], { width })` → new `src/components/visuals/DocumentsCard.jsx` (Figma "UI · Documents").
+
+## Integrations (09.01–09.10)
+Figma section "09 · Integrations" (`48:383882`). Module: `src/modules/09-integrations/`. Routes: `ROUTES.integrationsPage.<key>` (slugs = mega menu; `ROUTES.integrations` is still the overview string).
+
+### Page
+- `pages/IntegrationsPage.jsx` is a `BlockPage` that adds one Integrations section type:
+  - `index` — `components/IntegrationIndex.jsx`. Figma "Index · Find Your Integration": a 48px heading, then 3-up 416×150 link tiles, each with a tinted icon mark, a coloured "↗" and corner rings. The icons are in `assets/images/integrations/ic-*.svg`. `id` is the anchor for the hero's "Explore integrations" button.
+- Builders in `content/integrations.js`:
+  - `splits([{ eyebrow?, title, body[], cta, visual }])` — alternating rows. The panels cycle pink rings → blue dots → lilac hairlines → mint waveform → amber rings. Figma's "supporting" lines are plain 17px paragraphs, so they go in `body`.
+  - `intCta(title)` — headline, an empty sub-line (non-breaking space) and "Book a demo"
+  - `exploreIntegrations(keys)`, `RELATED`, `intBreadcrumb`, `CONTACT(label)` → contact sales
+- `content/shared.js` holds the repeated task lists (`po`, `vendor`, `secTasks`), the "vendor approval workflow" search and the summary insights.
+
+### Shared changes
+- `RelatedRow`: two or three cards fill the row on desktop (`lg:grid-cols-2` / `lg:grid-cols-3`).
+- `ActionItemsCard` / `actions(…, { footer: false })` drops the "Synced to Jira and Asana" footer (hero carousels).
+- `mocks.js`: `CRM_CONNECTED` (the 8-chip list). `integrations(…, { muted })` greys Salesforce / HubSpot by default.
