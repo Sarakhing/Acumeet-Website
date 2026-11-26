@@ -14,6 +14,7 @@ import { deploymentRoutes } from '@/modules/10-deployment';
 import { enterpriseRoutes } from '@/modules/11-enterprise';
 import { compareRoutes } from '@/modules/12-compare';
 import { resourcesRoutes } from '@/modules/13-resources';
+import { developersRoutes } from '@/modules/14-developers';
 
 /**
  * Each Figma section is a module exporting its own lazy routes.
@@ -36,6 +37,7 @@ export const router = createBrowserRouter([
       ...enterpriseRoutes,
       ...compareRoutes,
       ...resourcesRoutes,
+      ...developersRoutes,
       { path: '*', element: <ComingSoon /> },
     ],
   },

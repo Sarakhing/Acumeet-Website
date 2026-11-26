@@ -499,3 +499,25 @@ Figma section "13 · Resources" (`49:138233`). Module: `src/modules/13-resources
 ### Shared changes
 - `SectionHeading`: `flush` drops the 44px head's vertical padding.
 - `Checklist`: `eyebrow` and `id` props.
+
+## Developers (14.01–14.10)
+Figma section "14 · Developers" (`49:155703`). Module: `src/modules/14-developers/`. Routes: `ROUTES.developersPage.<key>`, with slugs that match the mega menu and Figma's path chips.
+
+### Page
+- `pages/DevelopersPage.jsx` is its own renderer, not a `BlockPage`, because these pages have their own hero types. It renders breadcrumb → `sections` → FAQ (anchored `#faqs`) → optional `afterFaq` section → CTA band. Figma's "Copy status badge" is a designer note and is not rendered.
+- `content/developers.js`: the `DEVELOPERS` catalogue and `docsPage(key, {…})`. The latter builds a whole docs page (14.02–14.10): `DocsHero` with a page-specific panel, `DocsBody`, the FAQ and the CTA.
+- Components:
+  - `code.jsx`: the `Code` highlighter (comments, `$VARS`, URLs, strings, keys), the `Method` pill (GET / POST / EVENT), window `Chrome`, `EarlyAccess`, and the grid backgrounds.
+  - `panels.jsx`: the docs hero panels — endpoints, code, request headers, webhook event, guide steps, SDK checklist, API reference (Response / Request tabs), resource links and quickstart.
+  - `DocsHero`, `DocsBody`: the three-column docs body with a sticky sidebar, numbered sections, key points, related path cards and a sticky "On this page" index.
+  - Overview blocks:
+    - `DevHero` (language tabs)
+    - `ResourceAccordion` (each item swaps the panel visual)
+    - `DevJourney`
+    - `ApiConsole` (endpoint sidebar, language tabs, Copy)
+    - `UseCaseCarousel` (scroll-snap row, ← / →, progress rail; card visuals are in `useCaseVisuals.jsx`)
+    - `DevBlocks` (`ResponsibleIntegration`, `DevDirectory`, `CtaPanel`)
+- `content/snippets.js`: the API console's endpoints and code samples.
+
+### Shared changes
+- `DuoIcon`: an optional `line` colour, for icons on dark cards.
