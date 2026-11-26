@@ -62,6 +62,7 @@ function WashHero({
   titleSize = 'hero',
   leadSize = 18,
   leadWidth = 560,
+  extra,
 }) {
   const leadClass = cn(
     'text-[17px] leading-[1.35] text-ink-700',
@@ -147,6 +148,7 @@ function WashHero({
                 {lead}
               </p>
             ))}
+          {extra}
           {(primary || secondary) && (
             <div className="flex flex-wrap items-center gap-x-3 gap-y-4">
               {primary && <Button to={primary.to}>{primary.label}</Button>}
@@ -412,6 +414,7 @@ function CenteredWashHero({
  * wash-only options (all optional, defaults = Protect): pattern 'dots' | 'hairlines' (Control),
  *   eyebrowStyle 'plain' | 'chip' (Govern), secondaryStyle 'link' | 'button' (Control),
  *   visualAlign 'start' | 'end', copyTop (lg copy offset, 76), padBottom (lg bottom padding, 111).
+ * wash: extra (node above the buttons — Support 15.01 search bar).
  * rings / centered: minHeight (lg minimum height — copy-only heroes, Compare 12.01–12.08).
  * rings-only option: secondaryStyle 'button' (default, white outlined pill) | 'link' (Connect: white text + →).
  * See src/components/blocks/README.md for props.

@@ -203,6 +203,23 @@ export const ROUTES = {
     resources: '/developers/resources',
   },
   support: '/support',
+  // Support pages (Figma "15 · Support"); slugs match the header mega menu. 15.02 Help Center is the
+  // overview, 15.03 Documentation is 13.12 and 15.06 Integration Guides is 14.07.
+  supportPage: {
+    overview: '/support',
+    gettingStarted: '/support/getting-started',
+    featureGuides: '/support/feature-guides',
+    administration: '/support/administration',
+    billing: '/support/billing',
+    security: '/support/security',
+    troubleshooting: '/support/troubleshooting',
+    faqs: '/support/faqs',
+    contact: '/support/contact',
+    raiseTicket: '/support/raise-a-ticket',
+    ticketStatus: '/support/ticket-status',
+    serviceStatus: '/support/service-status',
+    supportPlans: '/support/support-plans',
+  },
   pricing: '/pricing',
   company: '/company',
   whyAcumeet: '/why-acumeet', // header mega menu (Solutions footer link)

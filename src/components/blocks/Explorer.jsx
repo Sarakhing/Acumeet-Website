@@ -33,6 +33,7 @@ export default function Explorer({
   interval = 7000,
   tone = 'subtle',
   className,
+  id,
 }) {
   const auto = useAutoAdvance(items.length, { interval });
   const baseId = useId();
@@ -60,13 +61,31 @@ export default function Explorer({
   };
 
   return (
-    <section className={cn(tone === 'white' ? 'bg-surface-white' : 'bg-surface-muted', 'py-16 lg:py-[120px]', className)}>
+    <section
+      id={id}
+      className={cn(
+        'scroll-mt-20',
+        tone === 'white' ? 'bg-surface-white' : 'bg-surface-muted',
+        'py-16 lg:py-[120px]',
+        className,
+      )}
+    >
       <Container width="wide" className="flex flex-col gap-10 lg:gap-12">
         {title && (
-          <SectionHeading eyebrow={eyebrow} title={title} accent={accent} lead={lead} titleSize={titleSize} />
+          <SectionHeading
+            eyebrow={eyebrow}
+            title={title}
+            accent={accent}
+            lead={lead}
+            titleSize={titleSize}
+          />
         )}
 
-        <div className="flex flex-col gap-8 lg:flex-row lg:items-start lg:gap-10" {...auto.hoverProps} {...auto.focusProps}>
+        <div
+          className="flex flex-col gap-8 lg:flex-row lg:items-start lg:gap-10"
+          {...auto.hoverProps}
+          {...auto.focusProps}
+        >
           <div
             role="tablist"
             aria-orientation="vertical"
@@ -118,7 +137,9 @@ export default function Explorer({
                   </button>
                   {on && (
                     <>
-                      <p className="max-w-[388px] text-[15px] leading-[1.5] text-ink-700">{item.body}</p>
+                      <p className="max-w-[388px] text-[15px] leading-[1.5] text-ink-700">
+                        {item.body}
+                      </p>
                       {item.link && (
                         <Link
                           to={item.link.to}

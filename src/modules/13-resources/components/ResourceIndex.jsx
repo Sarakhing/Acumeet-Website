@@ -1,6 +1,7 @@
 import { Link } from 'react-router';
 import Container from '@/components/ui/Container';
 import Pattern from '@/components/patterns/Pattern';
+import SectionHeading from '@/components/blocks/SectionHeading';
 import { cn } from '@/utils/cn';
 
 /* Tile header tint, pattern and number colour, in Figma order (the first tile is the dark one). */
@@ -101,12 +102,15 @@ function Tile({ it, i }) {
  * Figma "Index · …" bento (Resources 13.01, 13.03, 13.12): on #fafafb, a 3-column grid whose first
  * tile is dark and spans two columns. Each tile: a 100px 140px tinted header with a pattern and a large mono
  * number, then a title, an optional 13px body and an optional "Link →". Tiles with `to` are links.
- * items: [{ title, body?, link?, to? }].
+ * items: [{ title, body?, link?, to? }]; optional 44px `title` + `accent` heading (Support 15.01).
  */
-export default function ResourceIndex({ id, items = [] }) {
+export default function ResourceIndex({ id, title, accent, items = [] }) {
   return (
     <section id={id} className="scroll-mt-20 bg-surface-muted py-16 lg:py-28">
-      <Container width="wide">
+      <Container width="wide" className="flex flex-col gap-12">
+        {title && (
+          <SectionHeading title={title} accent={accent} accentBreak={false} titleSize={44} />
+        )}
         <ul className="grid gap-5 sm:grid-cols-2 lg:grid-cols-3">
           {items.map((it, i) => (
             <li key={it.title} className={cn(i === 0 && 'sm:col-span-2')}>

@@ -521,3 +521,25 @@ Figma section "14 · Developers" (`49:155703`). Module: `src/modules/14-develope
 
 ### Shared changes
 - `DuoIcon`: an optional `line` colour, for icons on dark cards.
+
+## Support (15.01–15.16)
+Figma section "15 · Support" (`49:167019`). Module: `src/modules/15-support/`. Routes: `ROUTES.supportPage.<key>`, with slugs that match the mega menu. 15.02 Help Center is the overview, 15.03 Documentation is 13.12 and 15.06 Integration Guides is 14.07, so they have no routes of their own.
+
+### Page
+- `pages/SupportPage.jsx` is a `BlockPage` that adds:
+  - `index` — the Resources `ResourceIndex` bento, which now takes an optional `title` / `accent`.
+  - `form` — `components/SupportForm.jsx`:
+    - `panel`: "Need a person?" beside a ticket card with issue-type chips and an attachment row.
+    - `full`: stacked fields with an issue-type select.
+    - `status`: ticket reference and work email.
+  - There is no backend yet: submitting validates the fields and shows Figma's confirmation, and nothing is sent.
+- `components/SupportSearch.jsx` — the 15.01 hero search (via the wash hero's new `extra` slot). It opens `/support/faqs?q=…`.
+- `components/SupportCards.jsx` — new mock cards: My tickets, Service status, Support by plan (`selected`), Choose a plan, Billing, Invoices, Add-ons and Support ticket (status timeline, `step` 0–3).
+- Builders:
+  - `content/support.js`: the `SUPPORT` catalogue, `statement`, `explorer` (44px heads), `faq(title, items)`, `exploreSupport`, `RELATED`, `cta`, and the card builders.
+  - `content/shared.js`: the support task lists, the "SSO setup ticket" search, summaries and transcript lines.
+
+### Shared changes
+- `SolutionHero` (wash variant): an `extra` slot above the buttons.
+- `Explorer`: an `id` prop, for anchors.
+- `ResourceIndex`: an optional heading.
