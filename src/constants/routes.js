@@ -123,6 +123,21 @@ export const ROUTES = {
     developer: '/integrations/developer-integrations',
   },
   deployment: '/deployment',
+  // Deployment pages (Figma "10 · Deployment"). 10.07 Data Residency reuses the Trust Center
+  // page (07.06) and 10.11 Implementation the Enterprise page (11.08).
+  deploymentPage: {
+    overview: '/deployment',
+    cloudHosted: '/deployment/cloud-hosted',
+    enterpriseHosted: '/deployment/enterprise-hosted',
+    customerAzureTenant: '/deployment/customer-azure-tenant',
+    byos: '/deployment/byos',
+    privateDeployment: '/deployment/private-deployment',
+    dataResidency: '/trust-center/data-residency',
+    azureArchitecture: '/deployment/azure-architecture',
+    highAvailability: '/deployment/high-availability',
+    disasterRecovery: '/deployment/disaster-recovery',
+    implementation: '/enterprise/implementation',
+  },
   enterprise: '/enterprise',
   compare: '/compare',
   resources: '/resources',

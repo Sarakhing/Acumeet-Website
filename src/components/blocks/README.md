@@ -429,3 +429,13 @@ Figma section "09 · Integrations" (`48:383882`). Module: `src/modules/09-integr
 - `RelatedRow`: two or three cards fill the row on desktop (`lg:grid-cols-2` / `lg:grid-cols-3`).
 - `ActionItemsCard` / `actions(…, { footer: false })` drops the "Synced to Jira and Asana" footer (hero carousels).
 - `mocks.js`: `CRM_CONNECTED` (the 8-chip list). `integrations(…, { muted })` greys Salesforce / HubSpot by default.
+
+## Deployment (10.01–10.10)
+Figma section "10 · Deployment" (`48:393382`). Module: `src/modules/10-deployment/`. Routes: `ROUTES.deploymentPage.<key>` (`ROUTES.deployment` is still the overview string). 10.07 Data Residency and 10.11 Implementation are Figma "shared" entries: their keys point at the Trust Center page (07.06) and `/enterprise/implementation` (11.08, not built yet), and they have no route here.
+
+### Page
+- `pages/DeploymentPage.jsx` is a `BlockPage` that adds `stepper` (the shared `Stepper` block) as a section type.
+- The sub-pages share one template: hero → dark chapters → FAQ (all open) → "Explore Deployment" → CTA. Heroes: centred (10.01, 10.04, 10.08), rings + carousel (10.02, 10.05, 10.09), window (10.03, 10.06, 10.10).
+- `components/DeploymentOptionsCard.jsx` — Figma "UI · Deployment options" (350 wide): a radio list of the five approaches with one highlighted. The 10.01 explorer shows it with the tab's option selected (`options(i)`). Icons are in `assets/images/deployment/`.
+- Builders in `content/deployment.js`: `chapters`, `faq`, `depCta(title)`, `exploreDeployment(keys)`, `RELATED`, `depBreadcrumb`, `CONTACT(label)` → contact sales, `options(selected)`.
+- `content/shared.js`: deployment task lists (`tasks`, `rollout`) and the "Key value points" summary (`keySummary`).
