@@ -60,6 +60,7 @@ function Mark({ it, on, color }) {
  * items: [{ label, icon? | image?, tone, to? }] (tone = key of TONES; `to` makes the card a link).
  * layout: 'grid' (4 · 3+2 · 3+3 · 4+4) | 'questions' (Compare "Five questions": 2-up 137px cards,
  *   15px labels, the odd last card full width, no highlight).
+ * flush: drop the heading's 16px vertical padding (default: when there is an eyebrow; Pricing 16.01).
  */
 export default function Checklist({
   id,
@@ -69,6 +70,7 @@ export default function Checklist({
   lead,
   items = [],
   layout = 'grid',
+  flush = Boolean(eyebrow),
 }) {
   const [active, setActive] = useState(0);
   const questions = layout === 'questions';
@@ -80,7 +82,7 @@ export default function Checklist({
       <Container width="wide" className="flex flex-col gap-12">
         <SectionHeading
           eyebrow={eyebrow}
-          flush={Boolean(eyebrow)}
+          flush={flush}
           title={title}
           accent={accent}
           accentBreak={false}

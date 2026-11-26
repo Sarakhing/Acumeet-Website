@@ -163,8 +163,8 @@ export function SupportPlansCard({ width = 350, shadow, selected = 3 }) {
   );
 }
 
-/** "Choose a plan": radio list (Teams current) + Compare / Change buttons. */
-export function PlansCard({ width = 350, shadow }) {
+/** "Choose a plan": radio list (Teams current; `selected` row checked) + Compare / Change buttons. */
+export function PlansCard({ width = 350, shadow, selected = 'Teams' }) {
   const rows = [
     ['Free', 'Get started'],
     ['Individual', 'For one person'],
@@ -185,7 +185,7 @@ export function PlansCard({ width = 350, shadow }) {
       }
     >
       {rows.map(([t, d]) => {
-        const on = t === 'Teams';
+        const on = t === selected;
         return (
           <div key={t} className={cn(ROW, on && 'border-brand-blue bg-[#f5f8ff]')}>
             <span

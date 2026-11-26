@@ -26,7 +26,8 @@ const BASE_SECTIONS = {
 /**
  * Data-driven page (Security 06.x, Trust Center 07.x): breadcrumb → hero (+ carousel) →
  * `content.sections: [{ type, ...props }]` in Figma order → optional FAQ → optional
- * related row → CTA band. `sections` maps extra type names to module components;
+ * related row → CTA band. `hero` is optional (Pricing 16.01 / 16.03 open on a section).
+ * `sections` maps extra type names to module components;
  * `subnav` renders between the breadcrumb and the hero (Enterprise tabs).
  */
 export default function BlockPage({ content: c, sections = {}, subnav }) {
@@ -35,7 +36,9 @@ export default function BlockPage({ content: c, sections = {}, subnav }) {
     <>
       <Breadcrumb items={c.breadcrumb} />
       {subnav}
-      <SolutionHero {...c.hero}>{c.carousel && <HeroCarousel slides={c.carousel} />}</SolutionHero>
+      {c.hero && (
+        <SolutionHero {...c.hero}>{c.carousel && <HeroCarousel slides={c.carousel} />}</SolutionHero>
+      )}
       {c.sections.map(({ type, ...props }, i) => {
         const Section = registry[type];
         return <Section key={i} {...props} />;

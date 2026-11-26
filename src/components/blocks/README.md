@@ -543,3 +543,19 @@ Figma section "15 · Support" (`49:167019`). Module: `src/modules/15-support/`. 
 - `SolutionHero` (wash variant): an `extra` slot above the buttons.
 - `Explorer`: an `id` prop, for anchors.
 - `ResourceIndex`: an optional heading.
+
+## Pricing (16.01–16.06)
+Figma section "16 · Pricing". Module: `src/modules/16-pricing/`. Routes: `ROUTES.pricingPage.<key>` (`/pricing`, `/pricing/feature-comparison`, `/pricing/enterprise`, `/pricing/add-ons`, `/pricing/faqs`). 16.02 Plans is the overview's plan cards and 16.07 Contact Sales is `ROUTES.contactSales` (18.06), so they have no routes of their own.
+
+### Page
+- `pages/PricingPage.jsx` is a `BlockPage` that adds:
+  - `plans` — `components/PlanCards.jsx`: the 58px centred title, a Yearly / Monthly switch (`aria-pressed`), five plan cards (Business outlined in blue) and a "Compare plans" link to 16.03. Cards are 5-up at lg, 2-up at sm, stacked on phones.
+  - `comparison` — `components/ComparisonTable.jsx`: a semantic table (plan header with buttons, grouped feature rows, ticks / dashes with screen-reader text, Business column on a pale blue wash). Below xl it scrolls sideways with the feature column pinned.
+  - `checklist` — the Enterprise `Checklist`.
+- Data: `content/plans.js` holds `PLANS` (cards and table header) and `COMPARISON` (table rows). Monthly prices are placeholders, because Figma only shows yearly billing.
+- Builders: `content/pricing.js` holds the `PRICING` catalogue, `explorePricing`, `addOnCards` (Benefits cards), `enterpriseTabs(governanceVisual)` and `priTasks`. It re-exports `statement` / `explorer` / `faq` / `cta` and the plan, add-on and billing mock cards from Support.
+
+### Shared changes
+- `BlockPage`: `hero` is optional, because 16.01 and 16.03 open on a section.
+- Support `PlansCard`: a `selected` plan (default Teams).
+- `Checklist`: a `flush` prop (the default is unchanged: flush when there is an eyebrow).

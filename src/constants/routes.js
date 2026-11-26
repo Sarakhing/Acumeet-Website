@@ -221,6 +221,15 @@ export const ROUTES = {
     supportPlans: '/support/support-plans',
   },
   pricing: '/pricing',
+  // Pricing pages (Figma "16 · Pricing"). 16.02 Plans is the overview's plan cards and 16.07
+  // Contact Sales is ROUTES.contactSales (18.06).
+  pricingPage: {
+    overview: '/pricing',
+    featureComparison: '/pricing/feature-comparison',
+    enterprise: '/pricing/enterprise',
+    addOns: '/pricing/add-ons',
+    faqs: '/pricing/faqs',
+  },
   company: '/company',
   whyAcumeet: '/why-acumeet', // header mega menu (Solutions footer link)
   getStarted: '/get-started',
