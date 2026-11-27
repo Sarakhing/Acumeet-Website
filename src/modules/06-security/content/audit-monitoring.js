@@ -14,11 +14,11 @@ const heroActions = actions(
 
 /** 06.06 · Audit & Monitoring (Figma 48:325863). */
 export default {
-  breadcrumb: secBreadcrumb('Audit & Monitoring'),
+  breadcrumb: secBreadcrumb('Audit & monitoring'),
 
   /** 01 · Hero (910 tall): audit log (+6°) and decisions (−6°) tilted behind action items. */
   ...centeredHero({
-    eyebrow: 'Audit & Monitoring',
+    eyebrow: 'Audit & monitoring',
     title: 'Make relevant activity easier to review',
     accent: 'and investigate.',
     lead: 'Audit and monitoring capabilities can help teams understand activity, identify operational or security concerns, and support investigation. Confirm which events are recorded, how long they are retained, and which monitoring or SIEM integrations are supported.',

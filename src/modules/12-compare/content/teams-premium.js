@@ -32,7 +32,7 @@ export default {
 
   /** 01 · Hero (979): workspace access (+6°) and decisions (−6°) tilted behind upcoming meetings. */
   ...centeredHero({
-    eyebrow: 'Teams Premium alternative',
+    eyebrow: 'Teams premium alternative',
     title: 'Acumeet vs Microsoft Teams Premium: Teams-native or',
     accent: 'cross-platform meeting intelligence?',
     lead: 'Teams Premium adds intelligent recap and advanced protection to Microsoft Teams. Acumeet is an enterprise meeting intelligence layer across Microsoft Teams, Zoom and Google Meet.',

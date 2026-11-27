@@ -14,15 +14,15 @@ const P = ROUTES.pricingPage;
  * 16.02 Plans is the overview's plan cards; 16.07 Contact Sales is the shared 18.06 page.
  */
 export const PRICING = {
-  overview: { title: 'Pricing Overview', to: P.overview, figma: '49:173600' },
+  overview: { title: 'Pricing overview', to: P.overview, figma: '49:173600' },
   featureComparison: {
-    title: 'Feature Comparison',
+    title: 'Feature comparison',
     tagline: 'Compare plans by what your team needs',
     to: P.featureComparison,
     figma: '49:173923',
   },
   enterprise: {
-    title: 'Enterprise Pricing',
+    title: 'Enterprise pricing',
     tagline: 'Need more control?',
     to: P.enterprise,
     figma: '49:174456',
@@ -35,7 +35,7 @@ export const PRICING = {
   },
   faqs: { title: 'FAQs', tagline: 'Pricing FAQs', to: P.faqs, figma: '49:174719' },
   contactSales: {
-    title: 'Contact Sales',
+    title: 'Contact sales',
     tagline: 'Have a question before you take the next step?',
     to: ROUTES.contactSales, // shared → 18.06
   },
@@ -57,7 +57,7 @@ export const REQUEST_POC = to('Request a PoC', ROUTES.enterprisePage.requestPoc)
 /** Home / Pricing Overview / {page}. */
 export const priBreadcrumb = (label) => [
   { label: 'Home', to: ROUTES.home },
-  { label: 'Pricing Overview', to: P.overview },
+  { label: 'Pricing overview', to: P.overview },
   { label },
 ];
 
@@ -71,7 +71,7 @@ const SLOTS = [
 /** "Explore Pricing" row — every "Related" card reads "Pricing". */
 export const explorePricing = (keys) => ({
   eyebrow: 'Keep exploring',
-  title: 'Explore Pricing',
+  title: 'Explore pricing',
   cards: keys.map((k, i) => ({
     title: PRICING[k].title,
     description: 'Pricing',

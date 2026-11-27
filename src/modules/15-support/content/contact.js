@@ -17,13 +17,13 @@ import {
 
 /** 15.12 · Contact Support (Figma 49:168043). */
 export default {
-  breadcrumb: supBreadcrumb('Contact Support'),
+  breadcrumb: supBreadcrumb('Contact support'),
 
   /** 01 · Hero + "Hero carousel · 15.12 · Contact Support" (49:91273). */
   hero: {
     variant: 'rings',
     secondaryStyle: 'link',
-    eyebrow: 'Support  ·  Contact Support',
+    eyebrow: 'Support  ·  Contact support',
     title: 'Need a person?',
     lead: 'Tell us what you were trying to do and what happened. Add a screenshot if it helps.',
     primary: RAISE,

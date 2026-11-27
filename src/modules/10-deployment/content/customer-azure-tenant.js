@@ -7,11 +7,11 @@ const heroActions = rollout(4, ['May 3', 'Next week', 'May 13'], { width: 400, s
 
 /** 10.04 · Customer Azure Tenant (Figma 48:393739). */
 export default {
-  breadcrumb: depBreadcrumb('Customer Azure Tenant'),
+  breadcrumb: depBreadcrumb('Customer Azure tenant'),
 
   /** 01 · Hero (985): keys & storage (+6°) and decisions (−6°) tilted behind action items. */
   ...centeredHero({
-    eyebrow: 'Customer Azure Tenant',
+    eyebrow: 'Customer Azure tenant',
     title: 'Evaluate Acumeet against your',
     accent: 'Azure environment.',
     lead: 'For organisations that need to assess the use of their own Microsoft Azure environment, Acumeet can work with your stakeholders to define the intended architecture, security boundaries, permissions, and operational responsibilities.',

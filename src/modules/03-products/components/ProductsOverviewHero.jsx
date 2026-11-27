@@ -1,3 +1,4 @@
+import { HERO_WASH } from '@/components/blocks/heroWash';
 import Button from '@/components/ui/Button';
 import Container from '@/components/ui/Container';
 import ScaleToFit from '@/components/ui/ScaleToFit';
@@ -7,23 +8,19 @@ import ProductsOverviewHeroVisual, {
 } from './visuals/ProductsOverviewHeroVisual';
 
 /**
- * Figma "01 · Hero" (46:30446, 990 tall): #fbfbfd wash with a blue (left) and
- * pink (right) radial glow, a dark dot field across the lower part, centred
+ * Figma "01 · Hero" (46:30446, 990 tall): the site's soft hero wash (HERO_WASH), a dark dot field across the lower part, centred
  * copy (chip, 64px title, 19px lead, two buttons) and the floating product
  * composition. Glow centres are expressed relative to the page centre so they
  * stay put on wider/narrower screens.
  */
-const WASH = [
-  'radial-gradient(648px 689px at calc(50% - 432px) 212px, rgb(204 219 255 / 0.95), rgb(255 255 255 / 0))',
-  'radial-gradient(576px 636px at calc(50% + 504px) 212px, rgb(252 214 235 / 0.85), rgb(255 255 255 / 0))',
-].join(', ');
+
 
 export default function ProductsOverviewHero({ chip, title, lead, primary, secondary }) {
   return (
     <section
       aria-labelledby="products-hero-title"
-      className="relative overflow-hidden bg-[#fbfbfd] pb-14 pt-14 sm:pb-16 lg:pb-[50px] lg:pt-24"
-      style={{ backgroundImage: WASH }}
+      className="relative overflow-hidden pb-14 pt-14 sm:pb-16 lg:pb-[50px] lg:pt-24"
+      style={{ background: HERO_WASH }}
     >
       <img
         src={heroDots}
@@ -31,11 +28,11 @@ export default function ProductsOverviewHero({ chip, title, lead, primary, secon
         aria-hidden="true"
         width={1410}
         height={398}
-        className="pointer-events-none absolute bottom-[-59px] left-1/2 h-[398px] w-[1410px] max-w-none -translate-x-1/2 select-none"
+        className="motion-pan pointer-events-none absolute bottom-[-59px] left-1/2 h-[398px] w-[1410px] max-w-none -translate-x-1/2 select-none"
       />
       <Container className="relative">
         <div className="mx-auto flex max-w-[980px] flex-col items-center gap-6 text-center">
-          <p className="rounded-pill border border-border-muted bg-surface-white px-2.5 py-1 font-mono text-[11px] font-medium uppercase leading-[1.5] tracking-[0.44px] text-brand-magenta">
+          <p className="eyebrow">
             {chip}
           </p>
           <h1

@@ -14,11 +14,11 @@ import {
 
 /** 07.13 · Trust Updates (Figma 48:338442). The "Recent updates" cards are placeholders in Figma. */
 export default {
-  breadcrumb: tcBreadcrumb('Trust Updates'),
+  breadcrumb: tcBreadcrumb('Trust updates'),
 
   /** 01 · Hero + "Hero carousel · 07.13 · Trust Updates" (48:342469). */
   ...ringsHero({
-    eyebrow: 'Trust Center  ·  Trust Updates',
+    eyebrow: 'Trust Center  ·  Trust updates',
     title: 'Trust updates',
     lead: 'Changes to our security, privacy and compliance posture, published as they happen.',
     primary: REQUEST('Subscribe to updates'),

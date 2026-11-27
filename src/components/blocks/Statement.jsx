@@ -102,20 +102,13 @@ export default function Statement({
           <h2
             className={cn(
               'text-balance font-medium leading-[1.12] lg:text-wrap',
-              accent && 'bg-[image:var(--gradient-accent)] bg-clip-text',
               dark
                 ? 'max-w-[1000px] text-[32px] tracking-[-0.9px] text-ink-on-dark sm:text-[42px] lg:text-[52px] lg:tracking-[-1.56px]'
                 : 'max-w-[920px] text-[30px] tracking-[-0.9px] text-ink-900 sm:text-[38px] lg:text-[46px] lg:tracking-[-1.15px]',
             )}
           >
-            {accent ? <span>{title}</span> : title}
-            {accent && (
-              <>
-                {' '}
-                {/* like AccentTitle, the gradient spans the whole heading box */}
-                <span className="text-transparent">{accent}</span>
-              </>
-            )}
+            {title}
+            {accent && ` ${accent}`}
           </h2>
         )}
         {paragraphs.map((p) => (

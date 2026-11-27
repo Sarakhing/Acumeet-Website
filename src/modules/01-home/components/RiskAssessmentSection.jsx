@@ -148,7 +148,7 @@ const ROWS = [
 
 /**
  * Figma "06b · Meeting risk assessment" (46:8645): tinted card with copy +
- * CTA on the left and a sample "Meeting Risk Score" card on the right.
+ * CTA on the left and a sample "Meeting risk score" card on the right.
  */
 export default function RiskAssessmentSection() {
   const headingId = `${useId()}-risk-heading`;
@@ -160,7 +160,7 @@ export default function RiskAssessmentSection() {
           <div className="flex flex-col gap-10 lg:flex-row lg:items-center lg:gap-14">
             {/* Copy */}
             <div className="flex min-w-0 flex-1 flex-col items-start">
-              <p className="text-eyebrow tracking-[0.78px] text-brand-magenta uppercase">Meeting risk assessment</p>
+              <p className="eyebrow">Meeting risk assessment</p>
               <h2
                 id={headingId}
                 className="mt-[14px] max-w-[579px] text-[32px] leading-[1.1] font-medium tracking-[-0.8px] text-balance text-ink-900 sm:text-[40px] sm:tracking-[-1px] lg:text-[48px] lg:tracking-[-1.2px]"
@@ -177,11 +177,11 @@ export default function RiskAssessmentSection() {
                 rel="noopener noreferrer"
                 className="mt-[38px]"
               >
-                Check My Risk Score
+                Check my risk score
                 <span className="sr-only"> (opens in a new tab)</span>
               </Button>
               <div className="mt-5 flex w-full flex-col gap-1.5 border-l-2 border-border-default py-1 pl-[18px]">
-                <h3 className="text-heading-4 text-ink-900">See Where Your Meetings May Be Losing Accountability</h3>
+                <h3 className="text-heading-4 text-ink-900">See where your meetings may be losing accountability</h3>
                 <p className="text-body-sm text-ink-600">
                   Take the Meeting Risk Assessment and identify gaps in how decisions, actions and meeting
                   knowledge are captured and managed.

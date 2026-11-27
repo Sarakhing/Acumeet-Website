@@ -44,7 +44,7 @@ const capture = [
     tile('meetingCapture', '1.1', {
       width: 760,
       tint: 'lilac',
-      title: 'Capture Every Important Business Conversation.',
+      title: 'Capture every important business conversation.',
       titleWidth: 688,
       body: 'Acumeet helps organisations capture meeting content so conversations can become searchable information, summaries, decisions, and actionable follow-ups.',
       bodyWidth: 560,
@@ -58,9 +58,9 @@ const capture = [
           width: 460,
           date: 'Thu, May 11',
           meetings: [
-            { title: 'Client Feedback Analysis Session', meta: '10:30 AM · Meet' },
+            { title: 'Client feedback analysis session', meta: '10:30 AM · Meet' },
             { title: 'Weekly ProcureCentro Stand-up', meta: '11:00 AM · Teams' },
-            { title: 'Monthly Marketing Strategy Review', meta: '3:30 PM · Zoom' },
+            { title: 'Monthly marketing strategy review', meta: '3:30 PM · Zoom' },
           ],
         }),
       },
@@ -68,7 +68,7 @@ const capture = [
     tile('aiTranscription', '1.2', {
       width: 496,
       tint: 'pink',
-      title: 'Turn Business Conversations into Usable Text',
+      title: 'Turn business conversations into usable text',
       titleWidth: 424,
       body: 'Acumeet AI meeting transcription software helps teams turn spoken business discussions into text they can review, reference and use after the meeting.',
       bodyWidth: 424,
@@ -94,7 +94,7 @@ const capture = [
       width: 628,
       tint: 'blue',
       titleSize: 24,
-      title: 'Know Who Said What in Every Meeting',
+      title: 'Know who said what in every meeting',
       body: 'Keep meeting conversations clear and easier to review with AI speaker recognition.',
       bodyWidth: 556,
       visual: {
@@ -120,7 +120,7 @@ const capture = [
       width: 628,
       tint: 'night',
       titleSize: 24,
-      title: 'Protect Sensitive Data Before It Becomes a Risk',
+      title: 'Protect sensitive data before it becomes a risk',
       body: 'Meetings can contain personal details, financial information, and confidential business discussions.',
       bodyWidth: 556,
       visual: {
@@ -156,7 +156,7 @@ const understand = [
       layout: 'split',
       tint: 'white',
       copyWidth: 520,
-      title: 'Turn Business Meetings into Clear Summaries and Tracked Actions',
+      title: 'Turn business meetings into clear summaries and tracked actions',
       titleWidth: 416,
       body: 'Meetings should move work forward, not leave teams searching for notes or chasing forgotten decisions.',
       bodyWidth: 416,
@@ -168,7 +168,7 @@ const understand = [
         y: 144,
         content: h(SummaryCard, {
           width: 460,
-          title: 'Monthly Marketing Strategy Review',
+          title: 'Monthly marketing strategy review',
           scores: [
             { label: 'Quality', value: 47, bar: 'amber' },
             { label: 'Sentiment', value: 75, bar: 'green' },
@@ -187,7 +187,7 @@ const understand = [
       width: 628,
       tint: 'mint',
       titleSize: 24,
-      title: 'Turn Every Meeting into Business Intelligence.',
+      title: 'Turn every meeting into business intelligence.',
       body: 'Acumeet helps turn meeting conversations into structured business intelligence.',
       bodyWidth: 556,
       visual: {
@@ -212,7 +212,7 @@ const understand = [
       width: 628,
       tint: 'amber',
       titleSize: 24,
-      title: 'Turn Meeting Activity into Clear, Actionable Insights.',
+      title: 'Turn meeting activity into clear, actionable insights.',
       body: 'Understand how your organisation meets, participates, and follows through.',
       bodyWidth: 556,
       visual: {
@@ -243,7 +243,7 @@ const act = [
       reverse: true,
       tint: 'amber-deep',
       copyWidth: 580,
-      title: 'Turn Meeting Decisions into Actions That Move Forward',
+      title: 'Turn meeting decisions into actions that move forward',
       titleWidth: 480,
       body: 'Meetings should create progress, not just conversations. Acumeet helps teams identify next steps, maintain visibility into follow-up work and carry important actions from one meeting to the next.',
       bodyWidth: 480,
@@ -276,7 +276,7 @@ const remember = [
       width: 628,
       tint: 'lilac-deep',
       titleSize: 24,
-      title: 'Turn Meeting Records into Knowledge Your Organisation Can Reuse.',
+      title: 'Turn meeting records into knowledge your organisation can reuse.',
       body: 'Keep valuable meeting information organised and easier to retrieve.',
       bodyWidth: 556,
       visual: {
@@ -300,7 +300,7 @@ const remember = [
       width: 628,
       tint: 'night-card',
       titleSize: 24,
-      title: 'Your Acumeet Information. One Conversation Away.',
+      title: 'Your Acumeet information. One conversation away.',
       body: 'Ask Atlas about your meetings, account, subscription, and usage.',
       bodyWidth: 556,
       visual: {

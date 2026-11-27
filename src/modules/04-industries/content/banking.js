@@ -21,8 +21,8 @@ export default {
   hero: {
     eyebrow: 'Banking',
     eyebrowStyle: 'chip',
-    title: 'Bring Clarity to Banking Conversations',
-    accent: 'and Decisions',
+    title: 'Bring clarity to banking conversations',
+    accent: 'and decisions',
     lead: 'From operational reviews to customer strategy, Acumeet helps banking teams turn meetings into structured records, documented decisions and trackable next steps.',
     visual: heroCanvas(553, [
       [
@@ -62,7 +62,7 @@ export default {
   explorer: {
     items: explorerItems([
       {
-        title: 'Support Better Meeting Continuity',
+        title: 'Support better meeting continuity',
         body: 'Banking teams coordinate across operations, products, customer relationships, risk and leadership. Acumeet helps capture discussions and summarise key points so teams can revisit decisions and maintain continuity between meetings.',
         visual: summary('Branch Performance Review', [71, 81, 25], [
           'The team agreed to review USSD uptime weekly.',
@@ -79,7 +79,7 @@ export default {
         ]),
       },
       {
-        title: 'Retain Institutional Knowledge',
+        title: 'Retain institutional knowledge',
         body: 'Make previous meeting discussions easier to retrieve when teams need context on a project, customer issue or business decision.',
         visual: search('failed transfer escalation', [
           ['Customer Experience Forum', 'Apr 24', '…agreed to escalate failed transfers above the weekly threshold.'],
@@ -88,7 +88,7 @@ export default {
         ]),
       },
       {
-        title: 'Banking Workflows',
+        title: 'Banking workflows',
         body: 'Support operational reviews, branch and business performance discussions, product planning, customer relationship reviews and cross-functional coordination.',
         visual: capture('Fri, May 21', [
           ['Digital Channels Sync', '2:00 PM · Meet'],
@@ -101,7 +101,7 @@ export default {
 
   /** 06 · Responsible Information Handling (48:288199). */
   note: {
-    title: 'Responsible Information Handling',
+    title: 'Responsible information handling',
     body: 'Financial discussions can include sensitive information. Apply Acumeet’s available security and access controls in line with your institution’s policies, and confirm configuration and data-handling requirements before use.',
     ctas: NOTE_CTAS,
   },

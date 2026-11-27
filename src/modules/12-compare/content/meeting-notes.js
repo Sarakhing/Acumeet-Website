@@ -17,7 +17,7 @@ import {
 
 /** 12.03 · Acumeet vs Traditional Meeting Notes (Figma 49:116107). */
 export default {
-  breadcrumb: cmpBreadcrumb('Acumeet vs Traditional Meeting Notes'),
+  breadcrumb: cmpBreadcrumb('Acumeet vs traditional meeting notes'),
 
   /** 01 · Hero (695): upcoming meetings in the window, action items overlapping, "Live" chip. */
   ...windowHero({

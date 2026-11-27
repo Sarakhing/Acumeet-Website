@@ -6,13 +6,13 @@ const RESULTS_QUERY = 'phase two budget release';
 
 /** 04.14 · Public Sector (Figma 48:293890). */
 export default {
-  breadcrumb: industryBreadcrumb('Public Sector'),
+  breadcrumb: industryBreadcrumb('Public sector'),
 
-  /** 01 · Hero (48:293893) — 726 wash, Banking composition, Book a Demo + "Contact Our Team →". */
+  /** 01 · Hero (48:293893) — 726 wash, Banking composition, Book a Demo + "Contact our team →". */
   hero: windowHero({
-    eyebrow: 'Public Sector',
-    title: 'Make Public Sector Meetings Easier to Document',
-    accent: 'and Follow Through',
+    eyebrow: 'Public sector',
+    title: 'Make public sector meetings easier to document',
+    accent: 'and follow through',
     lead: 'Public sector organisations bring together departments, programme teams, agencies, service providers and community stakeholders to discuss policy, services and public initiatives. Acumeet helps turn these discussions into structured meeting records, documented decisions and trackable actions.',
     decisions: [
       'Jun 6',
@@ -28,8 +28,8 @@ export default {
         ['Prepare the quarterly progress report', 'May 4'],
       ],
     ],
-    primary: { label: 'Book a Demo', to: ROUTES.bookDemo },
-    secondary: { label: 'Contact Our Team', to: ROUTES.contactSales },
+    primary: { label: 'Book a demo', to: ROUTES.bookDemo },
+    secondary: { label: 'Contact our team', to: ROUTES.contactSales },
     padBottom: 100,
   }),
 
@@ -39,7 +39,7 @@ export default {
       type: 'split',
       size: 'compact',
       reverse: true,
-      title: 'Create Clear Records of Discussions',
+      title: 'Create clear records of discussions',
       body: [
         'Support consistent documentation of programme reviews, stakeholder consultations and internal coordination meetings so key points are easier to revisit.',
       ],
@@ -61,7 +61,7 @@ export default {
     {
       type: 'editorial',
       tone: 'subtle',
-      title: 'Track Commitments and Next Steps',
+      title: 'Track commitments and next steps',
       paragraphs: [
         'Capture agreed actions and responsibilities to help teams follow through on decisions and coordinate across departments and delivery partners.',
       ],
@@ -72,7 +72,7 @@ export default {
       size: 'compact',
       tone: 'dark',
       reverse: true,
-      title: 'Preserve Programme Context',
+      title: 'Preserve programme context',
       body: [
         'Retain meeting-derived knowledge across recurring meetings, personnel changes and multi-stage initiatives, subject to the organisation’s records policies.',
       ],

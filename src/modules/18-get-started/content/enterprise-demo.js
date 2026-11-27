@@ -12,7 +12,7 @@ import {
 
 /** 18.04 · Request Enterprise Demo (Figma 49:196342). */
 export default {
-  breadcrumb: gsBreadcrumb('Request Enterprise Demo'),
+  breadcrumb: gsBreadcrumb('Request enterprise demo'),
   sections: [
     heroForm(
       {

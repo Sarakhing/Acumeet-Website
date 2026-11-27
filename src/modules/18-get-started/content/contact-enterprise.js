@@ -12,7 +12,7 @@ import {
 
 /** 18.07 · Contact Enterprise Team (Figma 49:196883). */
 export default {
-  breadcrumb: gsBreadcrumb('Contact Enterprise Team'),
+  breadcrumb: gsBreadcrumb('Contact enterprise team'),
   sections: [
     heroForm(
       {

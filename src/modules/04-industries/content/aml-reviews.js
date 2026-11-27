@@ -4,13 +4,13 @@ import { actions, capture, explorerItems, fsBreadcrumb, search, summary, windowH
 
 /** 04.11 · AML Reviews (Figma 48:292310). */
 export default {
-  breadcrumb: fsBreadcrumb('AML Reviews'),
+  breadcrumb: fsBreadcrumb('AML reviews'),
 
   /** 01 · Hero (48:292313) — 630 wash, Banking composition. */
   hero: windowHero({
-    eyebrow: 'AML Reviews',
-    title: 'Bring Structure to Anti-Money Laundering',
-    accent: 'Review Meetings',
+    eyebrow: 'AML reviews',
+    title: 'Bring structure to anti-money laundering',
+    accent: 'review meetings',
     lead: 'Acumeet helps teams document AML-related discussions, capture escalation decisions and organise follow-up actions while leaving screening and monitoring to the appropriate systems.',
     decisions: [
       'May 28',
@@ -32,7 +32,7 @@ export default {
   explorer: {
     items: explorerItems([
       {
-        title: 'Document Review Discussions',
+        title: 'Document review discussions',
         body: 'Create structured records of AML review meetings, case discussions, policy reviews and internal escalations.',
         visual: summary('Investigation Update', [62, 90, 52], [
           'Investigations flagged linked accounts across two branches.',
@@ -49,7 +49,7 @@ export default {
         ]),
       },
       {
-        title: 'Retain Meeting Context',
+        title: 'Retain meeting context',
         body: 'Make prior meeting-derived information easier to retrieve when relevant issues return for review.',
         visual: search(
           'case 1042 escalation',
@@ -62,7 +62,7 @@ export default {
         ),
       },
       {
-        title: 'AML Review Workflows',
+        title: 'AML review workflows',
         body: 'Support AML case review meetings, investigation coordination, suspicious activity escalations, policy discussions and remediation follow-ups.',
         visual: capture('Thu, Jun 20', [
           ['Escalation Committee', '11:00 AM · Zoom'],
@@ -76,10 +76,10 @@ export default {
   /** 06 · Clarify the Role of Meeting Intelligence (48:292397) — Editorial row, white. */
   editorial: {
     tone: 'white',
-    title: 'Clarify the Role of Meeting Intelligence',
+    title: 'Clarify the role of meeting intelligence',
     paragraphs: ['Acumeet helps organise meeting records.'],
-    cta: { label: 'Book a Demo', to: ROUTES.bookDemo },
-    secondary: { label: 'Contact Our Team', to: ROUTES.contactSales },
+    cta: { label: 'Book a demo', to: ROUTES.bookDemo },
+    secondary: { label: 'Contact our team', to: ROUTES.contactSales },
   },
 
   /** Explore more (48:292408). */

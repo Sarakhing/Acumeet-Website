@@ -61,7 +61,7 @@ export default function PricingTeaser() {
           id="pricing-teaser-title"
           className="max-w-[720px] text-balance text-[32px] leading-[1.1] font-medium tracking-[-0.9px] text-ink-900 sm:text-[40px] lg:text-[48px] lg:tracking-[-1.2px]"
         >
-          A Plan That Fits How Your Team Works
+          A plan that fits how your team works
         </h2>
         <p className="max-w-[820px] text-body leading-[1.55] text-ink-600 sm:text-[18px]">
           Whether you&apos;re exploring Acumeet with a smaller team or evaluating it across your
@@ -84,7 +84,7 @@ export default function PricingTeaser() {
             See pricing
           </Button>
           <Button to={ROUTES.contactSales} intent="secondary">
-            Talk to Sales
+            Talk to sales
           </Button>
         </div>
       </Container>

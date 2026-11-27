@@ -27,11 +27,11 @@ const list = (open, rows, width = 440) =>
 
 /** 09.09 · Project Management (Figma 48:385861). */
 export default {
-  breadcrumb: intBreadcrumb('Project Management'),
+  breadcrumb: intBreadcrumb('Project management'),
 
   /** 01 · Hero + "Hero carousel · 09.09 · Project Management" (46:93593). */
   ...ringsHero({
-    eyebrow: 'Integrations  ·  Project Management',
+    eyebrow: 'Integrations  ·  Project management',
     title: 'Turn meeting decisions into delivery.',
     lead: 'Meeting decisions are more valuable when they lead to owned, trackable work. Explore the project-management tools below and confirm the supported method for transferring action items or meeting context into your team’s delivery workflow.',
     primary: CONTACT('Discuss your project management requirements'),

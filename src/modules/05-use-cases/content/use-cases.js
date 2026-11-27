@@ -9,23 +9,23 @@ const U = ROUTES.useCase;
  * card line. Slugs match the header mega menu (src/constants/megaMenu.js).
  */
 export const USE_CASES = {
-  overview: { title: 'Use Cases Overview', to: U.overview, figma: '48:308252' },
+  overview: { title: 'Use cases overview', to: U.overview, figma: '48:308252' },
   executiveBoardMeetings: {
-    title: 'Executive & Board Meetings',
+    title: 'Executive & board meetings',
     tagline: 'Turn Executive Discussions into Clear Decisions and Follow-Through',
     blurb: 'Give leadership teams a clearer record of strategic discussions, decisions, and commitments.',
     to: U.executiveBoardMeetings,
     figma: '48:305601',
   },
   riskCompliance: {
-    title: 'Risk & Compliance',
+    title: 'Risk & compliance',
     tagline: 'Bring Clarity and Accountability to Risk & Compliance Meetings',
     blurb: 'Organise risk and compliance meeting records, assigned actions, and follow-up responsibilities.',
     to: U.riskCompliance,
     figma: '48:305805',
   },
   creditInvestmentCommittees: {
-    title: 'Credit & Investment Committees',
+    title: 'Credit & investment committees',
     tagline: 'Bring Structure and Clarity to Credit & Investment Committee Meetings',
     blurb: 'Document committee discussions, decision rationale, conditions, and next steps.',
     to: U.creditInvestmentCommittees,
@@ -46,14 +46,14 @@ export const USE_CASES = {
     figma: '48:306374',
   },
   projectGovernance: {
-    title: 'Project Governance',
+    title: 'Project governance',
     tagline: 'Turn Project Meetings into Clear Decisions and Accountable Follow-Through',
     blurb: 'Track project decisions, dependencies, risks, blockers, and milestones across governance meetings.',
     to: U.projectGovernance,
     figma: '48:306542',
   },
   customerStrategy: {
-    title: 'Customer Strategy',
+    title: 'Customer strategy',
     tagline: 'Turn Customer Conversations into Clearer Strategies and Follow-Through',
     blurb: 'Preserve customer insights, strategic priorities, and agreed initiatives across account discussions.',
     to: U.customerStrategy,
@@ -67,7 +67,7 @@ export const USE_CASES = {
     figma: '48:307020',
   },
   customerSuccess: {
-    title: 'Customer Success',
+    title: 'Customer success',
     tagline: 'Keep Customer Commitments Visible After Every Meeting',
     blurb: 'Keep onboarding discussions, customer goals, open issues, and account follow-ups connected.',
     to: U.customerSuccess,
@@ -81,21 +81,21 @@ export const USE_CASES = {
     figma: '48:307330',
   },
   productTeams: {
-    title: 'Product Teams',
+    title: 'Product teams',
     tagline: 'Turn Product Discussions into Decisions Teams Can Build On',
     blurb: 'Capture product requirements, prioritisation discussions, user feedback, and delivery blockers.',
     to: U.productTeams,
     figma: '48:307638',
   },
   managementMeetings: {
-    title: 'Management Meetings',
+    title: 'Management meetings',
     tagline: 'Keep Management Decisions Clear, Connected, and Actionable',
     blurb: 'Create continuity across performance reviews, departmental updates, and cross-functional decisions.',
     to: U.managementMeetings,
     figma: '48:307791',
   },
   enterpriseKnowledgeManagement: {
-    title: 'Enterprise Knowledge Management',
+    title: 'Enterprise knowledge management',
     tagline: 'Turn Meeting Conversations into Organisational Knowledge',
     blurb: 'Make meeting-derived knowledge easier to retain, search, and reuse across the organisation.',
     to: U.enterpriseKnowledgeManagement,
@@ -117,7 +117,7 @@ const SLOTS = [
 /** "Explore Use Cases" row. Every "✓ Related" card's line reads "Use Cases". Detail pages show "Keep exploring"; the overview hides it. */
 export const exploreUseCases = (keys, { eyebrow = 'Keep exploring' } = {}) => ({
   eyebrow,
-  title: 'Explore Use Cases',
+  title: 'Explore use cases',
   cards: keys.map((k, i) => ({
     title: USE_CASES[k].title,
     description: 'Use Cases',
@@ -129,7 +129,7 @@ export const exploreUseCases = (keys, { eyebrow = 'Keep exploring' } = {}) => ({
 /** Home / Use Cases Overview / {page}. */
 export const ucBreadcrumb = (label) => [
   { label: 'Home', to: ROUTES.home },
-  { label: 'Use Cases Overview', to: USE_CASES.overview.to },
+  { label: 'Use cases overview', to: USE_CASES.overview.to },
   { label },
 ];
 
@@ -137,6 +137,6 @@ export const ucBreadcrumb = (label) => [
 export const ucCta = (title, lead) => ({
   title,
   lead,
-  primary: { label: 'Book a Demo', to: ROUTES.bookDemo },
-  secondary: { label: 'Talk to Our Team', to: ROUTES.contactSales },
+  primary: { label: 'Book a demo', to: ROUTES.bookDemo },
+  secondary: { label: 'Talk to our team', to: ROUTES.contactSales },
 });

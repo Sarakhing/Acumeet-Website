@@ -17,13 +17,13 @@ const SUBSCRIBE = link('Subscribe to updates', ROUTES.contactSales);
 
 /** 15.15 · Service Status (Figma 49:168369). Sample status data until the live feed is connected. */
 export default {
-  breadcrumb: supBreadcrumb('Service Status'),
+  breadcrumb: supBreadcrumb('Service status'),
 
   /** 01 · Hero + "Hero carousel · 15.15 · Service Status" (49:92502). */
   hero: {
     variant: 'rings',
     secondaryStyle: 'link',
-    eyebrow: 'Support  ·  Service Status',
+    eyebrow: 'Support  ·  Service status',
     title: 'Service status',
     lead: 'Current availability, incidents and maintenance.',
     primary: SUBSCRIBE,

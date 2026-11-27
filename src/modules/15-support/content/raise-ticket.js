@@ -17,11 +17,11 @@ import {
 
 /** 15.13 · Raise a Ticket (Figma 49:168095). */
 export default {
-  breadcrumb: supBreadcrumb('Raise a Ticket'),
+  breadcrumb: supBreadcrumb('Raise a ticket'),
 
   /** 01 · Hero (680): support ticket in the window, action items overlapping, "Live" chip. */
   ...windowHero({
-    eyebrow: 'Support  ·  Raise a Ticket',
+    eyebrow: 'Support  ·  Raise a ticket',
     title: 'Raise a support',
     accent: 'ticket',
     lead: 'Send us the details so the support team can review them.',

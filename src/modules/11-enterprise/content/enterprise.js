@@ -9,14 +9,14 @@ const E = ROUTES.enterprisePage;
  */
 export const ENTERPRISE = {
   overview: {
-    title: 'Enterprise Overview',
+    title: 'Enterprise overview',
     tab: 'Overview',
     icon: 'stack',
     to: E.overview,
     figma: '49:67846',
   },
   architecture: {
-    title: 'Enterprise Architecture',
+    title: 'Enterprise architecture',
     tab: 'Architecture',
     icon: 'plugs-connected',
     tagline: 'Fit Acumeet into your environment',
@@ -24,7 +24,7 @@ export const ENTERPRISE = {
     figma: '49:68145',
   },
   administration: {
-    title: 'Enterprise Administration',
+    title: 'Enterprise administration',
     tab: 'Administration',
     icon: 'users-three',
     tagline: 'Manage access with confidence',
@@ -72,7 +72,7 @@ export const ENTERPRISE = {
     figma: '49:70267',
   },
   onboarding: {
-    title: 'User Onboarding',
+    title: 'User onboarding',
     tab: 'Onboarding',
     icon: 'user-check',
     tagline: 'Get every team productive quickly',
@@ -88,7 +88,7 @@ export const ENTERPRISE = {
     figma: '49:69046',
   },
   changeManagement: {
-    title: 'Change Management',
+    title: 'Change management',
     tab: 'Change management',
     icon: 'arrows-clockwise',
     tagline: 'Make adoption stick',
@@ -96,7 +96,7 @@ export const ENTERPRISE = {
     figma: '49:69194',
   },
   support: {
-    title: 'Enterprise Support',
+    title: 'Enterprise support',
     tab: 'Support',
     icon: 'lifebuoy',
     tagline: 'Support for enterprise teams',
@@ -104,7 +104,7 @@ export const ENTERPRISE = {
     figma: '49:69323',
   },
   serviceLevels: {
-    title: 'Service Levels',
+    title: 'Service levels',
     tab: 'Service levels',
     icon: 'clock',
     tagline: 'Service commitments that match your deployment',
@@ -126,19 +126,19 @@ export const ENTERPRISE = {
     figma: '49:69711',
   },
   pocProcess: {
-    title: 'PoC Process',
+    title: 'PoC process',
     tagline: 'A clear path from question to result',
     to: E.pocProcess,
     figma: '49:69804',
   },
   pocScope: {
-    title: 'PoC Scope',
+    title: 'PoC scope',
     tagline: 'Focus the PoC on what matters',
     to: E.pocScope,
     figma: '49:69969',
   },
   pocSuccess: {
-    title: 'PoC Success Criteria',
+    title: 'PoC success criteria',
     tagline: 'Agree what success looks like first',
     to: E.pocSuccess,
     figma: '49:70167',
@@ -170,7 +170,7 @@ export const link = (label, to) => ({ label, to });
 /** Home / Enterprise Overview / {page}; PoC sub-pages add "Proof of Concept". */
 export const entBreadcrumb = (label, { poc = false } = {}) => [
   { label: 'Home', to: ROUTES.home },
-  { label: 'Enterprise Overview', to: E.overview },
+  { label: 'Enterprise overview', to: E.overview },
   ...(poc ? [{ label: 'Proof of Concept', to: E.poc }] : []),
   { label },
 ];
@@ -193,7 +193,7 @@ const SLOTS = [
 /** "Explore Enterprise" row — every "Related" card reads "Enterprise". */
 export const exploreEnterprise = (keys) => ({
   eyebrow: 'Keep exploring',
-  title: 'Explore Enterprise',
+  title: 'Explore enterprise',
   cards: keys.map((k, i) => ({
     title: ENTERPRISE[k].title,
     description: 'Enterprise',

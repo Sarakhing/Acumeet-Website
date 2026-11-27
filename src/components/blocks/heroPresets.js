@@ -4,10 +4,10 @@ import { appWindow, floatChip, heroCanvas } from '@/components/visuals/mocks';
 /**
  * SolutionHero presets shared by the Use Cases (05.x) and Security (06.x) pages.
  * Each returns `{ hero, carousel? }` to spread into a content object; `primary`
- * defaults to "Book a Demo". Positions are Figma 1440-frame coordinates.
+ * defaults to "Book a demo". Positions are Figma 1440-frame coordinates.
  */
 
-const DEMO = { label: 'Book a Demo', to: ROUTES.bookDemo };
+const DEMO = { label: 'Book a demo', to: ROUTES.bookDemo };
 
 /**
  * Dark rings hero + "✓ Hero carousel" (05.01, 05.05, 05.08, 05.09, 05.11).

@@ -10,10 +10,10 @@ export default {
   /** 01 · Hero (48:307333) — 678 tall, 54px title, analytics + action items over hairlines. */
   ...stackedHero({
     eyebrow: 'Operations',
-    title: 'Bring Clearer Follow-Through to Operational Meetings',
+    title: 'Bring clearer follow-through to operational meetings',
     titleSize: 54,
     lead: 'Operational teams coordinate processes, service delivery, incidents, and cross-functional priorities through recurring meetings. Acumeet helps capture these discussions, summarise key points, and document decisions and follow-up actions—so teams can revisit what was agreed and keep responsibilities visible between meetings.',
-    secondary: { label: 'Explore Meeting Intelligence', to: ROUTES.product.meetingIntelligence },
+    secondary: { label: 'Explore meeting intelligence', to: ROUTES.product.meetingIntelligence },
     back: analytics('This quarter', [73, 25, 63], { width: 440, shadow: 'float' }),
     front: actions(
       3,

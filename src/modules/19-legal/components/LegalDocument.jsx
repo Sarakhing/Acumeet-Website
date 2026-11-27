@@ -171,7 +171,7 @@ export default function LegalDocument({ doc }) {
     <section id="document" className="scroll-mt-20 bg-[#fafafb] py-16 lg:py-28">
       <Container width="wide" className="flex flex-col gap-10 lg:gap-12">
         <header className="flex flex-col gap-4">
-          <p className="font-mono text-[12px] tracking-[0.96px] text-[#c2185b] uppercase">
+          <p className="eyebrow">
             Legal document
           </p>
           <h2 className="text-[34px] leading-[1.12] font-medium tracking-[-1px] text-[#0b0b12] lg:text-[48px] lg:tracking-[-1.44px]">

@@ -7,7 +7,7 @@ const C = ROUTES.compliancePage;
  * "Link card" line on 08.01. Slugs match the header mega menu.
  */
 export const COMPLIANCE = {
-  overview: { title: 'Compliance Overview', to: C.overview, figma: '48:369434' },
+  overview: { title: 'Compliance overview', to: C.overview, figma: '48:369434' },
   ndpr: {
     title: 'NDPR',
     tagline: 'NDPR compliance and Nigerian data protection.',
@@ -28,37 +28,37 @@ export const COMPLIANCE = {
     figma: '48:370251',
   },
   cbn: {
-    title: 'CBN Requirements',
+    title: 'CBN requirements',
     tagline: 'Support your assessment against CBN requirements',
     to: C.cbn,
     figma: '48:369039',
   },
   financialServices: {
-    title: 'Financial Services Compliance',
+    title: 'Financial services compliance',
     tagline: 'Compliance support for financial services',
     to: C.financialServices,
     figma: '48:369157',
   },
   dataGovernance: {
-    title: 'Data Governance',
+    title: 'Data governance',
     tagline: 'Responsible handling of meeting information.',
     to: C.dataGovernance,
     figma: '48:370412',
   },
   auditReadiness: {
-    title: 'Audit Readiness',
+    title: 'Audit readiness',
     tagline: 'Support audit and vendor reviews',
     to: C.auditReadiness,
     figma: '48:369199',
   },
   regulatorySupport: {
-    title: 'Regulatory Support',
+    title: 'Regulatory support',
     tagline: 'Bring compliance and procurement in early',
     to: C.regulatorySupport,
     figma: '48:369307',
   },
   documentation: {
-    title: 'Compliance Documentation',
+    title: 'Compliance documentation',
     tagline: 'Find the information relevant to your assessment.',
     to: C.documentation,
     figma: '48:370556',
@@ -72,12 +72,12 @@ export const CONTACT = (label) => ({ label, to: ROUTES.contactSales });
 export const REQUEST_DOCS = CONTACT('Request Compliance Documentation');
 export const VISIT_TRUST = { label: 'Explore the Trust Center', to: ROUTES.trustPage.overview };
 export const BOOK_DEMO = { label: 'Book a demo', to: ROUTES.bookDemo };
-export const PRIVACY_NOTICE = { label: 'Read the Privacy Notice', to: ROUTES.trustPage.privacy };
+export const PRIVACY_NOTICE = { label: 'Read the privacy notice', to: ROUTES.trustPage.privacy };
 
 /** Home / Compliance Overview / {page}. */
 export const compBreadcrumb = (label) => [
   { label: 'Home', to: ROUTES.home },
-  { label: 'Compliance Overview', to: C.overview },
+  { label: 'Compliance overview', to: C.overview },
   { label },
 ];
 
@@ -102,7 +102,7 @@ const SLOTS = [
 /** "Explore Compliance" row — every "Related" card reads "Compliance". */
 export const exploreCompliance = (keys) => ({
   eyebrow: 'Keep exploring',
-  title: 'Explore Compliance',
+  title: 'Explore compliance',
   cards: keys.map((k, i) => ({
     title: COMPLIANCE[k].title,
     description: 'Compliance',

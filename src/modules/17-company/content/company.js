@@ -7,7 +7,7 @@ const C = ROUTES.companyPage;
 
 /** Company catalogue (Figma "17 · Company"): card title, line and link label per page. */
 export const COMPANY = {
-  hub: { title: 'Company Hub', to: C.hub },
+  hub: { title: 'Company hub', to: C.hub },
   about: {
     title: 'About Acumeet',
     body: 'Why we exist, who we build for and the idea behind meeting intelligence.',
@@ -60,7 +60,7 @@ export const PLATFORM = to('Explore the platform', ROUTES.products);
 /** Home / Company Hub / {page}. */
 export const coBreadcrumb = (label) => [
   { label: 'Home', to: ROUTES.home },
-  { label: 'Company Hub', to: C.hub },
+  { label: 'Company hub', to: C.hub },
   { label },
 ];
 

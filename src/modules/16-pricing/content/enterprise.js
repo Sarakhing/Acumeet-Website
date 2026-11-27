@@ -18,11 +18,11 @@ import {
 
 /** 16.04 · Enterprise Pricing (Figma 49:174456). */
 export default {
-  breadcrumb: priBreadcrumb('Enterprise Pricing'),
+  breadcrumb: priBreadcrumb('Enterprise pricing'),
 
   /** 01 · Hero (630): deployment options in the window, action items overlapping. */
   ...windowHero({
-    eyebrow: 'Pricing  ·  Enterprise Pricing',
+    eyebrow: 'Pricing  ·  Enterprise pricing',
     title: 'Need more',
     accent: 'control?',
     lead: 'Enterprise pricing is built around your deployment, security, governance and support needs.',
@@ -41,7 +41,7 @@ export default {
     ),
     /** Tabs explorer + "Explorer · What Enterprise includes" (49:175120). */
     explorer(
-      { title: 'What Enterprise', accent: 'includes', titleSize: 48 },
+      { title: 'What enterprise', accent: 'includes', titleSize: 48 },
       enterpriseTabs(retention(POLICY_ROWS, { status: 'All meetings' })),
     ),
   ],

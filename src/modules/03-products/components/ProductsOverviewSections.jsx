@@ -34,7 +34,7 @@ export function ProductsWorkspaceSection({ caption }) {
   return (
     <section aria-label={caption} className="overflow-hidden bg-surface-night pt-16 lg:pt-[120px]">
       <Container width="wide" className="flex flex-col items-center gap-7">
-        <p className="text-center font-mono text-overline uppercase text-ink-on-dark-faint">{caption}</p>
+        <p className="eyebrow-dark text-center">{caption}</p>
         <div className="w-full max-w-[1120px]">
           <ScaleToFit width={1120}>
             <ProductsWorkspaceWindow />

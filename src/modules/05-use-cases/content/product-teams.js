@@ -5,14 +5,14 @@ import { challenge, explorer, faq, outcomes, ringsHero, workflows } from './deta
 
 /** 05.11 · Product Teams (Figma 48:307638). */
 export default {
-  breadcrumb: ucBreadcrumb('Product Teams'),
+  breadcrumb: ucBreadcrumb('Product teams'),
 
   /** 01 · Hero + "Hero carousel · 05.11 · Product Teams" (48:314195). */
   ...ringsHero({
-    eyebrow: 'Product Teams',
-    title: 'Turn Product Discussions into Decisions Teams Can Build On',
+    eyebrow: 'Product teams',
+    title: 'Turn product discussions into decisions teams can build on',
     lead: 'Product teams make decisions across discovery interviews, roadmap reviews, prioritisation sessions, sprint ceremonies, and customer feedback meetings. Acumeet helps capture those conversations, summarise key points, and document decisions and follow-up actions—making it easier to preserve context from discovery through delivery.',
-    secondary: { label: 'Explore Meeting Intelligence', to: ROUTES.product.meetingIntelligence },
+    secondary: { label: 'Explore meeting intelligence', to: ROUTES.product.meetingIntelligence },
     slides: [
       [
         'Access',

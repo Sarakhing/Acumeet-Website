@@ -23,15 +23,15 @@ const FAQ_COMPLIANCE =
  * closest Solutions pages (Protect, Control, Govern) and Security.
  */
 export const aiRedaction = {
-  breadcrumb: productBreadcrumb('AI Redaction'),
+  breadcrumb: productBreadcrumb('AI redaction'),
 
   /** 01 · Hero (46:40051) — centred wash hero, 951 tall, 3-card composition below the copy. */
   hero: {
     variant: 'centered',
-    eyebrow: 'Product · AI Redaction',
-    title: 'Protect Sensitive Data Before It Becomes a Risk',
+    eyebrow: 'Product · AI redaction',
+    title: 'Protect sensitive data before it becomes a risk',
     lead: 'Meetings can contain personal details, financial information, and confidential business discussions. Acumeet AI Redaction is designed to help teams identify and handle sensitive information in meeting content according to defined privacy and governance requirements.',
-    primary: { label: 'Book a Demo', to: ROUTES.bookDemo },
+    primary: { label: 'Book a demo', to: ROUTES.bookDemo },
     secondary: { label: 'Explore the Trust Center', to: ROUTES.trustCenter },
     visual: h(RedactionHeroVisual),
     visualWidth: 1280,
@@ -43,7 +43,7 @@ export const aiRedaction = {
   responsible: {
     size: 'compact',
     reverse: true,
-    title: 'Meeting Intelligence Requires Responsible Data Handling',
+    title: 'Meeting intelligence requires responsible data handling',
     body: [
       'Meeting records can become valuable organisational knowledge, but they may also contain information that should not be widely exposed. Redaction helps reduce unnecessary exposure by removing or masking selected information before it is shared or used further, depending on the product’s supported workflow.',
       'Acumeet’s redaction approach should be configured around the types of information your organisation needs to protect and the controls that govern access to meeting content.',
@@ -72,22 +72,22 @@ export const aiRedaction = {
 
   /** 03 · rows (46:41247) — the "PII REDACTION" overline is hidden in Figma. */
   pii: {
-    title: 'Help Protect Personally Identifiable Information',
+    title: 'Help protect personally identifiable information',
     paragraphs: [
       'Meeting discussions may include personal information such as names, contact details, identification numbers, or other details that can identify an individual. PII redaction is intended to help teams identify and mask supported personal data in meeting content, reducing unnecessary exposure when records are stored, reviewed, or shared.',
     ],
-    cta: { label: 'Explore PII Protection', to: S.protect, size: 'lg' },
+    cta: { label: 'Explore PII protection', to: S.protect, size: 'lg' },
   },
 
   /** 03 · rows (46:41256) — dark split, 664×500 night panel with blue glow + dark dots. */
   financial: {
     size: 'compact',
     tone: 'dark',
-    title: 'Reduce Exposure of Sensitive Financial Details',
+    title: 'Reduce exposure of sensitive financial details',
     body: [
       'Business meetings may include account details, payment information, transaction references, or other financial data. Financial data redaction helps organisations apply appropriate handling to supported financial information within meeting content, in line with their internal policies.',
     ],
-    cta: { label: 'Protect Financial Meeting Data', to: S.protect, intent: 'ghost-light' },
+    cta: { label: 'Protect financial meeting data', to: S.protect, intent: 'ghost-light' },
     panel: {
       width: 664,
       height: 500,
@@ -110,22 +110,22 @@ export const aiRedaction = {
 
   /** 03 · rows (46:41298). */
   confidential: {
-    title: 'Keep Confidential Business Discussions Under Control',
+    title: 'Keep confidential business discussions under control',
     paragraphs: [
       'Strategic plans, customer information, internal commercial terms, and other confidential material may arise during meetings. Redaction controls can help limit exposure of supported confidential information in meeting records, complementing access controls and organisational data-handling policies.',
     ],
-    cta: { label: 'Protect Confidential Information', to: S.control, size: 'lg' },
+    cta: { label: 'Protect confidential information', to: S.control, size: 'lg' },
   },
 
   /** Split 46:41306 — visual left, amber rings, retention policy; 40px title / 18px body. */
   policies: {
     size: 'wide',
     reverse: true,
-    title: 'Align Redaction with Your Organisation’s Policies',
+    title: 'Align redaction with your organisation’s policies',
     body: [
       'Different organisations define sensitive information differently. Custom redaction rules can support tailored handling for selected terms, patterns, or categories, where supported by the product. This helps teams align redaction behaviour with internal requirements and the needs of specific workflows.',
     ],
-    cta: { label: 'Explore Custom Redaction Rules', to: S.govern, intent: 'secondary' },
+    cta: { label: 'Explore custom redaction rules', to: S.govern, intent: 'secondary' },
     visual: {
       tint: 'amber',
       pattern: { type: 'rings', size: 'panel' },
@@ -144,16 +144,16 @@ export const aiRedaction = {
 
   /** 03 · rows (46:41354). */
   preStorage: {
-    title: 'Consider Sensitive Data Before It Is Stored',
+    title: 'Consider sensitive data before it is stored',
     paragraphs: [
       'Pre-storage redaction refers to identifying and masking selected sensitive information before the relevant content is persisted. This can help reduce the amount of unredacted sensitive data retained by a system.',
     ],
-    cta: { label: 'Learn About Pre-Storage Redaction', to: ROUTES.security, size: 'lg' },
+    cta: { label: 'Learn about pre-storage redaction', to: ROUTES.security, size: 'lg' },
   },
 
   /** 04 · How AI Redaction Works (46:41362) — NumberedGrid compact, white. */
   how: {
-    title: 'How AI Redaction Works',
+    title: 'How AI redaction works',
     tone: 'white',
     size: 'compact',
     items: [
@@ -169,7 +169,7 @@ export const aiRedaction = {
   /** Benefits 46:41378 — bento: 846 + 413, then 3 × 413 ("✓ Card · …"). */
   benefits: {
     title: 'Business',
-    accent: 'Benefits',
+    accent: 'benefits',
     accentBreak: false,
     cards: [
       {
@@ -224,9 +224,9 @@ export const aiRedaction = {
 
   /** CTA band 46:41400. (No "Explore more" row on this page in Figma.) */
   cta: {
-    title: 'Protect Sensitive Data. Strengthen Meeting Intelligence.',
+    title: 'Protect sensitive data. Strengthen meeting intelligence.',
     lead: 'Explore how Acumeet can help your organisation manage sensitive information in meeting content while supporting responsible, governed access to meeting knowledge.',
-    primary: { label: 'Book a Demo', to: ROUTES.bookDemo },
+    primary: { label: 'Book a demo', to: ROUTES.bookDemo },
     secondary: { label: 'Explore the Trust Center', to: ROUTES.trustCenter },
   },
 };

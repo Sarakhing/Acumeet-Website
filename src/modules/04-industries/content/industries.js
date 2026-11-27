@@ -9,9 +9,9 @@ const I = ROUTES.industry;
  * Slugs match the header mega menu (src/constants/megaMenu.js).
  */
 export const INDUSTRIES = {
-  overview: { title: 'Industries Overview', to: I.overview, figma: '48:287759' },
+  overview: { title: 'Industries overview', to: I.overview, figma: '48:287759' },
   financialServices: {
-    title: 'Financial Services',
+    title: 'Financial services',
     description: 'Turn Financial Meetings Into Actionable Intelligence',
     to: I.financialServices,
     figma: '48:287949',
@@ -29,55 +29,55 @@ export const INDUSTRIES = {
     figma: '48:288221',
   },
   executiveMeetings: {
-    title: 'Executive Meetings',
+    title: 'Executive meetings',
     description: 'Turn Executive Discussions Into Clear Priorities and Action',
     to: I.executiveMeetings,
     figma: '48:289384',
   },
   creditCommittees: {
-    title: 'Credit Committees',
+    title: 'Credit committees',
     description: 'Create Clearer Records of Credit Committee Decisions',
     to: I.creditCommittees,
     figma: '48:289461',
   },
   riskCommittees: {
-    title: 'Risk Committees',
+    title: 'Risk committees',
     description: 'Keep Risk Discussions, Decisions and Actions Connected',
     to: I.riskCommittees,
     figma: '48:289571',
   },
   complianceMeetings: {
-    title: 'Compliance Meetings',
+    title: 'Compliance meetings',
     description: 'Make Compliance Discussions Easier to Document and Follow Up',
     to: I.complianceMeetings,
     figma: '48:289785',
   },
   fraudInvestigations: {
-    title: 'Fraud Investigations',
+    title: 'Fraud investigations',
     description: 'Organise Investigation Discussions and Follow-Up Actions',
     to: I.fraudInvestigations,
     figma: '48:289851',
   },
   boardMeetings: {
-    title: 'Board Meetings',
+    title: 'Board meetings',
     description: 'Preserve Board Decisions and Support Follow-Through',
     to: I.boardMeetings,
     figma: '48:289960',
   },
   auditMeetings: {
-    title: 'Audit Meetings',
+    title: 'Audit meetings',
     description: 'Turn Audit Discussions Into Trackable Follow-Up',
     to: I.auditMeetings,
     figma: '48:291127',
   },
   amlReviews: {
-    title: 'AML Reviews',
+    title: 'AML reviews',
     description: 'Bring Structure to Anti-Money Laundering Review Meetings',
     to: I.amlReviews,
     figma: '48:292310',
   },
   customerStrategy: {
-    title: 'Customer Strategy',
+    title: 'Customer strategy',
     description: 'Turn Customer Conversations Into Clear Next Steps',
     to: I.customerStrategy,
     figma: '48:292421',
@@ -89,7 +89,7 @@ export const INDUSTRIES = {
     figma: '48:293592',
   },
   publicSector: {
-    title: 'Public Sector',
+    title: 'Public sector',
     description: 'Make Public Sector Meetings Easier to Document and Follow Through',
     to: I.publicSector,
     figma: '48:293890',
@@ -101,7 +101,7 @@ export const INDUSTRIES = {
     figma: '48:294092',
   },
   otherRegulated: {
-    title: 'Other Regulated Industries',
+    title: 'Other regulated industries',
     description: 'Meeting Intelligence for Regulated and Accountability-Driven Organisations',
     to: I.otherRegulated,
     figma: '48:294434',
@@ -128,7 +128,7 @@ export const relatedIndustries = (...keys) =>
 /** "Explore Industries" row (36px title). The overview hides the "Keep exploring" overline; FS pages show it. */
 export const exploreIndustries = (keys, { eyebrow = null } = {}) => ({
   eyebrow,
-  title: 'Explore Industries',
+  title: 'Explore industries',
   cards: relatedIndustries(...keys),
 });
 
@@ -144,8 +144,8 @@ export const industryCta = (title) => ({
 export const industryCtaFull = (title) => ({
   title,
   lead: 'Turn important conversations into structured meeting knowledge, clearer decisions and trackable follow-up actions with Acumeet.',
-  primary: { label: 'Book a Demo', to: ROUTES.bookDemo },
-  secondary: { label: 'Contact Our Team', to: ROUTES.contactSales },
+  primary: { label: 'Book a demo', to: ROUTES.bookDemo },
+  secondary: { label: 'Contact our team', to: ROUTES.contactSales },
 });
 
 /** Directory link card for an industry: { title, description, to }. */

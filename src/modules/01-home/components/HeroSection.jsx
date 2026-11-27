@@ -107,14 +107,14 @@ export default function HeroSection() {
 
       <Container className="flex flex-col items-center text-center">
         <div className="flex max-w-[1000px] flex-col items-center gap-4">
-          <p className="animate-fade-up text-[13px] font-medium leading-[1.4] text-ink-600 sm:text-[14px]">
+          <p className="eyebrow animate-fade-up">
             With Enterprise-grade security built-in
           </p>
           <h1
             id="home-hero-title"
             className="animate-fade-up text-[38px] font-medium leading-[1.1] tracking-[-1px] text-balance text-ink-900 [animation-delay:80ms] sm:text-[48px] sm:tracking-[-1.2px] lg:text-[64px] lg:tracking-[-1.6px]"
           >
-            Turn Every Conversation Into Decisions, Actions and Intelligence
+            Turn every conversation into decisions, actions and intelligence
           </h1>
           <p className="max-w-[640px] animate-fade-up text-[17px] leading-[1.4] text-ink-600 [animation-delay:160ms] sm:text-[20px]">
             Turn every critical meeting into secure, actionable intelligence your organisation can

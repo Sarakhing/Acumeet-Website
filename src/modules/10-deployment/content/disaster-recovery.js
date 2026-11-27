@@ -13,11 +13,11 @@ import {
 
 /** 10.10 · Disaster Recovery (Figma 48:394247). */
 export default {
-  breadcrumb: depBreadcrumb('Disaster Recovery'),
+  breadcrumb: depBreadcrumb('Disaster recovery'),
 
   /** 01 · Hero (765): keys & storage in the window, action items overlapping, "Live" chip. */
   ...windowHero({
-    eyebrow: 'Disaster Recovery',
+    eyebrow: 'Disaster recovery',
     title: 'Prepare for disruption with a documented',
     accent: 'recovery approach.',
     lead: 'Disaster recovery planning considers how a service and its data can be restored after a significant disruption. Work with Acumeet to understand the recovery arrangements applicable to your deployment and how they align with your organisation’s continuity requirements.',

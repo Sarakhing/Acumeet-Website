@@ -12,11 +12,11 @@ import {
 
 /** 09.10 · Developer Integrations (Figma 48:386166). */
 export default {
-  breadcrumb: intBreadcrumb('Developer Integrations'),
+  breadcrumb: intBreadcrumb('Developer integrations'),
 
   /** 01 · Hero (610): integrations in an app window, action items overlapping, "Live" chip. */
   ...windowHero({
-    eyebrow: 'Integrations  ·  Developer Integrations',
+    eyebrow: 'Integrations  ·  Developer integrations',
     title: 'Build around your systems',
     accent: 'and workflows.',
     lead: 'For teams with specific technical requirements, developer integration paths can help define how Acumeet exchanges data and triggers downstream workflows. Confirm the current API surface, event support, authentication, rate limits, and documentation access with the Acumeet team.',

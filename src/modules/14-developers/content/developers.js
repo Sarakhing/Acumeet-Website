@@ -15,7 +15,7 @@ export const DEVELOPERS = {
     figma: '49:156383',
   },
   apiDocumentation: {
-    title: 'API Documentation',
+    title: 'API documentation',
     tagline: 'Everything you need to get started—clearly documented.',
     to: D.apiDocumentation,
     figma: '49:156617',
@@ -39,7 +39,7 @@ export const DEVELOPERS = {
     figma: '49:157036',
   },
   integrationGuides: {
-    title: 'Integration Guides',
+    title: 'Integration guides',
     tagline: 'Turn an integration idea into a working implementation.',
     to: D.integrationGuides,
     figma: '49:157258',
@@ -51,13 +51,13 @@ export const DEVELOPERS = {
     figma: '49:157482',
   },
   apiReference: {
-    title: 'API Reference',
+    title: 'API reference',
     tagline: 'Find the exact details behind each API operation.',
     to: D.apiReference,
     figma: '49:157693',
   },
   resources: {
-    title: 'Developer Resources',
+    title: 'Developer resources',
     tagline: 'The practical resources to help your team build responsibly.',
     to: D.resources,
     figma: '49:157905',
@@ -72,7 +72,7 @@ export const link = (label, to) => ({ label, to });
 /** Home / Developer Overview / {page}. */
 export const devBreadcrumb = (label) => [
   { label: 'Home', to: ROUTES.home },
-  { label: 'Developer Overview', to: D.overview },
+  { label: 'Developer overview', to: D.overview },
   { label },
 ];
 

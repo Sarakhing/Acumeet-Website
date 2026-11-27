@@ -5,12 +5,12 @@ import { challenge, explorer, faq, note, outcomes, stackedHero, workflows } from
 
 /** 05.03 · Credit & Investment Committees (Figma 48:306049). */
 export default {
-  breadcrumb: ucBreadcrumb('Credit & Investment Committees'),
+  breadcrumb: ucBreadcrumb('Credit & investment committees'),
 
   /** 01 · Hero (48:306052) — 654 tall, 46px title, decisions + action items over hairlines. */
   ...stackedHero({
-    eyebrow: 'Credit & Investment Committees',
-    title: 'Bring Structure and Clarity to Credit & Investment Committee Meetings',
+    eyebrow: 'Credit & investment committees',
+    title: 'Bring structure and clarity to credit & investment committee meetings',
     titleSize: 46,
     lead: 'Credit and investment committees weigh complex information, discuss risks and opportunities, and record decisions that can shape significant financial outcomes. Acumeet helps teams capture meeting discussions, summarise key points, document decisions and conditions, and keep follow-up responsibilities visible.',
     secondary: { label: 'Explore Enterprise Meeting Intelligence', to: ROUTES.solutions.emi },

@@ -13,11 +13,11 @@ import { BOOK_DEMO, compBreadcrumb, compCta, CONTACT, explorer, statement } from
 
 /** 08.07 · Financial Services Compliance (Figma 48:369157). No related row in Figma. */
 export default {
-  breadcrumb: compBreadcrumb('Financial Services Compliance'),
+  breadcrumb: compBreadcrumb('Financial services compliance'),
 
   /** 01 · Hero + "Hero carousel · 08.07 · Financial Services Compliance" (48:345905). */
   ...ringsHero({
-    eyebrow: 'Compliance  ·  Financial Services Compliance',
+    eyebrow: 'Compliance  ·  Financial services compliance',
     title: 'Compliance support for financial services',
     lead: 'Clearer records of critical meetings, decisions and actions, with enterprise controls on sensitive data.',
     primary: { label: 'Explore financial services', to: ROUTES.industry.financialServices },

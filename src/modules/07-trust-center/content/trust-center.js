@@ -9,7 +9,7 @@ const T = ROUTES.trustPage;
  * have no page of their own here.
  */
 export const TRUST = {
-  overview: { title: 'Trust Center Overview', to: T.overview, figma: '48:336988' },
+  overview: { title: 'Trust Center overview', to: T.overview, figma: '48:336988' },
   privacy: {
     title: 'Privacy',
     tagline: 'Access only what the meeting needs',
@@ -17,13 +17,13 @@ export const TRUST = {
     figma: '48:337641',
   },
   dataProcessing: {
-    title: 'Data Processing',
+    title: 'Data processing',
     tagline: 'How meeting data is processed',
     to: T.dataProcessing,
     figma: '48:337726',
   },
   dataResidency: {
-    title: 'Data Residency',
+    title: 'Data residency',
     tagline: 'Make data location a defined deployment requirement.',
     to: T.dataResidency,
     figma: '48:338502',
@@ -35,7 +35,7 @@ export const TRUST = {
     figma: '48:337849',
   },
   securityArchitecture: {
-    title: 'Security Architecture',
+    title: 'Security architecture',
     tagline: 'How Acumeet is built to protect meeting data',
     to: T.securityArchitecture,
     figma: '48:337990',
@@ -53,13 +53,13 @@ export const TRUST = {
     figma: '48:337477',
   },
   securityDocumentation: {
-    title: 'Security Documentation',
+    title: 'Security documentation',
     tagline: 'Security documentation for your review',
     to: T.securityDocumentation,
     figma: '48:338251',
   },
   trustUpdates: {
-    title: 'Trust Updates',
+    title: 'Trust updates',
     tagline: 'Trust updates',
     to: T.trustUpdates,
     figma: '48:338442',
@@ -76,7 +76,7 @@ export const VISIT_TRUST = { label: 'Visit the Trust Center', to: T.overview };
 /** Home / Trust Center Overview / {page}. */
 export const tcBreadcrumb = (label) => [
   { label: 'Home', to: ROUTES.home },
-  { label: 'Trust Center Overview', to: T.overview },
+  { label: 'Trust Center overview', to: T.overview },
   { label },
 ];
 

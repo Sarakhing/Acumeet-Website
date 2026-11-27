@@ -33,19 +33,9 @@ export function Pill({ children, bg = '#fbf0f5', color = MAGENTA, mono = true, c
   );
 }
 
-/** 12px mono overline ("WHO WE ARE"). */
+/** Section eyebrow ("Who we are") — the site-wide eyebrow style. */
 export function Overline({ children, dark, className }) {
-  return (
-    <p
-      className={cn(
-        'font-mono text-[12px] leading-4 uppercase tracking-[0.96px]',
-        dark ? 'text-[#8e8ea0]' : 'text-[#8b90a3]',
-        className,
-      )}
-    >
-      {children}
-    </p>
-  );
+  return <p className={cn(dark ? 'eyebrow-dark' : 'eyebrow', className)}>{children}</p>;
 }
 
 /** Magenta "Label →" text link. */
@@ -124,7 +114,10 @@ export function Rings({
       height={height}
       viewBox={`0 0 ${width} ${height}`}
       fill="none"
-      className={cn('pointer-events-none absolute top-0 left-1/2 -translate-x-1/2', className)}
+      className={cn(
+        'motion-breathe pointer-events-none absolute top-0 left-1/2 -translate-x-1/2 [--motion-origin:center_top]',
+        className,
+      )}
     >
       {Array.from({ length: count }, (_, i) => (
         <circle key={i} cx={cx} cy={cy} r={(step / 2) * (i + 1)} stroke={stroke} />
@@ -138,7 +131,7 @@ export function CornerRings({ stroke = 'rgba(158,0,89,0.09)' }) {
   return (
     <svg
       aria-hidden="true"
-      className="pointer-events-none absolute top-0 right-0"
+      className="motion-breathe pointer-events-none absolute top-0 right-0 [--motion-origin:right_top]"
       width="300"
       height="300"
       viewBox="0 0 300 300"
@@ -167,7 +160,7 @@ export function GridLines() {
   return (
     <span
       aria-hidden="true"
-      className="pointer-events-none absolute inset-0"
+      className="motion-pan pointer-events-none absolute inset-0"
       style={{
         backgroundImage:
           'linear-gradient(to right, rgba(255,255,255,0.05) 1px, transparent 1px), linear-gradient(to bottom, rgba(255,255,255,0.05) 1px, transparent 1px)',

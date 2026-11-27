@@ -7,11 +7,11 @@ const TITLE = 'Meeting intelligence, without managing the application stack.';
 
 /** 10.02 · Cloud Hosted (Figma 48:393585). No related row in Figma. */
 export default {
-  breadcrumb: depBreadcrumb('Cloud Hosted'),
+  breadcrumb: depBreadcrumb('Cloud hosted'),
 
   /** 01 · Hero + "Hero carousel · 10.02 · Cloud Hosted" (48:352413). */
   ...ringsHero({
-    eyebrow: 'Cloud Hosted',
+    eyebrow: 'Cloud hosted',
     title: TITLE,
     lead: 'Explore Acumeet’s hosted deployment approach for turning meeting conversations into summaries, decisions, action items, and searchable organisational knowledge. The Acumeet team can explain the available service configuration and operational responsibilities for your organisation.',
     primary: CONTACT('Discuss Cloud Hosted deployment'),

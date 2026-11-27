@@ -6,11 +6,11 @@ import { CONTACT, INTEGRATION_KEYS, INTEGRATIONS, splits } from './integrations'
 
 /** 09.01 · Integration Overview (Figma 48:383883). No related row in Figma. */
 export default {
-  breadcrumb: [{ label: 'Home', to: ROUTES.home }, { label: 'Integration Overview' }],
+  breadcrumb: [{ label: 'Home', to: ROUTES.home }, { label: 'Integration overview' }],
 
   /** 01 · Hero (726): integrations in an app window, action items overlapping, "Live" chip. */
   ...windowHero({
-    eyebrow: 'Acumeet Integrations',
+    eyebrow: 'Acumeet integrations',
     title: 'Bring meeting intelligence into the tools your',
     accent: 'teams already use.',
     lead: 'Acumeet turns conversations into organised meeting knowledge—summaries, decisions, and action items your teams can use beyond the meeting. Explore the platforms, productivity tools, identity systems, storage options, security services, analytics, and developer pathways that can connect your meeting workflows.',
@@ -39,8 +39,8 @@ export default {
     {
       type: 'index',
       id: 'find-your-integration',
-      title: 'Find Your',
-      accent: 'Integration',
+      title: 'Find your',
+      accent: 'integration',
       lead: 'Explore integrations by the job they help your organisation do. Choose a category to learn about the intended connection, the workflow it supports, and the implementation details to confirm with your Acumeet team.',
       items: INTEGRATION_KEYS.map((k) => ({
         title: INTEGRATIONS[k].title,
@@ -58,7 +58,7 @@ export default {
         visual: actions(3, vendor(['Next week', 'Jun 24', 'Fri']), { width: 440 }),
       },
       {
-        title: 'Built For Real-World Enterprise Workflows',
+        title: 'Built for real-world enterprise workflows',
         body: [
           'Enterprise integration needs vary by environment. Our team can help assess your systems, security requirements, identity model, data-handling expectations, and target workflows before an integration is implemented.',
         ],
@@ -70,7 +70,7 @@ export default {
     {
       type: 'directory',
       eyebrow: 'Integrations',
-      title: 'Explore Integrations',
+      title: 'Explore integrations',
       items: INTEGRATION_KEYS.map((k) => ({
         title: INTEGRATIONS[k].title,
         description: INTEGRATIONS[k].tagline,

@@ -30,7 +30,7 @@ export default function EnterpriseJourney({ eyebrow, title, stages = [] }) {
       <Rings />
       <Container width="wide" className="relative flex flex-col gap-14">
         <div className="flex flex-col gap-3.5">
-          <p className="font-mono text-[12px] uppercase tracking-[0.96px] text-[#8e8ea0]">
+          <p className="eyebrow-dark">
             {eyebrow}
           </p>
           <h2 className="text-[36px] font-medium leading-[1.3] tracking-[-1px] text-ink-on-dark sm:text-[48px]">

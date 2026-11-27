@@ -25,9 +25,9 @@ export const secure = {
   hero: {
     variant: 'rings',
     eyebrow: 'Solutions · Secure',
-    title: 'Security Should Never Be an Afterthought.',
+    title: 'Security should never be an afterthought.',
     lead: 'Protect every meeting with a security-first approach to identity, access, encryption, and accountability. Acumeet is built for organisations that need to manage sensitive conversations with greater control and confidence.',
-    primary: { label: 'Book a Security Demo', to: ROUTES.bookDemo },
+    primary: { label: 'Book a security demo', to: ROUTES.bookDemo },
     secondary: { label: 'Explore the Trust Center', to: ROUTES.trustCenter },
   },
 
@@ -62,7 +62,7 @@ export const secure = {
 
   statement: {
     tone: 'light',
-    title: 'Enterprise Security, Built Around the Way Your Organisation Works',
+    title: 'Enterprise security, built around the way your organisation works',
     paragraphs: [
       'Business meetings contain more than conversations. They contain financial information, strategic decisions, customer data, employee discussions, confidential plans, and commercially sensitive information.',
       'Your organisation needs confidence in who can access that information, how it is protected, and whether access and administrative activity can be traced. Acumeet’s security approach brings together identity management, access controls, encryption, and auditability to support more secure enterprise meeting intelligence.',
@@ -83,7 +83,7 @@ export const secure = {
   rbac: {
     size: 'feature',
     reverse: true,
-    title: 'The Right Access for the Right Role. Nothing More Than Necessary.',
+    title: 'The right access for the right role. Nothing more than necessary.',
     body: [
       'Not everyone in an organisation should have the same level of access to meeting intelligence, administrative settings, or sensitive information. RBAC assigns permissions according to defined roles, helping organisations establish clear boundaries between users and administrative responsibilities.',
     ],
@@ -109,7 +109,7 @@ export const secure = {
   },
 
   identity: {
-    title: 'Identity Management That Fits Your IT Environment',
+    title: 'Identity management that fits your IT environment',
     tiles: [
       {
         title: 'Single Sign-On (SSO)',
@@ -132,7 +132,7 @@ export const secure = {
         miniHeight: 150,
       },
       {
-        title: 'SCIM Provisioning',
+        title: 'SCIM provisioning',
         body: 'Access should change when your workforce changes. SCIM supports automated user provisioning and deprovisioning between compatible identity systems and applications, making user access management more scalable as an organisation grows.',
         icon: arrowsClockwise,
         iconTone: 'green',
@@ -147,7 +147,7 @@ export const secure = {
 
   encryption: {
     size: 'feature',
-    title: 'Your Meeting Data Deserves Protection at Every Stage.',
+    title: 'Your meeting data deserves protection at every stage.',
     body: [
       'Meeting intelligence can contain highly sensitive information. Encryption is a fundamental safeguard for reducing the risk of unauthorised disclosure when data is stored or transmitted.',
     ],
@@ -178,7 +178,7 @@ export const secure = {
     size: 'feature',
     reverse: true,
     eyebrow: 'Audit logs',
-    title: 'Security Is Not Only About Preventing Incidents. It Is Also About Understanding What Happened.',
+    title: 'Security is not only about preventing incidents. It is also about understanding what happened.',
     body: [
       'Organisations need visibility into relevant activity across their systems. Audit logs help create a record of events that can support security investigations, operational oversight, and compliance processes.',
       'Where supported, Acumeet audit logging should help authorised teams investigate relevant activity, establish timelines, and support internal reviews.',
@@ -205,7 +205,7 @@ export const secure = {
 
   siem: {
     eyebrow: 'SIEM integration',
-    title: 'Your Meeting Intelligence Platform Should Fit Into Your Security Ecosystem.',
+    title: 'Your meeting intelligence platform should fit into your security ecosystem.',
     lead: 'Security teams often use Security Information and Event Management (SIEM) platforms to collect and analyse events from multiple systems, identify suspicious patterns, and support incident response. Integrating relevant Acumeet security events with an organisation’s SIEM could help security teams incorporate meeting-platform activity into their existing monitoring and investigation workflows.',
     steps: [
       { title: 'Collect and analyse', body: 'Events from multiple systems, including relevant meeting-platform activity.' },
@@ -216,11 +216,11 @@ export const secure = {
   },
 
   industries: {
-    title: 'Security That Supports Enterprise',
-    accent: 'Requirements',
+    title: 'Security that supports enterprise',
+    accent: 'requirements',
     cards: [
       {
-        title: 'Financial Services and Insurance',
+        title: 'Financial services and insurance',
         body: 'Help protect sensitive business discussions, customer-related information, and commercially confidential decisions.',
         tint: 'lilac',
         pattern: { type: 'rings', size: 'card' },
@@ -234,7 +234,7 @@ export const secure = {
         to: ROUTES.industries,
       },
       {
-        title: 'Legal, Compliance and Executive Teams',
+        title: 'Legal, compliance and executive teams',
         body: 'Apply security-conscious practices to conversations involving confidential matters, internal decisions, and business strategy.',
         tint: 'blue',
         pattern: { type: 'hairlines', size: 'card' },
@@ -273,9 +273,9 @@ export const secure = {
   related: relatedSolutions('protect', 'control', 'govern', 'emi'),
 
   cta: {
-    title: 'Make Security Part of Every Meeting.',
+    title: 'Make security part of every meeting.',
     lead: 'Give your organisation a clearer path to secure, controlled, and accountable meeting intelligence. Explore Acumeet with your IT and security requirements in mind.',
-    primary: { label: 'Book a Security Demo', to: ROUTES.bookDemo },
-    secondary: { label: 'Contact Our Team', to: ROUTES.contactSales },
+    primary: { label: 'Book a security demo', to: ROUTES.bookDemo },
+    secondary: { label: 'Contact our team', to: ROUTES.contactSales },
   },
 };

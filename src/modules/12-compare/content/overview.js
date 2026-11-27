@@ -72,7 +72,7 @@ const OPTIONS = [
 
 /** 12.08 · Competitive Comparison (Figma 49:117344) — the /compare overview. */
 export default {
-  breadcrumb: cmpBreadcrumb('Competitive Comparison'),
+  breadcrumb: cmpBreadcrumb('Competitive comparison'),
 
   ...darkHero({
     height: 548,

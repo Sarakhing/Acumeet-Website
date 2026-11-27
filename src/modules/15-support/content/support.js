@@ -18,21 +18,21 @@ const S = ROUTES.supportPage;
  * 15.02 Help Center, 15.03 Documentation and 15.06 Integration Guides are shared pages.
  */
 export const SUPPORT = {
-  overview: { title: 'Support Overview', to: S.overview, figma: '49:167033' },
+  overview: { title: 'Support overview', to: S.overview, figma: '49:167033' },
   gettingStarted: {
-    title: 'Getting Started',
+    title: 'Getting started',
     tagline: 'Get started with Acumeet',
     to: S.gettingStarted,
     figma: '49:167278',
   },
   featureGuides: {
-    title: 'Feature Guides',
+    title: 'Feature guides',
     tagline: 'Feature guides',
     to: S.featureGuides,
     figma: '49:167407',
   },
   integrationGuides: {
-    title: 'Integration Guides',
+    title: 'Integration guides',
     tagline: 'Turn an integration idea into a working implementation.',
     to: ROUTES.developersPage.integrationGuides, // shared → 14.07
   },
@@ -57,37 +57,37 @@ export const SUPPORT = {
   },
   faqs: { title: 'FAQs', tagline: 'Frequently asked questions', to: S.faqs, figma: '49:167903' },
   contact: {
-    title: 'Contact Support',
+    title: 'Contact support',
     tagline: 'Need a person?',
     to: S.contact,
     figma: '49:168043',
   },
   raiseTicket: {
-    title: 'Raise a Ticket',
+    title: 'Raise a ticket',
     tagline: 'Raise a support ticket',
     to: S.raiseTicket,
     figma: '49:168095',
   },
   ticketStatus: {
-    title: 'Ticket Status',
+    title: 'Ticket status',
     tagline: 'Check ticket status',
     to: S.ticketStatus,
     figma: '49:168230',
   },
   serviceStatus: {
-    title: 'Service Status',
+    title: 'Service status',
     tagline: 'Service status',
     to: S.serviceStatus,
     figma: '49:168369',
   },
   supportPlans: {
-    title: 'Support Plans',
+    title: 'Support plans',
     tagline: 'Support that fits how your organisation operates',
     to: S.supportPlans,
     figma: '49:168429',
   },
   documentation: {
-    title: 'Acumeet Documentation',
+    title: 'Acumeet documentation',
     tagline: 'Everything you need to work with Acumeet',
     to: ROUTES.resourcesPage.documentation, // shared → 13.12
   },
@@ -108,7 +108,7 @@ export const DEMO = link('Book a demo', ROUTES.bookDemo);
 /** Home / Support Overview / {page}. */
 export const supBreadcrumb = (label) => [
   { label: 'Home', to: ROUTES.home },
-  { label: 'Support Overview', to: S.overview },
+  { label: 'Support overview', to: S.overview },
   { label },
 ];
 
@@ -124,7 +124,7 @@ const SLOTS = [
 /** "Explore Support" row — every "Related" card reads "Support". */
 export const exploreSupport = (keys) => ({
   eyebrow: 'Keep exploring',
-  title: 'Explore Support',
+  title: 'Explore support',
   cards: keys.map((k, i) => ({
     title: SUPPORT[k].title,
     description: 'Support',

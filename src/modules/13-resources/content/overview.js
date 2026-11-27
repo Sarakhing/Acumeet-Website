@@ -18,11 +18,11 @@ const DIRECTORY = [
 
 /** 13.01 · Resources Overview (Figma 49:138234). */
 export default {
-  breadcrumb: [{ label: 'Home', to: ROUTES.home }, { label: 'Resources Overview' }],
+  breadcrumb: [{ label: 'Home', to: ROUTES.home }, { label: 'Resources overview' }],
 
   /** 01 · Hero (736): knowledge search in the window, action items overlapping, "Live" chip. */
   ...windowHero({
-    eyebrow: 'Acumeet Resources',
+    eyebrow: 'Acumeet resources',
     title: 'Learn how better meetings',
     accent: 'work',
     lead: 'Guides, product updates and insights on meeting governance, AI and security.',
@@ -140,7 +140,7 @@ export default {
     {
       type: 'directory',
       eyebrow: 'Resources',
-      title: 'Explore Resources',
+      title: 'Explore resources',
       items: DIRECTORY.map((k) => ({
         title: RESOURCES[k].title,
         description: RESOURCES[k].tagline,

@@ -3,13 +3,13 @@ import { actions, audit, capture, decisions, explorerItems, followSplit, fsBread
 
 /** 04.07 · Compliance Meetings (Figma 48:289785). */
 export default {
-  breadcrumb: fsBreadcrumb('Compliance Meetings'),
+  breadcrumb: fsBreadcrumb('Compliance meetings'),
 
   /** 01 · Hero (48:289788) — dark rings hero, no buttons, 836 tall. */
   hero: {
     variant: 'rings',
-    eyebrow: 'Compliance Meetings',
-    title: 'Make Compliance Discussions Easier to Document and Follow Up',
+    eyebrow: 'Compliance meetings',
+    title: 'Make compliance discussions easier to document and follow up',
     lead: 'Help teams capture compliance discussions, document agreed actions and retrieve meeting context with Acumeet.',
   },
 
@@ -55,7 +55,7 @@ export default {
   explorer: {
     items: explorerItems([
       {
-        title: 'Create Structured Meeting Records',
+        title: 'Create structured meeting records',
         body: 'Summarise discussions about policies, regulatory developments, internal controls and compliance priorities to help teams retain key points.',
         visual: summary('Policy Review Meeting', [42, 70, 32], [
           'The policy draft will be circulated for sign-off.',
@@ -63,7 +63,7 @@ export default {
         ]),
       },
       {
-        title: 'Track Agreed Actions',
+        title: 'Track agreed actions',
         body: 'Record responsibilities and follow-up actions from compliance meetings so outstanding items are easier to review.',
         visual: actions(
           5,
@@ -76,7 +76,7 @@ export default {
         ),
       },
       {
-        title: 'Retain Context for Future Reviews',
+        title: 'Retain context for future reviews',
         body: 'Make earlier meeting-derived information easier to retrieve when teams revisit an issue, policy or remediation plan.',
         visual: search(
           'regulator query response',
@@ -89,7 +89,7 @@ export default {
         ),
       },
       {
-        title: 'Compliance Workflows',
+        title: 'Compliance workflows',
         body: 'Support regulatory update meetings, policy reviews, internal control discussions, issue escalations and compliance action planning.',
         visual: capture('Thu, Jun 12', [
           ['Compliance Monitoring Update', '10:30 AM · Meet'],

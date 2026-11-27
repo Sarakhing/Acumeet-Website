@@ -30,7 +30,7 @@ const update = (title, body, to, tint, pattern, visual, reverse) => ({
 
 /** 13.09 · Product Updates (Figma 49:139325). */
 export default {
-  breadcrumb: resBreadcrumb('Product Updates'),
+  breadcrumb: resBreadcrumb('Product updates'),
 
   /** 01 · Hero + "Hero carousel · 13.09 · Product Updates" (49:80982). */
   hero: {

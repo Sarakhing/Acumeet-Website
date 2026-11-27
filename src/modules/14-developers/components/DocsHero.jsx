@@ -48,7 +48,7 @@ export default function DocsHero({ path, eyebrow, title, lead, primary, secondar
             </span>
             <EarlyAccess />
           </div>
-          <p className="font-mono text-[12px] uppercase tracking-[0.96px] text-brand-magenta">
+          <p className="eyebrow">
             {eyebrow}
           </p>
           <h1 className="text-[38px] font-medium leading-[1.08] tracking-[-1.4px] text-ink-900 sm:text-[48px] lg:text-[56px] lg:leading-[1.04] lg:tracking-[-2.2px]">

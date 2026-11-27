@@ -13,7 +13,7 @@ import {
 
 /** 11.12 · Enterprise Support (Figma 49:69323). */
 export default {
-  breadcrumb: entBreadcrumb('Enterprise Support'),
+  breadcrumb: entBreadcrumb('Enterprise support'),
 
   /** 01 · Hero + "Hero carousel · 11.12 · Enterprise Support" (49:71926). */
   ...entPage('support', {

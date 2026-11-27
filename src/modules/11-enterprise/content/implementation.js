@@ -17,7 +17,7 @@ export default {
 
   /** 01 · Hero (680): summary in the window, action items overlapping, "Live" chip. */
   ...windowHero({
-    eyebrow: 'Enterprise Implementation',
+    eyebrow: 'Enterprise implementation',
     title: 'Move from deployment decision to a',
     accent: 'controlled rollout.',
     lead: 'A successful Acumeet implementation aligns technical configuration with business outcomes. Bring your business owners, IT, Security, Compliance, and relevant administrators together to plan readiness, validate workflows, and prepare users for adoption.',

@@ -10,7 +10,7 @@ const R = ROUTES.resourcesPage;
  * (also each page's headline). Slugs match the header mega menu.
  */
 export const RESOURCES = {
-  overview: { title: 'Resources Overview', to: R.overview, figma: '49:138234' },
+  overview: { title: 'Resources overview', to: R.overview, figma: '49:138234' },
   blog: {
     title: 'Blog',
     tagline: 'Ideas for better meetings and better decisions',
@@ -18,13 +18,13 @@ export const RESOURCES = {
     figma: '49:138510',
   },
   blogCategories: {
-    title: 'Blog Categories',
+    title: 'Blog categories',
     tagline: 'Explore the blog by topic',
     to: R.blogCategories,
     figma: '49:138636',
   },
   caseStudies: {
-    title: 'Case Studies',
+    title: 'Case studies',
     tagline: 'See meeting intelligence in practice',
     to: R.caseStudies,
     figma: '49:138741',
@@ -54,25 +54,25 @@ export const RESOURCES = {
     figma: '49:139175',
   },
   productUpdates: {
-    title: 'Product Updates',
+    title: 'Product updates',
     tagline: 'What is new in Acumeet',
     to: R.productUpdates,
     figma: '49:139325',
   },
   customerStories: {
-    title: 'Customer Stories',
+    title: 'Customer stories',
     tagline: 'The people behind better meeting outcomes',
     to: R.customerStories,
     figma: '49:139652',
   },
   calculator: {
-    title: 'Meeting Productivity Calculator',
+    title: 'Meeting productivity calculator',
     tagline: 'What are your meetings really costing you?',
     to: R.calculator,
     figma: '49:139942',
   },
   documentation: {
-    title: 'Acumeet Documentation',
+    title: 'Acumeet documentation',
     tagline: 'Everything you need to work with Acumeet',
     to: R.documentation,
     figma: '49:140194',
@@ -90,7 +90,7 @@ export const link = (label, to) => ({ label, to });
 /** Home / Resources Overview / {page} (Blog Categories adds "Blog"). */
 export const resBreadcrumb = (label, { blog = false } = {}) => [
   { label: 'Home', to: ROUTES.home },
-  { label: 'Resources Overview', to: R.overview },
+  { label: 'Resources overview', to: R.overview },
   ...(blog ? [{ label: 'Blog', to: R.blog }] : []),
   { label },
 ];
@@ -108,7 +108,7 @@ const SLOTS = [
 /** "Explore Resources" row — every "Related" card reads "Resources". */
 export const exploreResources = (keys) => ({
   eyebrow: 'Keep exploring',
-  title: 'Explore Resources',
+  title: 'Explore resources',
   cards: keys.map((k, i) => ({
     title: RESOURCES[k].title,
     description: 'Resources',

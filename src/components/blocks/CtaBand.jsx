@@ -11,7 +11,7 @@ import { cn } from '@/utils/cn';
 export default function CtaBand({
   title = 'Make Every Meeting Part of Your Enterprise Knowledge',
   lead = 'Build a more consistent approach to documenting conversations, managing decisions, preserving knowledge, and governing meeting information across your organisation.',
-  primary = { label: 'Talk to Our Team', to: ROUTES.contactSales },
+  primary = { label: 'Talk to our team', to: ROUTES.contactSales },
   secondary = { label: 'Explore Acumeet', to: ROUTES.products },
   size = 'default',
 }) {

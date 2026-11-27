@@ -5,15 +5,15 @@ import { challenge, explorer, faq, note, outcomes, windowHero, workflows } from 
 
 /** 05.02 · Risk & Compliance (Figma 48:305805). */
 export default {
-  breadcrumb: ucBreadcrumb('Risk & Compliance'),
+  breadcrumb: ucBreadcrumb('Risk & compliance'),
 
   /** 01 · Hero (48:305808) — 670 tall: audit log in the window, decisions card overlapping. */
   ...windowHero({
-    eyebrow: 'Risk & Compliance',
-    title: 'Bring Clarity and Accountability to Risk',
-    accent: '& Compliance Meetings',
+    eyebrow: 'Risk & compliance',
+    title: 'Bring clarity and accountability to risk',
+    accent: '& compliance meetings',
     lead: 'Risk and compliance teams need a clear record of issues discussed, decisions made, and actions assigned. Acumeet helps capture meeting discussions, summarise key points, and organise follow-up actions so teams can revisit context and keep responsibilities visible.',
-    secondary: { label: 'Explore Enterprise Governance', to: ROUTES.solutions.govern },
+    secondary: { label: 'Explore enterprise governance', to: ROUTES.solutions.govern },
     window: audit(
       [
         ['10:04', 'Signed in via SSO', 'Ruth Godwin'],

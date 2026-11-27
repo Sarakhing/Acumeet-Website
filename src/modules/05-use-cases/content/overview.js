@@ -17,15 +17,15 @@ const heroDecisions = (width) =>
 
 /** 05.00 · Use Cases Overview (Figma 48:308252). */
 export default {
-  breadcrumb: [{ label: 'Home', to: ROUTES.home }, { label: 'Use Cases Overview' }],
+  breadcrumb: [{ label: 'Home', to: ROUTES.home }, { label: 'Use cases overview' }],
 
   /** 01 · Hero (48:308255) — 988 tall: action items + decisions + knowledge search over the hatch. */
   ...centeredHero({
     eyebrow: 'Acumeet',
-    title: 'Every Meeting Has a Purpose. Make',
-    accent: 'Every Outcome Count.',
+    title: 'Every meeting has a purpose. Make',
+    accent: 'every outcome count.',
     lead: 'Important decisions, customer commitments, project updates, and operational priorities often emerge in meetings. But when notes are scattered and follow-ups are manual, important context can be lost. Acumeet helps your team turn conversations into clear summaries, documented decisions, trackable actions, and searchable knowledge.',
-    secondary: { label: 'Explore Use Cases', to: `#${GRID_ID}` },
+    secondary: { label: 'Explore use cases', to: `#${GRID_ID}` },
     height: 988,
     copyHeight: 394,
     top: 556,
@@ -65,8 +65,8 @@ export default {
   /** 02 · Choose Your Use Case (48:308359). The hidden "Index · Choose Your Use Case" (48:308429) is not built. */
   grid: {
     id: GRID_ID,
-    title: 'Choose Your Use',
-    accent: 'Case',
+    title: 'Choose your use',
+    accent: 'case',
     lead: 'Different teams meet for different reasons. Explore how Acumeet can support the conversations, decisions, and follow-through that matter to your organisation.',
     items: USE_CASE_KEYS.map((k) => ({ title: USE_CASES[k].title, description: USE_CASES[k].blurb, to: USE_CASES[k].to })),
   },
@@ -117,11 +117,11 @@ export default {
   /** 04 · Connect Meeting Outcomes to Everyday Work (48:308598) — mint panel with centred 30px-pitch rings. */
   connect: {
     size: 'standard',
-    title: 'Connect Meeting Outcomes to Everyday Work',
+    title: 'Connect meeting outcomes to everyday work',
     body: [
       'Meetings should support the work that happens afterwards. Acumeet helps teams organise outcomes and follow-ups so that responsibilities are clearer and discussions can translate into practical next steps. Where supported, integrations can help connect meeting outcomes with the tools teams already use.',
     ],
-    cta: { label: 'Explore Acumeet Integrations', to: ROUTES.integrations, intent: 'secondary' },
+    cta: { label: 'Explore Acumeet integrations', to: ROUTES.integrations, intent: 'secondary' },
     panel: actions(
       4,
       [
@@ -136,7 +136,7 @@ export default {
   /** 05 · Build Continuity Across Your Organisation (48:308653). */
   continuity: {
     tone: 'subtle',
-    title: 'Build Continuity Across Your Organisation',
+    title: 'Build continuity across your organisation',
     paragraphs: [
       'When meeting records are difficult to find, teams can lose valuable context and repeat discussions. Acumeet helps preserve meeting-derived knowledge so people can revisit previous conversations, understand what was decided, and maintain continuity as projects and responsibilities evolve.',
     ],
@@ -150,7 +150,7 @@ export default {
     body: [
       "Many meetings involve confidential information, important decisions, or regulated business processes. Acumeet's enterprise positioning emphasises responsible access, governance, and secure handling of meeting information.",
     ],
-    cta: { label: 'Explore Security and Governance', to: ROUTES.security },
+    cta: { label: 'Explore security and governance', to: ROUTES.security },
     visual: {
       tint: 'blue',
       pattern: { type: 'dots', size: 'explorer' },
@@ -166,7 +166,7 @@ export default {
   /** Directory · USE CASES (48:308696). */
   directory: {
     eyebrow: 'Use cases',
-    title: 'Explore Use Cases',
+    title: 'Explore use cases',
     items: USE_CASE_KEYS.map((k) => ({ title: USE_CASES[k].title, description: USE_CASES[k].tagline, to: USE_CASES[k].to })),
   },
 
@@ -197,9 +197,9 @@ export default {
   }),
 
   cta: {
-    title: 'Make Every Meeting More Valuable',
+    title: 'Make every meeting more valuable',
     lead: 'Give your team a clearer way to capture discussions, preserve decisions, track follow-ups, and retain knowledge. Discover how Acumeet can support the meetings that move your organisation forward.',
-    primary: { label: 'Book a Demo', to: ROUTES.bookDemo },
+    primary: { label: 'Book a demo', to: ROUTES.bookDemo },
     secondary: { label: 'Explore Acumeet', to: ROUTES.products },
   },
 };

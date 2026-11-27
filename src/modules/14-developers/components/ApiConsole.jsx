@@ -63,13 +63,13 @@ export default function ApiConsole({ title, accent, lead, primary, secondary }) 
           <div className="flex flex-col gap-3">
             <p className="flex items-center gap-3">
               <EarlyAccess />
-              <span className="font-mono text-[11px] uppercase tracking-[0.88px] text-ink-500">
+              <span className="eyebrow">
                 REST API
               </span>
             </p>
             <h2 className="text-[36px] font-medium tracking-[-1.2px] text-ink-900 sm:text-[52px]">
               {title}{' '}
-              <span className="bg-[image:var(--gradient-accent)] bg-clip-text text-transparent">
+              <span>
                 {accent}
               </span>
             </h2>

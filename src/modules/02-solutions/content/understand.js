@@ -24,9 +24,9 @@ export const understand = {
     eyebrowStyle: 'chip',
     secondaryStyle: 'button',
     eyebrow: 'Solutions · Understand',
-    title: 'Turn Every Conversation Into Business Intelligence.',
+    title: 'Turn every conversation into business intelligence.',
     lead: 'Your meetings are full of decisions, ideas, commitments, and knowledge. Acumeet helps your organisation uncover the value in those conversations, connect insights across meetings, and turn information into meaningful business action.',
-    primary: { label: 'Book an Enterprise Demo', to: ROUTES.bookDemo },
+    primary: { label: 'Book an enterprise demo', to: ROUTES.bookDemo },
     secondary: { label: 'Explore Acumeet', to: ROUTES.products },
     visual: h(UnderstandHeroVisual),
     visualWidth: 660,
@@ -41,7 +41,7 @@ export const understand = {
   transcript: {
     size: 'compact',
     reverse: true,
-    title: 'Understand More Than What Was Said.',
+    title: 'Understand more than what was said.',
     body: [
       'A meeting transcript tells you what people said. Meeting intelligence helps you understand what matters.',
       'Acumeet transforms meeting conversations into structured information, helping teams identify important discussions, follow key developments, and revisit the context behind business decisions.',
@@ -76,7 +76,7 @@ export const understand = {
   /** Editorial 46:19321. */
   decisions: {
     tone: 'subtle',
-    title: 'Know What Was Decided. Understand Why It Matters.',
+    title: 'Know what was decided. Understand why it matters.',
     paragraphs: [
       'Important business decisions are often spread across multiple meetings, conversations, and follow-ups. When that context is difficult to find, teams can lose sight of why a decision was made or what informed it.',
       'Acumeet helps teams capture and revisit decisions from meeting conversations, making it easier to understand the reasoning and context behind important business outcomes.',
@@ -91,7 +91,7 @@ export const understand = {
     size: 'compact',
     tone: 'dark',
     reverse: true,
-    title: 'Turn Meeting Commitments Into Meaningful Progress.',
+    title: 'Turn meeting commitments into meaningful progress.',
     body: [
       'Meetings should move work forward. But when action items are forgotten, ownership is unclear, or follow-ups are missed, even productive discussions can fail to deliver results.',
       'Acumeet helps turn meeting conversations into actionable follow-through by identifying action items, organising commitments, and helping teams keep track of what needs to happen next.',
@@ -129,7 +129,7 @@ export const understand = {
     chapters: [
       {
         tab: 'Your Meeting and Account',
-        title: 'Your Meeting and Account Intelligence, One Conversation Away.',
+        title: 'Your meeting and account intelligence, one conversation away.',
         paragraphs: [
           'Finding information should not mean searching through countless transcripts, summaries, and account screens.',
           'Atlas is Acumeet’s conversational AI assistant, designed to help users ask questions and retrieve relevant information from the meetings and account information available to them.',
@@ -174,7 +174,7 @@ export const understand = {
   /** Editorial 46:19495 (46:19485 is a hidden duplicate). */
   knowledge: {
     tone: 'white',
-    title: 'Turn Meeting History Into Lasting Organisational Knowledge.',
+    title: 'Turn meeting history into lasting organisational knowledge.',
     paragraphs: [
       'Every organisation accumulates valuable knowledge through its meetings. Strategies are discussed, problems are solved, decisions are made, and lessons are learned.',
       'But when that knowledge remains scattered across individual calendars, recordings, and disconnected conversations, it becomes difficult to retrieve and reuse.',
@@ -186,11 +186,11 @@ export const understand = {
 
   /** Head 46:19505 + "✓ Explorer · One Platform. Five Ways…" (spec 46:22156). */
   explorer: {
-    title: 'One Platform. Five Ways to',
-    accent: 'Understand More.',
+    title: 'One platform. Five ways to',
+    accent: 'understand more.',
     items: [
       {
-        title: 'Meeting Intelligence',
+        title: 'Meeting intelligence',
         body: 'Understand conversations, themes, and important discussion points.',
         tint: 'lilac',
         pattern: { type: 'dots', size: 'explorer' },
@@ -208,7 +208,7 @@ export const understand = {
         }),
       },
       {
-        title: 'Decision Intelligence',
+        title: 'Decision intelligence',
         body: 'Revisit decisions and the context behind them.',
         tint: 'pink',
         pattern: { type: 'rings', size: 'explorer' },
@@ -223,7 +223,7 @@ export const understand = {
         }),
       },
       {
-        title: 'Action Intelligence',
+        title: 'Action intelligence',
         body: 'Keep commitments, responsibilities, and follow-ups visible.',
         tint: 'blue',
         pattern: { type: 'hairlines', size: 'explorer' },
@@ -264,7 +264,7 @@ export const understand = {
         }),
       },
       {
-        title: 'Organisational Knowledge',
+        title: 'Organisational knowledge',
         body: 'Preserve and reuse the knowledge generated through meetings.',
         tint: 'amber',
         pattern: { type: 'dots', size: 'explorer' },
@@ -294,34 +294,34 @@ export const understand = {
 
   /** "Benefits" Head 46:19509 + Grid 46:19511 ("✓ Card · …" 630×280, 2-up). */
   audiences: {
-    title: 'Built for Teams That Need More',
-    accent: 'From Their Meetings',
+    title: 'Built for teams that need more',
+    accent: 'from their meetings',
     accentBreak: false,
     columns: 2,
     cards: [
       {
-        title: 'Leadership and Executive Teams',
+        title: 'Leadership and executive teams',
         body: 'Maintain visibility into business discussions, important decisions, and commitments across meetings.',
         tint: 'lilac',
         pattern: { type: 'rings', size: 'card-wide' },
         to: ROUTES.useCases,
       },
       {
-        title: 'Project and Operations Teams',
+        title: 'Project and operations teams',
         body: 'Keep actions, follow-ups, and previous discussions connected to ongoing work.',
         tint: 'pink',
         pattern: { type: 'dots', size: 'card-wide' },
         to: ROUTES.useCases,
       },
       {
-        title: 'Sales and Customer Success Teams',
+        title: 'Sales and customer success teams',
         body: 'Revisit conversations, commitments, and relevant context to support better-informed customer engagement.',
         tint: 'blue',
         pattern: { type: 'hairlines', size: 'card-wide' },
         to: ROUTES.useCases,
       },
       {
-        title: 'Enterprise and Knowledge Teams',
+        title: 'Enterprise and knowledge teams',
         body: 'Make institutional knowledge more accessible and reduce reliance on individual memory.',
         tint: 'mint',
         pattern: { type: 'rings', size: 'card-wide' },
@@ -367,9 +367,9 @@ export const understand = {
   ],
 
   cta: {
-    title: 'Your Meetings Have More to Offer.',
+    title: 'Your meetings have more to offer.',
     lead: 'Discover how Acumeet can help your organisation turn conversations into intelligence, decisions into direction, and meeting knowledge into lasting business value.',
-    primary: { label: 'Book an Enterprise Demo', to: ROUTES.bookDemo },
+    primary: { label: 'Book an enterprise demo', to: ROUTES.bookDemo },
     secondary: { label: 'Explore Acumeet', to: ROUTES.products },
   },
 };

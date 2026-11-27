@@ -28,7 +28,7 @@ export default function FlowSteps({ eyebrow, title, accent, steps = [], pattern,
       <Container width="wide" className="relative flex flex-col items-center gap-10 lg:gap-14">
         <div className="flex max-w-[900px] flex-col items-center gap-3.5 text-center">
           {eyebrow && (
-            <p className="font-mono text-[11px] uppercase leading-normal tracking-[0.88px] text-ink-on-dark-faint sm:text-[12px] sm:tracking-[0.96px]">
+            <p className="eyebrow-dark">
               {eyebrow}
             </p>
           )}
@@ -37,7 +37,7 @@ export default function FlowSteps({ eyebrow, title, accent, steps = [], pattern,
             {accent && (
               <>
                 {' '}
-                <span className="bg-[image:var(--gradient-accent-dark)] bg-clip-text text-transparent">{accent}</span>
+                <span>{accent}</span>
               </>
             )}
           </h2>

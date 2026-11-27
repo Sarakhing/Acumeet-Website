@@ -93,7 +93,7 @@ export default function DHero({
           center && 'items-center text-center',
         )}
       >
-        <Pill>{eyebrow}</Pill>
+        <p className="eyebrow">{eyebrow}</p>
         <h1
           className={cn(
             'text-[40px] leading-[1.06] font-medium text-[#0b0b12] sm:text-[52px]',

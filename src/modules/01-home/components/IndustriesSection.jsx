@@ -164,7 +164,7 @@ export default function IndustriesSection() {
             aria-hidden="true"
             width={720}
             height={440}
-            className="pointer-events-none absolute top-0 right-0 h-[440px] w-[720px] max-w-none"
+            className="motion-breathe pointer-events-none absolute top-0 right-0 h-[440px] w-[720px] max-w-none [--motion-origin:right_top]"
           />
 
           <div

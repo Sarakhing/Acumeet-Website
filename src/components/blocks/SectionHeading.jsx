@@ -46,7 +46,7 @@ export default function SectionHeading({
   return (
     <div className={cn('flex flex-col gap-4', intro && !flush && 'lg:py-4')}>
       {eyebrow && (
-        <p className="font-mono text-[11px] uppercase leading-[1.5] tracking-[0.66px] text-ink-500">
+        <p className="eyebrow">
           {eyebrow}
         </p>
       )}

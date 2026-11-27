@@ -5,15 +5,15 @@ import { challenge, CONNECTED, explorer, faq, outcomes, windowHero, workflows } 
 
 /** 05.06 · Project Governance (Figma 48:306542). */
 export default {
-  breadcrumb: ucBreadcrumb('Project Governance'),
+  breadcrumb: ucBreadcrumb('Project governance'),
 
   /** 01 · Hero (48:306545) — 729 tall: action items in the window, retention policy overlapping. */
   ...windowHero({
-    eyebrow: 'Project Governance',
-    title: 'Turn Project Meetings into Clear Decisions',
-    accent: 'and Accountable Follow-Through',
+    eyebrow: 'Project governance',
+    title: 'Turn project meetings into clear decisions',
+    accent: 'and accountable follow-through',
     lead: 'Projects move through changing priorities, dependencies, risks, and decisions. Acumeet helps teams capture the context of project discussions, summarise key points, and document agreed actions so stakeholders can follow what was decided and what needs to happen next.',
-    secondary: { label: 'Explore Meeting Intelligence', to: ROUTES.product.meetingIntelligence },
+    secondary: { label: 'Explore meeting intelligence', to: ROUTES.product.meetingIntelligence },
     window: actions(
       5,
       [

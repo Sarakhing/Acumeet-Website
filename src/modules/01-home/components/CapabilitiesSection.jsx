@@ -90,10 +90,10 @@ export default function CapabilitiesSection() {
           id="home-capabilities-title"
           className="max-w-[820px] text-center text-[30px] leading-[1.12] font-medium tracking-[-0.9px] text-balance text-ink-900 sm:text-[38px] sm:tracking-[-1px] lg:text-[48px] lg:leading-[1.1] lg:tracking-[-1.2px]"
         >
-          Turn Every Meeting Into Business Intelligence You Can Act On
+          Turn every meeting into business intelligence you can act on
         </h2>
 
-        <div className="flex w-full max-w-[1104px] flex-col gap-4">
+        <div className="flex w-full max-w-[1200px] flex-col gap-4">
           <div className="grid gap-4 md:grid-cols-2 lg:grid-cols-[2fr_1fr_1fr]">
             {ROW_1.map((card) => (
               <CapabilityCard key={card.title} {...card} />

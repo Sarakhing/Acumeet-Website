@@ -97,8 +97,8 @@ export default function Split({
                   : size === 'chapter'
                     ? 'text-[28px] leading-[1.12] tracking-[-0.76px] sm:text-[34px] lg:text-[38px]'
                     : 'text-[30px] leading-[1.12] tracking-[-1.2px] sm:text-[34px] lg:text-heading-xl',
-              dark && '[&>span:first-child]:text-ink-on-dark',
-              !dark && feature && '[&>span:first-child]:text-ink-900',
+              dark && 'text-ink-on-dark!',
+              !dark && feature && 'text-ink-900!',
             )}
           >
             {title}

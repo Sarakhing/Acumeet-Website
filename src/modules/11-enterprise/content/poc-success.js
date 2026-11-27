@@ -12,13 +12,13 @@ import {
 
 /** 11.18 · PoC Success Criteria (Figma 49:70167). */
 export default {
-  breadcrumb: entBreadcrumb('PoC Success Criteria', { poc: true }),
+  breadcrumb: entBreadcrumb('PoC success criteria', { poc: true }),
 
   /** 01 · Hero + "Hero carousel · 11.18 · PoC Success Criteria" (49:72683). */
   ...entPage('pocSuccess', {
     hero: 'rings',
     tabKey: 'poc',
-    eyebrow: 'PoC Success Criteria',
+    eyebrow: 'PoC success criteria',
     title: 'Agree what success looks like first',
     lead: 'Define measurable outcomes so every stakeholder knows what the PoC needs to prove.',
     primary: REQUEST_POC,

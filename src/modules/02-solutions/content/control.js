@@ -20,10 +20,10 @@ export const control = {
     pattern: 'hairlines',
     secondaryStyle: 'button',
     eyebrow: 'Solutions · Control',
-    title: 'Your Data. Your Keys. Your Rules.',
+    title: 'Your data. Your keys. Your rules.',
     lead: 'Keep greater control over where your meeting data is stored, how it is protected, and how long it is retained. Acumeet supports enterprise data control through customer-managed storage options, customer-managed encryption keys, regional storage configuration, and configurable retention choices.',
-    primary: { label: 'Book an Enterprise Demo', to: ROUTES.bookDemo },
-    secondary: { label: 'Explore Data Storage Options', to: ROUTES.deployment },
+    primary: { label: 'Book an enterprise demo', to: ROUTES.bookDemo },
+    secondary: { label: 'Explore data storage options', to: ROUTES.deployment },
     visual: h(ControlHeroVisual),
     visualWidth: 540,
     visualAlign: 'end',
@@ -33,7 +33,7 @@ export const control = {
 
   /** "02 · Control Where Your Data Lives" (Row 46:17148). */
   storage: {
-    title: 'Control Where Your Data Lives',
+    title: 'Control where your data lives',
     paragraphs: [
       'Different organisations have different requirements for data ownership, storage, and oversight. Acumeet offers storage options designed to help organisations align meeting data handling with their internal policies and infrastructure preferences.',
       'Keep organisational meeting data logically separated within Acumeet-managed storage. Private storage supports a more controlled environment for managing meeting assets.',
@@ -67,7 +67,7 @@ export const control = {
   retention: {
     size: 'standard',
     reverse: true,
-    title: 'Retention That Fits Your Policies',
+    title: 'Retention that fits your policies',
     body: [
       'Set a retention period that reflects your organisation’s data classification, records management, legal obligations, and internal data-loss prevention (DLP) policies. Available retention choices include 30 days, 90 days, 180 days, and a custom period.',
       'Short-term retention for temporary or highly sensitive meeting information.',
@@ -93,7 +93,7 @@ export const control = {
   /** Split 46:17233 ("04 · Visibility…" Editorial 46:17282 is hidden in Figma). */
   visibility: {
     size: 'standard',
-    title: 'Visibility Into Storage and Encryption',
+    title: 'Visibility into storage and encryption',
     body: [
       'Give administrators a clearer view of configured storage, connection status, and storage usage. Storage status information helps teams understand whether their connected storage is configured and operating as expected.',
       'Audit records also help support oversight of relevant administrative and data-management activity.',
@@ -144,9 +144,9 @@ export const control = {
   related: relatedSolutions('protect', 'secure', 'govern', 'emi'),
 
   cta: {
-    title: 'Enterprise Data Control, Built Around Your Requirements.',
+    title: 'Enterprise data control, built around your requirements.',
     lead: 'Explore storage, encryption, regional configuration, and retention options that can help your organisation manage meeting data in line with its requirements.',
-    primary: { label: 'Discuss Your Enterprise Requirements', to: ROUTES.contactSales },
-    secondary: { label: 'Book a Demo', to: ROUTES.bookDemo },
+    primary: { label: 'Discuss your enterprise requirements', to: ROUTES.contactSales },
+    secondary: { label: 'Book a demo', to: ROUTES.bookDemo },
   },
 };

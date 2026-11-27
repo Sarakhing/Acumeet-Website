@@ -14,13 +14,13 @@ const heroCapture = () =>
 
 /** 04.09 · Board Meetings (Figma 48:289960). */
 export default {
-  breadcrumb: fsBreadcrumb('Board Meetings'),
+  breadcrumb: fsBreadcrumb('Board meetings'),
 
   /** 01 · Hero (48:289963) — centred light wash, 832 tall; canvas origin 1440-frame (80, 403). */
   hero: {
     variant: 'centered',
-    eyebrow: 'Board Meetings',
-    title: 'Preserve Board Decisions and Support Follow-Through',
+    eyebrow: 'Board meetings',
+    title: 'Preserve board decisions and support follow-through',
     lead: 'Acumeet helps boards and company secretariats organise meeting discussions, capture decisions and track agreed actions across governance workflows.',
     visual: heroCanvas(
       409,
@@ -62,7 +62,7 @@ export default {
   explorer: {
     items: explorerItems([
       {
-        title: 'Document Strategic Discussions',
+        title: 'Document strategic discussions',
         body: 'Create structured summaries that help authorised stakeholders revisit key topics and decisions from board discussions.',
         visual: summary('Executive Committee Meeting', [52, 80, 42], [
           'The committee approved the Q3 priorities with two changes.',
@@ -70,7 +70,7 @@ export default {
         ]),
       },
       {
-        title: 'Track Resolutions and Actions',
+        title: 'Track resolutions and actions',
         body: 'Capture agreed actions and responsibilities to support follow-up between board and committee meetings.',
         visual: actions(
           3,
@@ -83,7 +83,7 @@ export default {
         ),
       },
       {
-        title: 'Maintain Governance Context',
+        title: 'Maintain governance context',
         body: 'Retain meeting-derived knowledge so prior discussions and decisions are easier to retrieve when relevant matters return to the agenda.',
         visual: search(
           'regional expansion decision',
@@ -96,7 +96,7 @@ export default {
         ),
       },
       {
-        title: 'Board Meeting Workflows',
+        title: 'Board meeting workflows',
         body: 'Support board strategy sessions, committee updates, governance discussions, business performance reviews and action follow-ups.',
         visual: capture('Thu, Jun 16', [
           ['Board Meeting · Q3', '3:30 PM · Teams'],
@@ -109,7 +109,7 @@ export default {
 
   /** 06 · Align With Formal Board Processes (48:291105). */
   note: {
-    title: 'Align With Formal Board Processes',
+    title: 'Align with formal board processes',
     body: 'Acumeet-generated summaries should be reviewed and approved through the organisation’s established processes.',
     ctas: NOTE_CTAS,
   },

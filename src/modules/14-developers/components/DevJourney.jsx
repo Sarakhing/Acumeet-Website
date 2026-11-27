@@ -21,7 +21,7 @@ export default function DevJourney({ eyebrow, title, steps = [] }) {
       </svg>
       <Container width="wide" className="relative flex flex-col gap-12 lg:gap-14">
         <div className="flex flex-col gap-3">
-          <p className="font-mono text-[11px] uppercase tracking-[0.88px] text-ink-500">
+          <p className="eyebrow">
             {eyebrow}
           </p>
           <h2 className="text-[34px] font-medium tracking-[-1px] text-ink-900 sm:text-[44px]">

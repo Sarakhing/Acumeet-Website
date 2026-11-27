@@ -73,7 +73,7 @@ export default function SignUpPage() {
         </div>
 
         <div className="mx-auto flex w-full max-w-[400px] flex-1 flex-col justify-center gap-[18px] py-14 lg:mx-[100px] lg:py-16">
-          <Pill>Create your account</Pill>
+          <p className="eyebrow">Create your account</p>
           <h1 className="text-[34px] leading-[1.15] font-medium tracking-[-1.2px] text-[#0b0b12] lg:text-[40px]">
             Start with Acumeet
           </h1>

@@ -9,11 +9,11 @@ const heroActions = floatActions(4, tasks(['Jun 3', 'May 8', 'Today']));
 
 /** 08.06 · CBN Requirements (Figma 48:369039). No related row in Figma. */
 export default {
-  breadcrumb: compBreadcrumb('CBN Requirements'),
+  breadcrumb: compBreadcrumb('CBN requirements'),
 
   /** 01 · Hero (858): audit log (+6°) and decisions (−6°) tilted behind action items. */
   ...centeredHero({
-    eyebrow: 'Compliance  ·  CBN Requirements',
+    eyebrow: 'Compliance  ·  CBN requirements',
     title: 'Support your assessment against',
     accent: 'CBN requirements',
     lead: 'Financial institutions can use our security, governance and audit documentation in their internal assessment against applicable CBN requirements.',

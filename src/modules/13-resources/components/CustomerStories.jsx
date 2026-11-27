@@ -155,7 +155,7 @@ export default function CustomerStories({
       <Container width="wide" className="flex flex-col gap-8 lg:gap-14">
         <div className="flex flex-col gap-6 lg:flex-row lg:items-end lg:justify-between">
           <div className="flex flex-col gap-3">
-            <p className="font-mono text-[12px] uppercase tracking-[0.96px] text-brand-magenta">
+            <p className="eyebrow">
               {eyebrow}
             </p>
             <h2 className="text-[30px] font-medium leading-[1.2] tracking-[-0.8px] text-ink-900 sm:text-[40px]">

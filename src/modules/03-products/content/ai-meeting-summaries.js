@@ -22,14 +22,14 @@ const INTEGRATIONS = [
 
 /** 02.04 · AI Meeting Summaries (Figma 46:35486). */
 export const aiMeetingSummaries = {
-  breadcrumb: productBreadcrumb('AI Meeting Summaries'),
+  breadcrumb: productBreadcrumb('AI meeting summaries'),
 
   /** 01 · Hero (46:35489) — 721 tall, 46px title, outlined secondary button, hairline field. */
   hero: {
-    eyebrow: 'AI Meeting Summaries',
+    eyebrow: 'AI meeting summaries',
     eyebrowStyle: 'chip',
     pattern: 'hairlines',
-    title: 'Turn Business Meetings into Clear Summaries and Tracked Actions',
+    title: 'Turn business meetings into clear summaries and tracked actions',
     titleSize: 46,
     copyWidth: 580,
     copyTop: 56,
@@ -37,7 +37,7 @@ export const aiMeetingSummaries = {
       'Meetings should move work forward, not leave teams searching for notes or chasing forgotten decisions. Acumeet helps organisations capture meeting information, create useful summaries, and connect decisions to the actions that follow.',
       'Use Acumeet as an AI meeting summarizer to review key discussion points, keep track of actions from previous meetings, and make meeting knowledge easier to revisit.',
     ],
-    primary: { label: 'Book a Demo', to: ROUTES.bookDemo },
+    primary: { label: 'Book a demo', to: ROUTES.bookDemo },
     secondary: { label: 'Explore Acumeet', to: ROUTES.products },
     secondaryStyle: 'button',
     visual: h(SummariesHeroVisual),
@@ -47,18 +47,18 @@ export const aiMeetingSummaries = {
 
   /** Tabs explorer (46:35647) + "✓ Explorer · Capture, Track and Build" (46:44886). */
   explorer: {
-    title: 'Capture, Track and Build',
-    accent: 'Knowledge',
+    title: 'Capture, track and build',
+    accent: 'knowledge',
     tone: 'white',
     items: [
       {
-        title: 'Capture What Matters',
+        title: 'Capture what matters',
         body: 'Turn business meeting conversations into structured summaries that help participants revisit key topics, decisions and next steps. AI meeting notes give teams a more consistent way to review what was discussed after a meeting ends.',
         tint: 'lilac',
         pattern: { type: 'dots', size: 'explorer' },
         visual: h(SummaryCard, {
           width: 480,
-          title: 'Monthly Marketing Strategy Review',
+          title: 'Monthly marketing strategy review',
           scores: [
             { label: 'Quality', value: 54, bar: 'amber' },
             { label: 'Sentiment', value: 73, bar: 'green' },
@@ -71,7 +71,7 @@ export const aiMeetingSummaries = {
         }),
       },
       {
-        title: 'Track Actions Across Meetings',
+        title: 'Track actions across meetings',
         body: 'Meeting actions should not disappear when the call ends. Acumeet helps teams carry action items forward from previous meetings and review outstanding actions before the next meeting begins. This gives participants useful context on what was agreed, what has progressed and what still needs attention.',
         tint: 'pink',
         pattern: { type: 'rings', size: 'explorer' },
@@ -96,14 +96,14 @@ export const aiMeetingSummaries = {
         }),
       },
       {
-        title: 'Connect Meeting Actions to Your Workflow',
+        title: 'Connect meeting actions to your workflow',
         body: 'Bring meeting follow-through closer to the tools your teams already use. With integrations into project management and collaboration tools such as Slack, Jira, Asana and ClickUp, Acumeet can help connect meeting actions with everyday workflows.',
         tint: 'blue',
         pattern: { type: 'hairlines', size: 'explorer' },
         visual: h(IntegrationsCard, { width: 480, connected: 6, items: INTEGRATIONS }),
       },
       {
-        title: 'Build a Searchable Meeting Knowledge Base',
+        title: 'Build a searchable meeting knowledge base',
         body: 'Meetings generate organisational knowledge that can be useful long after the conversation ends. Acumeet can help teams build a knowledge base of meeting information, making it easier to revisit previous discussions, find shared context and look back at decisions instead of relying on memory or scattered notes.',
         tint: 'mint',
         pattern: { type: 'waveform', size: 'explorer' },
@@ -136,7 +136,7 @@ export const aiMeetingSummaries = {
   split: {
     size: 'standard',
     reverse: true,
-    title: 'The Meeting Ends. The Work Continues.',
+    title: 'The meeting ends. The work continues.',
     body: [
       'After a meeting, teams still need to identify decisions, follow up on commitments and prepare for the next discussion. When actions are buried in notes or spread across separate tools, it becomes harder to maintain continuity and accountability.',
       'Acumeet connects meeting summaries with action tracking and meeting knowledge, helping teams carry context forward from one conversation to the next.',
@@ -168,8 +168,8 @@ export const aiMeetingSummaries = {
 
   /** Stepper 46:35706 + "✓ Stepper · How It Works" (46:45118) — 5 steps. */
   how: {
-    title: 'How It',
-    accent: 'Works',
+    title: 'How it',
+    accent: 'works',
     accentBreak: false,
     tone: 'white',
     steps: [
@@ -184,7 +184,7 @@ export const aiMeetingSummaries = {
           date: 'Mon, Jun 8',
           meetings: [
             { title: 'Weekly ProcureCentro Stand-up', meta: '9:00 AM · Teams' },
-            { title: 'Monthly Marketing Strategy Review', meta: '2:00 PM · Zoom' },
+            { title: 'Monthly marketing strategy review', meta: '2:00 PM · Zoom' },
             { title: 'Product Development Sync-Up', meta: '4:00 PM · Meet' },
           ],
         }),
@@ -196,7 +196,7 @@ export const aiMeetingSummaries = {
         pattern: { type: 'rings', size: 'stepper' },
         visual: h(SummaryCard, {
           width: 440,
-          title: 'Client Feedback Analysis Session',
+          title: 'Client feedback analysis session',
           scores: [
             { label: 'Quality', value: 49, bar: 'amber' },
             { label: 'Sentiment', value: 83, bar: 'green' },
@@ -274,7 +274,7 @@ export const aiMeetingSummaries = {
   statement: {
     tone: 'dark',
     title: 'Designed for Business',
-    accent: 'Meetings',
+    accent: 'meetings',
     paragraphs: [
       'From project reviews and operational check-ins to leadership discussions, Acumeet helps teams retain meeting context and make follow-through more organised. Summaries help people understand what was discussed, action tracking supports continuity between meetings, and a meeting knowledge base helps preserve useful organisational information.',
     ],
@@ -312,9 +312,9 @@ export const aiMeetingSummaries = {
 
   /** CTA band 46:37237. */
   cta: {
-    title: 'Make Every Meeting Count Beyond the Call',
+    title: 'Make every meeting count beyond the call',
     lead: 'Capture the conversation, carry actions forward and keep important meeting knowledge within reach.',
-    primary: { label: 'Book a Demo', to: ROUTES.bookDemo },
-    secondary: { label: 'Explore Meeting Intelligence', to: ROUTES.product.meetingIntelligence },
+    primary: { label: 'Book a demo', to: ROUTES.bookDemo },
+    secondary: { label: 'Explore meeting intelligence', to: ROUTES.product.meetingIntelligence },
   },
 };

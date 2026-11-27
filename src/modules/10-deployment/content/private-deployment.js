@@ -13,11 +13,11 @@ import {
 
 /** 10.06 · Private Deployment (Figma 48:393933). */
 export default {
-  breadcrumb: depBreadcrumb('Private Deployment'),
+  breadcrumb: depBreadcrumb('Private deployment'),
 
   /** 01 · Hero (765): keys & storage in the window, action items overlapping, "Live" chip. */
   ...windowHero({
-    eyebrow: 'Private Deployment',
+    eyebrow: 'Private deployment',
     title: 'Discuss deployment options for stricter',
     accent: 'environment requirements.',
     lead: 'Some organisations require a more controlled deployment arrangement because of internal policies, sensitive workflows, or infrastructure requirements. Work with Acumeet to determine whether a private deployment approach is available and what it would involve.',

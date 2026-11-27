@@ -19,7 +19,7 @@ const pad = (n) => String(n).padStart(2, '0');
 /**
  * Figma "EMI pillars" (component 46:29435, Pillar=1…5; used at 46:20847).
  * A 360px numbered tab list next to a white 28px-radius panel: accent arcs
- * (top right), eyebrow pill, 36px title, body, a grey "Key Benefits" box with
+ * (top right), eyebrow pill, 36px title, body, a grey "Key benefits" box with
  * accent check circles, and a CTA. The active tab is a white card whose 3px bar
  * fills over `interval`, then the next pillar shows. Pauses on hover/focus,
  * stops once the user picks a tab, off under reduced motion. ARIA tabs with
@@ -140,7 +140,7 @@ export default function PillarTabs({ id, items = [], interval = 7000, label = 'E
               />
             )}
             <div key={auto.index} className="relative flex animate-fade-up flex-col items-start gap-5 p-6 sm:p-10 lg:p-11">
-              <p className={cn('rounded-pill px-3 py-1.5 font-mono text-[11px] font-medium uppercase leading-normal tracking-[0.66px]', accent.wash, accent.text)}>
+              <p className="eyebrow">
                 {active.eyebrow}
               </p>
               <h3 className="text-[28px] font-medium leading-[1.15] text-ink-800 sm:text-[36px]">{active.title}</h3>

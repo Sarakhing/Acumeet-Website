@@ -26,11 +26,11 @@ const adminSearch = (dates, width) =>
 
 /** 06.07 · Data Lifecycle (Figma 48:326037). */
 export default {
-  breadcrumb: secBreadcrumb('Data Lifecycle'),
+  breadcrumb: secBreadcrumb('Data lifecycle'),
 
   /** 01 · Hero + "Hero carousel · 06.07" (48:331458). */
   ...ringsHero({
-    eyebrow: 'Data Lifecycle',
+    eyebrow: 'Data lifecycle',
     title: 'Define how meeting data is kept, moved, and removed.',
     lead: 'Data lifecycle controls establish how information is retained, archived, and deleted. Organisations should define policies for each data category and understand how those policies apply across Acumeet, connected services, customer-owned storage, logs, and backups.',
     ...HERO_ACTIONS,

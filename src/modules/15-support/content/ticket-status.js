@@ -17,11 +17,11 @@ const heroActions = supTasks(3, ['Fri', 'May 11', 'Today'], { width: 400, shadow
 
 /** 15.14 · Ticket Status (Figma 49:168230). */
 export default {
-  breadcrumb: supBreadcrumb('Ticket Status'),
+  breadcrumb: supBreadcrumb('Ticket status'),
 
   /** 01 · Hero (820): my tickets and decisions (−6°) behind action items. */
   ...centeredHero({
-    eyebrow: 'Support  ·  Ticket Status',
+    eyebrow: 'Support  ·  Ticket status',
     title: 'Check ticket',
     accent: 'status',
     lead: 'Already raised a ticket? Check where it is and add more detail.',

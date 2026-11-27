@@ -23,7 +23,7 @@ const EXPLORE_API = link('Explore the API', D.api.to);
 
 /** 14.01 · Developer Overview (Figma 49:155906). */
 export default {
-  breadcrumb: [{ label: 'Home', to: ROUTES.home }, { label: 'Developer Overview' }],
+  breadcrumb: [{ label: 'Home', to: ROUTES.home }, { label: 'Developer overview' }],
 
   sections: [
     /** D · Hero (49:155910). */
@@ -50,7 +50,7 @@ export default {
           visual: h(EndpointsPanel, { width: 400 }),
         },
         {
-          title: 'API Documentation',
+          title: 'API documentation',
           tagline: D.apiDocumentation.tagline,
           body: 'Use Acumeet’s API documentation to understand prerequisites, access setup, request structure, responses, errors, and implementation practices.',
           cta: link('Open API Documentation', D.apiDocumentation.to),
@@ -72,7 +72,7 @@ export default {
           }),
         },
         {
-          title: 'API Reference',
+          title: 'API reference',
           tagline: D.apiReference.tagline,
           body: 'The API Reference is the detailed source for supported endpoints, request and response schemas, permissions, status codes, and documented limits.',
           cta: link('Open API Reference', D.apiReference.to),
@@ -181,7 +181,7 @@ export default {
     {
       type: 'directory',
       eyebrow: 'Developers',
-      title: 'Explore Developers',
+      title: 'Explore developers',
       items: DEV_KEYS.map((k) => ({ title: D[k].title, tagline: D[k].tagline, to: D[k].to })),
     },
   ],

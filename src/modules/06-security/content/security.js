@@ -7,39 +7,39 @@ const S = ROUTES.securityPage;
  * also the Directory "Link card" line. Slugs match the header mega menu.
  */
 export const SECURITY = {
-  overview: { title: 'Security Overview', to: S.overview, figma: '48:325159' },
+  overview: { title: 'Security overview', to: S.overview, figma: '48:325159' },
   zeroTrust: {
-    title: 'Zero Trust Architecture',
+    title: 'Zero trust architecture',
     tagline: 'Verify access. Limit trust. Protect every boundary.',
     to: S.zeroTrust,
     figma: '48:325303',
   },
   identityAccess: {
-    title: 'Identity & Access',
+    title: 'Identity & access',
     tagline: 'Give the right people the right level of access.',
     to: S.identityAccess,
     figma: '48:325402',
   },
   dataSecurity: {
-    title: 'Data Security',
+    title: 'Data security',
     tagline: 'Protect meeting information throughout its journey.',
     to: S.dataSecurity,
     figma: '48:325595',
   },
   aiSecurity: {
-    title: 'AI Security',
+    title: 'AI security',
     tagline: 'Build safeguards around sensitive meeting content.',
     to: S.aiSecurity,
     figma: '48:325695',
   },
   auditMonitoring: {
-    title: 'Audit & Monitoring',
+    title: 'Audit & monitoring',
     tagline: 'Make relevant activity easier to review and investigate.',
     to: S.auditMonitoring,
     figma: '48:325863',
   },
   dataLifecycle: {
-    title: 'Data Lifecycle',
+    title: 'Data lifecycle',
     tagline: 'Define how meeting data is kept, moved, and removed.',
     to: S.dataLifecycle,
     figma: '48:326037',
@@ -57,7 +57,7 @@ export const HERO_ACTIONS = {
 /** Home / Security Overview / {page}. */
 export const secBreadcrumb = (label) => [
   { label: 'Home', to: ROUTES.home },
-  { label: 'Security Overview', to: S.overview },
+  { label: 'Security overview', to: S.overview },
   { label },
 ];
 
@@ -77,10 +77,10 @@ const SLOTS = [
   { tint: 'mint', pattern: { type: 'hairlines', size: 'mini' } },
 ];
 
-/** "Explore Security" row — every "Related" card reads "Security". */
+/** "Explore security" row — every "Related" card reads "Security". */
 export const exploreSecurity = (keys) => ({
   eyebrow: 'Keep exploring',
-  title: 'Explore Security',
+  title: 'Explore security',
   cards: keys.map((k, i) => ({
     title: SECURITY[k].title,
     description: 'Security',

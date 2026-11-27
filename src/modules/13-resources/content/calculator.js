@@ -6,7 +6,7 @@ const heroAnalytics = analytics('Last 30 days', [68, 50, 73], { width: 400, shad
 
 /** 13.11 · Meeting Productivity Calculator (Figma 49:139942). */
 export default {
-  breadcrumb: resBreadcrumb('Meeting Productivity Calculator'),
+  breadcrumb: resBreadcrumb('Meeting productivity calculator'),
 
   /** 01 · Hero (829): talk time and decisions (−6°) behind meeting analytics. */
   ...centeredHero({

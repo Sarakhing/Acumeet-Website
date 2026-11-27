@@ -15,11 +15,11 @@ const TITLE = 'Explore customer-owned storage for meeting data.';
 
 /** 10.05 · BYOS Deployment (Figma 48:393876). */
 export default {
-  breadcrumb: depBreadcrumb('BYOS Deployment'),
+  breadcrumb: depBreadcrumb('BYOS deployment'),
 
   /** 01 · Hero + "Hero carousel · 10.05 · BYOS Deployment" (48:353285). */
   ...ringsHero({
-    eyebrow: 'BYOS Deployment',
+    eyebrow: 'BYOS deployment',
     title: TITLE,
     lead: 'Bring Your Own Storage (BYOS) is intended for organisations that want to assess the use of their own storage environment for supported Acumeet data. Confirm supported providers, data flows, key handling, and responsibility boundaries before relying on BYOS in production.',
     primary: CONTACT('Discuss BYOS requirements'),

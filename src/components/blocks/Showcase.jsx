@@ -96,7 +96,7 @@ export function ShowcaseTile({ id, layout = 'stack', tint = 'lilac', eyebrow, ti
         )}
       >
         {eyebrow && (
-          <p className={cn('font-mono text-overline uppercase', dark ? 'text-ink-on-dark-faint' : 'text-ink-500')}>{eyebrow}</p>
+          <p className={dark ? 'eyebrow-dark' : 'eyebrow'}>{eyebrow}</p>
         )}
         <h3
           id={id ? `${id}-title` : undefined}
@@ -145,7 +145,7 @@ export default function Showcase({ id, eyebrow, title, index = [], rows = [], cl
     <section id={id} className={cn('scroll-mt-nav bg-surface-white pb-16 pt-14 lg:pb-[120px] lg:pt-20', className)}>
       <Container width="wide">
         <div className="flex flex-col items-center gap-6 text-center">
-          {eyebrow && <p className="font-mono text-[12px] font-medium uppercase leading-[1.55] tracking-[0.72px] text-brand-magenta">{eyebrow}</p>}
+          {eyebrow && <p className="eyebrow">{eyebrow}</p>}
           <h2 className="max-w-[900px] text-[34px] font-medium leading-[1.06] tracking-[-1px] text-ink-800 sm:text-[40px] lg:text-[48px] lg:tracking-[-1.44px]">
             {title}
           </h2>

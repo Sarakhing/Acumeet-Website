@@ -10,9 +10,9 @@ export default {
   /** 01 · Hero + "Hero carousel · 05.08 · Sales" (48:312339). */
   ...ringsHero({
     eyebrow: 'Sales',
-    title: 'Turn Sales Conversations into Clear Next Steps',
+    title: 'Turn sales conversations into clear next steps',
     lead: 'Sales teams handle discovery calls, product demonstrations, stakeholder meetings, negotiations, and pipeline reviews. Acumeet helps capture meeting discussions, summarise customer needs and key points, and document agreed follow-ups—so teams can spend less time reconstructing conversations and more time moving opportunities forward.',
-    secondary: { label: 'Explore Meeting Intelligence', to: ROUTES.product.meetingIntelligence },
+    secondary: { label: 'Explore meeting intelligence', to: ROUTES.product.meetingIntelligence },
     slides: [
       ['Analytics', analytics('Last 30 days', [66, 54, 80], { width: 560 })],
       [

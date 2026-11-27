@@ -28,16 +28,16 @@ const sprintLines = (t1, t2, t3) => [
 
 /** 02.03 · AI Transcription (Figma 46:37240). */
 export const aiTranscription = {
-  breadcrumb: productBreadcrumb('AI Transcription'),
+  breadcrumb: productBreadcrumb('AI transcription'),
 
   /** 01 · Hero (46:37243) — dark rings hero, carousel bleeds into the next section. */
   hero: {
     variant: 'rings',
-    eyebrow: 'Product · AI Transcription',
-    title: 'Turn Business Conversations into Usable Text',
+    eyebrow: 'Product · AI transcription',
+    title: 'Turn business conversations into usable text',
     lead: 'Acumeet AI meeting transcription software helps teams turn spoken business discussions into text they can review, reference and use after the meeting. Keep important details from conversations accessible, reduce reliance on handwritten notes and give your team a clearer record of what was discussed.',
     primary: { label: 'Explore Acumeet', to: ROUTES.products },
-    secondary: { label: 'Book a Demo', to: ROUTES.bookDemo },
+    secondary: { label: 'Book a demo', to: ROUTES.bookDemo },
     secondaryStyle: 'link',
   },
 
@@ -83,7 +83,7 @@ export const aiTranscription = {
       label: 'Summary',
       content: h(SummaryCard, {
         width: 560,
-        title: 'Monthly Marketing Strategy Review',
+        title: 'Monthly marketing strategy review',
         scores: [
           { label: 'Quality', value: 77, bar: 'amber' },
           { label: 'Sentiment', value: 75, bar: 'green' },
@@ -100,7 +100,7 @@ export const aiTranscription = {
   /** Split 46:37271 — copy left, blue rings panel with the transcript. */
   split: {
     size: 'standard',
-    title: 'Important Details Should Not Disappear When a Meeting Ends',
+    title: 'Important details should not disappear when a meeting ends',
     body: [
       'Business meetings move quickly. People may miss details while taking notes, misunderstand a point or struggle to find a specific statement later. When meeting information is scattered across personal notes and follow-up messages, it becomes harder for teams to work from a shared record.',
       'Automated meeting transcription can help make conversations easier to review by creating a text record of meeting discussions. With Acumeet, teams can use captured meeting information as a reference point for follow-up and organisational knowledge, subject to their workspace settings and available features.',
@@ -133,7 +133,7 @@ export const aiTranscription = {
   /** Stepper 46:37322 + "✓ Stepper · How Acumeet AI Meeting Transcription Works" (46:44404). */
   how: {
     title: 'How Acumeet AI Meeting',
-    accent: 'Transcription Works',
+    accent: 'transcription works',
     accentBreak: false,
     tone: 'white',
     steps: [
@@ -147,7 +147,7 @@ export const aiTranscription = {
           date: 'Mon, May 25',
           meetings: [
             { title: 'Product Development Sync-Up', meta: '2:00 PM · Meet' },
-            { title: 'Client Feedback Analysis Session', meta: '4:00 PM · Teams' },
+            { title: 'Client feedback analysis session', meta: '4:00 PM · Teams' },
             { title: 'Weekly ProcureCentro Stand-up', meta: '9:00 AM · Zoom' },
           ],
         }),
@@ -198,8 +198,8 @@ export const aiTranscription = {
 
   /** Benefits 46:37326 + "✓ Card · …" (630×280, State 2 = night) — CardGrid columns={2}. */
   benefits: {
-    title: 'Benefits of Business Meeting',
-    accent: 'Transcription',
+    title: 'Benefits of business meeting',
+    accent: 'transcription',
     columns: 2,
     cards: [
       {
@@ -234,7 +234,7 @@ export const aiTranscription = {
     tone: 'subtle',
     pattern: 'waveform',
     title: 'Built for Business and',
-    accent: 'Enterprise Meetings',
+    accent: 'enterprise meetings',
     paragraphs: [
       'Acumeet is designed for organisations that need meeting information to remain useful beyond the live conversation. Teams can use AI meeting transcription as part of a broader meeting intelligence workflow that supports review, summaries, action tracking and knowledge retention.',
     ],
@@ -271,9 +271,9 @@ export const aiTranscription = {
 
   /** CTA band 46:37359 — single CTA. */
   cta: {
-    title: 'Make Every Business Conversation Easier to Revisit',
+    title: 'Make every business conversation easier to revisit',
     lead: 'Turn spoken discussions into a written record your team can review, reference and build on. Explore how Acumeet brings meeting transcription into a broader workflow for meeting intelligence.',
-    primary: { label: 'Book a Demo', to: ROUTES.bookDemo },
+    primary: { label: 'Book a demo', to: ROUTES.bookDemo },
     secondary: null,
   },
 };

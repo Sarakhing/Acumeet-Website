@@ -33,47 +33,47 @@ export const explorerItems = (items) => items.map((it, i) => ({ ...PANELS[i % PA
 /** Breadcrumb for an FS sub-page: Home / Industries / Financial Services / {page}. */
 export const fsBreadcrumb = (label) => [
   { label: 'Home', to: ROUTES.home },
-  { label: 'Industries Overview', to: INDUSTRIES.overview.to },
-  { label: 'Financial Services', to: INDUSTRIES.financialServices.to },
+  { label: 'Industries overview', to: INDUSTRIES.overview.to },
+  { label: 'Financial services', to: INDUSTRIES.financialServices.to },
   { label },
 ];
 
 /** Breadcrumb for a top-level industry page: Home / Industries / {page}. */
 export const industryBreadcrumb = (label) => [
   { label: 'Home', to: ROUTES.home },
-  { label: 'Industries Overview', to: INDUSTRIES.overview.to },
+  { label: 'Industries overview', to: INDUSTRIES.overview.to },
   { label },
 ];
 
 /** The two outlined buttons under every info note. */
 export const NOTE_CTAS = [
-  { label: 'Book a Demo', to: ROUTES.bookDemo },
-  { label: 'Contact Our Team', to: ROUTES.contactSales },
+  { label: 'Book a demo', to: ROUTES.bookDemo },
+  { label: 'Contact our team', to: ROUTES.contactSales },
 ];
 
 /**
  * Follow-through split ("Make Follow-Through Easier", 704 tall): pink rings panel
- * on the left with an action-items card, title + body, Book a Demo + "Contact Our Team →".
+ * on the left with an action-items card, title + body, Book a Demo + "Contact our team →".
  */
 export const followSplit = (title, body, content) => ({
   size: 'compact',
   reverse: true,
   title,
   body: [body],
-  cta: { label: 'Book a Demo', to: ROUTES.bookDemo },
-  secondary: { label: 'Contact Our Team', to: ROUTES.contactSales },
+  cta: { label: 'Book a demo', to: ROUTES.bookDemo },
+  secondary: { label: 'Contact our team', to: ROUTES.contactSales },
   visual: { tint: 'pink', pattern: { type: 'rings', size: 'panel' }, content },
 });
 
-/** Subtle waveform statement (Credit Committees "A Documentation Aid…", 537 tall): Book a Demo + "Contact Our Team →". */
+/** Subtle waveform statement (Credit Committees "A Documentation Aid…", 537 tall): Book a Demo + "Contact our team →". */
 export const disclaimer = (title, accent, body) => ({
   tone: 'subtle',
   pattern: 'waveform',
   title,
   accent,
   paragraphs: [body],
-  cta: { label: 'Book a Demo', to: ROUTES.bookDemo },
-  secondary: { label: 'Contact Our Team', to: ROUTES.contactSales },
+  cta: { label: 'Book a demo', to: ROUTES.bookDemo },
+  secondary: { label: 'Contact our team', to: ROUTES.contactSales },
 });
 
 /**

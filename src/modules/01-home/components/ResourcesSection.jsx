@@ -14,13 +14,13 @@ function WavePattern({ seed }) {
 }
 
 function RingsPattern() {
-  return <img src={ringsPattern} alt="" width={120} height={32} className="block h-8 w-[120px]" />;
+  return <img src={ringsPattern} alt="" width={120} height={32} className="motion-breathe block h-8 w-[120px] [--motion-origin:left_center]" />;
 }
 
 function DotsPattern() {
   return (
     <div aria-hidden="true" className="relative h-8 w-[120px] overflow-hidden">
-      <img src={dotsPattern} alt="" width={112} height={22} className="absolute top-[5px] left-[5px] block h-[22px] w-[112px]" />
+      <img src={dotsPattern} alt="" width={112} height={22} className="motion-pan absolute top-[5px] left-[5px] block h-[22px] w-[112px]" />
     </div>
   );
 }
@@ -28,30 +28,30 @@ function DotsPattern() {
 const RESOURCES = [
   {
     id: 'productivity-leakage',
-    title: 'Productivity Leakage Calculator',
+    title: 'Productivity leakage calculator',
     summary: 'Understand the potential cost of meeting inefficiency.',
     body: "Use the Productivity Leakage Calculator to estimate how meeting time, administrative overhead and follow-up challenges may affect your organisation's productivity. Explore the potential impact and identify opportunities to improve how meetings are managed.",
-    cta: 'Calculate Your Productivity Leakage',
+    cta: 'Calculate your productivity leakage',
     to: ROUTES.resources,
     bg: 'bg-[#f4f1fa]',
     pattern: <WavePattern seed={7} />,
   },
   {
     id: 'governance-maturity',
-    title: 'Governance & Compliance Maturity Score Calculator',
+    title: 'Governance & compliance maturity score calculator',
     summary: 'Assess your governance and compliance maturity.',
     body: "Evaluate your organisation's approach to meeting governance, data handling, access controls and oversight through a guided self-assessment. Identify potential areas for improvement as your organisation considers AI adoption and enterprise governance requirements.",
-    cta: 'Assess Your Governance Maturity',
+    cta: 'Assess your governance maturity',
     to: ROUTES.resources,
     bg: 'bg-[#fbf0f5]',
     pattern: <RingsPattern />,
   },
   {
     id: 'blogs-insights',
-    title: 'Blogs & Insights',
+    title: 'Blogs & insights',
     summary: 'Ideas and guidance for better meeting intelligence.',
     body: 'Explore articles, AI meeting guides and practical insights covering meeting productivity, enterprise meeting management, AI adoption, security and governance. Find useful perspectives to help your team understand the opportunities and considerations involved in bringing AI into meeting workflows.',
-    cta: 'Explore Blogs & Insights',
+    cta: 'Explore blogs & insights',
     to: ROUTES.resources,
     bg: 'bg-[#eef4ff]',
     pattern: <DotsPattern />,
@@ -99,7 +99,7 @@ export default function ResourcesSection() {
             id="resources-title"
             className="max-w-[880px] text-balance text-[32px] leading-[1.12] font-medium tracking-[-0.9px] text-ink-800 sm:text-[40px] lg:text-[48px] lg:tracking-[-1.44px]"
           >
-            AI Meeting Productivity Resources
+            AI meeting productivity resources
           </h2>
           <p className="max-w-[820px] text-body leading-[1.5] text-[#4f5566] sm:text-[18px]">
             Discover practical AI meeting guides, meeting intelligence insights and AI meeting best

@@ -53,15 +53,15 @@ const reviewSummary = (title, width) =>
 
 /** 02.06 · Speaker Recognition (Figma 46:39919). */
 export const speakerRecognition = {
-  breadcrumb: productBreadcrumb('Speaker Recognition'),
+  breadcrumb: productBreadcrumb('Speaker recognition'),
 
   /** 01 · Hero (46:39922) — dark rings hero, outlined "Explore Acumeet" pill. */
   hero: {
     variant: 'rings',
-    eyebrow: 'Product · Speaker Recognition',
-    title: 'Know Who Said What in Every Meeting',
+    eyebrow: 'Product · Speaker recognition',
+    title: 'Know who said what in every meeting',
     lead: 'Keep meeting conversations clear and easier to review with AI speaker recognition. Acumeet helps teams connect spoken contributions to the right speakers, making meeting transcripts more useful for understanding discussions, decisions, and next steps.',
-    primary: { label: 'Book a Demo', to: ROUTES.bookDemo },
+    primary: { label: 'Book a demo', to: ROUTES.bookDemo },
     secondary: { label: 'Explore Acumeet', to: ROUTES.products },
   },
 
@@ -95,13 +95,13 @@ export const speakerRecognition = {
   split: {
     size: 'standard',
     reverse: true,
-    title: 'A Meeting Transcript Is More Useful When You Know Who Spoke',
+    title: 'A meeting transcript is more useful when you know who spoke',
     body: [
       'A transcript may capture the words spoken during a meeting, but understanding the conversation also requires knowing who contributed each point.',
       'When speaker attribution is unclear, teams can struggle to follow the flow of a discussion, revisit specific contributions, and understand the context behind important decisions.',
       'Acumeet’s speaker recognition experience is designed to make conversations easier to interpret by helping distinguish speakers within meeting transcripts.',
     ],
-    cta: { label: 'See How Acumeet Works', to: ROUTES.products },
+    cta: { label: 'See how Acumeet works', to: ROUTES.products },
     visual: {
       tint: 'blue',
       pattern: { type: 'rings', size: 'panel' },
@@ -130,31 +130,31 @@ export const speakerRecognition = {
   /** Tabs explorer (46:40004) + "✓ Explorer · Key Features" (46:46515). */
   explorer: {
     title: 'Key',
-    accent: 'Features',
+    accent: 'features',
     items: [
       {
-        title: 'Speaker Identification',
+        title: 'Speaker identification',
         body: 'Make it easier to distinguish different speakers in a meeting transcript so readers can follow the conversation and understand individual contributions.',
         tint: 'lilac',
         pattern: { type: 'dots', size: 'explorer' },
         visual: h(TalkTimeCard, { width: 480, duration: '60 min', speakers: speakers(25, 25, 20, 15, 15) }),
       },
       {
-        title: 'Clear Speaker Attribution',
+        title: 'Clear speaker attribution',
         body: 'Associate transcript segments with identified speakers where supported, helping teams understand who made a point or contributed to a discussion.',
         tint: 'pink',
         pattern: { type: 'rings', size: 'explorer' },
         visual: h(TranscriptCard, { lines: sprintLines('03:21', '04:28', '05:35') }),
       },
       {
-        title: 'Easier Transcript Review',
+        title: 'Easier transcript review',
         body: 'Make conversations easier to revisit by giving readers more context around the flow of the discussion and the people involved.',
         tint: 'blue',
         pattern: { type: 'hairlines', size: 'explorer' },
         visual: reviewSummary('Monthly Marketing Strategy Review', 440),
       },
       {
-        title: 'Better Context for Meeting Intelligence',
+        title: 'Better context for meeting intelligence',
         body: 'Speaker attribution can support a clearer understanding of meeting discussions alongside summaries, decisions, and follow-up actions.',
         tint: 'mint',
         pattern: { type: 'waveform', size: 'explorer' },
@@ -174,8 +174,8 @@ export const speakerRecognition = {
 
   /** Benefits 46:40008 — bento: 846 + 413, then 3 × 413 ("✓ Card · …"). */
   benefits: {
-    title: 'Bring More Context to',
-    accent: 'Every Conversation',
+    title: 'Bring more context to',
+    accent: 'every conversation',
     accentBreak: false,
     tone: 'subtle',
     cards: [
@@ -215,8 +215,8 @@ export const speakerRecognition = {
 
   /** Stepper 46:40018 + "✓ Stepper · From Spoken Conversation…" (46:46882). */
   how: {
-    title: 'From Spoken Conversation to Clearer',
-    accent: 'Meeting Records',
+    title: 'From spoken conversation to clearer',
+    accent: 'meeting records',
     accentBreak: false,
     tone: 'white',
     steps: [
@@ -229,9 +229,9 @@ export const speakerRecognition = {
           width: 440,
           date: 'Tue, Jun 14',
           meetings: [
-            { title: 'Monthly Marketing Strategy Review', meta: '10:30 AM · Meet' },
+            { title: 'Monthly marketing strategy review', meta: '10:30 AM · Meet' },
             { title: 'Product Development Sync-Up', meta: '11:00 AM · Teams' },
-            { title: 'Client Feedback Analysis Session', meta: '3:30 PM · Zoom' },
+            { title: 'Client feedback analysis session', meta: '3:30 PM · Zoom' },
           ],
         }),
       },
@@ -288,9 +288,9 @@ export const speakerRecognition = {
 
   /** CTA band 46:40045. */
   cta: {
-    title: 'Give Every Voice More Context',
+    title: 'Give every voice more context',
     lead: 'Make meeting conversations easier to understand and revisit. Explore how Acumeet’s meeting intelligence capabilities can help your team get more value from the conversations that move work forward.',
-    primary: { label: 'Book a Demo', to: ROUTES.bookDemo },
-    secondary: { label: 'Get Started', to: ROUTES.getStarted },
+    primary: { label: 'Book a demo', to: ROUTES.bookDemo },
+    secondary: { label: 'Get started', to: ROUTES.getStarted },
   },
 };

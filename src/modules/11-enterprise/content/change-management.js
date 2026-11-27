@@ -22,12 +22,12 @@ const heroDecisions = decisions(
 
 /** 11.11 · Change Management (Figma 49:69194). */
 export default {
-  breadcrumb: entBreadcrumb('Change Management'),
+  breadcrumb: entBreadcrumb('Change management'),
 
   /** 01 · Hero (826): summary (tilted 3°) behind decisions. */
   ...entPage('changeManagement', {
     hero: 'centered',
-    eyebrow: 'Change Management',
+    eyebrow: 'Change management',
     title: 'Make adoption',
     accent: 'stick',
     lead: 'Acumeet changes how meeting knowledge is captured, found and acted on. Adoption works best when teams understand the change and see the value.',

@@ -15,11 +15,11 @@ export const protect = {
   hero: {
     variant: 'wash',
     eyebrow: 'Solutions · Protect',
-    title: 'Protect Sensitive Information in',
-    accent: 'Every Meeting.',
+    title: 'Protect sensitive information in',
+    accent: 'every meeting.',
     lead: 'Acumeet helps enterprises protect sensitive meeting information by turning business conversations into structured, searchable intelligence while supporting responsible handling of confidential data. Give your teams the information they need while keeping privacy and data protection in focus.',
-    primary: { label: 'Book a Demo', to: ROUTES.bookDemo },
-    secondary: { label: 'Explore Acumeet Security', to: ROUTES.security },
+    primary: { label: 'Book a demo', to: ROUTES.bookDemo },
+    secondary: { label: 'Explore Acumeet security', to: ROUTES.security },
     visual: h(ProtectHeroVisual),
     visualWidth: 665,
   },
@@ -35,8 +35,8 @@ export const protect = {
   },
 
   explorer: {
-    title: 'How Acumeet Helps Protect',
-    accent: 'Meeting Information',
+    title: 'How Acumeet helps protect',
+    accent: 'meeting information',
     items: [
       {
         title: 'Protect sensitive information',
@@ -99,8 +99,8 @@ export const protect = {
   },
 
   audiences: {
-    title: 'Designed for Sensitive Business',
-    accent: 'Conversations',
+    title: 'Designed for sensitive business',
+    accent: 'conversations',
     items: [
       { body: "Acumeet's Protect solution is relevant to teams that regularly handle confidential information, including:" },
       { title: 'Financial services', body: 'discussions involving financial performance, risk and commercial decisions.' },
@@ -112,12 +112,12 @@ export const protect = {
   },
 
   split: {
-    title: 'Protect the Value Created in Meetings',
+    title: 'Protect the value created in meetings',
     body: [
       'Security is not just about protecting a recording. It also matters when meeting information becomes summaries, action items, searchable records and organisational knowledge.',
       'Acumeet helps organisations turn conversations into useful business information.',
     ],
-    cta: { label: 'See How Acumeet Works', to: ROUTES.products },
+    cta: { label: 'See how Acumeet works', to: ROUTES.products },
     visual: { tint: 'lilac', pattern: { type: 'rings', size: 'panel' }, content: h(KeysStorageCard, { actions: ['Manage', 'Connected'] }) },
   },
 
@@ -143,9 +143,9 @@ export const protect = {
   related: relatedSolutions('control', 'secure', 'govern', 'emi'),
 
   cta: {
-    title: 'Protect Sensitive Information in Every Meeting.',
+    title: 'Protect sensitive information in every meeting.',
     lead: null,
-    primary: { label: 'Book a Demo', to: ROUTES.bookDemo },
+    primary: { label: 'Book a demo', to: ROUTES.bookDemo },
     secondary: null,
   },
 };

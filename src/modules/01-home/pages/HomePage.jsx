@@ -31,7 +31,7 @@ export default function HomePage() {
         size="home"
         title="Ready to Explore Acumeet?"
         lead="Discover how Acumeet can support your organisation's meeting workflows and enterprise requirements."
-        primary={{ label: 'Book a Demo', to: ROUTES.bookDemo }}
+        primary={{ label: 'Book a demo', to: ROUTES.bookDemo }}
         secondary={{ label: 'Explore the Platform', to: ROUTES.products }}
       />
     </>

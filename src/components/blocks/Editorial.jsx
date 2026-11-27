@@ -39,7 +39,7 @@ export default function Editorial({
             accent={accent}
             className={cn(
               'text-[30px] font-medium leading-[1.12] tracking-[-0.9px] lg:text-heading-xl',
-              dark && '[&>span:first-child]:text-ink-on-dark',
+              dark && 'text-ink-on-dark!',
             )}
           >
             {title}

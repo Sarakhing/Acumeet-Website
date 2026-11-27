@@ -6,7 +6,7 @@ const TITLE = 'Everything you need to work with Acumeet';
 
 /** 13.12 · Acumeet Documentation (Figma 49:140194). Doc pages are not built, so tiles are not links. */
 export default {
-  breadcrumb: resBreadcrumb('Acumeet Documentation'),
+  breadcrumb: resBreadcrumb('Acumeet documentation'),
 
   /** 01 · Hero + "Hero carousel · 13.12 · Acumeet Documentation" (49:81359). */
   hero: {

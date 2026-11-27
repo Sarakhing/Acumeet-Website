@@ -139,7 +139,7 @@ export default function HowItWorksSection() {
           id={`${uid}-heading`}
           className="max-w-[810px] text-center text-[32px] font-medium leading-[1.12] tracking-[-0.64px] text-ink-900 text-balance sm:text-[40px] sm:tracking-[-0.8px] lg:text-[48px] lg:tracking-[-0.96px]"
         >
-          Critical Decisions Shouldn’t Disappear After the Meeting.
+          Critical decisions shouldn’t disappear after the meeting.
         </h2>
 
         <div

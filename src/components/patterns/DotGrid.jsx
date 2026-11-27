@@ -17,22 +17,46 @@ const FADES = {
  * - Without `size` it renders an infinite CSS field (used for full-bleed section
  *   backgrounds, where Figma draws hundreds of 2px ellipses on a 22px pitch).
  *   tone: light (ink 8%) | dark (white 8%); fade: none | left | radial | edges.
+ * - Both drift slowly (motion={false} to keep still).
  */
-export default function DotGrid({ size, tone = 'light', pitch = 22, offset = 11, fade = 'none', className }) {
-  if (size) return <PatternImage asset={DOTS[size]} position="left top" className={className} />;
+export default function DotGrid({
+  size,
+  tone = 'light',
+  pitch = 22,
+  offset = 11,
+  fade = 'none',
+  motion = true,
+  className,
+}) {
+  if (size)
+    return (
+      <PatternImage
+        asset={DOTS[size]}
+        position="left top"
+        motion={motion ? 'pan' : 'none'}
+        className={className}
+      />
+    );
   const color = tone === 'dark' ? 'rgb(255 255 255 / 0.08)' : 'rgb(11 11 18 / 0.08)';
   const mask = FADES[fade];
+  // The dots sit on an inner layer one pitch larger on each side that drifts by one pitch
+  // (seamless); the fade mask stays on the outer box so it doesn't move.
   return (
     <div
       aria-hidden="true"
-      className={cn('pointer-events-none absolute inset-0', className)}
-      style={{
-        backgroundImage: `radial-gradient(circle at 1px 1px, ${color} 1px, transparent 1.25px)`,
-        backgroundSize: `${pitch}px ${pitch}px`,
-        backgroundPosition: `${offset}px ${offset}px`,
-        maskImage: mask,
-        WebkitMaskImage: mask,
-      }}
-    />
+      className={cn('pointer-events-none absolute inset-0 overflow-hidden', className)}
+      style={{ maskImage: mask, WebkitMaskImage: mask }}
+    >
+      <div
+        className={cn('absolute', motion && 'motion-dots')}
+        style={{
+          inset: -pitch,
+          '--dot-pitch': `${pitch}px`,
+          backgroundImage: `radial-gradient(circle at 1px 1px, ${color} 1px, transparent 1.25px)`,
+          backgroundSize: `${pitch}px ${pitch}px`,
+          backgroundPosition: `${offset}px ${offset}px`,
+        }}
+      />
+    </div>
   );
 }

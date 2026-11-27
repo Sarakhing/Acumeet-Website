@@ -14,13 +14,13 @@ const heroActions = rollout(4, ['Fri', 'May 17', 'Jun 22'], { width: 400, shadow
 
 /** 11.17 · PoC Scope (Figma 49:69969). */
 export default {
-  breadcrumb: entBreadcrumb('PoC Scope', { poc: true }),
+  breadcrumb: entBreadcrumb('PoC scope', { poc: true }),
 
   /** 01 · Hero (771): decisions (tilted 3°) behind action items. */
   ...entPage('pocScope', {
     hero: 'centered',
     tabKey: 'poc',
-    eyebrow: 'PoC Scope',
+    eyebrow: 'PoC scope',
     title: 'Focus the PoC on',
     accent: 'what matters',
     lead: 'Focus on the meetings, users, controls and workflows most relevant to your buying decision.',

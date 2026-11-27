@@ -21,7 +21,7 @@ export default {
   hero: {
     variant: 'centered',
     eyebrow: 'Insurance',
-    title: 'Make Insurance Meetings More Structured and Actionable',
+    title: 'Make insurance meetings more structured and actionable',
     lead: 'Acumeet helps insurance teams document discussions, preserve decisions and organise follow-up actions across claims, underwriting, broker relationships and customer strategy.',
     visual: heroCanvas(
       508,
@@ -65,7 +65,7 @@ export default {
   explorer: {
     items: explorerItems([
       {
-        title: 'Keep Complex Discussions Organised',
+        title: 'Keep complex discussions organised',
         body: 'Insurance workflows bring together claims teams, underwriters, brokers, operations and customer-facing teams. Structured meeting records help preserve what was discussed and what needs to happen next.',
         visual: summary('Claims Review Committee', [65, 72, 18], [
           'Underwriting flagged rising losses on motor policies.',
@@ -73,7 +73,7 @@ export default {
         ]),
       },
       {
-        title: 'Capture Decisions and Commitments',
+        title: 'Capture decisions and commitments',
         body: 'Summaries and action items can help teams record decisions, outstanding questions, assigned responsibilities and customer or broker follow-ups.',
         visual: actions(4, [
           ['Share broker commission reconciliation', 'Today'],
@@ -82,7 +82,7 @@ export default {
         ]),
       },
       {
-        title: 'Maintain Context Across Teams',
+        title: 'Maintain context across teams',
         body: 'Make meeting-derived information easier to revisit across ongoing claims, policy servicing, renewal planning and operational reviews.',
         visual: search(
           'claims triage threshold',
@@ -95,7 +95,7 @@ export default {
         ),
       },
       {
-        title: 'Insurance Workflows',
+        title: 'Insurance workflows',
         body: 'Support claims review meetings, underwriting discussions, broker meetings, policy and renewal planning, customer service reviews and internal business planning.',
         visual: capture('Fri, Jun 12', [
           ['Underwriting Review', '11:00 AM · Zoom'],
@@ -108,7 +108,7 @@ export default {
 
   /** 06 · Use Appropriate Information Safeguards (48:289362). */
   note: {
-    title: 'Use Appropriate Information Safeguards',
+    title: 'Use appropriate information safeguards',
     body: 'Insurance meetings may involve confidential customer or claim information. Follow internal policies and validate Acumeet’s available access, retention and data-handling controls before processing sensitive information.',
     ctas: NOTE_CTAS,
   },

@@ -13,12 +13,12 @@ import {
 
 /** 11.13 · Service Levels (Figma 49:69408). */
 export default {
-  breadcrumb: entBreadcrumb('Service Levels'),
+  breadcrumb: entBreadcrumb('Service levels'),
 
   /** 01 · Hero (680): meeting analytics in the window, action items overlapping, "Live" chip. */
   ...entPage('serviceLevels', {
     hero: 'window',
-    eyebrow: 'Service Levels',
+    eyebrow: 'Service levels',
     title: 'Service commitments that match',
     accent: 'your deployment',
     lead: 'Align support coverage and operational requirements with your enterprise deployment.',

@@ -37,13 +37,13 @@ export default function DevHero({ title, accent, lead, primary, secondary }) {
         <div className="flex flex-col items-start gap-6">
           <p className="flex items-center gap-3">
             <EarlyAccess dark />
-            <span className="font-mono text-[11px] uppercase tracking-[0.88px] text-[#8b8ba0]">
+            <span className="eyebrow-dark">
               Build with Acumeet
             </span>
           </p>
           <h1 className="text-[40px] font-medium leading-[1.06] tracking-[-1.6px] text-white sm:text-[52px] lg:text-[64px]">
             {title}{' '}
-            <span className="bg-[linear-gradient(90deg,#ff6fae,#b48cff)] bg-clip-text text-transparent">
+            <span>
               {accent}
             </span>
             .

@@ -7,11 +7,11 @@ const TITLE = 'Make data location a defined deployment requirement.';
 
 /** 07.06 · Data Residency (Figma 48:338502). */
 export default {
-  breadcrumb: tcBreadcrumb('Data Residency'),
+  breadcrumb: tcBreadcrumb('Data residency'),
 
   /** 01 · Hero (765 tall): keys & storage in the window, action items overlapping. */
   ...windowHero({
-    eyebrow: 'Data Residency',
+    eyebrow: 'Data residency',
     title: 'Make data location a defined',
     accent: 'deployment requirement.',
     lead: 'Data residency requirements should be discussed before implementation, not after rollout. Work with Acumeet to identify the data types involved, applicable locations, processing dependencies, and the evidence your organisation needs for approval.',

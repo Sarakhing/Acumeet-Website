@@ -14,10 +14,10 @@ export const govern = {
     variant: 'wash',
     eyebrowStyle: 'chip',
     eyebrow: 'Solutions · Govern',
-    title: 'Govern Every Meeting. Strengthen',
-    accent: 'Every Decision.',
+    title: 'Govern every meeting. Strengthen',
+    accent: 'every decision.',
     lead: 'Establish clear rules for how your organisation records, manages, shares, and retains meeting information. Acumeet helps enterprises bring structure, consistency, and accountability to meeting governance.',
-    primary: { label: 'Book an Enterprise Demo', to: ROUTES.bookDemo },
+    primary: { label: 'Book an enterprise demo', to: ROUTES.bookDemo },
     secondary: { label: 'Explore Acumeet', to: ROUTES.products },
     visual: h(GovernHeroVisual),
     visualWidth: 665,
@@ -30,7 +30,7 @@ export const govern = {
     reverse: true,
     eyebrow: 'Meeting governance',
     eyebrowStyle: 'mono',
-    title: 'Turn Meeting Policies into a More Consistent Way of Working.',
+    title: 'Turn meeting policies into a more consistent way of working.',
     body: [
       'Every meeting creates business information that needs to be managed responsibly. From recordings and transcripts to summaries and decisions, organisations need clear policies for how this information is handled.',
       'Acumeet supports a structured approach to meeting governance, helping organisations align meeting workflows with their internal policies, data-handling requirements, and business responsibilities.',
@@ -51,7 +51,7 @@ export const govern = {
   /** Editorial 46:18953. */
   transparency: {
     tone: 'subtle',
-    title: 'Make Transparency Part of Every Recorded Meeting.',
+    title: 'Make transparency part of every recorded meeting.',
     paragraphs: [
       'Recording meetings should come with clear expectations. Help your organisation establish responsible recording practices that respect participant privacy and align with applicable requirements.',
       'Acumeet supports a governance approach that prioritises transparency, consent, and responsible handling of recorded conversations.',
@@ -63,7 +63,7 @@ export const govern = {
     size: 'compact',
     tone: 'dark',
     reverse: true,
-    title: 'Keep Meeting Information for the Right Amount of Time.',
+    title: 'Keep meeting information for the right amount of time.',
     body: [
       'Not every meeting record needs to be kept indefinitely. Establish retention periods that reflect your organisation’s data governance policies, legal obligations, contractual requirements, and records-management practices.',
       'Acumeet supports configurable retention options, including 30 days, 90 days, 180 days, and a custom period for applicable storage configurations.',
@@ -88,7 +88,7 @@ export const govern = {
   rows: [
     {
       tone: 'subtle',
-      title: 'Keep Sensitive Meeting Information in the Right Hands.',
+      title: 'Keep sensitive meeting information in the right hands.',
       paragraphs: [
         'Meeting recordings, transcripts, and summaries can contain confidential business information. Clear sharing rules help organisations manage who should be able to access and distribute these records.',
         'Support responsible collaboration by aligning information sharing with your organisation’s access permissions, confidentiality requirements, and internal policies.',
@@ -96,7 +96,7 @@ export const govern = {
     },
     {
       tone: 'white',
-      title: 'Access Should Not Last Longer Than Necessary.',
+      title: 'Access should not last longer than necessary.',
       paragraphs: [
         'Business needs change, projects end, and responsibilities shift. Time-bound access can help organisations manage temporary access arrangements and reduce the risk of permissions remaining active beyond their intended purpose.',
         'Establish clearer expectations for temporary collaboration and periodic access reviews, in line with your organisation’s access-management policies.',
@@ -104,7 +104,7 @@ export const govern = {
     },
     {
       tone: 'subtle',
-      title: 'Classify Meeting Records. Make Information Easier to Govern.',
+      title: 'Classify meeting records. Make information easier to govern.',
       paragraphs: [
         'Consistent classification helps organisations organise meeting information and understand how different records should be handled.',
         'Use a structured tagging approach to categorise meeting records by relevant business context, such as department, project, meeting type, confidentiality level, or records-management category.',
@@ -117,7 +117,7 @@ export const govern = {
   redaction: {
     size: 'compact',
     reverse: true,
-    title: 'Define How Sensitive Information Should Be Handled.',
+    title: 'Define how sensitive information should be handled.',
     body: [
       'Meeting records may contain personal information, financial details, and confidential business discussions. Organisations need clear rules for identifying and protecting this information.',
       'Acumeet’s AI redaction capabilities can help identify and redact selected sensitive content, supporting your organisation’s approach to privacy and responsible information handling.',
@@ -141,7 +141,7 @@ export const govern = {
   /** Editorial 46:19056. */
   visibility: {
     tone: 'subtle',
-    title: 'Bring Greater Visibility to Meeting Governance.',
+    title: 'Bring greater visibility to meeting governance.',
     paragraphs: [
       'Governance requires more than policies on paper. Organisations need visibility into relevant activity to support internal reviews, oversight, and compliance processes.',
       'Compliance reporting can help authorised teams review available governance information, support internal assessments, and identify areas that may require further attention.',
@@ -151,11 +151,11 @@ export const govern = {
 
   /** "Benefits" 46:19063 — ✓ Card · … (46:21702 / 46:21730 / 46:21753). */
   industries: {
-    title: 'Governance for Sensitive Business',
-    accent: 'Environments',
+    title: 'Governance for sensitive business',
+    accent: 'environments',
     cards: [
       {
-        title: 'Financial Services and Insurance',
+        title: 'Financial services and insurance',
         body: 'Support consistent handling of sensitive discussions and business records.',
         tint: 'lilac',
         pattern: { type: 'rings', size: 'card' },
@@ -169,7 +169,7 @@ export const govern = {
         to: ROUTES.industries,
       },
       {
-        title: 'Legal, Compliance and Executive Teams',
+        title: 'Legal, compliance and executive teams',
         body: 'Support responsible recording, classification, retention, and review of important organisational conversations.',
         tint: 'blue',
         pattern: { type: 'hairlines', size: 'card' },
@@ -218,9 +218,9 @@ export const govern = {
   ],
 
   cta: {
-    title: 'Bring Structure to the Way Your Organisation Governs Meetings.',
+    title: 'Bring structure to the way your organisation governs meetings.',
     lead: 'Create clearer expectations for recording, consent, information sharing, retention, and accountability across your meeting workflows.',
-    primary: { label: 'Book an Enterprise Demo', to: ROUTES.bookDemo },
-    secondary: { label: 'Contact Our Team', to: ROUTES.contactSales },
+    primary: { label: 'Book an enterprise demo', to: ROUTES.bookDemo },
+    secondary: { label: 'Contact our team', to: ROUTES.contactSales },
   },
 };

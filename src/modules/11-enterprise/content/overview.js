@@ -6,7 +6,7 @@ const heroActions = rollout(4, ['Fri', 'Jun 26', 'May 4'], { width: 400, shadow:
 
 /** 11.01 · Enterprise Overview (Figma 49:67846). */
 export default {
-  breadcrumb: [{ label: 'Home', to: ROUTES.home }, { label: 'Enterprise Overview' }],
+  breadcrumb: [{ label: 'Home', to: ROUTES.home }, { label: 'Enterprise overview' }],
 
   /** 01 · Hero (890): summary behind action items over hairlines. */
   ...entPage('overview', {
@@ -46,7 +46,7 @@ export default {
     {
       type: 'journey',
       eyebrow: 'Enterprise',
-      title: 'Explore Enterprise',
+      title: 'Explore enterprise',
       stages: GROUPS.map(([label, keys]) => ({
         label,
         links: keys

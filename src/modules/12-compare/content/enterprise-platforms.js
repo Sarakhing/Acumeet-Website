@@ -37,7 +37,7 @@ const CARDS = [
 
 /** 12.04 · Acumeet vs Enterprise Meeting Intelligence Platforms (Figma 49:116398). */
 export default {
-  breadcrumb: cmpBreadcrumb('Acumeet vs Enterprise Meeting Intelligence Platforms'),
+  breadcrumb: cmpBreadcrumb('Acumeet vs Enterprise Meeting Intelligence platforms'),
 
   ...lightHero({
     height: 598,

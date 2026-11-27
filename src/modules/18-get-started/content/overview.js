@@ -4,7 +4,7 @@ const G = ROUTES.getStartedPage;
 
 /** 18.01 · Get Started (Figma 49:197079). */
 export default {
-  breadcrumb: [{ label: 'Home', to: ROUTES.home }, { label: 'Get Started' }],
+  breadcrumb: [{ label: 'Home', to: ROUTES.home }, { label: 'Get started' }],
   sections: [
     {
       type: 'hero',

@@ -68,7 +68,7 @@ export const PLANS = [
     monthly: '$30.99',
     unit: 'seat / month',
     audience: 'For larger organisations.',
-    cta: { label: 'Choose Business', to: ROUTES.getStarted },
+    cta: { label: 'Choose business', to: ROUTES.getStarted },
     featured: true,
     ai: ['Governed AI', 'Access and audit controls'],
     includes: 'Includes Team, plus:',

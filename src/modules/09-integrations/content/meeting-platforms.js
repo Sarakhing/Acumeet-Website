@@ -15,11 +15,11 @@ const heroCapture = capture(
 
 /** 09.02 · Meeting Platforms (Figma 48:384226). No related row in Figma. */
 export default {
-  breadcrumb: intBreadcrumb('Meeting Platforms'),
+  breadcrumb: intBreadcrumb('Meeting platforms'),
 
   /** 01 · Hero (941): integrations (+6°) and decisions (−6°) tilted behind upcoming meetings. */
   ...centeredHero({
-    eyebrow: 'Integrations  ·  Meeting Platforms',
+    eyebrow: 'Integrations  ·  Meeting platforms',
     title: 'Make meeting knowledge easier to capture',
     accent: 'and reuse.',
     lead: 'Acumeet supports meeting-intelligence workflows designed to turn conversations into summaries, decisions, and action items. Explore the meeting platforms and recording-upload pathway your organisation may use to bring meeting content into Acumeet.',

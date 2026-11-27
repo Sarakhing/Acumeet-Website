@@ -115,7 +115,7 @@ export function MarketCard({ eyebrow, statement, chips }) {
   return (
     <div className="relative isolate flex flex-col gap-5 overflow-hidden rounded-[28px] border border-[#e7e7ee] bg-surface-white p-8">
       <CornerRings />
-      <Pill className="relative">{eyebrow}</Pill>
+      <p className="eyebrow relative">{eyebrow}</p>
       <p className="relative text-[20px] leading-[1.4] font-medium tracking-[-0.18px] text-[#0b0b12] lg:text-[22px]">
         {statement}
       </p>

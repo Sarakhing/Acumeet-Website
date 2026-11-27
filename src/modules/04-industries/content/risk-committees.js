@@ -4,14 +4,14 @@ import { actions, capture, decisions, explorerItems, fsBreadcrumb, heroCanvas, s
 
 /** 04.06 · Risk Committees (Figma 48:289571). */
 export default {
-  breadcrumb: fsBreadcrumb('Risk Committees'),
+  breadcrumb: fsBreadcrumb('Risk committees'),
 
   /** 01 · Hero (48:289574) — 613 wash with hairlines, same composition as the Industries overview. */
   hero: {
-    eyebrow: 'Risk Committees',
+    eyebrow: 'Risk committees',
     eyebrowStyle: 'chip',
     pattern: 'hairlines',
-    title: 'Keep Risk Discussions, Decisions and Actions Connected',
+    title: 'Keep risk discussions, decisions and actions connected',
     titleSize: 54,
     copyWidth: 580,
     copyTop: 56,
@@ -55,7 +55,7 @@ export default {
   explorer: {
     items: explorerItems([
       {
-        title: 'Document Risk Discussions',
+        title: 'Document risk discussions',
         body: 'Create structured records of discussions about operational, enterprise and emerging risks so teams can revisit key points and agreed responses.',
         visual: summary('Risk Committee Meeting', [81, 76, 50], [
           'Owners will update remediation dates by Friday.',
@@ -63,7 +63,7 @@ export default {
         ]),
       },
       {
-        title: 'Track Mitigation Commitments',
+        title: 'Track mitigation commitments',
         body: 'Capture action items, responsibilities and next steps associated with risk discussions, making follow-up easier to manage.',
         visual: actions(5, [
           ['Update the risk register with new operational risks', 'Today'],
@@ -72,7 +72,7 @@ export default {
         ]),
       },
       {
-        title: 'Preserve Historical Context',
+        title: 'Preserve historical context',
         body: 'Retrieve prior meeting-derived information to support continuity when risk matters return for review.',
         visual: search(
           'control remediation owner',
@@ -85,7 +85,7 @@ export default {
         ),
       },
       {
-        title: 'Risk Committee Workflows',
+        title: 'Risk committee workflows',
         body: 'Support enterprise risk reviews, operational risk discussions, incident reviews, mitigation planning and risk-related steering meetings.',
         visual: capture('Tue, Jun 14', [
           ['Operational Risk Review', '10:30 AM · Meet'],
@@ -100,12 +100,12 @@ export default {
   split: {
     size: 'compact',
     reverse: true,
-    title: 'Complement Existing Risk Systems',
+    title: 'Complement existing risk systems',
     body: [
       'Acumeet supports meeting intelligence and documentation. It does not replace formal risk assessment, monitoring or governance systems.',
     ],
-    cta: { label: 'Book a Demo', to: ROUTES.bookDemo },
-    secondary: { label: 'Contact Our Team', to: ROUTES.contactSales },
+    cta: { label: 'Book a demo', to: ROUTES.bookDemo },
+    secondary: { label: 'Contact our team', to: ROUTES.contactSales },
     visual: {
       tint: 'pink',
       pattern: { type: 'rings', size: 'panel' },

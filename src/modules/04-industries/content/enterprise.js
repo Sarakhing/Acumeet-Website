@@ -12,7 +12,7 @@ export default {
     eyebrow: 'Enterprise',
     eyebrowStyle: 'chip',
     pattern: 'hairlines',
-    title: 'Connect Enterprise Conversations to Decisions and Delivery',
+    title: 'Connect enterprise conversations to decisions and delivery',
     titleSize: 54,
     copyWidth: 580,
     copyTop: 56,
@@ -58,7 +58,7 @@ export default {
       type: 'split',
       size: 'compact',
       reverse: true,
-      title: 'Improve Continuity Across Teams',
+      title: 'Improve continuity across teams',
       body: [
         'Give teams a more consistent way to retain meeting context as initiatives move between departments, project groups and leadership.',
       ],
@@ -80,7 +80,7 @@ export default {
     {
       type: 'editorial',
       tone: 'subtle',
-      title: 'Make Decisions Easier to Revisit',
+      title: 'Make decisions easier to revisit',
       paragraphs: [
         'Capture key decisions and the reasoning discussed in meetings so teams can find relevant context when priorities or plans are reviewed.',
       ],
@@ -113,7 +113,7 @@ export default {
     {
       type: 'editorial',
       tone: 'subtle',
-      title: 'Build Searchable Meeting Knowledge',
+      title: 'Build searchable meeting knowledge',
       paragraphs: [
         'Help people retrieve meeting-derived information instead of relying solely on individual notes, inboxes or memory.',
       ],
@@ -122,7 +122,7 @@ export default {
     {
       type: 'editorial',
       tone: 'white',
-      title: 'Fit Into Existing Workflows',
+      title: 'Fit into existing workflows',
       paragraphs: [
         'Where supported integrations are available, connect meeting outputs to the tools teams already use.',
       ],

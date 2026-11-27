@@ -42,11 +42,11 @@ const stepPanel = (tint) => ({ tint, pattern: { type: 'rings', size: 'stepper' }
 
 /** 10.01 · Deployment Overview (Figma 48:393391). */
 export default {
-  breadcrumb: [{ label: 'Home', to: ROUTES.home }, { label: 'Deployment Overview' }],
+  breadcrumb: [{ label: 'Home', to: ROUTES.home }, { label: 'Deployment overview' }],
 
   /** 01 · Hero (1011): keys & storage (+6°) and decisions (−6°) tilted behind action items. */
   ...centeredHero({
-    eyebrow: 'Deployment Overview',
+    eyebrow: 'Deployment overview',
     title: 'Meeting intelligence that fits',
     accent: 'your environment.',
     lead: 'Acumeet helps organisations turn meetings into searchable knowledge, clear decisions, and accountable actions. Explore deployment approaches with our team to determine the right fit for your organisation’s architecture, governance, storage, and operational requirements.',
@@ -155,7 +155,7 @@ export default {
     {
       type: 'directory',
       eyebrow: 'Deployment',
-      title: 'Explore Deployment',
+      title: 'Explore deployment',
       items: DEPLOYMENT_KEYS.map((k) => ({
         title: DEPLOYMENT[k].title,
         description: DEPLOYMENT[k].tagline,

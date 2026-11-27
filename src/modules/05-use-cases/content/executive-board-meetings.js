@@ -5,12 +5,12 @@ import { challenge, explorer, faq, note, outcomes, ringsHero, workflows } from '
 
 /** 05.01 · Executive & Board Meetings (Figma 48:305601). */
 export default {
-  breadcrumb: ucBreadcrumb('Executive & Board Meetings'),
+  breadcrumb: ucBreadcrumb('Executive & board meetings'),
 
   /** 01 · Hero (48:305604) + "✓ Hero carousel · 05.01" (48:309032). */
   ...ringsHero({
-    eyebrow: 'Executive & Board Meetings',
-    title: 'Turn Executive Discussions into Clear Decisions and Follow-Through',
+    eyebrow: 'Executive & board meetings',
+    title: 'Turn executive discussions into clear decisions and follow-through',
     lead: 'Leadership meetings shape strategy, set priorities, and determine what happens next. Acumeet helps teams capture meeting discussions, review key points, document decisions, and keep action items visible—so important context does not disappear when the meeting ends.',
     secondary: { label: 'Explore Enterprise Meeting Intelligence', to: ROUTES.solutions.emi },
     slides: [

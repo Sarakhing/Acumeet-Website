@@ -12,11 +12,11 @@ import {
 
 /** 08.11 · Compliance Documentation (Figma 48:370556). */
 export default {
-  breadcrumb: compBreadcrumb('Compliance Documentation'),
+  breadcrumb: compBreadcrumb('Compliance documentation'),
 
   /** 01 · Hero + "Hero carousel · 08.11 · Compliance Documentation" (48:347000). */
   ...ringsHero({
-    eyebrow: 'Compliance  ·  Compliance Documentation',
+    eyebrow: 'Compliance  ·  Compliance documentation',
     title: 'Find the information relevant to your assessment.',
     lead: 'Use the resources below to begin your compliance review. If a document is not publicly available, request it from our team.',
     primary: REQUEST_DOCS,

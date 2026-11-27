@@ -21,11 +21,11 @@ const heroActions = actions(
 
 /** 06.03 · Identity & Access (Figma 48:325402). */
 export default {
-  breadcrumb: secBreadcrumb('Identity & Access'),
+  breadcrumb: secBreadcrumb('Identity & access'),
 
   /** 01 · Hero (909 tall): access (+6°) and decisions (−6°) tilted behind action items. */
   ...centeredHero({
-    eyebrow: 'Identity & Access',
+    eyebrow: 'Identity & access',
     title: 'Give the right people the right',
     accent: 'level of access.',
     lead: 'Identity and access controls help organisations govern who can use Acumeet, which capabilities they can access, and how access changes over time. Evaluate the identity features and configuration options available for your environment.',
@@ -314,7 +314,7 @@ export default {
     /** Conditional Access — four cards. */
     cards(
       {
-        eyebrow: 'Conditional Access',
+        eyebrow: 'Conditional access',
         title: 'Apply the access policies your',
         accent: 'organisation requires.',
         lead: 'Conditional Access policies can use identity-provider signals and rules to govern access. Assess how your organisation’s policies interact with the supported Acumeet sign-in configuration and identify any limitations.',

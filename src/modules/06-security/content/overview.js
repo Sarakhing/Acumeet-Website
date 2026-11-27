@@ -12,11 +12,11 @@ const members = [
 
 /** 06.01 · Security Overview (Figma 48:325159). */
 export default {
-  breadcrumb: [{ label: 'Home', to: ROUTES.home }, { label: 'Security Overview' }],
+  breadcrumb: [{ label: 'Home', to: ROUTES.home }, { label: 'Security overview' }],
 
   /** 01 · Hero + "Hero carousel · 06.01" (48:326135). */
   ...ringsHero({
-    eyebrow: 'Security Overview',
+    eyebrow: 'Security overview',
     title: 'Security and governance for meeting intelligence.',
     lead: 'Meetings can contain sensitive decisions, confidential business information, personal data, and regulated discussions. Acumeet’s security approach is designed to help organisations evaluate how meeting information is accessed, processed, protected, monitored, and managed throughout its lifecycle. Explore the controls and evidence relevant to your requirements.',
     ...HERO_ACTIONS,
@@ -140,7 +140,7 @@ export default {
     {
       type: 'directory',
       eyebrow: 'Security',
-      title: 'Explore Security',
+      title: 'Explore security',
       items: SECURITY_KEYS.map((k) => ({ title: SECURITY[k].title, description: SECURITY[k].tagline, to: SECURITY[k].to })),
     },
   ],

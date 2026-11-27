@@ -24,11 +24,11 @@ const heroActions = actions(
 
 /** 07.11 · Security Documentation (Figma 48:338251). */
 export default {
-  breadcrumb: tcBreadcrumb('Security Documentation'),
+  breadcrumb: tcBreadcrumb('Security documentation'),
 
   /** 01 · Hero (948 tall): knowledge search (+6°) and decisions (−6°) tilted behind action items. */
   ...centeredHero({
-    eyebrow: 'Trust Center  ·  Security Documentation',
+    eyebrow: 'Trust Center  ·  Security documentation',
     title: 'Security documentation for your',
     accent: 'review',
     lead: 'Architecture, access, incident and recovery documents for security teams and vendor reviews.',

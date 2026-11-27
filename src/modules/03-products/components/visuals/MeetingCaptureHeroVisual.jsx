@@ -21,7 +21,7 @@ export default function MeetingCaptureHeroVisual() {
           date="Wed, Jun 20"
           meetings={[
             { title: 'Product Development Sync-Up', meta: '2:00 PM · Meet' },
-            { title: 'Client Feedback Analysis Session', meta: '4:00 PM · Teams' },
+            { title: 'Client feedback analysis session', meta: '4:00 PM · Teams' },
             { title: 'Weekly ProcureCentro Stand-up', meta: '9:00 AM · Zoom' },
           ]}
         />

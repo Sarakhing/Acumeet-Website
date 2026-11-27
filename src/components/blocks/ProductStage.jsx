@@ -40,7 +40,7 @@ function TileCopy({ id, dark, split, eyebrow, title, titleSize = 26, titleWidth,
   return (
     <>
       {eyebrow && (
-        <p className={cn('font-mono text-overline uppercase', dark ? 'text-ink-on-dark-faint' : 'text-ink-500')}>{eyebrow}</p>
+        <p className={dark ? 'eyebrow-dark' : 'eyebrow'}>{eyebrow}</p>
       )}
       <h3
         id={id ? `${id}-title` : undefined}

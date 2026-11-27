@@ -10,37 +10,37 @@ const P = ROUTES.product;
  */
 export const PRODUCTS = {
   meetingCapture: {
-    title: 'Meeting Capture',
+    title: 'Meeting capture',
     description: 'Capture Every Important Business Conversation.',
     to: P.meetingCapture,
     figma: '46:37362',
   },
   aiTranscription: {
-    title: 'AI Transcription',
+    title: 'AI transcription',
     description: 'Turn Business Conversations into Usable Text',
     to: P.aiTranscription,
     figma: '46:37240',
   },
   aiMeetingSummaries: {
-    title: 'AI Meeting Summaries',
+    title: 'AI meeting summaries',
     description: 'Turn Business Meetings into Clear Summaries and Tracked Actions',
     to: P.aiMeetingSummaries,
     figma: '46:35486',
   },
   actionItemManagement: {
-    title: 'Action Item Management',
+    title: 'Action item management',
     description: 'Turn Meeting Decisions into Actions That Move Forward',
     to: P.actionItemManagement,
     figma: '46:38621',
   },
   speakerRecognition: {
-    title: 'Speaker Recognition',
+    title: 'Speaker recognition',
     description: 'Know Who Said What in Every Meeting',
     to: P.speakerRecognition,
     figma: '46:39919',
   },
   aiRedaction: {
-    title: 'AI Redaction',
+    title: 'AI redaction',
     description: 'Protect Sensitive Data Before It Becomes a Risk',
     to: P.aiRedaction,
     figma: '46:40048',
@@ -52,13 +52,13 @@ export const PRODUCTS = {
     figma: '46:41403',
   },
   meetingIntelligence: {
-    title: 'Meeting Intelligence',
+    title: 'Meeting intelligence',
     description: 'Turn Every Meeting into Business Intelligence.',
     to: P.meetingIntelligence,
     figma: '46:41646',
   },
   knowledgeRepository: {
-    title: 'Knowledge Repository',
+    title: 'Knowledge repository',
     description: 'Turn Meeting Records into Knowledge Your Organisation Can Reuse.',
     to: P.knowledgeRepository,
     figma: '46:43025',

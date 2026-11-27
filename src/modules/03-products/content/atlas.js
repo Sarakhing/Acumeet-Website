@@ -24,9 +24,9 @@ export const atlas = {
   hero: {
     variant: 'rings',
     eyebrow: 'Product · Atlas',
-    title: 'Your Acumeet Information. One Conversation Away.',
+    title: 'Your Acumeet information. One conversation away.',
     lead: 'Ask Atlas about your meetings, account, subscription, and usage. Find relevant information across your available meeting knowledge, get answers in context, and explore the information you need through one conversational interface built into Acumeet.',
-    primary: { label: 'Book a Demo', to: ROUTES.bookDemo },
+    primary: { label: 'Book a demo', to: ROUTES.bookDemo },
     secondary: { label: 'Explore Acumeet', to: ROUTES.products },
     secondaryStyle: 'link',
   },
@@ -96,7 +96,7 @@ export const atlas = {
   /** Split 46:41434 — copy left, lilac rings panel with the account-scoped Atlas chat. */
   chatbot: {
     size: 'standard',
-    title: 'More Than a Chatbot. A Conversational Way to Navigate Acumeet.',
+    title: 'More than a chatbot. A conversational way to navigate Acumeet.',
     body: [
       'Finding information should not mean manually searching through meeting records or navigating multiple areas of an application. Atlas gives users a conversational way to ask questions about available meeting information and relevant account details. Ask a question in everyday language and use the response to find the context you need.',
       'The information Atlas can return depends on the data available to it and the permissions assigned to the user.',
@@ -140,7 +140,7 @@ export const atlas = {
   naturally: {
     size: 'standard',
     reverse: true,
-    title: 'Ask Questions Naturally',
+    title: 'Ask questions naturally',
     body: [
       'Atlas is designed to let users interact with Acumeet through natural-language prompts. Instead of needing to know where information is stored, users can ask questions about meetings, decisions, follow-ups, account details, subscription information, or usage data available to them.',
     ],
@@ -184,7 +184,7 @@ export const atlas = {
   /** Benefits 46:41612 + "✓ Card · …" (413×280, 3 × 2). */
   benefits: {
     title: 'Key',
-    accent: 'Benefits',
+    accent: 'benefits',
     accentBreak: false,
     cards: [
       {
@@ -256,9 +256,9 @@ export const atlas = {
 
   /** CTA band 46:41643. */
   cta: {
-    title: 'Spend Less Time Searching. Get More from Your Meeting Knowledge.',
+    title: 'Spend less time searching. Get more from your meeting knowledge.',
     lead: 'Discover how Atlas can help your team ask questions, find relevant meeting information, and navigate the information available in Acumeet through a conversational experience.',
-    primary: { label: 'Book a Demo', to: ROUTES.bookDemo },
+    primary: { label: 'Book a demo', to: ROUTES.bookDemo },
     secondary: { label: 'Explore Acumeet', to: ROUTES.products },
   },
 };

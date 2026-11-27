@@ -5,7 +5,7 @@ const TITLE = 'Explore the blog by topic';
 
 /** 13.03 · Blog Categories (Figma 49:138636). */
 export default {
-  breadcrumb: resBreadcrumb('Blog Categories', { blog: true }),
+  breadcrumb: resBreadcrumb('Blog categories', { blog: true }),
 
   /** 01 · Hero + "Hero carousel · 13.03 · Blog Categories" (49:80294): chip and title only. */
   hero: { variant: 'rings', eyebrow: 'Blog categories', title: TITLE },

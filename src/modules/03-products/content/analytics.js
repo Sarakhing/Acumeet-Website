@@ -25,10 +25,10 @@ export const analytics = {
   hero: {
     variant: 'rings',
     eyebrow: 'Product · Analytics',
-    title: 'Turn Meeting Activity into Clear, Actionable Insights.',
+    title: 'Turn meeting activity into clear, actionable insights.',
     lead: 'Understand how your organisation meets, participates, and follows through. Acumeet Analytics brings meeting activity, participation, action item status, discussion topics, quality, sentiment, and engagement metrics into reports that help teams explore patterns and make more informed decisions.',
-    primary: { label: 'Book a Demo', to: ROUTES.bookDemo },
-    secondary: { label: 'Explore Acumeet Analytics', to: ROUTES.products },
+    primary: { label: 'Book a demo', to: ROUTES.bookDemo },
+    secondary: { label: 'Explore Acumeet analytics', to: ROUTES.products },
     secondaryStyle: 'link',
   },
 
@@ -80,7 +80,7 @@ export const analytics = {
   split: {
     size: 'standard',
     reverse: true,
-    title: 'See the Patterns Behind Your Meetings',
+    title: 'See the patterns behind your meetings',
     body: [
       'Meeting activity creates data that can help teams understand how time is spent, who participates, what topics are discussed, and how meeting outcomes are progressing. Acumeet presents this information through reporting views, charts, distributions, and time-based trends.',
       'Use the available reports to explore activity over a selected period, examine meeting quality and engagement indicators, and review topics and action item statuses. The metrics shown depend on the data available, selected filters, and enabled features.',
@@ -104,7 +104,7 @@ export const analytics = {
 
   /** 03 · rows (46:43508) — "MEETING ANALYTICS" overline hidden in Figma. */
   activity: {
-    title: 'Understand Your Meeting Activity',
+    title: 'Understand your meeting activity',
     paragraphs: [
       'Get a clearer view of meeting volume, duration, attendance, recording, and scheduling patterns. Acumeet’s Analytics interface includes reporting metrics such as:',
       'Total number of meetings',
@@ -112,7 +112,7 @@ export const analytics = {
       'Percentage of meetings completed',
       'Average number of participants',
     ],
-    cta: { label: 'Explore Meeting Analytics', to: ROUTES.bookDemo, size: 'lg' },
+    cta: { label: 'Explore meeting analytics', to: ROUTES.bookDemo, size: 'lg' },
   },
 
   /** Chapters (46:43521) — nav + "Chapter 02 / 05" counter hidden: one static dark row. */
@@ -120,7 +120,7 @@ export const analytics = {
     chapters: [
       {
         tab: 'Understand Participation and Engagement',
-        title: 'Understand Participation and Engagement',
+        title: 'Understand participation and engagement',
         paragraphs: [
           'Explore participation patterns across meetings and teams. The current interface includes team participation, participant-level engagement information, average participants, active participants, engagement scores, and engagement by time of day.',
           'These views can help teams examine who is participating and how engagement indicators vary across the selected reporting period. Interpret participant-level information in the context of meeting type, data availability, and the organisation’s policies.',
@@ -133,29 +133,29 @@ export const analytics = {
 
   /** 03 · rows (46:43590). */
   actions: {
-    title: 'Keep Track of Meeting Actions and Their Status',
+    title: 'Keep track of meeting actions and their status',
     paragraphs: [
       'Meeting discussions often generate tasks and follow-ups. Acumeet’s interface includes action item status indicators such as actions generated, in progress, overdue, and completed. These views help users review the current status of meeting-related actions.',
       'Where supported by the available reporting data, action status information can help teams identify outstanding work and follow up on commitments.',
     ],
-    cta: { label: 'Review Action Item Status', to: P.actionItemManagement, size: 'lg' },
+    cta: { label: 'Review action item status', to: P.actionItemManagement, size: 'lg' },
   },
 
   /** 03 · rows (46:43599) — white. */
   topics: {
     tone: 'white',
-    title: 'Discover the Topics Shaping Your Meetings',
+    title: 'Discover the topics shaping your meetings',
     paragraphs: [
       'Topic Insights helps users explore themes that appear in meeting discussions. The current interface shows topic search, topic cards, mention counts, dates or date ranges, and sentiment indicators associated with topics.',
       'Examples visible in the interface include budgeting and financial visibility, cash flow management, resource risks and recruitment, marketing and website engagement, enterprise onboarding issues, BYOK/BYOS architecture, workspace and billing development, and KPI dashboard metrics.',
       'Use topic insights to identify recurring subjects and explore how discussions are represented in the available meeting data. The topics shown will depend on the meetings and reporting period selected.',
     ],
-    cta: { label: 'Explore Topic Insights', to: P.meetingIntelligence, size: 'lg' },
+    cta: { label: 'Explore topic insights', to: P.meetingIntelligence, size: 'lg' },
   },
 
   /** 03 · rows (46:43609). */
   quality: {
-    title: 'Explore Meeting Quality, Sentiment, and Engagement',
+    title: 'Explore meeting quality, sentiment, and engagement',
     paragraphs: [
       'Bring together indicators that help teams examine meeting experience and patterns over time. The current Analytics interface includes the following reporting views:',
       'Meeting Quality: Average Meeting Quality Score; total meetings scored; excellent and poor meeting counts; quality score distribution; quality score by meeting type; quality score drivers by meeting type; quality score over time',
@@ -163,13 +163,13 @@ export const analytics = {
       'Engagement: Average engagement score; average drop-off time; active participants; interactivity; engagement distribution',
       'These views can help organisations explore patterns in meeting quality, sentiment, and engagement. Scores are indicators generated by the product and should be interpreted as signals for review, not as definitive judgements about an individual or team.',
     ],
-    cta: { label: 'Explore Organisational Insights', to: ROUTES.solutions.understand, size: 'lg' },
+    cta: { label: 'Explore organisational insights', to: ROUTES.solutions.understand, size: 'lg' },
   },
 
   /** Benefits (46:43621) — 2 rows of 3 × 413. */
   benefits: {
     title: 'Key',
-    accent: 'Benefits',
+    accent: 'benefits',
     accentBreak: false,
     cards: [
       {
@@ -243,9 +243,9 @@ export const analytics = {
 
   /** CTA band (46:43653). */
   cta: {
-    title: 'Make Better-Informed Decisions About How Your Organisation Meets.',
+    title: 'Make better-informed decisions about how your organisation meets.',
     lead: 'Explore meeting activity, participation, action statuses, discussion themes, quality, sentiment, and engagement through Acumeet Analytics.',
-    primary: { label: 'Book a Demo', to: ROUTES.bookDemo },
+    primary: { label: 'Book a demo', to: ROUTES.bookDemo },
     secondary: { label: 'Explore Acumeet', to: ROUTES.products },
   },
 };

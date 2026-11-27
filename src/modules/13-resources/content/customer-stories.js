@@ -41,7 +41,7 @@ const featuredVisual = h(
 
 /** 13.10 · Customer Stories (Figma 49:139652). Story pages are not built, so cards are not links. */
 export default {
-  breadcrumb: resBreadcrumb('Customer Stories'),
+  breadcrumb: resBreadcrumb('Customer stories'),
 
   /** 01 · Hero (680): summary in the window, action items overlapping, "Live" chip. */
   ...windowHero({

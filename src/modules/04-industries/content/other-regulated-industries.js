@@ -8,16 +8,16 @@ const QUERY = 'regulator query response';
 
 /** 04.16 · Other Regulated Industries (Figma 48:294434). */
 export default {
-  breadcrumb: industryBreadcrumb('Other Regulated Industries'),
+  breadcrumb: industryBreadcrumb('Other regulated industries'),
 
-  /** 01 · Hero (48:294437) — dark rings hero with Book a Demo + "Contact Our Team →", 1024 tall. */
+  /** 01 · Hero (48:294437) — dark rings hero with Book a Demo + "Contact our team →", 1024 tall. */
   hero: {
     variant: 'rings',
-    eyebrow: 'Other Regulated Industries',
-    title: 'Meeting Intelligence for Regulated and Accountability-Driven Organisations',
+    eyebrow: 'Other regulated industries',
+    title: 'Meeting intelligence for regulated and accountability-driven organisations',
     lead: 'In regulated environments, important discussions may need to be documented, revisited and followed through carefully. Acumeet helps teams create structured meeting summaries, capture decisions and actions, and retain meeting-derived knowledge for appropriate business use.',
-    primary: { label: 'Book a Demo', to: ROUTES.bookDemo },
-    secondary: { label: 'Contact Our Team', to: ROUTES.contactSales },
+    primary: { label: 'Book a demo', to: ROUTES.bookDemo },
+    secondary: { label: 'Contact our team', to: ROUTES.contactSales },
     secondaryStyle: 'link',
   },
 
@@ -62,7 +62,7 @@ export default {
       type: 'split',
       size: 'compact',
       reverse: true,
-      title: 'Support Consistent Meeting Documentation',
+      title: 'Support consistent meeting documentation',
       body: [
         'Create structured records of discussions, decisions and next steps across teams working within defined procedures and governance expectations.',
       ],
@@ -84,7 +84,7 @@ export default {
     {
       type: 'editorial',
       tone: 'subtle',
-      title: 'Improve Action Visibility',
+      title: 'Improve action visibility',
       paragraphs: [
         'Capture agreed responsibilities and follow-up actions so outstanding items are easier to review between meetings.',
       ],
@@ -95,7 +95,7 @@ export default {
       size: 'compact',
       tone: 'dark',
       reverse: true,
-      title: 'Retain Relevant Context',
+      title: 'Retain relevant context',
       body: [
         'Make meeting-derived knowledge easier to retrieve when teams revisit issues, initiatives or prior decisions.',
       ],
@@ -117,7 +117,7 @@ export default {
     {
       type: 'editorial',
       tone: 'subtle',
-      title: 'Support Governance Workflows',
+      title: 'Support governance workflows',
       paragraphs: [
         'Use structured meeting outputs as a complement to established recordkeeping, review and approval processes.',
       ],
@@ -126,7 +126,7 @@ export default {
     {
       type: 'editorial',
       tone: 'white',
-      title: 'Evaluate Fit for Your Environment',
+      title: 'Evaluate fit for your environment',
       paragraphs: [
         'Requirements differ by sector and organisation. Review data handling, access controls, retention, residency, auditability and integration needs before deployment.',
       ],

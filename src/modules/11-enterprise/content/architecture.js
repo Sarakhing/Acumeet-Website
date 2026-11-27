@@ -5,7 +5,7 @@ import { entBreadcrumb, link, statement, TALK } from './enterprise';
 
 /** 11.02 · Enterprise Architecture (Figma 49:68145). No related row in Figma. */
 export default {
-  breadcrumb: entBreadcrumb('Enterprise Architecture'),
+  breadcrumb: entBreadcrumb('Enterprise architecture'),
 
   /** 01 · Hero + "Hero carousel · 11.02 · Enterprise Architecture" (49:70434). */
   ...entPage('architecture', {

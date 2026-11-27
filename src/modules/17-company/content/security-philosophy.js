@@ -3,7 +3,7 @@ import { coBreadcrumb, ctaBand } from './company';
 
 /** 17.05 · Security Philosophy (Figma 49:188445). */
 export default {
-  breadcrumb: coBreadcrumb('Security Philosophy'),
+  breadcrumb: coBreadcrumb('Security philosophy'),
   sections: [
     {
       type: 'hero',

@@ -34,7 +34,7 @@ const base = windowHero({
 
 /** 15.01 · Support Overview (Figma 49:167033). Also 15.02 Help Center. */
 export default {
-  breadcrumb: [{ label: 'Home', to: ROUTES.home }, { label: 'Support Overview' }],
+  breadcrumb: [{ label: 'Home', to: ROUTES.home }, { label: 'Support overview' }],
 
   /** 01 · Hero (680): search bar, knowledge search in the window, action items overlapping. */
   hero: { ...base.hero, extra: h(SupportSearch, { to: S.faqs }) },
@@ -111,7 +111,7 @@ export default {
     {
       type: 'directory',
       eyebrow: 'Support',
-      title: 'Explore Support',
+      title: 'Explore support',
       items: DIRECTORY_KEYS.map((k) => ({
         title: SUPPORT[k].title,
         description: SUPPORT[k].tagline,

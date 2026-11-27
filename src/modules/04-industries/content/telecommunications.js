@@ -4,8 +4,8 @@ import KeysStorageCard from '@/modules/02-solutions/components/visuals/KeysStora
 import { exploreIndustries, industryCtaFull } from './industries';
 import { actions, decisions, heroCanvas, industryBreadcrumb } from './detail';
 
-const BOOK = { label: 'Book a Demo', to: ROUTES.bookDemo };
-const CONTACT = { label: 'Contact Our Team', to: ROUTES.contactSales };
+const BOOK = { label: 'Book a demo', to: ROUTES.bookDemo };
+const CONTACT = { label: 'Contact our team', to: ROUTES.contactSales };
 
 /** 04.13 · Telecommunications (Figma 48:293592). */
 export default {
@@ -16,7 +16,7 @@ export default {
     eyebrow: 'Telecommunications',
     eyebrowStyle: 'chip',
     pattern: 'hairlines',
-    title: 'Turn Telecommunications Meetings Into Coordinated Action',
+    title: 'Turn telecommunications meetings into coordinated action',
     titleSize: 54,
     copyWidth: 580,
     copyTop: 56,
@@ -65,7 +65,7 @@ export default {
       type: 'split',
       size: 'compact',
       reverse: true,
-      title: 'Bring Operational Discussions Into Focus',
+      title: 'Bring operational discussions into focus',
       body: [
         'Operational and technical teams often need to align on service performance, network initiatives, incidents and delivery priorities. Acumeet helps capture the key points from meetings so participants can revisit discussions and agreed next steps.',
       ],
@@ -79,7 +79,7 @@ export default {
     {
       type: 'editorial',
       tone: 'subtle',
-      title: 'Connect Projects and Stakeholders',
+      title: 'Connect projects and stakeholders',
       paragraphs: [
         'Infrastructure rollouts and service improvements can involve engineering, operations, commercial teams, vendors and leadership. Structured meeting records help preserve context across stakeholders and recurring project meetings.',
       ],
@@ -90,7 +90,7 @@ export default {
       size: 'compact',
       tone: 'dark',
       reverse: true,
-      title: 'Document Decisions and Responsibilities',
+      title: 'Document decisions and responsibilities',
       body: [
         'Capture decisions, action items and responsibilities from reviews and planning sessions so follow-up is easier to coordinate.',
       ],
@@ -112,7 +112,7 @@ export default {
     {
       type: 'editorial',
       tone: 'subtle',
-      title: 'Retain Organisational Knowledge',
+      title: 'Retain organisational knowledge',
       paragraphs: [
         'Make meeting-derived context easier to retrieve when teams revisit a project, vendor discussion, operational issue or previously agreed decision.',
       ],

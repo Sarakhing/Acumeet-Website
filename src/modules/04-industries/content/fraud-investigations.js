@@ -3,13 +3,13 @@ import { actions, capture, explorerItems, fsBreadcrumb, NOTE_CTAS, search, summa
 
 /** 04.08 · Fraud Investigations (Figma 48:289851). */
 export default {
-  breadcrumb: fsBreadcrumb('Fraud Investigations'),
+  breadcrumb: fsBreadcrumb('Fraud investigations'),
 
   /** 01 · Hero (48:289854) — 630 wash, Banking composition. */
   hero: windowHero({
-    eyebrow: 'Fraud Investigations',
-    title: 'Organise Investigation Discussions and',
-    accent: 'Follow-Up Actions',
+    eyebrow: 'Fraud investigations',
+    title: 'Organise investigation discussions and',
+    accent: 'follow-up actions',
     lead: 'Acumeet helps teams document investigation-related meetings, preserve discussion context and record agreed next steps, subject to appropriate information safeguards.',
     decisions: [
       'Jun 4',
@@ -31,7 +31,7 @@ export default {
   explorer: {
     items: explorerItems([
       {
-        title: 'Keep Investigation Discussions Structured',
+        title: 'Keep investigation discussions structured',
         body: 'Create organised summaries of case briefings, internal escalations, findings discussions and outstanding questions.',
         visual: summary('AML Review Meeting', [47, 75, 57], [
           'Investigations flagged linked accounts across two branches.',
@@ -39,7 +39,7 @@ export default {
         ]),
       },
       {
-        title: 'Capture Decisions and Responsibilities',
+        title: 'Capture decisions and responsibilities',
         body: 'Record agreed actions and responsibilities so follow-up is easier to coordinate across authorised stakeholders.',
         visual: actions(4, [
           ['Confirm case owner for the card fraud cluster', 'Jun 7'],
@@ -48,7 +48,7 @@ export default {
         ]),
       },
       {
-        title: 'Retrieve Relevant Meeting Context',
+        title: 'Retrieve relevant meeting context',
         body: 'Make previous meeting-derived information easier to find when a case is revisited or additional discussions are required.',
         visual: search(
           'case 1042 escalation',
@@ -61,7 +61,7 @@ export default {
         ),
       },
       {
-        title: 'Investigation Workflows',
+        title: 'Investigation workflows',
         body: 'Support investigation briefings, case reviews, internal coordination, escalation meetings and lessons-learned discussions.',
         visual: capture('Thu, May 25', [
           ['Investigation Update', '4:00 PM · Zoom'],
@@ -74,7 +74,7 @@ export default {
 
   /** 06 · Handle Sensitive Information Carefully (48:289938). */
   note: {
-    title: 'Handle Sensitive Information Carefully',
+    title: 'Handle sensitive information carefully',
     body: 'Investigation records may be highly confidential. Confirm access controls, retention, redaction and data-handling arrangements before using Acumeet for sensitive case information.',
     ctas: NOTE_CTAS,
   },

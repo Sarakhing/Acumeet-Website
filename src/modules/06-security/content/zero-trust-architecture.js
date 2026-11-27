@@ -4,11 +4,11 @@ import { chapters, faq, HERO_ACTIONS, secBreadcrumb, secCta } from './security';
 
 /** 06.02 · Zero Trust Architecture (Figma 48:325303). */
 export default {
-  breadcrumb: secBreadcrumb('Zero Trust Architecture'),
+  breadcrumb: secBreadcrumb('Zero trust architecture'),
 
   /** 01 · Hero (774 tall): keys & storage in the window, audit log overlapping. */
   ...windowHero({
-    eyebrow: 'Zero Trust Architecture',
+    eyebrow: 'Zero trust architecture',
     title: 'Verify access. Limit trust. Protect',
     accent: 'every boundary.',
     lead: 'Zero Trust is an approach to security that avoids treating a user, device, network, or service as automatically trusted simply because it is inside a particular environment. Review how identity, permissions, context, and access boundaries should be assessed for Acumeet.',

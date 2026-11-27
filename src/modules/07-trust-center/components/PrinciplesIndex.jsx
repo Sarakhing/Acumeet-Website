@@ -71,7 +71,7 @@ export default function PrinciplesIndex({ title, accent, filters = [], items = [
                     aria-hidden="true"
                     width={413}
                     height={110}
-                    className="pointer-events-none absolute -right-px -top-px h-[110px] w-[413px] max-w-none"
+                    className="motion-breathe pointer-events-none absolute -right-px -top-px h-[110px] w-[413px] max-w-none [--motion-origin:right_top]"
                   />
                   <span
                     className={cn(

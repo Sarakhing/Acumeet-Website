@@ -24,7 +24,7 @@ export default function InfoCards({
       <Container className="flex flex-col gap-10">
         <div className="flex max-w-[820px] flex-col gap-4">
           {eyebrow && (
-            <p className="font-mono text-[12px] font-medium uppercase leading-[1.55] tracking-[0.72px] text-brand-magenta">
+            <p className="eyebrow">
               {eyebrow}
             </p>
           )}

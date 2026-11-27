@@ -29,13 +29,13 @@ const talk = h(TalkTimeCard, {
 
 /** 15.05 · Feature Guides (Figma 49:167407). */
 export default {
-  breadcrumb: supBreadcrumb('Feature Guides'),
+  breadcrumb: supBreadcrumb('Feature guides'),
 
   /** 01 · Hero + "Hero carousel · 15.05 · Feature Guides" (49:88436). */
   hero: {
     variant: 'rings',
     secondaryStyle: 'link',
-    eyebrow: 'Support  ·  Feature Guides',
+    eyebrow: 'Support  ·  Feature guides',
     title: 'Feature guides',
     lead: 'Learn transcription, summaries, action items, speaker recognition, Redaction AI and Atlas.',
     primary: link('Browse guides', '#guides'),

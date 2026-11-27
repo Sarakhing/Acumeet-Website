@@ -10,8 +10,8 @@ export default {
   /** 01 · Hero (48:305350) — 668 tall: audit log in the window, action items overlapping. */
   ...windowHero({
     eyebrow: 'Audit',
-    title: 'Make Audit Discussions Easier to Document, Review,',
-    accent: 'and Follow Up',
+    title: 'Make audit discussions easier to document, review,',
+    accent: 'and follow up',
     lead: 'Audit meetings often involve findings, evidence requests, recommendations, deadlines, and corrective actions across multiple stakeholders. Acumeet helps teams capture discussions, summarise key points, document follow-up responsibilities, and revisit meeting context when work continues.',
     secondary: { label: 'Explore Enterprise Meeting Intelligence', to: ROUTES.solutions.emi },
     window: audit(

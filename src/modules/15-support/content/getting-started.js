@@ -15,11 +15,11 @@ const STEPS = [
 
 /** 15.04 · Getting Started (Figma 49:167278). No related row in Figma. */
 export default {
-  breadcrumb: supBreadcrumb('Getting Started'),
+  breadcrumb: supBreadcrumb('Getting started'),
 
   /** 01 · Hero (820): meetings and decisions (−6°) behind action items. */
   ...centeredHero({
-    eyebrow: 'Support  ·  Getting Started',
+    eyebrow: 'Support  ·  Getting started',
     title: 'Get started with',
     accent: 'Acumeet',
     lead: 'Set up Acumeet and connect your first meeting platform.',

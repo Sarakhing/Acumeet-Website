@@ -32,10 +32,10 @@ export const connect = {
   hero: {
     variant: 'rings',
     eyebrow: 'Solutions · Connect',
-    title: 'Connect Your Meetings to the Tools That Move Work Forward',
+    title: 'Connect your meetings to the tools that move work forward',
     lead: 'Your meetings shouldn’t operate in isolation. Acumeet helps connect meeting intelligence with the tools your teams already use, bringing conversations, decisions, and action items closer to the workflows where work gets done.',
-    primary: { label: 'Explore Integrations', to: ROUTES.integrations },
-    secondary: { label: 'Talk to Our Team', to: ROUTES.contactSales },
+    primary: { label: 'Explore integrations', to: ROUTES.integrations },
+    secondary: { label: 'Talk to our team', to: ROUTES.contactSales },
     secondaryStyle: 'link',
   },
 
@@ -69,9 +69,9 @@ export const connect = {
         width: 560,
         date: 'Mon, Jun 6',
         meetings: [
-          { title: 'Monthly Marketing Strategy Review', meta: '11:00 AM · Zoom' },
+          { title: 'Monthly marketing strategy review', meta: '11:00 AM · Zoom' },
           { title: 'Product Development Sync-Up', meta: '3:30 PM · Meet' },
-          { title: 'Client Feedback Analysis Session', meta: '10:30 AM · Teams' },
+          { title: 'Client feedback analysis session', meta: '10:30 AM · Teams' },
         ],
       }),
     },
@@ -83,7 +83,7 @@ export const connect = {
     reverse: true,
     eyebrow: 'Meeting integrations',
     eyebrowStyle: 'mono',
-    title: 'Bring Your Meetings Into One Connected Workflow',
+    title: 'Bring your meetings into one connected workflow',
     body: [
       'Connect Acumeet with supported meeting platforms to capture conversations and transform them into structured, useful information. Turn meetings into transcripts, summaries, decisions, and action items that teams can revisit and act on.',
       'Connect supported meeting platforms to your meeting intelligence workflow.',
@@ -91,7 +91,7 @@ export const connect = {
       'Reduce manual effort in documenting conversations.',
       'Create a foundation for consistent meeting follow-up.',
     ],
-    cta: { label: 'Explore Meeting Integrations', to: ROUTES.integrations, intent: 'secondary' },
+    cta: { label: 'Explore meeting integrations', to: ROUTES.integrations, intent: 'secondary' },
     visual: {
       tint: 'pink',
       pattern: { type: 'rings', size: 'panel' },
@@ -120,7 +120,7 @@ export const connect = {
   /** Editorial 46:19630. */
   crm: {
     tone: 'subtle',
-    title: 'Turn Customer Conversations Into Actionable Context',
+    title: 'Turn customer conversations into actionable context',
     paragraphs: [
       'Connect meeting intelligence with customer relationship management workflows to help teams maintain context across sales conversations, account discussions, and customer engagements. With supported CRM integrations, teams can bring relevant meeting insights closer to customer records and follow-up activities.',
       'Keep meeting context accessible alongside customer information.',
@@ -128,7 +128,7 @@ export const connect = {
       'Improve continuity across customer conversations.',
       'Help teams track commitments made during meetings.',
     ],
-    cta: { label: 'Connect Your Customer Workflows', to: ROUTES.integrations, size: 'lg' },
+    cta: { label: 'Connect your customer workflows', to: ROUTES.integrations, size: 'lg' },
   },
 
   /** Dark Split 46:19642 — visual left, magenta 12% waveform bars on night. */
@@ -136,7 +136,7 @@ export const connect = {
     size: 'compact',
     tone: 'dark',
     reverse: true,
-    title: 'Turn Meeting Decisions Into Project Progress',
+    title: 'Turn meeting decisions into project progress',
     body: [
       'Important decisions and commitments should not disappear when a meeting ends. Connect meeting outcomes with project-management workflows to help teams translate discussions into tasks and follow-up activities. With supported integrations, Acumeet can help bridge the gap between what teams discuss and the work they need to complete.',
       'Turn meeting action items into trackable tasks.',
@@ -144,7 +144,7 @@ export const connect = {
       'Improve visibility into responsibilities and follow-ups.',
       'Help teams revisit outstanding commitments from previous meetings.',
     ],
-    cta: { label: 'Connect Meetings to Projects', to: ROUTES.integrations, intent: 'ghost-light' },
+    cta: { label: 'Connect meetings to projects', to: ROUTES.integrations, intent: 'ghost-light' },
     visual: {
       tint: 'night',
       pattern: { type: 'waveform', size: 'panel' },
@@ -169,7 +169,7 @@ export const connect = {
   /** Editorial 46:19691. */
   everyday: {
     tone: 'subtle',
-    title: 'Bring Meeting Outcomes Into Everyday Work',
+    title: 'Bring meeting outcomes into everyday work',
     paragraphs: [
       'Help your teams access meeting insights within the tools they use to communicate, collaborate, and organise their work. Connect Acumeet with supported productivity tools to make meeting summaries, decisions, and follow-up information easier to share and act on.',
       'Share relevant meeting outcomes with the right teams.',
@@ -177,7 +177,7 @@ export const connect = {
       'Reduce repetitive manual updates.',
       'Improve access to meeting knowledge across teams.',
     ],
-    cta: { label: 'Connect Your Team’s Tools', to: ROUTES.integrations, size: 'lg' },
+    cta: { label: 'Connect your team’s tools', to: ROUTES.integrations, size: 'lg' },
   },
 
   /**
@@ -188,7 +188,7 @@ export const connect = {
     chapters: [
       {
         tab: 'Make Meeting Data More',
-        title: 'Make Meeting Data More Useful for Your Business',
+        title: 'Make meeting data more useful for your business',
         paragraphs: [
           'Meeting activity can reveal patterns in collaboration, participation, productivity, and execution. Connect relevant meeting data to reporting and analytics workflows to support a broader understanding of how your organisation works. Where supported, integrations and data exports can help teams incorporate meeting information into their existing reporting environments.',
           'Analyse meeting activity and participation patterns.',
@@ -217,7 +217,7 @@ export const connect = {
   /** Editorial 46:20612 (46:20600 is hidden). */
   api: {
     tone: 'subtle',
-    title: 'Build Custom Integrations Around Your Workflow',
+    title: 'Build custom integrations around your workflow',
     paragraphs: [
       'Every organisation has its own systems, processes, and technology requirements. API capabilities can help technical teams connect Acumeet with internal applications and build workflows tailored to their business needs. Depending on the APIs and permissions available, integrations could enable approved systems to work with meeting records, summaries, action items, and other supported data.',
       'Connect Acumeet with internal business applications.',
@@ -225,26 +225,26 @@ export const connect = {
       'Reduce repetitive data handling between systems.',
       'Extend meeting intelligence across your technology environment.',
     ],
-    cta: { label: 'Discuss API Access', to: ROUTES.developers, size: 'lg' },
+    cta: { label: 'Discuss API access', to: ROUTES.developers, size: 'lg' },
   },
 
   /** Split 46:20624 — visual left, magenta waveform on pink. */
   webhooks: {
     size: 'compact',
     reverse: true,
-    title: 'Trigger Workflows When Meeting Events Occur',
+    title: 'Trigger workflows when meeting events occur',
     body: [
       'Help connected applications respond to meeting-related events through supported webhook capabilities. Webhooks can enable systems to receive notifications when defined events occur, allowing teams to build more responsive workflows. Depending on supported events, these workflows could include notifications when meeting processing is complete, a summary is ready, or an action item is created or updated.',
       'Trigger workflows in connected applications.',
       'Notify systems when relevant meeting events occur.',
       'Reduce reliance on manual status checks.',
     ],
-    cta: { label: 'Explore Webhook Capabilities', to: ROUTES.developers, intent: 'secondary' },
+    cta: { label: 'Explore webhook capabilities', to: ROUTES.developers, intent: 'secondary' },
     visual: {
       tint: 'pink',
       pattern: { type: 'waveform', size: 'panel' },
       content: h(SummaryCard, {
-        title: 'Monthly Marketing Strategy Review',
+        title: 'Monthly marketing strategy review',
         scores: [
           { label: 'Quality', value: 71, bar: 'amber' },
           { label: 'Sentiment', value: 81, bar: 'green' },
@@ -261,8 +261,8 @@ export const connect = {
   /** Head 46:20665 + "✓ Stepper · From Conversation to Coordinated Action" (46:28640). */
   workflow: {
     eyebrow: 'One connected meeting workflow',
-    title: 'From Conversation to Coordinated',
-    accent: 'Action',
+    title: 'From conversation to coordinated',
+    accent: 'action',
     tone: 'white',
     steps: [
       {
@@ -275,7 +275,7 @@ export const connect = {
           date: 'Tue, May 7',
           meetings: [
             { title: 'Product Development Sync-Up', meta: '2:00 PM · Meet' },
-            { title: 'Client Feedback Analysis Session', meta: '4:00 PM · Teams' },
+            { title: 'Client feedback analysis session', meta: '4:00 PM · Teams' },
             { title: 'Weekly ProcureCentro Stand-up', meta: '9:00 AM · Zoom' },
           ],
         }),
@@ -313,7 +313,7 @@ export const connect = {
         visual: h(IntegrationsCard, { width: 440, connected: 6, items: INTEGRATIONS }),
       },
       {
-        label: 'Follow Through',
+        label: 'Follow through',
         body: 'Help teams maintain context, track commitments, and move work forward beyond the meeting.',
         tint: 'grey',
         pattern: { type: 'rings', size: 'stepper' },
@@ -364,9 +364,9 @@ export const connect = {
   ],
 
   cta: {
-    title: 'Make Every Meeting Part of Your Workflow',
+    title: 'Make every meeting part of your workflow',
     lead: 'Connect meeting intelligence to the tools your teams use to communicate, collaborate, and execute. Build workflows that help turn conversations into coordinated action.',
-    primary: { label: 'Discuss Your Integration Needs', to: ROUTES.contactSales },
-    secondary: { label: 'Integration Enquiries', to: ROUTES.integrations },
+    primary: { label: 'Discuss your integration needs', to: ROUTES.contactSales },
+    secondary: { label: 'Integration enquiries', to: ROUTES.integrations },
   },
 };

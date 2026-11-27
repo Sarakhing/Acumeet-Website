@@ -134,7 +134,7 @@ export default {
     {
       type: 'directory',
       eyebrow: 'Compare',
-      title: 'Explore Competitor',
+      title: 'Explore competitor',
       items: DIRECTORY.map((k) => ({
         title: COMPARE[k].title,
         description: COMPARE[k].tagline,

@@ -22,11 +22,11 @@ const contract = (count, match, width = 440) =>
 
 /** 06.05 · AI Security (Figma 48:325695). */
 export default {
-  breadcrumb: secBreadcrumb('AI Security'),
+  breadcrumb: secBreadcrumb('AI security'),
 
   /** 01 · Hero (668 tall): redaction review in the window, action items overlapping. */
   ...windowHero({
-    eyebrow: 'AI Security',
+    eyebrow: 'AI security',
     title: 'Build safeguards around sensitive',
     accent: 'meeting content.',
     lead: 'AI can help organisations extract useful knowledge from meetings, but meeting data may contain personal, confidential, or regulated information. Review the safeguards, processing sequence, governance, and human oversight relevant to your Acumeet configuration.',

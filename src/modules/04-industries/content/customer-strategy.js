@@ -18,13 +18,13 @@ const heroAnalytics = () =>
 
 /** 04.12 · Customer Strategy (Figma 48:292421). */
 export default {
-  breadcrumb: fsBreadcrumb('Customer Strategy'),
+  breadcrumb: fsBreadcrumb('Customer strategy'),
 
   /** 01 · Hero (48:292424) — centred light wash, 838 tall; canvas origin 1440-frame (80, 403). */
   hero: {
     variant: 'centered',
-    eyebrow: 'Customer Strategy',
-    title: 'Turn Customer Conversations Into Clear Next Steps',
+    eyebrow: 'Customer strategy',
+    title: 'Turn customer conversations into clear next steps',
     lead: 'Acumeet helps financial services teams document customer needs, preserve relationship context and follow up on commitments and opportunities.',
     visual: heroCanvas(
       415,
@@ -66,7 +66,7 @@ export default {
   explorer: {
     items: explorerItems([
       {
-        title: 'Capture Customer Needs and Priorities',
+        title: 'Capture customer needs and priorities',
         body: 'Structure meeting summaries so teams can revisit customer goals, concerns, feedback and key discussion points.',
         visual: capture(
           'Fri, Jun 24',
@@ -88,7 +88,7 @@ export default {
         ]),
       },
       {
-        title: 'Preserve Relationship Context',
+        title: 'Preserve relationship context',
         body: 'Make previous meeting-derived information easier to retrieve when customer relationships continue across teams or over time.',
         visual: search(
           'customer renewal next steps',
@@ -101,7 +101,7 @@ export default {
         ),
       },
       {
-        title: 'Customer Strategy Workflows',
+        title: 'Customer strategy workflows',
         body: 'Support key account reviews, customer feedback sessions, retention planning, service improvement discussions and relationship strategy meetings.',
         visual: capture('Thu, May 11', [
           ['Customer Onboarding Call', '9:00 AM · Teams'],
@@ -114,7 +114,7 @@ export default {
 
   /** 06 · Use Customer Information Responsibly (48:293570). */
   note: {
-    title: 'Use Customer Information Responsibly',
+    title: 'Use customer information responsibly',
     body: 'Apply appropriate consent, access, retention and data-handling practices when meeting discussions include personal or confidential customer information.',
     ctas: NOTE_CTAS,
   },

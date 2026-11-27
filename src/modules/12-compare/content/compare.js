@@ -23,7 +23,7 @@ export const COMPARE = {
     figma: '49:115723',
   },
   aiAssistants: {
-    title: 'Acumeet vs AI Meeting Assistants',
+    title: 'Acumeet vs AI meeting assistants',
     tile: 'Acumeet vs AI meeting assistants',
     tagline: 'When notes are not enough, you need meeting intelligence',
     vs: 'AI meeting\nassistants',
@@ -32,7 +32,7 @@ export const COMPARE = {
     figma: '49:115909',
   },
   meetingNotes: {
-    title: 'Acumeet vs Traditional Meeting Notes',
+    title: 'Acumeet vs traditional meeting notes',
     tile: 'Acumeet vs traditional meeting notes',
     tagline: 'Stop relying on memory, minutes and manual follow-up',
     vs: 'Traditional notes',
@@ -41,7 +41,7 @@ export const COMPARE = {
     figma: '49:116107',
   },
   enterprisePlatforms: {
-    title: 'Acumeet vs Enterprise Meeting Intelligence Platforms',
+    title: 'Acumeet vs Enterprise Meeting Intelligence platforms',
     tile: 'Acumeet vs enterprise platforms',
     tagline: 'Enterprise meeting intelligence should go beyond recording the meeting',
     vs: 'Enterprise\nplatforms',
@@ -78,7 +78,7 @@ export const COMPARE = {
     figma: '49:117101',
   },
   overview: {
-    title: 'Competitive Comparison',
+    title: 'Competitive comparison',
     tile: 'Competitor overview',
     tagline: 'Compare the meeting intelligence that fits your enterprise',
     to: C.overview,
@@ -291,7 +291,7 @@ const SLOTS = [
 /** "Explore Compare" row — every "Related" card reads "Compare". */
 export const exploreCompare = (keys) => ({
   eyebrow: 'Keep exploring',
-  title: 'Explore Compare',
+  title: 'Explore compare',
   cards: keys.map((k, i) => ({
     title: COMPARE[k].title,
     description: 'Compare',

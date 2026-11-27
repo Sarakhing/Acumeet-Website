@@ -11,7 +11,7 @@ export const LEGAL = {
     height: 439,
   },
   terms: {
-    title: 'Terms & Conditions',
+    title: 'Terms & conditions',
     lead: 'The terms that govern your use of Acumeet.',
     to: L.terms,
     height: 432,
@@ -83,7 +83,7 @@ export const legalPage = (key, doc, { directory, related } = {}) => {
     sections,
     related: related && {
       eyebrow: 'Keep exploring',
-      title: 'Explore Legal',
+      title: 'Explore legal',
       cards: related.map((k, i) => ({
         title: LEGAL[k].title,
         description: 'Legal',

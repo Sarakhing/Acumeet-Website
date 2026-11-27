@@ -5,14 +5,14 @@ import { challenge, CONNECTED, explorer, faq, outcomes, ringsHero, workflows } f
 
 /** 05.09 · Customer Success (Figma 48:307158; 48:307157 is an empty duplicate frame). */
 export default {
-  breadcrumb: ucBreadcrumb('Customer Success'),
+  breadcrumb: ucBreadcrumb('Customer success'),
 
   /** 01 · Hero + "Hero carousel · 05.09 · Customer Success" (48:312982). */
   ...ringsHero({
-    eyebrow: 'Customer Success',
-    title: 'Keep Customer Commitments Visible After Every Meeting',
+    eyebrow: 'Customer success',
+    title: 'Keep customer commitments visible after every meeting',
     lead: 'Customer success depends on understanding customer goals, responding to concerns, and following through on agreed actions. Acumeet helps teams capture customer meeting discussions, summarise key points, and document next steps—making it easier to maintain context across onboarding, reviews, and ongoing account conversations.',
-    secondary: { label: 'Explore Meeting Intelligence', to: ROUTES.product.meetingIntelligence },
+    secondary: { label: 'Explore meeting intelligence', to: ROUTES.product.meetingIntelligence },
     slides: [
       ['Analytics', analytics('Last 30 days', [84, 18, 47], { width: 560 })],
       [

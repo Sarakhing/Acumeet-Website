@@ -17,7 +17,7 @@ import {
 
 /** 07.01 · Trust Center Overview (Figma 48:336988). */
 export default {
-  breadcrumb: [{ label: 'Home', to: ROUTES.home }, { label: 'Trust Center Overview' }],
+  breadcrumb: [{ label: 'Home', to: ROUTES.home }, { label: 'Trust Center overview' }],
 
   /** 01 · Hero (664 tall): audit log in the window, action items overlapping. */
   ...windowHero({

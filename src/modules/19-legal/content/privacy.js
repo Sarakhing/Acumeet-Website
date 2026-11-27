@@ -7,7 +7,7 @@ export default legalPage('privacy', doc, {
   directory: {
     type: 'directory',
     eyebrow: 'Legal',
-    title: 'Explore Legal',
+    title: 'Explore legal',
     items: [
       ...['terms', 'cookies', 'dpa', 'acceptableUse', 'security'].map((k) => ({
         title: LEGAL[k].title,

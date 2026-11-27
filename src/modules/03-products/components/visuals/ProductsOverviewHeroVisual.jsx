@@ -20,7 +20,7 @@ export function ProductsAtlasPrompt({ className }) {
 }
 
 const SUMMARY = {
-  title: 'Client Feedback Analysis Session',
+  title: 'Client feedback analysis session',
   scores: [
     { label: 'Quality', value: 66, bar: 'amber' },
     { label: 'Sentiment', value: 91, bar: 'green' },

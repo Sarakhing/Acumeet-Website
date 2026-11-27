@@ -2,7 +2,7 @@ import { DEMO, priBreadcrumb } from './pricing';
 
 /** 16.03 · Feature Comparison (Figma 49:173923). */
 export default {
-  breadcrumb: priBreadcrumb('Feature Comparison'),
+  breadcrumb: priBreadcrumb('Feature comparison'),
 
   sections: [
     /** 01 · Comparison (49:173926). */
@@ -14,5 +14,5 @@ export default {
     },
   ],
 
-  cta: { title: 'Feature Comparison', lead: ' ', primary: DEMO, secondary: null },
+  cta: { title: 'Feature comparison', lead: ' ', primary: DEMO, secondary: null },
 };

@@ -16,11 +16,11 @@ const heroActions = floatActions(4, tasks(['Fri', 'Jun 17', 'May 22']));
 
 /** 08.10 · Regulatory Support (Figma 48:369307). */
 export default {
-  breadcrumb: compBreadcrumb('Regulatory Support'),
+  breadcrumb: compBreadcrumb('Regulatory support'),
 
   /** 01 · Hero (858): audit log (+6°) and decisions (−6°) tilted behind action items. */
   ...centeredHero({
-    eyebrow: 'Compliance  ·  Regulatory Support',
+    eyebrow: 'Compliance  ·  Regulatory support',
     title: 'Bring compliance and procurement',
     accent: 'in early',
     lead: 'Our team supports security reviews, procurement risk assessments and regulatory information requests.',

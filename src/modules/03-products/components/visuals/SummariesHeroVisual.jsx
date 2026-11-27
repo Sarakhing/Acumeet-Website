@@ -33,7 +33,7 @@ export default function SummariesHeroVisual() {
         date="Tue, Jun 14"
         meetings={[
           { title: 'Weekly ProcureCentro Stand-up', meta: '4:00 PM · Zoom' },
-          { title: 'Monthly Marketing Strategy Review', meta: '9:00 AM · Meet' },
+          { title: 'Monthly marketing strategy review', meta: '9:00 AM · Meet' },
           { title: 'Product Development Sync-Up', meta: '2:00 PM · Teams' },
         ]}
       />

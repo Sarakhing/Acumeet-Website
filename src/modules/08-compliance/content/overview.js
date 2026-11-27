@@ -30,7 +30,7 @@ import {
 
 /** 08.01 · Compliance Overview (Figma 48:369434). */
 export default {
-  breadcrumb: [{ label: 'Home', to: ROUTES.home }, { label: 'Compliance Overview' }],
+  breadcrumb: [{ label: 'Home', to: ROUTES.home }, { label: 'Compliance overview' }],
 
   /** 01 · Hero + "Hero carousel · 08.01 · Compliance Overview" (48:344810). */
   ...ringsHero({
@@ -67,7 +67,7 @@ export default {
           'Meetings can contain personal data, confidential business discussions and decisions that affect customers, employees and operations. Acumeet’s compliance approach supports the responsible use of meeting intelligence and helps enterprise teams understand the commitments relevant to their evaluation.',
           'This page summarises Acumeet’s stated certifications and compliance commitments. It is intended to help security, legal, privacy, procurement and business teams find the right starting point for due diligence.',
         ],
-        cta: CONTACT('Talk to Our Team'),
+        cta: CONTACT('Talk to our team'),
       },
       [
         [
@@ -197,7 +197,7 @@ export default {
           'Meeting intelligence is useful only when organisations can understand and govern the information behind it. Acumeet helps turn meeting activity into structured knowledge, so privacy and data governance need to be considered across capture, processing, access, retention and deletion.',
         ],
         columns: 2,
-        cta: { label: 'Explore Privacy & Data Protection', to: ROUTES.trustPage.privacy },
+        cta: { label: 'Explore privacy & data protection', to: ROUTES.trustPage.privacy },
       },
       GOVERNANCE_CARDS,
     ),
@@ -290,7 +290,7 @@ export default {
     {
       type: 'directory',
       eyebrow: 'Compliance',
-      title: 'Explore Compliance',
+      title: 'Explore compliance',
       items: COMPLIANCE_KEYS.map((k) => ({
         title: COMPLIANCE[k].title,
         description: COMPLIANCE[k].tagline,

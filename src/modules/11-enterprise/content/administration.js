@@ -5,7 +5,7 @@ import { checklist, DEMO, entBreadcrumb, exploreEnterprise, link, statement } fr
 
 /** 11.03 · Enterprise Administration (Figma 49:68282). */
 export default {
-  breadcrumb: entBreadcrumb('Enterprise Administration'),
+  breadcrumb: entBreadcrumb('Enterprise administration'),
 
   /** 01 · Hero (695): workspace access in the window, decisions overlapping, "Live" chip. */
   ...entPage('administration', {

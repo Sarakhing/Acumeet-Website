@@ -5,11 +5,11 @@ import { chapters, CONTACT, depBreadcrumb, depCta, exploreDeployment, faq } from
 
 /** 10.03 · Enterprise Hosted (Figma 48:393631). */
 export default {
-  breadcrumb: depBreadcrumb('Enterprise Hosted'),
+  breadcrumb: depBreadcrumb('Enterprise hosted'),
 
   /** 01 · Hero (771): keys & storage in the window, decisions overlapping, "Live" chip. */
   ...windowHero({
-    eyebrow: 'Enterprise Hosted',
+    eyebrow: 'Enterprise hosted',
     title: 'A deployment discussion shaped around',
     accent: 'enterprise requirements.',
     lead: 'Plan Acumeet around your organisation’s operational realities: identity, access, integrations, governance, scale, support, and the policies that shape how meeting-derived information is handled.',

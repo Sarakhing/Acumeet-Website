@@ -3,7 +3,7 @@ import { companyCards, DEMO, PLATFORM } from './company';
 
 /** 17.01 · Company Hub (Figma 49:187601). */
 export default {
-  breadcrumb: [{ label: 'Home', to: ROUTES.home }, { label: 'Company Hub' }],
+  breadcrumb: [{ label: 'Home', to: ROUTES.home }, { label: 'Company hub' }],
   sections: [
     {
       type: 'hero',

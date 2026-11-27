@@ -16,11 +16,11 @@ import {
 
 /** 15.16 · Support Plans (Figma 49:168429). */
 export default {
-  breadcrumb: supBreadcrumb('Support Plans'),
+  breadcrumb: supBreadcrumb('Support plans'),
 
   /** 01 · Hero (680): support by plan in the window, action items overlapping, "Live" chip. */
   ...windowHero({
-    eyebrow: 'Support  ·  Support Plans',
+    eyebrow: 'Support  ·  Support plans',
     title: 'Support that fits how your',
     accent: 'organisation operates',
     lead: 'From email support to a dedicated Customer Success Manager and custom SLA.',

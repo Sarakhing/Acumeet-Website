@@ -29,6 +29,81 @@
   }
 }
 
+/*
+ * Eyebrow: the one small label above section and hero titles, site-wide (the home hero's
+ * "With Enterprise-grade security built-in"): 13px → 14px from sm, medium, sentence case.
+ * `eyebrow-dark` is the same on dark surfaces.
+ */
+@utility eyebrow {
+  font-family: var(--font-sans);
+  font-size: 13px;
+  line-height: 1.4;
+  font-weight: 500;
+  letter-spacing: 0;
+  text-transform: none;
+  color: var(--color-ink-600);
+  @media (width >= 40rem) {
+    font-size: 14px;
+  }
+}
+@utility eyebrow-dark {
+  font-family: var(--font-sans);
+  font-size: 13px;
+  line-height: 1.4;
+  font-weight: 500;
+  letter-spacing: 0;
+  text-transform: none;
+  color: var(--color-ink-on-dark-muted);
+  @media (width >= 40rem) {
+    font-size: 14px;
+  }
+}
+
+/*
+ * Pattern motion: slow, small movement for decorative patterns (the waveform already drifts).
+ * motion-breathe — rings: a slow ~4% swell and fade (origin via --motion-origin).
+ * motion-pan     — hairline / dot artwork: a slow sway of about 1% (slightly over-scaled so the
+ *                  edges never show).
+ * motion-dots    — CSS dot fields: drift one pitch diagonally, seamlessly (set --dot-pitch).
+ * The reduced-motion rule below stops them.
+ */
+@keyframes pattern-breathe {
+  from {
+    transform: scale(1);
+    opacity: 0.75;
+  }
+  to {
+    transform: scale(1.04);
+    opacity: 1;
+  }
+}
+@keyframes pattern-pan {
+  from {
+    transform: scale(1.05) translate3d(-1%, -0.8%, 0);
+  }
+  to {
+    transform: scale(1.05) translate3d(1%, 0.8%, 0);
+  }
+}
+@keyframes pattern-dots {
+  to {
+    transform: translate3d(var(--dot-pitch, 22px), var(--dot-pitch, 22px), 0);
+  }
+}
+.motion-breathe {
+  transform-origin: var(--motion-origin, center);
+  animation: pattern-breathe 10s ease-in-out infinite alternate;
+  will-change: transform, opacity;
+}
+.motion-pan {
+  animation: pattern-pan 22s ease-in-out infinite alternate;
+  will-change: transform;
+}
+.motion-dots {
+  animation: pattern-dots 9s linear infinite;
+  will-change: transform;
+}
+
 @media (prefers-reduced-motion: reduce) {
   *,
   *::before,
@@ -37,5 +112,10 @@
     animation-iteration-count: 1 !important;
     transition-duration: 0.01ms !important;
     scroll-behavior: auto !important;
+  }
+  .motion-breathe,
+  .motion-pan,
+  .motion-dots {
+    animation: none !important;
   }
 }

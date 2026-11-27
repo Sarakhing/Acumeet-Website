@@ -10,13 +10,13 @@ import {
 
 /** 11.16 · PoC Process (Figma 49:69804). */
 export default {
-  breadcrumb: entBreadcrumb('PoC Process', { poc: true }),
+  breadcrumb: entBreadcrumb('PoC process', { poc: true }),
 
   /** 01 · Hero (680): summary in the window, action items overlapping, "Live" chip. */
   ...entPage('pocProcess', {
     hero: 'window',
     tabKey: 'poc',
-    eyebrow: 'PoC Process',
+    eyebrow: 'PoC process',
     title: 'A clear path from question',
     accent: 'to result',
     lead: 'Define the problem. Configure the environment. Test the workflow. Review the results.',

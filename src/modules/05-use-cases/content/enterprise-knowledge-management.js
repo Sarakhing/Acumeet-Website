@@ -14,15 +14,15 @@ const heroDecisions = decisions(
 
 /** 05.13 · Enterprise Knowledge Management (Figma 48:308004). */
 export default {
-  breadcrumb: ucBreadcrumb('Enterprise Knowledge Management'),
+  breadcrumb: ucBreadcrumb('Enterprise knowledge management'),
 
   /** 01 · Hero (48:308007) — 1026 tall: search (+1.5°) and summary (+0.2°) behind decisions. */
   ...centeredHero({
-    eyebrow: 'Enterprise Knowledge Management',
-    title: 'Turn Meeting Conversations into',
-    accent: 'Organisational Knowledge',
+    eyebrow: 'Enterprise knowledge management',
+    title: 'Turn meeting conversations into',
+    accent: 'organisational knowledge',
     lead: 'Important organisational knowledge is often created in meetings: decisions are explained, expertise is shared, risks are discussed, and next steps are agreed. Acumeet helps teams capture meeting discussions, summarise key information, and retain searchable meeting-derived knowledge—so authorised users can return to relevant context instead of relying only on memory or scattered notes.',
-    secondary: { label: 'Explore the Knowledge Repository', to: ROUTES.product.knowledgeRepository },
+    secondary: { label: 'Explore the knowledge repository', to: ROUTES.product.knowledgeRepository },
     height: 1026,
     copyHeight: 394,
     top: 558,

@@ -6,7 +6,7 @@ const G = ROUTES.getStartedPage;
 /** Home / Get Started / {page}. */
 export const gsBreadcrumb = (label) => [
   { label: 'Home', to: ROUTES.home },
-  { label: 'Get Started', to: G.overview },
+  { label: 'Get started', to: G.overview },
   { label },
 ];
 

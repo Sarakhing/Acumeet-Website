@@ -78,7 +78,7 @@ export function HeroForm({ eyebrow, title, titleSize = 52, lead, value, steps, l
         className="grid items-start gap-10 lg:grid-cols-[600px_minmax(0,560px)] lg:gap-20"
       >
         <div className="flex flex-col gap-7">
-          <Pill>{eyebrow}</Pill>
+          <p className="eyebrow">{eyebrow}</p>
           <h1
             className={cn(
               'text-[36px] leading-[1.06] font-medium tracking-[-1.2px] text-[#0b0b12] sm:text-[44px]',
@@ -136,7 +136,7 @@ export function GSHero({ eyebrow, title, lead, primary, secondary }) {
       />
       <Container width="wide">
         <div className="mx-auto flex max-w-[894px] flex-col items-center gap-6 text-center lg:px-10 lg:py-7">
-          <Pill>{eyebrow}</Pill>
+          <p className="eyebrow">{eyebrow}</p>
           <h1 className="text-[40px] leading-[1.05] font-medium tracking-[-1.4px] text-[#0b0b12] sm:text-[52px] lg:text-[64px] lg:tracking-[-2.05px]">
             {title}
           </h1>
@@ -174,9 +174,7 @@ export function Choose({ title, signUp, demo, routes }) {
           <article className="relative isolate flex flex-col gap-7 overflow-hidden rounded-[28px] bg-[#0b0b12] p-7 lg:p-9">
             <DarkGlows magenta={0.45} blue={0} />
             <GridLines />
-            <Pill bg="rgba(255,255,255,0.1)" color="#fff" className="relative">
-              {signUp.eyebrow}
-            </Pill>
+            <p className="eyebrow-dark relative">{signUp.eyebrow}</p>
             <div className="relative flex flex-col gap-3">
               <h3 className="text-[28px] leading-[1.15] font-medium tracking-[-0.8px] text-white lg:text-[32px]">
                 {signUp.title}
@@ -204,7 +202,7 @@ export function Choose({ title, signUp, demo, routes }) {
               height={380}
               className="-z-10"
             />
-            <Pill bg="#fff">{demo.eyebrow}</Pill>
+            <p className="eyebrow">{demo.eyebrow}</p>
             <div className="flex flex-col gap-3">
               <h3 className="text-[28px] leading-[1.15] font-medium tracking-[-0.8px] text-[#0b0b12] lg:text-[32px]">
                 {demo.title}

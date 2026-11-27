@@ -22,11 +22,11 @@ const policy = (status, width = 350) =>
 
 /** 06.04 · Data Security (Figma 48:325595). */
 export default {
-  breadcrumb: secBreadcrumb('Data Security'),
+  breadcrumb: secBreadcrumb('Data security'),
 
   /** 01 · Hero + "Hero carousel · 06.04" (48:328239). */
   ...ringsHero({
-    eyebrow: 'Data Security',
+    eyebrow: 'Data security',
     title: 'Protect meeting information throughout its journey.',
     lead: 'Meeting recordings, transcripts, summaries, and decisions can contain sensitive business information. Evaluate how data is protected in transit and at rest, how customer-managed key or storage options work, and how location requirements are handled in the selected Acumeet configuration.',
     ...HERO_ACTIONS,

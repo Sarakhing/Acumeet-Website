@@ -5,15 +5,15 @@ import { challenge, explorer, faq, outcomes, windowHero, workflows } from './det
 
 /** 05.12 · Management Meetings (Figma 48:307791). */
 export default {
-  breadcrumb: ucBreadcrumb('Management Meetings'),
+  breadcrumb: ucBreadcrumb('Management meetings'),
 
   /** 01 · Hero (48:307794) — 726 tall: upcoming meetings in the window, decisions overlapping. */
   ...windowHero({
-    eyebrow: 'Management Meetings',
-    title: 'Keep Management Decisions Clear, Connected,',
-    accent: 'and Actionable',
+    eyebrow: 'Management meetings',
+    title: 'Keep management decisions clear, connected,',
+    accent: 'and actionable',
     lead: 'Leadership and management teams make decisions that shape priorities, budgets, resources, and execution. Acumeet helps capture management discussions, summarise key points, and document agreed actions—giving teams a clearer record of what was decided, why it was discussed, and what needs to happen next.',
-    secondary: { label: 'Explore Meeting Intelligence', to: ROUTES.product.meetingIntelligence },
+    secondary: { label: 'Explore meeting intelligence', to: ROUTES.product.meetingIntelligence },
     window: capture(
       'Thu, May 21',
       [

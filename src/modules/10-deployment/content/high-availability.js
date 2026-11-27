@@ -15,11 +15,11 @@ const TITLE = 'Plan for service continuity with clear availability expectations.
 
 /** 10.09 · High Availability (Figma 48:394191). */
 export default {
-  breadcrumb: depBreadcrumb('High Availability'),
+  breadcrumb: depBreadcrumb('High availability'),
 
   /** 01 · Hero + "Hero carousel · 10.09 · High Availability" (48:354289). */
   ...ringsHero({
-    eyebrow: 'High Availability',
+    eyebrow: 'High availability',
     title: TITLE,
     lead: 'Availability planning should connect business needs with the actual architecture, dependencies, monitoring, and operational response. Acumeet can review your requirements and confirm the service commitments that apply to the proposed deployment.',
     primary: CONTACT('Discuss availability requirements'),

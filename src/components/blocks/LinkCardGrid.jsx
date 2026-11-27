@@ -74,7 +74,7 @@ export default function LinkCardGrid({ eyebrow, title, items = [], columns = 3, 
       <Container width="wide" className="flex flex-col gap-10">
         <div className="flex flex-col gap-3">
           {eyebrow && (
-            <p className="font-mono text-[12px] uppercase leading-[1.3] tracking-[0.96px] text-ink-500">{eyebrow}</p>
+            <p className="eyebrow">{eyebrow}</p>
           )}
           <h2 className="text-[32px] font-medium leading-[1.3] tracking-[-0.8px] text-ink-800 sm:text-[40px] lg:text-[44px]">
             {title}

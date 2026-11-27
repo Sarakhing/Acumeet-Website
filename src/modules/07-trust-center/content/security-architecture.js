@@ -14,11 +14,11 @@ import {
 
 /** 07.08 · Security Architecture (Figma 48:337990). */
 export default {
-  breadcrumb: tcBreadcrumb('Security Architecture'),
+  breadcrumb: tcBreadcrumb('Security architecture'),
 
   /** 01 · Hero + "Hero carousel · 07.08 · Security Architecture" (48:341003). */
   ...ringsHero({
-    eyebrow: 'Trust Center  ·  Security Architecture',
+    eyebrow: 'Trust Center  ·  Security architecture',
     title: 'How Acumeet is built to protect meeting data',
     lead: 'An overview of the identity, isolation, encryption and monitoring layers that protect your meeting intelligence.',
     primary: REQUEST('Request the architecture overview'),

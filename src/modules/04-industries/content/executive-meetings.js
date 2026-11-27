@@ -3,13 +3,13 @@ import { actions, capture, decisions, explorerItems, followSplit, fsBreadcrumb, 
 
 /** 04.04 · Executive Meetings (Figma 48:289384). */
 export default {
-  breadcrumb: fsBreadcrumb('Executive Meetings'),
+  breadcrumb: fsBreadcrumb('Executive meetings'),
 
   /** 01 · Hero (48:289387) — dark rings hero, no buttons, 867 tall. */
   hero: {
     variant: 'rings',
-    eyebrow: 'Executive Meetings',
-    title: 'Turn Executive Discussions Into Clear Priorities and Action',
+    eyebrow: 'Executive meetings',
+    title: 'Turn executive discussions into clear priorities and action',
     lead: 'Help leadership teams preserve strategic context, document decisions and follow through on priorities with Acumeet meeting intelligence.',
   },
 
@@ -52,7 +52,7 @@ export default {
   explorer: {
     items: explorerItems([
       {
-        title: 'Keep Leadership Aligned',
+        title: 'Keep leadership aligned',
         body: 'Executive meetings cover business performance, priorities, resource decisions and cross-functional initiatives. Structured summaries help participants revisit the same decisions and agreed direction.',
         visual: summary('Management Meeting', [71, 66, 40], [
           'Finance flagged budget pressure from currency movements.',
@@ -60,7 +60,7 @@ export default {
         ]),
       },
       {
-        title: 'Record Decisions and Ownership',
+        title: 'Record decisions and ownership',
         body: 'Capture key decisions and action items so responsibilities and next steps are easier to review after the meeting.',
         visual: actions(
           4,
@@ -73,7 +73,7 @@ export default {
         ),
       },
       {
-        title: 'Connect Discussions Across Time',
+        title: 'Connect discussions across time',
         body: 'Retrieve meeting-derived knowledge to understand how priorities evolved and what was agreed in earlier discussions.',
         visual: search(
           'regional expansion decision',
@@ -86,7 +86,7 @@ export default {
         ),
       },
       {
-        title: 'Executive Workflows',
+        title: 'Executive workflows',
         body: 'Support leadership meetings, strategy reviews, operating reviews, planning sessions, business performance discussions and cross-functional steering meetings.',
         visual: capture('Tue, Jun 10', [
           ['Strategy Offsite Review', '11:00 AM · Zoom'],

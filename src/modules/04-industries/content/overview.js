@@ -10,14 +10,14 @@ import { INDUSTRIES, exploreIndustries, linkCard } from './industries';
 
 /** 04.00 · Industries Overview (Figma 48:287759). */
 export const industriesOverview = {
-  breadcrumb: [{ label: 'Home', to: ROUTES.home }, { label: 'Industries Overview' }],
+  breadcrumb: [{ label: 'Home', to: ROUTES.home }, { label: 'Industries overview' }],
 
   /** 01 · Hero (48:287762) — 707 tall, no CTAs. */
   hero: {
     eyebrow: 'Industries',
     eyebrowStyle: 'chip',
     pattern: 'hairlines',
-    title: 'Meeting Intelligence for Complex, High-Stakes Work',
+    title: 'Meeting intelligence for complex, high-stakes work',
     titleSize: 54,
     copyWidth: 580,
     copyTop: 56,
@@ -34,7 +34,7 @@ export const industriesOverview = {
   /** Tabs explorer (48:287923) + "✓ Explorer · Explore Industries" (48:264517; tab 1 overridden on the page). */
   explorer: {
     title: 'Explore',
-    accent: 'Industries',
+    accent: 'industries',
     items: [
       {
         title: 'Telecommunications',
@@ -54,7 +54,7 @@ export const industriesOverview = {
         }),
       },
       {
-        title: 'Public Sector',
+        title: 'Public sector',
         body: 'Help teams document programme discussions, stakeholder meetings, policy conversations and agreed actions with a clearer record of outcomes.',
         link: { to: INDUSTRIES.publicSector.to },
         tint: 'pink',
@@ -79,7 +79,7 @@ export const industriesOverview = {
         pattern: { type: 'hairlines', size: 'explorer' },
         visual: h(SummaryCard, {
           width: 480,
-          title: 'Board Meeting · Q3',
+          title: 'Board meeting · Q3',
           scores: [
             { label: 'Quality', value: 71, bar: 'amber' },
             { label: 'Sentiment', value: 81, bar: 'green' },
@@ -92,7 +92,7 @@ export const industriesOverview = {
         }),
       },
       {
-        title: 'Other Regulated Industries',
+        title: 'Other regulated industries',
         body: 'Support organisations that need structured meeting records, controlled handling of information and clearer accountability across important discussions.',
         link: { to: INDUSTRIES.otherRegulated.to },
         tint: 'mint',
@@ -113,7 +113,7 @@ export const industriesOverview = {
   /** Directory · INDUSTRIES (48:287927). */
   directory: {
     eyebrow: 'Industries',
-    title: 'Explore Industries',
+    title: 'Explore industries',
     items: ['financialServices', 'telecommunications', 'publicSector', 'enterprise', 'otherRegulated'].map(linkCard),
   },
 
@@ -122,7 +122,7 @@ export const industriesOverview = {
 
   /** CTA band (48:287946) — headline + single button; Figma keeps the sub-line as a blank line (keeps its spacing). */
   cta: {
-    title: 'Meeting Intelligence for Complex, High-Stakes Work',
+    title: 'Meeting intelligence for complex, high-stakes work',
     lead: '\u00a0',
     primary: { label: 'Book a demo', to: ROUTES.bookDemo },
     secondary: null,

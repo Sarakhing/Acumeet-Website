@@ -14,16 +14,16 @@ const FAQ_DOWNSTREAM =
 
 /** 02.02 · Meeting Capture (Figma 46:37362). */
 export const meetingCapture = {
-  breadcrumb: productBreadcrumb('Meeting Capture'),
+  breadcrumb: productBreadcrumb('Meeting capture'),
 
   /** 01 · Hero (46:37365) — 800 tall. */
   hero: {
-    eyebrow: 'Product · Meeting Capture',
+    eyebrow: 'Product · Meeting capture',
     eyebrowStyle: 'chip',
-    title: 'Capture Every Important Business',
-    accent: 'Conversation.',
+    title: 'Capture every important business',
+    accent: 'conversation.',
     lead: 'Acumeet helps organisations capture meeting content so conversations can become searchable information, summaries, decisions, and actionable follow-ups. Bring meeting information into your workflow through supported meeting integrations and audio/video uploads.',
-    primary: { label: 'Book a Demo', to: ROUTES.bookDemo },
+    primary: { label: 'Book a demo', to: ROUTES.bookDemo },
     secondary: { label: 'Explore Acumeet', to: ROUTES.products },
     visual: h(MeetingCaptureHeroVisual),
     visualWidth: 665,
@@ -32,8 +32,8 @@ export const meetingCapture = {
 
   /** Tabs explorer (46:38522) + "✓ Explorer · Connect to the Meetings…" (46:43657). */
   explorer: {
-    title: 'Connect to the Meetings You',
-    accent: 'Already Use',
+    title: 'Connect to the meetings you',
+    accent: 'already use',
     items: [
       {
         title: 'Microsoft Teams',
@@ -46,7 +46,7 @@ export const meetingCapture = {
           date: 'Mon, May 12',
           meetings: [
             { title: 'Weekly ProcureCentro Stand-up', meta: '9:00 AM · Teams' },
-            { title: 'Client Feedback Analysis Session', meta: '11:30 AM · Teams' },
+            { title: 'Client feedback analysis session', meta: '11:30 AM · Teams' },
             { title: 'Product Development Sync-Up', meta: '3:00 PM · Teams' },
           ],
         }),
@@ -61,9 +61,9 @@ export const meetingCapture = {
           width: 400,
           date: 'Mon, May 12',
           meetings: [
-            { title: 'Monthly Marketing Strategy Review', meta: '10:00 AM · Zoom' },
-            { title: 'Partner Onboarding Call', meta: '1:00 PM · Zoom' },
-            { title: 'Vendor Quarterly Review', meta: '4:30 PM · Zoom' },
+            { title: 'Monthly marketing strategy review', meta: '10:00 AM · Zoom' },
+            { title: 'Partner onboarding call', meta: '1:00 PM · Zoom' },
+            { title: 'Vendor quarterly review', meta: '4:30 PM · Zoom' },
           ],
         }),
       },
@@ -77,14 +77,14 @@ export const meetingCapture = {
           width: 400,
           date: 'Mon, May 12',
           meetings: [
-            { title: 'Design Review', meta: '9:30 AM · Meet' },
-            { title: 'Hiring Panel Debrief', meta: '12:00 PM · Meet' },
-            { title: 'Sprint Planning', meta: '2:30 PM · Meet' },
+            { title: 'Design review', meta: '9:30 AM · Meet' },
+            { title: 'Hiring panel debrief', meta: '12:00 PM · Meet' },
+            { title: 'Sprint planning', meta: '2:30 PM · Meet' },
           ],
         }),
       },
       {
-        title: 'Audio and Video Uploads',
+        title: 'Audio and video uploads',
         body: 'Bring supported existing audio or video files into Acumeet so recorded conversations can be processed without requiring every meeting to be captured live.',
         tint: 'mint',
         pattern: { type: 'waveform', size: 'explorer' },
@@ -108,7 +108,7 @@ export const meetingCapture = {
   split: {
     size: 'standard',
     reverse: true,
-    title: 'Your Meeting Is Just the Beginning.',
+    title: 'Your meeting is just the beginning.',
     body: [
       'Meeting capture is the entry point into the Acumeet workflow. Once supported meeting content is available, it can feed into other product capabilities.',
       'Capture meeting content through supported meeting workflows or file uploads.',
@@ -138,8 +138,8 @@ export const meetingCapture = {
    * Tab labels are full sentences; the panel repeats them as the 34px title, no body.
    */
   why: {
-    title: 'Why Meeting Capture',
-    accent: 'Matters',
+    title: 'Why meeting capture',
+    accent: 'matters',
     accentBreak: false,
     tone: 'white',
     steps: [
@@ -153,7 +153,7 @@ export const meetingCapture = {
           date: 'Thu, May 5',
           meetings: [
             { title: 'Weekly ProcureCentro Stand-up', meta: '2:00 PM · Meet' },
-            { title: 'Monthly Marketing Strategy Review', meta: '4:00 PM · Teams' },
+            { title: 'Monthly marketing strategy review', meta: '4:00 PM · Teams' },
             { title: 'Product Development Sync-Up', meta: '9:00 AM · Zoom' },
           ],
         }),
@@ -261,7 +261,7 @@ export const meetingCapture = {
   cta: {
     title: 'Bring Your Meetings into Acumeet.',
     lead: 'Capture or import supported meeting content and make it available for the next steps in your meeting intelligence workflow.',
-    primary: { label: 'Book a Demo', to: ROUTES.bookDemo },
+    primary: { label: 'Book a demo', to: ROUTES.bookDemo },
     secondary: { label: 'Explore Acumeet', to: ROUTES.products },
   },
 };

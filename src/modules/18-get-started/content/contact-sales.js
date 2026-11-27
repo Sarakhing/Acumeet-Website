@@ -2,7 +2,7 @@ import { chips, EMAIL, gsBreadcrumb, heroForm, NAME, ORG, role, textarea } from 
 
 /** 18.06 · Contact Sales (Figma 49:196717). Also 16.07 Contact Sales. */
 export default {
-  breadcrumb: gsBreadcrumb('Contact Sales'),
+  breadcrumb: gsBreadcrumb('Contact sales'),
   sections: [
     heroForm(
       {

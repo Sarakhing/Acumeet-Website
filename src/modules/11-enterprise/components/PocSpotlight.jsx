@@ -22,7 +22,7 @@ export default function PocSpotlight({
       <Container width="wide">
         <div className="flex flex-col gap-10 rounded-[32px] bg-[linear-gradient(90deg,#fbeef4_0%,#f3f2fa_50%,#edf3ff_100%)] p-6 sm:p-10 lg:flex-row lg:items-center lg:gap-16 lg:p-16">
           <div className="flex flex-col gap-5 lg:w-[520px] lg:shrink-0">
-            <p className="font-mono text-[12px] uppercase tracking-[0.96px] text-brand-magenta">
+            <p className="eyebrow">
               {eyebrow}
             </p>
             <h2 className="text-[32px] font-medium leading-[1.1] tracking-[-1px] text-ink-900 sm:text-[44px]">

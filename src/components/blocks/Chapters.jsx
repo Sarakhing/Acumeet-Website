@@ -16,7 +16,7 @@ const GLOWS = {
 const TONES = {
   dark: {
     section: 'bg-surface-night',
-    heading: '[&>span:first-child]:text-ink-on-dark',
+    heading: 'text-ink-on-dark!',
     title: 'text-ink-on-dark',
     body: 'text-ink-on-dark-muted',
     check: 'text-[#12b76a]',
@@ -41,7 +41,7 @@ function ChapterBody({ ch, index, count, tone, showCounter, as: Heading = 'h3' }
     <>
       <div className="flex flex-col gap-4 lg:w-[560px] lg:shrink-0">
         {showCounter && (
-          <p className="font-mono text-overline uppercase text-[#8e8ea0]">
+          <p className="eyebrow-dark">
             Chapter {pad(index + 1)} / {pad(count)}
           </p>
         )}

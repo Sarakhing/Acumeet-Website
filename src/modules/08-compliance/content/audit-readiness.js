@@ -14,11 +14,11 @@ const REQUEST = CONTACT('Request documentation');
 
 /** 08.09 · Audit Readiness (Figma 48:369199). */
 export default {
-  breadcrumb: compBreadcrumb('Audit Readiness'),
+  breadcrumb: compBreadcrumb('Audit readiness'),
 
   /** 01 · Hero (664): audit log in an app window, action items overlapping, "Live" chip. */
   ...windowHero({
-    eyebrow: 'Compliance  ·  Audit Readiness',
+    eyebrow: 'Compliance  ·  Audit readiness',
     title: 'Support audit and vendor',
     accent: 'reviews',
     lead: 'Logged activity and ready documentation that make internal and external reviews easier.',

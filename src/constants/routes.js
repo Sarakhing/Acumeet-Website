@@ -271,6 +271,6 @@ export const ROUTES = {
 
 /** Off-site destinations (opened in a new tab). */
 export const EXTERNAL = {
-  // Meeting Risk Assessment tool (home "Check My Risk Score").
+  // Meeting Risk Assessment tool (home "Check my risk score").
   riskAssessment: 'https://tools.acumeet.ai/v2.0/',
 };

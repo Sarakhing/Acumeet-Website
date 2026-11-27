@@ -2,7 +2,7 @@ import { EMAIL, gsBreadcrumb, heroForm, NAMES, ORG, role, textarea } from './get
 
 /** 18.03 · Book a Demo (Figma 49:196176). */
 export default {
-  breadcrumb: gsBreadcrumb('Book a Demo'),
+  breadcrumb: gsBreadcrumb('Book a demo'),
   sections: [
     heroForm(
       {

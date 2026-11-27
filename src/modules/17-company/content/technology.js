@@ -3,7 +3,7 @@ import { coBreadcrumb, ctaBand, INTEGRATIONS_LINK, PLATFORM, PLATFORMS, STAGES }
 
 /** 17.04 · Our Technology (Figma 49:188272). */
 export default {
-  breadcrumb: coBreadcrumb('Our Technology'),
+  breadcrumb: coBreadcrumb('Our technology'),
   sections: [
     {
       type: 'hero',

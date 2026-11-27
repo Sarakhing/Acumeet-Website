@@ -29,7 +29,7 @@ export default function OverviewIntro({ eyebrow, text, items = [] }) {
     <section className="bg-surface-white py-16 lg:py-32">
       <Container width="wide" className="flex flex-col gap-10 lg:flex-row lg:items-start lg:gap-20">
         <div className="flex flex-col gap-5 lg:w-[560px] lg:shrink-0">
-          <p className="font-mono text-[12px] uppercase tracking-[0.96px] text-[#8b90a3]">
+          <p className="eyebrow">
             {eyebrow}
           </p>
           <p className="text-[24px] leading-[1.35] text-ink-900 sm:text-[30px]">{text}</p>

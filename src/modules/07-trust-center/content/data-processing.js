@@ -14,11 +14,11 @@ import {
 
 /** 07.05 · Data Processing (Figma 48:337726). */
 export default {
-  breadcrumb: tcBreadcrumb('Data Processing'),
+  breadcrumb: tcBreadcrumb('Data processing'),
 
   /** 01 · Hero (680 tall): summary in the window, action items overlapping. */
   ...windowHero({
-    eyebrow: 'Trust Center  ·  Data Processing',
+    eyebrow: 'Trust Center  ·  Data processing',
     title: 'How meeting data is',
     accent: 'processed',
     lead: 'What happens to meeting data from the moment it is captured to the moment it is deleted.',

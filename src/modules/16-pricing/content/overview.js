@@ -42,7 +42,7 @@ export const PRICING_FAQS = [
 
 /** 16.01 · Pricing Overview (Figma 49:173600). Also 16.02 Plans. */
 export default {
-  breadcrumb: [{ label: 'Home', to: ROUTES.home }, { label: 'Pricing Overview' }],
+  breadcrumb: [{ label: 'Home', to: ROUTES.home }, { label: 'Pricing overview' }],
 
   sections: [
     /** 01 · Hero and plans (49:173603). */
@@ -108,7 +108,7 @@ export default {
     {
       type: 'directory',
       eyebrow: 'Pricing',
-      title: 'Explore Pricing',
+      title: 'Explore pricing',
       items: DIRECTORY_KEYS.map((k) => ({
         title: PRICING[k].title,
         description: PRICING[k].tagline,

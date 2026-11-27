@@ -27,7 +27,7 @@ export default function EmiHeroVisual() {
         date="Mon, Jun 8"
         meetings={[
           { title: 'Product Development Sync-Up', meta: '9:00 AM · Teams', live: true },
-          { title: 'Client Feedback Analysis Session', meta: '2:00 PM · Zoom' },
+          { title: 'Client feedback analysis session', meta: '2:00 PM · Zoom' },
           { title: 'Weekly ProcureCentro Stand-up', meta: '4:00 PM · Meet' },
         ]}
       />

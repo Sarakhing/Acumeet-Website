@@ -10,56 +10,56 @@ const D = ROUTES.deploymentPage;
  * Implementation are "shared" entries: they link to 07.06 and 11.08 instead of a page here.
  */
 export const DEPLOYMENT = {
-  overview: { title: 'Deployment Overview', to: D.overview, figma: '48:393391' },
+  overview: { title: 'Deployment overview', to: D.overview, figma: '48:393391' },
   cloudHosted: {
-    title: 'Cloud Hosted',
+    title: 'Cloud hosted',
     tagline: 'Meeting intelligence, without managing the application stack.',
     to: D.cloudHosted,
     figma: '48:393585',
   },
   enterpriseHosted: {
-    title: 'Enterprise Hosted',
+    title: 'Enterprise hosted',
     tagline: 'A deployment discussion shaped around enterprise requirements.',
     to: D.enterpriseHosted,
     figma: '48:393631',
   },
   customerAzureTenant: {
-    title: 'Customer Azure Tenant',
+    title: 'Customer Azure tenant',
     tagline: 'Evaluate Acumeet against your Azure environment.',
     to: D.customerAzureTenant,
     figma: '48:393739',
   },
   byos: {
-    title: 'BYOS Deployment',
+    title: 'BYOS deployment',
     tagline: 'Explore customer-owned storage for meeting data.',
     to: D.byos,
     figma: '48:393876',
   },
   privateDeployment: {
-    title: 'Private Deployment',
+    title: 'Private deployment',
     tagline: 'Discuss deployment options for stricter environment requirements.',
     to: D.privateDeployment,
     figma: '48:393933',
   },
   dataResidency: {
-    title: 'Data Residency',
+    title: 'Data residency',
     tagline: 'Make data location a defined deployment requirement.',
     to: D.dataResidency, // shared → 07.06
   },
   azureArchitecture: {
-    title: 'Azure Architecture',
+    title: 'Azure architecture',
     tagline: 'Understand the architecture behind your deployment.',
     to: D.azureArchitecture,
     figma: '48:394053',
   },
   highAvailability: {
-    title: 'High Availability',
+    title: 'High availability',
     tagline: 'Plan for service continuity with clear availability expectations.',
     to: D.highAvailability,
     figma: '48:394191',
   },
   disasterRecovery: {
-    title: 'Disaster Recovery',
+    title: 'Disaster recovery',
     tagline: 'Prepare for disruption with a documented recovery approach.',
     to: D.disasterRecovery,
     figma: '48:394247',
@@ -79,7 +79,7 @@ export const CONTACT = (label) => ({ label, to: ROUTES.contactSales });
 /** Home / Deployment Overview / {page}. */
 export const depBreadcrumb = (label) => [
   { label: 'Home', to: ROUTES.home },
-  { label: 'Deployment Overview', to: D.overview },
+  { label: 'Deployment overview', to: D.overview },
   { label },
 ];
 
@@ -101,7 +101,7 @@ const SLOTS = [
 /** "Explore Deployment" row — every "Related" card reads "Deployment". */
 export const exploreDeployment = (keys) => ({
   eyebrow: 'Keep exploring',
-  title: 'Explore Deployment',
+  title: 'Explore deployment',
   cards: keys.map((k, i) => ({
     title: DEPLOYMENT[k].title,
     description: 'Deployment',

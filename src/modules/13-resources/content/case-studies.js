@@ -3,7 +3,7 @@ import { exploreResources, knowSummary, knowTasks, resBreadcrumb, resCta } from 
 
 /** 13.04 · Case Studies (Figma 49:138741). The listing is a placeholder until stories are approved. */
 export default {
-  breadcrumb: resBreadcrumb('Case Studies'),
+  breadcrumb: resBreadcrumb('Case studies'),
 
   /** 01 · Hero (680): summary in the window, action items overlapping, "Live" chip. */
   ...windowHero({

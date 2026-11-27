@@ -8,9 +8,9 @@ const I = ROUTES.integrationsPage;
  * Slugs match the header mega menu.
  */
 export const INTEGRATIONS = {
-  overview: { title: 'Integration Overview', to: I.overview, figma: '48:383883' },
+  overview: { title: 'Integration overview', to: I.overview, figma: '48:383883' },
   meetingPlatforms: {
-    title: 'Meeting Platforms',
+    title: 'Meeting platforms',
     tagline: 'Make meeting knowledge easier to capture and reuse.',
     icon: 'video-camera',
     to: I.meetingPlatforms,
@@ -59,14 +59,14 @@ export const INTEGRATIONS = {
     figma: '48:385586',
   },
   projectManagement: {
-    title: 'Project Management',
+    title: 'Project management',
     tagline: 'Turn meeting decisions into delivery.',
     icon: 'kanban',
     to: I.projectManagement,
     figma: '48:385861',
   },
   developer: {
-    title: 'Developer Integrations',
+    title: 'Developer integrations',
     tagline: 'Build around your systems and workflows.',
     icon: 'plugs-connected',
     to: I.developer,
@@ -82,7 +82,7 @@ export const CONTACT = (label) => ({ label, to: ROUTES.contactSales });
 /** Home / Integration Overview / {page}. */
 export const intBreadcrumb = (label) => [
   { label: 'Home', to: ROUTES.home },
-  { label: 'Integration Overview', to: I.overview },
+  { label: 'Integration overview', to: I.overview },
   { label },
 ];
 
@@ -104,7 +104,7 @@ const SLOTS = [
 /** "Explore Integrations" row — every "Related" card reads "Integrations". */
 export const exploreIntegrations = (keys) => ({
   eyebrow: 'Keep exploring',
-  title: 'Explore Integrations',
+  title: 'Explore integrations',
   cards: keys.map((k, i) => ({
     title: INTEGRATIONS[k].title,
     description: 'Integrations',

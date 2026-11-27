@@ -14,13 +14,13 @@ const heroAudit = () =>
 
 /** 04.10 · Audit Meetings (Figma 48:291127). */
 export default {
-  breadcrumb: fsBreadcrumb('Audit Meetings'),
+  breadcrumb: fsBreadcrumb('Audit meetings'),
 
   /** 01 · Hero (48:291130) — centred light wash, 838 tall; canvas origin 1440-frame (80, 403). */
   hero: {
     variant: 'centered',
-    eyebrow: 'Audit Meetings',
-    title: 'Turn Audit Discussions Into Trackable Follow-Up',
+    eyebrow: 'Audit meetings',
+    title: 'Turn audit discussions into trackable follow-up',
     lead: 'Acumeet helps audit teams document findings discussions, retain context and organise remediation actions and follow-up meetings.',
     visual: heroCanvas(
       415,
@@ -62,7 +62,7 @@ export default {
   explorer: {
     items: explorerItems([
       {
-        title: 'Document Findings and Recommendations',
+        title: 'Document findings and recommendations',
         body: 'Create structured records of audit-related discussions, including key observations, recommendations and outstanding questions.',
         visual: audit(
           [
@@ -75,7 +75,7 @@ export default {
         ),
       },
       {
-        title: 'Track Remediation Actions',
+        title: 'Track remediation actions',
         body: 'Capture agreed next steps, responsibilities and follow-up items to help teams review progress between meetings.',
         visual: actions(
           5,
@@ -88,7 +88,7 @@ export default {
         ),
       },
       {
-        title: 'Retain Context Across Review Cycles',
+        title: 'Retain context across review cycles',
         body: 'Make prior meeting-derived information easier to retrieve when findings or remediation plans are revisited.',
         visual: search(
           'access review finding evidence',
@@ -101,7 +101,7 @@ export default {
         ),
       },
       {
-        title: 'Audit Workflows',
+        title: 'Audit workflows',
         body: 'Support internal audit meetings, control reviews, findings discussions, remediation planning and follow-up reviews.',
         visual: capture('Thu, May 7', [
           ['Audit Committee Meeting', '2:00 PM · Meet'],

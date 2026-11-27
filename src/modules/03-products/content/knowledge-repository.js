@@ -14,19 +14,19 @@ const BLUE_GLOW =
 
 /** 02.10 · Knowledge Repository (Figma 46:43025). */
 export const knowledgeRepository = {
-  breadcrumb: productBreadcrumb('Knowledge Repository'),
+  breadcrumb: productBreadcrumb('Knowledge repository'),
 
   /** 01 · Hero (46:43028) — 737 tall: 64 + 650 canvas + 23; hairline field, 580px copy at y=120. */
   hero: {
     pattern: 'hairlines',
-    eyebrow: 'Product · Knowledge Repository',
+    eyebrow: 'Product · Knowledge repository',
     eyebrowStyle: 'chip',
-    title: 'Turn Meeting Records into Knowledge Your Organisation Can Reuse.',
+    title: 'Turn meeting records into knowledge your organisation can reuse.',
     titleSize: 46,
     copyWidth: 580,
     copyTop: 56,
     lead: 'Keep valuable meeting information organised and easier to retrieve. Acumeet’s Knowledge Repository is designed to help teams revisit meeting records, find relevant details across conversations, and preserve organisational knowledge for future use.',
-    primary: { label: 'Book a Demo', to: ROUTES.bookDemo },
+    primary: { label: 'Book a demo', to: ROUTES.bookDemo },
     secondary: { label: 'Explore Acumeet', to: ROUTES.products },
     secondaryStyle: 'button',
     visual: h(KnowledgeHeroVisual),
@@ -38,7 +38,7 @@ export const knowledgeRepository = {
   split: {
     size: 'compact',
     reverse: true,
-    title: 'A Central Place for Your Meeting Knowledge',
+    title: 'A central place for your meeting knowledge',
     body: [
       'Meetings generate decisions, discussions, commitments, and context that teams may need long after a call ends. When this information is scattered or difficult to locate, people can lose time reconstructing past conversations or repeating work.',
       'A knowledge repository helps make meeting information easier to organise and revisit. The content available depends on the meeting artefacts Acumeet stores and makes searchable, and on the user’s permissions.',
@@ -72,7 +72,7 @@ export const knowledgeRepository = {
 
   /** 03 · rows (46:43229) — the "MEETING ARCHIVE" overline is hidden in Figma. */
   archive: {
-    title: 'Preserve Meeting Records According to Your Organisation’s Policies',
+    title: 'Preserve meeting records according to your organisation’s policies',
     paragraphs: [
       'Meeting records should be managed in line with the organisation’s or institution’s data-handling, retention, privacy, and governance policies. Data Loss Prevention (DLP) policies can help guide how sensitive information is protected and handled, based on the rules the organisation defines and the controls the platform supports.',
       'An organisation may have requirements for which records can be stored, who can access them, how information can be shared, and when records should be retained or deleted.',
@@ -81,7 +81,7 @@ export const knowledgeRepository = {
       'Example use case: An organisation defines policies for handling sensitive meeting records and wants its archive practices to align with those requirements.',
       'Benefit: Support more consistent, policy-led handling of meeting information.',
     ],
-    cta: { label: 'Explore Meeting Archive', to: ROUTES.solutions.govern, size: 'lg' },
+    cta: { label: 'Explore meeting archive', to: ROUTES.solutions.govern, size: 'lg' },
   },
 
   /** 03 · rows Split (46:43245) — dark, 664×500 night panel (blue glow + dark dots). */
@@ -89,7 +89,7 @@ export const knowledgeRepository = {
     size: 'compact',
     tone: 'dark',
     reverse: true,
-    title: 'Make Meeting Information Easier to Find',
+    title: 'Make meeting information easier to find',
     body: [
       'Help users retrieve relevant information from meeting records instead of manually reviewing every conversation. Depending on the content types Acumeet supports, searchable knowledge may include transcripts, summaries, decisions, action items, and discussion points.',
     ],
@@ -98,7 +98,7 @@ export const knowledgeRepository = {
       { text: 'Example prompt: “Where did we discuss the updated delivery timeline?”' },
       { text: 'Benefit: Reduce the effort involved in finding useful information from past meetings.' },
     ],
-    cta: { label: 'Search Meeting Knowledge', to: P.atlas, intent: 'ghost-light' },
+    cta: { label: 'Search meeting knowledge', to: P.atlas, intent: 'ghost-light' },
     visual: h(
       VisualPanel,
       {
@@ -134,7 +134,7 @@ export const knowledgeRepository = {
 
   /** 03 · rows (46:43285). */
   crossMeeting: {
-    title: 'Connect Information Across Multiple Meetings',
+    title: 'Connect information across multiple meetings',
     paragraphs: [
       'Important topics often span multiple conversations. Cross-meeting search helps users find relevant information across available meeting records, making it easier to follow how decisions developed, revisit recurring issues, and connect related discussions over time.',
     ],
@@ -142,7 +142,7 @@ export const knowledgeRepository = {
       'Example prompt: “How has our approach to this project changed over the last four meetings?”',
       'Benefit: Help teams build a clearer picture from information spread across multiple meetings.',
     ],
-    cta: { label: 'Explore Cross-Meeting Search', to: P.atlas, size: 'lg' },
+    cta: { label: 'Explore cross-meeting search', to: P.atlas, size: 'lg' },
   },
 
   /**
@@ -152,7 +152,7 @@ export const knowledgeRepository = {
    */
   preserve: {
     size: 'chapter',
-    title: 'Preserve Knowledge Beyond the Meeting',
+    title: 'Preserve knowledge beyond the meeting',
     body: [
       'Meeting records can contain institutional context, lessons learned, project history, and the reasoning behind important decisions. Making this information easier to preserve and retrieve helps organisations maintain continuity and reuse knowledge instead of relying solely on individual memory.',
     ],
@@ -188,7 +188,7 @@ export const knowledgeRepository = {
   /** Benefits (46:43395) — 846 + 413, then 3 × 413. */
   benefits: {
     title: 'Business',
-    accent: 'Benefits',
+    accent: 'benefits',
     accentBreak: false,
     cards: [
       {
@@ -259,9 +259,9 @@ export const knowledgeRepository = {
 
   /** CTA band (46:43425). */
   cta: {
-    title: 'Make Your Meeting Knowledge Work Beyond the Meeting.',
+    title: 'Make your meeting knowledge work beyond the meeting.',
     lead: 'Organise the information your team creates in meetings, make it easier to retrieve, and help preserve useful context for the work that comes next.',
-    primary: { label: 'Book a Demo', to: ROUTES.bookDemo },
+    primary: { label: 'Book a demo', to: ROUTES.bookDemo },
     secondary: { label: 'Explore Acumeet', to: ROUTES.products },
   },
 };

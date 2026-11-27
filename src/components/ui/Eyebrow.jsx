@@ -1,15 +1,10 @@
 import { cn } from '@/utils/cn';
 
-/** Small uppercase mono overline used above section titles (Figma: Geist Mono 11, tracking 0.66). */
-const TONES = {
-  muted: 'text-ink-500',
-  magenta: 'text-brand-magenta',
-  blue: 'text-brand-blue',
-  dark: 'text-white/55',
-};
-
+/**
+ * The site's one eyebrow style (the home hero's "With Enterprise-grade security built-in"):
+ * 13/14px medium, sentence case, ink-600 — see the `eyebrow` utility in styles/index.css.
+ * tone="dark" is the on-dark version; other tones are kept for older callers and look the same.
+ */
 export default function Eyebrow({ tone = 'muted', className, children }) {
-  return (
-    <p className={cn('font-mono text-overline uppercase', TONES[tone], className)}>{children}</p>
-  );
+  return <p className={cn(tone === 'dark' ? 'eyebrow-dark' : 'eyebrow', className)}>{children}</p>;
 }

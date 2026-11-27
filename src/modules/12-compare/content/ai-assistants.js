@@ -15,7 +15,7 @@ import {
 
 /** 12.02 · Acumeet vs AI Meeting Assistants (Figma 49:115909). No related row in Figma. */
 export default {
-  breadcrumb: cmpBreadcrumb('Acumeet vs AI Meeting Assistants'),
+  breadcrumb: cmpBreadcrumb('Acumeet vs AI meeting assistants'),
 
   ...darkHero({
     height: 548,

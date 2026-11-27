@@ -85,7 +85,7 @@ export default function InPracticeSection({ videoSrc } = {}) {
             id="in-practice-title"
             className="text-balance text-[32px] leading-[1.12] font-medium tracking-[-0.9px] text-white sm:text-[40px] lg:text-[48px] lg:tracking-[-1.44px]"
           >
-            Enterprise AI Meeting Intelligence in Practice
+            Enterprise AI meeting intelligence in practice
           </h2>
           <div className="flex max-w-[878px] flex-col gap-4 text-body leading-[1.35] tracking-[-0.18px] text-[#b4b4c6] sm:text-[18px]">
             <p>

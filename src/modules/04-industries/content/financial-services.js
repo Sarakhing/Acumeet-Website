@@ -65,18 +65,18 @@ const avatar = (name) => AVATARS[name];
 export const financialServices = {
   breadcrumb: [
     { label: 'Home', to: ROUTES.home },
-    { label: 'Industries Overview', to: INDUSTRIES.overview.to },
-    { label: 'Financial Services' },
+    { label: 'Industries overview', to: INDUSTRIES.overview.to },
+    { label: 'Financial services' },
   ],
 
   /** 01 · Hero (48:287952) — dark rings hero, carousel bleeds into the next section. */
   hero: {
     variant: 'rings',
-    eyebrow: 'Financial Services',
-    title: 'Turn Financial Meetings Into Actionable Intelligence',
+    eyebrow: 'Financial services',
+    title: 'Turn financial meetings into actionable intelligence',
     lead: 'Financial institutions make critical decisions every day across leadership meetings, risk reviews, credit committees, compliance discussions and customer engagements. Acumeet helps teams turn these conversations into structured records, clear decisions, trackable actions and searchable organisational knowledge.',
-    primary: { label: 'Book a Demo', to: ROUTES.bookDemo },
-    secondary: { label: 'Explore Solutions', to: ROUTES.solutions.overview },
+    primary: { label: 'Book a demo', to: ROUTES.bookDemo },
+    secondary: { label: 'Explore solutions', to: ROUTES.solutions.overview },
     secondaryStyle: 'link',
   },
 
@@ -113,7 +113,7 @@ export const financialServices = {
       label: 'Summary',
       content: h(SummaryCard, {
         width: 560,
-        title: 'Retail Banking Operations Review',
+        title: 'Retail banking operations review',
         scores: [
           { label: 'Quality', value: 76, bar: 'amber' },
           { label: 'Sentiment', value: 86, bar: 'green' },
@@ -131,7 +131,7 @@ export const financialServices = {
   intro: {
     size: 'compact',
     reverse: true,
-    title: 'Bring Structure to High-Stakes Financial Discussions',
+    title: 'Bring structure to high-stakes financial discussions',
     body: [
       'Financial decisions often involve multiple stakeholders, detailed discussions, sensitive information and actions that must be followed through. When meeting outcomes are scattered across notes, emails and individual follow-ups, important context can be difficult to retrieve. Acumeet helps financial services teams create a more consistent way to document meetings, retain context and follow decisions through to action.',
     ],
@@ -159,18 +159,18 @@ export const financialServices = {
 
   /** Tabs explorer (48:288014) + "✓ Explorer · How Acumeet Supports Financial Services" (48:266716). */
   explorer: {
-    title: 'How Acumeet Supports Financial',
-    accent: 'Services',
+    title: 'How Acumeet supports financial',
+    accent: 'services',
     tone: 'subtle',
     items: [
       {
-        title: 'Meeting Documentation',
+        title: 'Meeting documentation',
         body: 'Generate structured transcripts and meeting summaries to help teams retain the key points discussed.',
         tint: 'lilac',
         pattern: { type: 'dots', size: 'explorer' },
         visual: h(SummaryCard, {
           width: 440,
-          title: 'Branch Performance Review',
+          title: 'Branch performance review',
           scores: [
             { label: 'Quality', value: 44, bar: 'amber' },
             { label: 'Sentiment', value: 63, bar: 'green' },
@@ -183,7 +183,7 @@ export const financialServices = {
         }),
       },
       {
-        title: 'Decision and Action Tracking',
+        title: 'Decision and action tracking',
         body: 'Capture decisions and action items, clarify responsibilities and make follow-up easier to manage.',
         tint: 'pink',
         pattern: { type: 'rings', size: 'explorer' },
@@ -200,7 +200,7 @@ export const financialServices = {
         }),
       },
       {
-        title: 'Searchable Meeting Knowledge',
+        title: 'Searchable meeting knowledge',
         body: 'Make it easier to retrieve previous discussions and the context behind decisions.',
         tint: 'blue',
         pattern: { type: 'hairlines', size: 'explorer' },
@@ -234,8 +234,8 @@ export const financialServices = {
 
   /** Benefits (48:288018) — 11 workflow cards linking to the FS sub-pages. */
   workflows: {
-    title: 'Explore Financial Services',
-    accent: 'Workflows',
+    title: 'Explore financial services',
+    accent: 'workflows',
     accentBreak: false,
     lead: 'Explore how Acumeet can support the conversations that drive financial institutions.',
     cards: FS_KEYS.map((k, i) => ({
@@ -254,8 +254,8 @@ export const financialServices = {
     body: [
       'Give your teams a clearer way to document discussions, retrieve institutional knowledge and follow up on decisions across financial services workflows.',
     ],
-    cta: { label: 'Book a Demo', to: ROUTES.bookDemo },
-    secondary: { label: 'Contact Our Team', to: ROUTES.contactSales },
+    cta: { label: 'Book a demo', to: ROUTES.bookDemo },
+    secondary: { label: 'Contact our team', to: ROUTES.contactSales },
     visual: {
       tint: 'pink',
       pattern: { type: 'rings', size: 'panel' },
@@ -274,8 +274,8 @@ export const financialServices = {
 
   /** Directory · FINANCIAL SERVICES (48:288083). */
   directory: {
-    eyebrow: 'Financial Services',
-    title: 'Explore Financial Services',
+    eyebrow: 'Financial services',
+    title: 'Explore financial services',
     items: FS_KEYS.map(linkCard),
   },
 

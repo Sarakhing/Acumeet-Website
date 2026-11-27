@@ -70,7 +70,7 @@ function KeysStorageCard({ className }) {
     <div
       className={cn(
         CARD,
-        'gap-3 shadow-[0_12px_16px_rgba(11,11,18,0.07),0_1px_1px_rgba(11,11,18,0.04)]',
+        'gap-3',
         className,
       )}
     >
@@ -134,7 +134,7 @@ function AccessCard({ className }) {
     <div
       className={cn(
         CARD,
-        'gap-2.5 shadow-[0_24px_32px_rgba(11,11,18,0.14),0_1px_1px_rgba(11,11,18,0.08)]',
+        'gap-2.5',
         className,
       )}
     >
@@ -166,16 +166,9 @@ function AccessCard({ className }) {
 
 export default function SecurityProductCards({ className }) {
   return (
-    <div
-      className={cn(
-        // Mobile: stacked and staggered. md+: Figma's overlapping layout
-        // (Access card offset 192px right, 299px down from the Keys card).
-        'relative flex w-full max-w-[572px] flex-col md:grid md:grid-cols-1 md:grid-rows-1 md:items-start',
-        className,
-      )}
-    >
-      <KeysStorageCard className="w-full max-w-[400px] md:col-start-1 md:row-start-1 md:w-[400px]" />
-      <AccessCard className="relative mt-4 ml-auto w-[calc(100%-24px)] max-w-[380px] md:col-start-1 md:row-start-1 md:mt-[299px] md:ml-[192px] md:w-[380px]" />
+    <div className={cn('flex w-full flex-col gap-3 sm:gap-4', className)}>
+      <KeysStorageCard />
+      <AccessCard />
     </div>
   );
 }

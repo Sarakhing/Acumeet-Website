@@ -15,11 +15,11 @@ const heroActions = rollout(4, ['Jun 12', 'May 17', 'Today'], { width: 400, shad
 
 /** 10.08 · Azure Architecture (Figma 48:394053). */
 export default {
-  breadcrumb: depBreadcrumb('Azure Architecture'),
+  breadcrumb: depBreadcrumb('Azure architecture'),
 
   /** 01 · Hero (985): keys & storage (+6°) and decisions (−6°) tilted behind action items. */
   ...centeredHero({
-    eyebrow: 'Azure Architecture',
+    eyebrow: 'Azure architecture',
     title: 'Understand the architecture behind',
     accent: 'your deployment.',
     lead: 'Use an architecture review to understand how Acumeet components, Azure resources, identity, storage, AI processing, integrations, and operational controls fit together in the proposed environment.',

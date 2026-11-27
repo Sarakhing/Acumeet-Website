@@ -15,11 +15,11 @@ const heroActions = floatActions(4, tasks(['Fri', 'Jun 8', 'Today']));
 
 /** 08.08 · Data Governance (Figma 48:370412). */
 export default {
-  breadcrumb: compBreadcrumb('Data Governance'),
+  breadcrumb: compBreadcrumb('Data governance'),
 
   /** 01 · Hero (975): retention policy (+6°) and decisions (−6°) tilted behind action items. */
   ...centeredHero({
-    eyebrow: 'Compliance  ·  Privacy and Data Governance',
+    eyebrow: 'Compliance  ·  Privacy and data governance',
     title: 'Responsible handling of meeting',
     accent: 'information.',
     lead: 'Meeting intelligence is useful only when organisations can understand and govern the information behind it. Acumeet helps turn meeting activity into structured knowledge, so privacy and data governance need to be considered across capture, processing, access, retention and deletion.',
@@ -66,7 +66,7 @@ export default {
       {
         title: 'Responsible handling of meeting information.',
         columns: 2,
-        cta: { label: 'Explore Privacy & Data Protection', to: ROUTES.trustPage.privacy },
+        cta: { label: 'Explore privacy & data protection', to: ROUTES.trustPage.privacy },
       },
       GOVERNANCE_CARDS,
     ),

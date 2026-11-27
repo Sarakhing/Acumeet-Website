@@ -14,14 +14,14 @@ import {
 
 /** 04.05 · Credit Committees (Figma 48:289461). */
 export default {
-  breadcrumb: fsBreadcrumb('Credit Committees'),
+  breadcrumb: fsBreadcrumb('Credit committees'),
 
   /** 01 · Hero (48:289464) — 630 wash, same composition as Banking. */
   hero: {
-    eyebrow: 'Credit Committees',
+    eyebrow: 'Credit committees',
     eyebrowStyle: 'chip',
-    title: 'Create Clearer Records of Credit',
-    accent: 'Committee Decisions',
+    title: 'Create clearer records of credit',
+    accent: 'committee decisions',
     lead: 'Acumeet helps teams document credit discussions, capture agreed outcomes and organise follow-up actions without replacing credit assessment or approval systems.',
     visual: heroCanvas(553, [
       [
@@ -61,7 +61,7 @@ export default {
   explorer: {
     items: explorerItems([
       {
-        title: 'Preserve the Context Behind Deliberations',
+        title: 'Preserve the context behind deliberations',
         body: 'Credit committee meetings can involve detailed proposals, lending considerations, questions and conditions. Structured summaries help retain the discussion context.',
         visual: summary('Investment Committee', [71, 81, 25], [
           'The committee approved the facility subject to collateral valuation.',
@@ -69,7 +69,7 @@ export default {
         ]),
       },
       {
-        title: 'Record Outcomes and Next Steps',
+        title: 'Record outcomes and next steps',
         body: 'Capture key points, decisions and outstanding actions so relevant stakeholders can review what was agreed and what remains to be done.',
         visual: decisions(
           'May 28',
@@ -80,7 +80,7 @@ export default {
         ),
       },
       {
-        title: 'Support Follow-Up Between Meetings',
+        title: 'Support follow-up between meetings',
         body: 'Keep meeting-derived records available for subsequent discussions, subject to institutional access and recordkeeping policies.',
         visual: actions(3, [
           ['Review covenant breaches on the SME portfolio', 'Today'],
@@ -89,7 +89,7 @@ export default {
         ]),
       },
       {
-        title: 'Credit Committee Workflows',
+        title: 'Credit committee workflows',
         body: 'Support discussions about credit proposals, lending reviews, outstanding documentation, conditions, escalations and follow-up actions.',
         visual: capture('Tue, May 23', [
           ['Loan Review Meeting', '9:00 AM · Teams'],

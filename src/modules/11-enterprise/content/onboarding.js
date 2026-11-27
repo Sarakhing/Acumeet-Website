@@ -13,7 +13,7 @@ import {
 
 /** 11.09 · User Onboarding (Figma 49:68961). */
 export default {
-  breadcrumb: entBreadcrumb('User Onboarding'),
+  breadcrumb: entBreadcrumb('User onboarding'),
 
   /** 01 · Hero + "Hero carousel · 11.09 · User Onboarding" (49:71538). */
   ...entPage('onboarding', {

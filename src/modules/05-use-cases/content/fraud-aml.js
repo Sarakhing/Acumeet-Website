@@ -20,9 +20,9 @@ export default {
   /** 01 · Hero + "✓ Hero carousel · 05.05" (48:310784). */
   ...ringsHero({
     eyebrow: 'Fraud & AML',
-    title: 'Keep Fraud & AML Meeting Discussions Organised and Accountable',
+    title: 'Keep fraud & AML meeting discussions organised and accountable',
     lead: 'Fraud investigation and anti-money-laundering teams often coordinate sensitive cases, review emerging information, and agree on next steps across multiple stakeholders. Acumeet helps capture meeting discussions, summarise key points, and document assigned follow-ups—giving authorised teams a clearer record of what was discussed and what needs attention.',
-    secondary: { label: 'Explore Security and Governance', to: ROUTES.security },
+    secondary: { label: 'Explore security and governance', to: ROUTES.security },
     slides: [
       [
         'Decisions',

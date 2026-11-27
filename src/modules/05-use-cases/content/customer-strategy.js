@@ -15,15 +15,15 @@ const heroActions = actions(
 
 /** 05.07 · Customer Strategy (Figma 48:306787). */
 export default {
-  breadcrumb: ucBreadcrumb('Customer Strategy'),
+  breadcrumb: ucBreadcrumb('Customer strategy'),
 
   /** 01 · Hero (48:306790) — 997 tall: analytics (+6°) and decisions (−6°) tilted behind action items. */
   ...centeredHero({
-    eyebrow: 'Customer Strategy',
-    title: 'Turn Customer Conversations into Clearer Strategies',
-    accent: 'and Follow-Through',
+    eyebrow: 'Customer strategy',
+    title: 'Turn customer conversations into clearer strategies',
+    accent: 'and follow-through',
     lead: 'Customer strategy depends on understanding priorities, aligning stakeholders, and following through on commitments. Acumeet helps teams capture customer-related meeting discussions, summarise key points, and document decisions and next steps—so teams can return to the context behind their plans and conversations.',
-    secondary: { label: 'Explore Meeting Intelligence', to: ROUTES.product.meetingIntelligence },
+    secondary: { label: 'Explore meeting intelligence', to: ROUTES.product.meetingIntelligence },
     height: 997,
     copyHeight: 458,
     top: 598,

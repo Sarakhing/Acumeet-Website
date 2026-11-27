@@ -33,16 +33,16 @@ const actions = (width, open, tasks) =>
  * is the visible copy of it.
  */
 export const actionItemManagement = {
-  breadcrumb: productBreadcrumb('Action Item Management'),
+  breadcrumb: productBreadcrumb('Action item management'),
 
   /** 01 · Hero (46:38624) — 786 tall, dot grid. */
   hero: {
-    eyebrow: 'Product · Action Item Management',
+    eyebrow: 'Product · Action item management',
     eyebrowStyle: 'chip',
-    title: 'Turn Meeting Decisions into Actions That',
-    accent: 'Move Forward',
+    title: 'Turn meeting decisions into actions that',
+    accent: 'move forward',
     lead: 'Meetings should create progress, not just conversations. Acumeet helps teams identify next steps, maintain visibility into follow-up work and carry important actions from one meeting to the next.',
-    primary: { label: 'Book a Demo', to: ROUTES.bookDemo },
+    primary: { label: 'Book a demo', to: ROUTES.bookDemo },
     secondary: { label: 'Explore Acumeet', to: ROUTES.products },
     visual: h(ActionItemsHeroVisual),
     visualWidth: 665,
@@ -52,24 +52,24 @@ export const actionItemManagement = {
   /** 02 · Overview (46:39819) — white statement, CTA + waveform bars. */
   overview: {
     tone: 'white',
-    title: 'A Decision Only Matters if Someone',
-    accent: 'Follows Through',
+    title: 'A decision only matters if someone',
+    accent: 'follows through',
     bodyWidth: 1000,
     paragraphs: [
       'Meetings generate ideas, decisions and commitments, but important tasks can easily get lost when the conversation ends. Responsibilities may be unclear, deadlines may be forgotten, and teams can spend valuable time trying to remember what was agreed. Acumeet helps make meeting outcomes easier to revisit, giving teams a clearer path from discussion to action.',
     ],
-    cta: { label: 'See How Acumeet Works', to: ROUTES.products },
+    cta: { label: 'See how Acumeet works', to: ROUTES.products },
     waveform: true,
   },
 
   /** Tabs explorer (46:39829) + "✓ Explorer · Key Features" (46:45604). */
   explorer: {
     title: 'Key',
-    accent: 'Features',
+    accent: 'features',
     tone: 'white',
     items: [
       {
-        title: 'Identify Action Items',
+        title: 'Identify action items',
         body: 'Bring tasks, commitments and follow-up points from meeting discussions into view, making it easier to understand what needs to happen next.',
         tint: 'lilac',
         pattern: { type: 'dots', size: 'explorer' },
@@ -88,7 +88,7 @@ export const actionItemManagement = {
         ]),
       },
       {
-        title: 'Clarify Ownership and Deadlines',
+        title: 'Clarify ownership and deadlines',
         body: 'Make responsibilities and expected timelines easier to review and confirm, helping teams establish accountability for agreed actions.',
         tint: 'pink',
         pattern: { type: 'rings', size: 'explorer' },
@@ -99,7 +99,7 @@ export const actionItemManagement = {
         ]),
       },
       {
-        title: 'Track Actions Across Meetings',
+        title: 'Track actions across meetings',
         body: 'Revisit outstanding tasks before the next meeting. Give your team a clearer view of what has progressed, what remains open and what requires attention.',
         tint: 'blue',
         pattern: { type: 'hairlines', size: 'explorer' },
@@ -114,7 +114,7 @@ export const actionItemManagement = {
         ]),
       },
       {
-        title: 'Connect Meeting Actions to Your Workflow',
+        title: 'Connect meeting actions to your workflow',
         body: 'Bring meeting follow-up closer to the tools your team already uses. Where supported by Acumeet’s available integrations, connect workflows with platforms such as Slack, Jira, Asana and ClickUp.',
         tint: 'mint',
         pattern: { type: 'waveform', size: 'explorer' },
@@ -126,12 +126,12 @@ export const actionItemManagement = {
   /** Split 46:39833 — copy left (hidden "CROSS-MEETING CONTINUITY" overline), mint rings panel. */
   split: {
     size: 'standard',
-    title: 'Every Meeting Should Build on the Last',
+    title: 'Every meeting should build on the last',
     body: [
       'The next meeting should not begin with everyone trying to remember what happened in the previous one.',
       'Acumeet helps teams revisit earlier discussions, recover important context and review outstanding actions before moving forward. This creates a more connected workflow in which decisions and commitments remain relevant beyond the meeting where they were made.',
     ],
-    cta: { label: 'Make Meetings More Productive', to: ROUTES.bookDemo },
+    cta: { label: 'Make meetings more productive', to: ROUTES.bookDemo },
     visual: {
       tint: 'mint',
       pattern: { type: 'rings', size: 'panel' },
@@ -151,7 +151,7 @@ export const actionItemManagement = {
   /** Benefits 46:39880 — bento: 846 + 413, then 3 × 413 ("✓ Card · …"). */
   benefits: {
     title: 'Turn Accountability into',
-    accent: 'Progress',
+    accent: 'progress',
     accentBreak: false,
     cards: [
       {
@@ -191,7 +191,7 @@ export const actionItemManagement = {
   /** Stepper 46:39890 + "✓ Stepper · From Conversation to Fol…" (46:45975). */
   how: {
     title: 'From Conversation to',
-    accent: 'Follow-Through',
+    accent: 'follow-through',
     accentBreak: false,
     tone: 'white',
     steps: [
@@ -205,9 +205,9 @@ export const actionItemManagement = {
           shadow: 'float',
           date: 'Wed, Jun 18',
           meetings: [
-            { title: 'Monthly Marketing Strategy Review', meta: '10:30 AM · Meet' },
+            { title: 'Monthly marketing strategy review', meta: '10:30 AM · Meet' },
             { title: 'Product Development Sync-Up', meta: '11:00 AM · Teams' },
-            { title: 'Client Feedback Analysis Session', meta: '3:30 PM · Zoom' },
+            { title: 'Client feedback analysis session', meta: '3:30 PM · Zoom' },
           ],
         }),
       },
@@ -286,9 +286,9 @@ export const actionItemManagement = {
 
   /** CTA band 46:39916. */
   cta: {
-    title: 'Keep the Work Moving After the Meeting',
+    title: 'Keep the work moving after the meeting',
     lead: 'Connect meeting discussions with the actions that follow. Help your team spend less time reconstructing decisions and more time moving work forward with Acumeet.',
-    primary: { label: 'Book a Demo', to: ROUTES.bookDemo },
-    secondary: { label: 'Get Started', to: ROUTES.getStarted },
+    primary: { label: 'Book a demo', to: ROUTES.bookDemo },
+    secondary: { label: 'Get started', to: ROUTES.getStarted },
   },
 };

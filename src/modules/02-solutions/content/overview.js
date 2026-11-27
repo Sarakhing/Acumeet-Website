@@ -47,7 +47,7 @@ const showcaseRows = [
     tile('protect', {
       width: 760,
       tint: 'pink',
-      title: 'Protect Sensitive Information in Every Meeting.',
+      title: 'Protect sensitive information in every meeting.',
       titleWidth: 688,
       body: 'Acumeet helps enterprises protect sensitive meeting information by turning business conversations into structured, searchable intelligence while supporting responsible handling of confidential data.',
       bodyWidth: 560,
@@ -72,7 +72,7 @@ const showcaseRows = [
     tile('control', {
       width: 496,
       tint: 'lilac',
-      title: 'Your Data. Your Keys. Your Rules.',
+      title: 'Your data. Your keys. Your rules.',
       body: 'Keep greater control over where your meeting data is stored, how it is protected, and how long it is retained.',
       bodyWidth: 424,
       visual: {
@@ -95,7 +95,7 @@ const showcaseRows = [
     tile('connect', {
       layout: 'split',
       tint: 'grey',
-      title: 'Connect Your Meetings to the Tools That Move Work Forward',
+      title: 'Connect your meetings to the tools that move work forward',
       titleWidth: 528,
       bodyWidth: 528,
       body: 'Acumeet helps connect meeting intelligence with the tools your teams already use, bringing conversations, decisions, and action items closer to the workflows where work gets done.',
@@ -113,7 +113,7 @@ const showcaseRows = [
     tile('secure', {
       width: 410,
       tint: 'blue',
-      title: 'Security Should Never Be an Afterthought.',
+      title: 'Security should never be an afterthought.',
       body: 'Protect every meeting with a security-first approach to identity, access, encryption, and accountability.',
       visual: {
         width: 410,
@@ -135,7 +135,7 @@ const showcaseRows = [
     tile('govern', {
       width: 410,
       tint: 'mint',
-      title: 'Govern Every Meeting. Strengthen Every Decision.',
+      title: 'Govern every meeting. Strengthen every decision.',
       body: 'Establish clear rules for how your organisation records, manages, shares, and retains meeting information.',
       visual: {
         width: 410,
@@ -157,7 +157,7 @@ const showcaseRows = [
     tile('understand', {
       width: 412,
       tint: 'amber',
-      title: 'Turn Every Conversation Into Business Intelligence.',
+      title: 'Turn every conversation into business intelligence.',
       body: 'Your meetings are full of decisions, ideas, commitments, and knowledge.',
       visual: {
         width: 412,
@@ -368,14 +368,14 @@ export const overview = {
     titleTo: ROUTES.industries,
     lead: 'Every industry has different workflows, risks and meeting needs. See how Acumeet reduces manual documentation and keeps critical meeting knowledge easy to find.',
     items: [
-      { title: 'Financial Services', body: 'Turn Financial Meetings Into Actionable Intelligence', slug: 'financial-services' },
+      { title: 'Financial services', body: 'Turn Financial Meetings Into Actionable Intelligence', slug: 'financial-services' },
       { title: 'Banking', body: 'Bring Clarity to Banking Conversations and Decisions', slug: 'banking' },
       { title: 'Insurance', body: 'Make Insurance Meetings More Structured and Actionable', slug: 'insurance' },
       { title: 'Telecommunications', body: 'Turn Telecommunications Meetings Into Coordinated Action', slug: 'telecommunications' },
-      { title: 'Public Sector', body: 'Make Public Sector Meetings Easier to Document and Follow Through', slug: 'public-sector' },
+      { title: 'Public sector', body: 'Make Public Sector Meetings Easier to Document and Follow Through', slug: 'public-sector' },
       { title: 'Enterprise', body: 'Connect Enterprise Conversations to Decisions and Delivery', slug: 'enterprise' },
       {
-        title: 'Other Regulated Industries',
+        title: 'Other regulated industries',
         body: 'Meeting Intelligence for Regulated and Accountability-Driven Organisations',
         slug: 'other-regulated-industries',
       },
