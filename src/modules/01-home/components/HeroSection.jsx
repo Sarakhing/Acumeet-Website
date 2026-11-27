@@ -1,13 +1,54 @@
+import { useEffect, useRef, useState } from 'react';
 import Button from '@/components/ui/Button';
 import Container from '@/components/ui/Container';
 import { ROUTES } from '@/constants/routes';
-import heroBand from '@/assets/images/home/hero-band.jpg';
+import heroBand from '@/assets/images/home/hero-band-gradient.jpg';
+import heroPoster from '@/assets/images/home/hero-video-poster.jpg';
+import heroStill from '@/assets/images/home/hero-video-still.jpg';
+import heroVideo from '@/assets/videos/home-hero.mp4';
 
 /**
  * Figma "01 · Hero" (46:8423) + load-in from "Live · Home · Hero load-in" (46:11494).
- * The band image already contains the product screenshot; the "Product shot"
- * frame (Start → Loaded) slides 48px up and fades in over it.
+ * The band is the gradient frame; its "Product shot · dashboard" layer (1088 × 624, 40px in)
+ * holds the product walkthrough video (acumeet-hero-v5), which slides 48px up and fades in.
+ * The video autoplays muted on a loop and pauses while off screen. With reduced motion it
+ * does not autoplay and shows a dashboard frame instead.
  */
+
+const prefersReducedMotion = () =>
+  typeof window !== 'undefined' && window.matchMedia?.('(prefers-reduced-motion: reduce)').matches;
+
+function HeroVideo() {
+  const ref = useRef(null);
+  const [reduced] = useState(prefersReducedMotion);
+
+  // Play only while the video is on screen (saves CPU/battery once the visitor scrolls on).
+  useEffect(() => {
+    const v = ref.current;
+    if (!v || reduced || !('IntersectionObserver' in window)) return undefined;
+    const io = new IntersectionObserver(([entry]) => {
+      if (entry.isIntersecting) v.play().catch(() => {});
+      else v.pause();
+    });
+    io.observe(v);
+    return () => io.disconnect();
+  }, [reduced]);
+
+  return (
+    <video
+      ref={ref}
+      src={heroVideo}
+      poster={reduced ? heroStill : heroPoster}
+      autoPlay={!reduced}
+      muted
+      loop
+      playsInline
+      preload={reduced ? 'none' : 'auto'}
+      aria-label="Acumeet product walkthrough: Acumeet joins a meeting, transcribes it live, then shows the summary, action items, analytics and the Atlas assistant"
+      className="size-full object-cover"
+    />
+  );
+}
 
 // Radial glows from the Figma fill, expressed relative to the 1440×1239 frame.
 const HERO_BG = [
@@ -66,17 +107,20 @@ export default function HeroSection() {
         <div className="hero-rise relative aspect-[1159/700] w-full max-w-[1159px] overflow-hidden rounded-card [animation-delay:320ms]">
           <img
             src={heroBand}
-            alt="Acumeet meeting workspace showing a recorded stand-up call with its summary, key insights and the AcuBot assistant"
+            alt=""
             width={1159}
             height={700}
             fetchPriority="high"
             className="absolute inset-0 size-full rounded-card object-cover"
           />
-          {/* "Product shot · dashboard" frame — Start (top 88, hidden) → Loaded (top 40, visible) */}
-          <div
-            aria-hidden="true"
-            className="hero-rise pointer-events-none absolute top-[5.71%] left-[3.06%] h-[88.57%] w-[93.87%] rounded-card border border-[#e2e2ea] drop-shadow-[0_2px_3px_rgb(20_13_51/0.06)] [animation-delay:700ms]"
-          />
+          {/* "Product shot · dashboard" (46:11496) — Start (top 88, hidden) → Loaded (top 40, visible) */}
+          <div className="hero-rise absolute top-[5.71%] left-[3.06%] h-[89.14%] w-[93.87%] overflow-hidden rounded-card bg-[#f5f4fa] shadow-[0_2px_6px_rgb(20_13_51/0.06),0_30px_60px_rgb(20_13_51/0.14)] [animation-delay:700ms]">
+            <HeroVideo />
+            <div
+              aria-hidden="true"
+              className="pointer-events-none absolute inset-0 rounded-card border border-[#e2e2ea]"
+            />
+          </div>
         </div>
       </Container>
     </section>
