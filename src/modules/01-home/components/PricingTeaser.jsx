@@ -7,15 +7,15 @@ import { PLANS as PRICING_PLANS } from '@/modules/16-pricing/content/plans';
 
 /**
  * Plan summary shown on the Home teaser — names, prices and audience lines come from the
- * Pricing section's plan data so the two pages stay in sync. Figma's teaser marks Team as
- * "Popular" (the Pricing page outlines Business); `popular` keeps the teaser's choice.
+ * Pricing section's plan data so the two pages stay in sync, including which plan is marked
+ * "Popular" (`featured`, Team).
  */
 const PLANS = PRICING_PLANS.map((p) => ({
   id: p.id,
   name: p.name,
   price: p.yearly,
   audience: p.audience,
-  popular: p.id === 'team',
+  popular: Boolean(p.featured),
 }));
 
 function PlanCard({ plan }) {

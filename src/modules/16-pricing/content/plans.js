@@ -52,6 +52,7 @@ export const PLANS = [
     unit: 'seat / month',
     audience: 'For small and growing teams.',
     cta: { label: 'Get started', to: ROUTES.getStarted },
+    featured: true, // the most popular plan (blue outline + "Popular" here and on the home teaser)
     ai: ['Team AI', 'Shared meeting library'],
     includes: 'Includes Individual, plus:',
     features: [
@@ -69,7 +70,6 @@ export const PLANS = [
     unit: 'seat / month',
     audience: 'For larger organisations.',
     cta: { label: 'Choose business', to: ROUTES.getStarted },
-    featured: true,
     ai: ['Governed AI', 'Access and audit controls'],
     includes: 'Includes Team, plus:',
     features: [

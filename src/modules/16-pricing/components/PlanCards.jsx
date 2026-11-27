@@ -16,9 +16,17 @@ function PlanCard({ plan, billing }) {
         featured ? 'border-2 border-brand-blue' : 'border border-[#e4e4e7]',
       )}
     >
-      <h3 className="text-[18px] font-semibold leading-[1.3] tracking-[-0.27px] text-[#0a0a0b]">
-        {name}
-      </h3>
+      <div className="flex items-center justify-between gap-2">
+        <h3 className="text-[18px] font-semibold leading-[1.3] tracking-[-0.27px] text-[#0a0a0b]">
+          {name}
+          {featured && <span className="sr-only"> (most popular plan)</span>}
+        </h3>
+        {featured && (
+          <span className="rounded-pill bg-[#eff4ff] px-2.5 py-0.5 text-[12px] font-medium leading-[1.5] text-brand-blue">
+            Popular
+          </span>
+        )}
+      </div>
       <p className="flex items-center gap-2">
         <span className="text-[38px] font-medium leading-[1.1] tracking-[-0.76px] text-[#0a0a0b]">
           {plan[billing]}
@@ -65,7 +73,7 @@ function PlanCard({ plan, billing }) {
 
 /**
  * Figma 16.01 "01 · Hero and plans" (49:173603, also 16.02 Plans): centred 58px title and lead,
- * a Yearly / Monthly switch, five plan cards (Business outlined in blue) and a "Compare plans"
+ * a Yearly / Monthly switch, five plan cards (Team, the popular plan, outlined in blue) and a "Compare plans"
  * link to 16.03. Cards are 5-up at lg, 2-up at sm and stacked on phones.
  */
 export default function PlanCards({ title, accent, lead, compareTo }) {

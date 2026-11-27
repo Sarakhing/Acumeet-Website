@@ -85,18 +85,17 @@ export default function InPracticeSection({ videoSrc } = {}) {
             id="in-practice-title"
             className="text-balance text-[32px] leading-[1.12] font-medium tracking-[-0.9px] text-white sm:text-[40px] lg:text-[48px] lg:tracking-[-1.44px]"
           >
-            Enterprise AI meeting intelligence in practice
+            See a meeting become a record
           </h2>
           <div className="flex max-w-[878px] flex-col gap-4 text-body leading-[1.35] tracking-[-0.18px] text-[#b4b4c6] sm:text-[18px]">
             <p>
-              Acumeet is an enterprise AI meeting assistant designed to help organisations capture
-              meeting information, organise decisions and make meeting outcomes more actionable.
+              Acumeet joins your Teams, Zoom and Google Meet calls, transcribes who said what, and
+              turns the conversation into a summary, the decisions made and the actions agreed,
+              each with an owner.
             </p>
             <p>
-              As businesses explore AI meeting software for businesses, Acumeet provides an
-              opportunity to evaluate how AI meeting intelligence for enterprises can support
-              business workflows, improve access to meeting knowledge and help teams manage
-              information more effectively.
+              Everything stays searchable, so the next time someone asks what was decided and why,
+              the answer is already written down.
             </p>
           </div>
           <Button
@@ -113,9 +112,9 @@ export default function InPracticeSection({ videoSrc } = {}) {
         </div>
 
         <p className="max-w-[760px] text-body leading-[1.35] tracking-[-0.18px] text-[#b4b4c6] sm:text-[18px]">
-          With a focus on enterprise needs, Acumeet brings meeting intelligence together with
-          security and governance considerations to support organisations exploring a secure AI
-          meeting platform.
+          Built for organisations that handle sensitive conversations: you control who sees each
+          meeting and how long it is kept, and your meeting data is never used to train public AI
+          models.
         </p>
       </Container>
     </section>
