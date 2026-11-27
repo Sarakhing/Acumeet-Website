@@ -6,14 +6,36 @@ import heroBand from '@/assets/images/home/hero-band-gradient.jpg';
 import heroPoster from '@/assets/images/home/hero-video-poster.jpg';
 import heroStill from '@/assets/images/home/hero-video-still.jpg';
 import heroVideo from '@/assets/videos/home-hero.mp4';
+import heroVideoMobile from '@/assets/videos/home-hero-mobile.mp4';
 
 /**
  * Figma "01 · Hero" (46:8423) + load-in from "Live · Home · Hero load-in" (46:11494).
  * The band is the gradient frame; its "Product shot · dashboard" layer (1088 × 624, 40px in)
  * holds the product walkthrough video (acumeet-hero-v5), which slides 48px up and fades in.
- * The video autoplays muted on a loop and pauses while off screen. With reduced motion it
- * does not autoplay and shows a dashboard frame instead.
+ * The video autoplays muted on a loop and pauses while off screen. Its source is attached only
+ * after the page has loaded (the first-frame poster shows until then), and phones get a 1280px
+ * encode (home-hero-mobile, same quality, ~1/3 smaller); wider screens get the 1920px original.
+ * With reduced motion it never loads and shows a dashboard frame instead.
  */
+
+const PHONE = '(max-width: 767px)';
+
+/** Calls `fn` once the page has finished loading (then waits for an idle moment). */
+function afterPageLoad(fn) {
+  let idle = 0;
+  const run = () => {
+    idle = window.requestIdleCallback
+      ? window.requestIdleCallback(fn, { timeout: 1500 })
+      : window.setTimeout(fn, 200);
+  };
+  if (document.readyState === 'complete') run();
+  else window.addEventListener('load', run, { once: true });
+  return () => {
+    window.removeEventListener('load', run);
+    if (window.cancelIdleCallback) window.cancelIdleCallback(idle);
+    window.clearTimeout(idle);
+  };
+}
 
 const prefersReducedMotion = () =>
   typeof window !== 'undefined' && window.matchMedia?.('(prefers-reduced-motion: reduce)').matches;
@@ -21,29 +43,37 @@ const prefersReducedMotion = () =>
 function HeroVideo() {
   const ref = useRef(null);
   const [reduced] = useState(prefersReducedMotion);
+  const [src, setSrc] = useState(null);
+
+  useEffect(() => {
+    if (reduced) return undefined;
+    return afterPageLoad(() =>
+      setSrc(window.matchMedia?.(PHONE).matches ? heroVideoMobile : heroVideo),
+    );
+  }, [reduced]);
 
   // Play only while the video is on screen (saves CPU/battery once the visitor scrolls on).
   useEffect(() => {
     const v = ref.current;
-    if (!v || reduced || !('IntersectionObserver' in window)) return undefined;
+    if (!v || !src || !('IntersectionObserver' in window)) return undefined;
     const io = new IntersectionObserver(([entry]) => {
       if (entry.isIntersecting) v.play().catch(() => {});
       else v.pause();
     });
     io.observe(v);
     return () => io.disconnect();
-  }, [reduced]);
+  }, [src]);
 
   return (
     <video
       ref={ref}
-      src={heroVideo}
+      src={src ?? undefined}
       poster={reduced ? heroStill : heroPoster}
-      autoPlay={!reduced}
+      autoPlay={Boolean(src)}
       muted
       loop
       playsInline
-      preload={reduced ? 'none' : 'auto'}
+      preload={src ? 'auto' : 'none'}
       aria-label="Acumeet product walkthrough: Acumeet joins a meeting, transcribes it live, then shows the summary, action items, analytics and the Atlas assistant"
       className="size-full object-cover"
     />
